@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(243, 122, 122);
+}
+
+.box {
+  position: relative;
+  top: 50px;
+  /* left: auto; */
+
+  padding: 30px;
+  height: 500px;
+  width: 250px;
+  background-color: rgb(216, 88, 88);
+  margin: auto;
+  border-radius: 20px;
+}
+.box h1 {
+  background-color: transparent;
+  position: relative;
+  top: 20px;
+  /* margin: auto; */
+  text-align: center;
+}
+
+.para{
+  position: relative;
+  top: 100px;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.box:hover{
+  
+}

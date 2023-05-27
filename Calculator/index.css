@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;700&display=swap");
+
+* {
+  background-color: rgb(245, 245, 249);
+  box-sizing: border-box;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-weight: 700;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+}
+
+.calc_cont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cal_body_con {
+  display: flex;
+  /* flex-direction: column; */
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+
+}
+
+.scrn_con {
+}
+.butt_con {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.butt_con .btn {
+    border: 1px solid rgb(0, 0, 255);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+
+
+}
+
