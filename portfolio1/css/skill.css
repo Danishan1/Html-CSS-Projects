@@ -1,0 +1,130 @@
+.skill_d1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.topic-name {
+  padding-bottom: 40px;
+  padding-left: 10px;
+  font-size: var(--size3xL);
+  font-weight: 600;
+  color: var(--col-btn);
+}
+
+.card-2 {
+  border: 1px solid var(--col-btn);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border-radius: 10px;
+}
+
+/* Contact */
+.card {
+  width: 300px;
+  height: 100px;
+}
+
+.contact-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.footer .links {
+  margin-top: 20px;
+  display: flex;
+}
+.footer .links a {
+  margin-left: 30px;
+}
+
+/* Projetcs */
+
+.proj-d2 .proj-name {
+  font-size: var(--size8L);
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.proj-d2 .proj-detail {
+  margin-bottom: 10px;
+}
+
+.proj-d3 {
+  display: flex;
+  justify-content: flex-end;
+  /* position: relative; */
+  /* top: -85px; */
+}
+
+.proj-btn .btn {
+  height: 40px;
+  width: 180px;
+  margin: 0 10px;
+}
+.proj-btn.b1 .btn {
+  background-color: var(--col-youtube);
+}
+
+@media (max-width: 900px) {
+  .proj-d2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .proj-d3 {
+    justify-content: space-evenly;
+    top: 5px;
+  }
+}
+@media (max-width: 630px) {
+  .proj-btn .btn {
+    font-size: var(--size3L);
+  }
+
+  .proj-d1 {
+    font-size: var(--size);
+  }
+
+  .proj-d2 .proj-name {
+    font-size: var(--size6L);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .proj-d3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .proj-d3 .btn {
+    margin: 10px;
+  }
+
+  .contact-1 {
+    font-size: var(--size);
+  }
+}
+@media (max-width: 680px) and (min-width: 490px) {
+  .topic-name {
+    font-size: var(--size2xL);
+  }
+}
+
+@media (max-width: 490px) {
+  .topic-name {
+    font-size: var(--size8L);
+  }
+}

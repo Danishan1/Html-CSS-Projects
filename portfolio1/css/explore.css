@@ -1,0 +1,154 @@
+@import "./util.css";
+@import "./skill.css";
+
+.nav .d4 ul a {
+  color: var(--col-black);
+}
+
+/* Introduction ********************************************************************************** */
+
+.about-intro {
+  display: flex;
+  height: 85vh;
+  padding-top: 80px;
+
+}
+
+.about-img {
+  height: 450px;
+  width: 450px;
+}
+
+.about-d1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.about-d1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-icon {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer a,
+.about-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin: 15px;
+  font-size: 1.3em;
+  color: var(--col-white);
+  border-radius: 50%;
+}
+
+.icon-github {
+  background-color: var(--col-github);
+}
+.icon-linkedin {
+  background-color: var(--col-linkedin) !important;
+}
+.icon-whatsapp {
+  background-color: var(--col-whatsapp);
+}
+.icon-pdf {
+  background-color: var(--col-pdf);
+}
+.icon-mail {
+  background-color: var(--col-mail);
+}
+
+/* Handaling name and Degination */
+
+.about-d2 {
+  width: 60%;
+  margin-right: 50px;
+}
+
+.about-name {
+  font-size: 7rem;
+  font-weight: 800;
+  color: var(--col-btn);
+  letter-spacing: 5px;
+}
+
+.about-deg {
+  margin-left: 10px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.col-btn {
+  color: var(--col-btn);
+}
+
+.about-intrest {
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-size: var(--size);
+}
+
+/* Education ********************************************************************************** */
+
+.about-acadmic {
+  display: flex;
+  padding: 0;
+}
+
+.aca1 {
+  width: 30%;
+}
+
+.aca1 img {
+  width: 300px;
+}
+.aca2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-right: 20px;
+  
+}
+
+.study {
+  width: 30%;
+  margin: 20px;
+  margin-top: 0;
+  border-radius: 10px;
+  border: 1px solid var(--col-btn);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.scl{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Smaller Device For About Section */
+@media (max-width: 900px) and (min-width: 680px) {
+}
+
+@media (max-width: 900px) and (min-width: 680px) {
+}
+
+@media (max-width: 680px) and (min-width: 490px) {
+}
+
+@media (max-width: 490px) {
+}

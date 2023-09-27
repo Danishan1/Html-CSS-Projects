@@ -1,0 +1,341 @@
+@import "./util.css";
+@import "./skill.css";
+
+.nav .d4 ul a {
+  color: var(--col-black);
+}
+
+.about-img {
+  height: 250px;
+  width: 250px;
+}
+
+.about-d1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.about-d1-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-icon {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.footer a,
+.about-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin: 10px;
+  font-size: 1.3em;
+  color: var(--col-white);
+  border-radius: 50%;
+}
+
+.icon-github {
+  background-color: var(--col-github);
+}
+.icon-linkedin {
+  background-color: var(--col-linkedin) !important;
+}
+.icon-whatsapp {
+  background-color: var(--col-whatsapp);
+}
+.icon-pdf {
+  background-color: var(--col-pdf);
+}
+.icon-mail {
+  background-color: var(--col-mail);
+}
+
+/* Handaling name and Degination */
+.about-name-deg {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 1.5px;
+}
+
+.about-name-deg {
+  font-size: var(--size);
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.about-name {
+  font-size: var(--size);
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Intrest  */
+.about-interst {
+  margin-left: 30px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+
+.about-interst li {
+  margin: 12px 0;
+}
+
+.about-interst li::marker {
+  color: var(--col-btn);
+}
+.about-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.about-acad {
+  display: flex;
+
+  /* gap: 10px; */
+  justify-content: space-around;
+
+  border: 2px solid red;
+}
+
+.study-name {
+  font-weight: 500;
+  border: 1px solid var(--col-btn);
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  font-size: var(--size);
+}
+
+.study-name p:first-child {
+  font-weight: 400;
+  /* font-size: var(--size); */
+}
+
+.study-name .mark {
+  font-weight: 800;
+  color: var(--col-btn);
+}
+
+.status__sem {
+  padding: 15px 10px;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.status__sem .card {
+  padding: 15px 10px;
+  width: 95%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.status__sem__cgpa {
+  padding-left: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Smaller Device For About Section */
+@media (max-width: 900px) and (min-width: 680px) {
+  .about-d1 {
+    padding-top: 0;
+  }
+  .about-1 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .about-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .about-img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .footer a,
+  .about-icon a {
+    margin: 8px;
+    font-size: var(--size5L);
+  }
+
+  .about-name-deg {
+    padding-bottom: 20px;
+    align-items: flex-start;
+    padding-left: 10px;
+    letter-spacing: 0.8px;
+  }
+  .about-name {
+    font-size: var(--size4xL);
+  }
+
+  .about {
+    font-size: var(--size4L);
+  }
+
+  .study-name {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .study-name p:last-child {
+    font-size: var(--size);
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 680px) {
+  .about-d1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  .about-d1 .about-icon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+
+  .about-img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .footer a,
+  .about-icon a {
+    margin: 8px;
+    font-size: var(--size5L);
+  }
+  .about-name-deg {
+    padding-bottom: 20px;
+    align-items: flex-start;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    letter-spacing: 0.8px;
+  }
+
+  .about {
+    font-size: var(--size1L);
+  }
+
+  .study-name {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .study-name p:last-child {
+    font-size: var(--size2x);
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 680px) and (min-width: 490px) {
+  .about-img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .footer a,
+  .about-icon a {
+    margin: 8px;
+    font-size: var(--size5L);
+  }
+  .about-name-deg {
+    padding-bottom: 20px;
+    letter-spacing: 0.8px;
+  }
+
+  .about {
+    font-size: var(--size1L);
+  }
+
+  .about-name-deg {
+    font-size: var(--size3xL);
+    padding-bottom: 7px;
+  }
+
+  .about-name {
+    font-size: var(--size3xL);
+    padding-bottom: 7px;
+  }
+
+  .study-name {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .study-name p:last-child {
+    font-size: var(--size2x);
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 490px) {
+  .about-img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .footer a,
+  .about-icon a {
+    margin: 5px;
+    font-size: var(--size5L);
+  }
+  .about-name-deg {
+    padding-bottom: 20px;
+    letter-spacing: 0.7px;
+  }
+
+  .about {
+    font-size: var(--size);
+  }
+
+  .about-name-deg {
+    font-size: var(--size2xL);
+    padding-bottom: 7px;
+  }
+  .about-name {
+    font-size: var(--size2xL);
+    padding-bottom: 7px;
+  }
+
+  .break {
+    display: block;
+  }
+
+  .study-name p:last-child {
+    font-size: var(--size2x);
+    font-weight: 400;
+  }
+}

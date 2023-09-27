@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap");
+
+/* 
+
+.nav : navigation Pannel
+a : link 
+.cur-page : Repesent current page
+.img-icon : image that will use as a icon
+.img : image 
+.new-sec : to make new section
+.btn : to make button
+.cardflip : make a card that flip in 3D on Y axis on hover
+.card-sqr2slide : make a card that silde on hover
+.card : simple card with border
+.line  : Use to give a line
+.gm-div :  glassmorphism effect
+
+
+
+*/
+
+:root {
+  --sizex: 0.8rem;
+  --size2x: 0.8rem;
+  --size3x: 0.7rem;
+  --size: 1rem;
+  --size1L: 1.1rem;
+  --size2L: 1.2rem;
+  --size3L: 1.3rem;
+  --size4L: 1.4rem;
+  --size5L: 1.5rem;
+  --size6L: 1.6rem;
+  --size8L: 1.8rem;
+  --size2xL: 2rem;
+  --size3xL: 3rem;
+  --size4xL: 4rem;
+
+  --col-dark: #111111;
+  --col-dark500: #333333;
+  --col-dark400: #555555;
+  --col-dark300: #777777;
+  --col-dark200: #999999;
+  --col-light: #f9fcfc;
+  --col-light300: #f1fefe;
+  --col-light500: #7ba28b;
+  --col-light400: #d9ece1;
+  --col-black: #000;
+  --col-white: #fff;
+  --col-btn: #50b8e7;
+  --col-btn-a: #50b7e7cc;
+  --col-btn-h: #6dc3eb;
+
+  --col-github: #171515;
+  --col-linkedin: #0a66c2;
+  --col-whatsapp: #128c7e;
+  --col-pdf: #a90e06;
+  --col-mail: #da0707;
+  --col-youtube: #f40b03;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: var(--size2L);
+  background-color: var(--col-light);
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* Nav Bar ----------------------------------------- */
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px 10px 20px;
+  border-bottom: 1px solid var(--col-dard200);
+  margin: 0;
+  z-index: 100;
+  background-color: var(--col-light);
+  position: fixed;
+  top: 0;
+}
+
+.nav * {
+  display: flex;
+  align-items: center;
+  gap: var(--size2L);
+  letter-spacing: 1.1px;
+}
+
+.nav a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav div p {
+  font-weight: 600;
+  color: var(--col-btn);
+}
+
+/* Link Behaviour  ----------------------------------------- */
+
+a {
+  text-decoration: none;
+}
+
+.nav a:active,
+.nav a:target,
+.nav a:visited {
+  color: var(--col-black);
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: var(--col-btn);
+}
+
+.cur-page {
+  font-weight: 600;
+  color: var(--col-btn);
+}
+
+a:hover .cur-page {
+  text-decoration: none;
+}
+
+/* Image Icon ----------------------------------------- */
+
+.img-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--col-btn);
+}
+
+/*  Image ------------------------- */
+
+.img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--col-btn);
+}
+
+/*     new Section ---------------------------------------------------- */
+
+.new-sec {
+  width: 95%;
+  margin: 5px auto;
+  padding: 0;
+  padding-top: 50px;
+
+  /* border: 2px solid red; */
+  position: relative;
+  display: grid;
+}
+
+/* Buttens ---------------------------------------------------- */
+.btn {
+  background-color: var(--col-btn);
+  color: var(--col-white);
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: var(--size5L);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--col-btn-h);
+  font-weight: 700;
+}
+
+/* Flip Card ------------------------------------------------ */
+
+.cardflip {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.cardflip .card {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.5s;
+}
+
+.cardflip:hover .card {
+  transform: rotateY(180deg);
+}
+
+.cardflip .card .front,
+.cardflip .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.3rem;
+}
+
+.cardflip .card .front {
+  background-color: #e79650;
+}
+
+.cardflip .card .back {
+  background-color: #7ba28b;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+/* Card Slide -------------------------------- */
+
+.card-sqr2slide {
+  /* Change at using time if required*/
+  width: 200px;
+  height: 200px;
+  background-color: var(--col-light300);
+  border: 1px solid var(--col-btn);
+  border-radius: 1.2rem;
+  transition: 0.4s;
+  overflow: hidden;
+}
+/* Card Slide -------------------------------- */
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: var(--col-light300);
+  border: 1px solid var(--col-btn);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-sqr2slide:hover {
+  /* Change at using time  if required*/
+  width: 400px;
+  height: 200px;
+  background-color: var(--col-light300);
+  border: 1px solid var(--col-btn);
+  border-radius: 1.2rem;
+}
+
+.line {
+  display: block;
+  margin: 20px 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--col-dark200);
+}
+
+/* Glassmorphism Effecs -------------------------------------*/
+
+.gm-div {
+  background: rgba(222, 221, 221, 0.2); /* Adjust the transparency as needed */
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Version   -------------------------------------- */
+
+@media (max-width: 900px) {
+  .bar {
+    display: flex !important;
+    position: fixed;
+    /* background-color: var(--col-light); */
+    right: 30px;
+    top: 20px;
+    z-index: 1000;
+  }
+
+  .nav .d1 {
+    z-index: 1;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+  }
+
+  .bar:hover {
+    cursor: pointer;
+  }
+
+  .nav .d4 ul {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: var(--col-btn-a);
+    transition: 0.3s;
+  }
+
+  #click:checked ~ .nav .d4 ul {
+    right: 0%;
+  }
+
+  #click {
+    display: none;
+  }
+
+  .cur-page,
+  #click:checked ~ .nav .d1 p {
+    color: var(--col-white);
+  }
+
+  #click:checked ~ .nav .d1 .img-icon {
+    border: 3px solid var(--col-white);
+  }
+
+  .nav .d4 ul a:hover {
+    color: var(--col-white);
+  }
+}
