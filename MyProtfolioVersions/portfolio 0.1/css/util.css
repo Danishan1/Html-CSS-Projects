@@ -13,7 +13,6 @@ a : link
 .card-sqr2slide : make a card that silde on hover
 .card : simple card with border
 .line  : Use to give a line
-.gm-div :  glassmorphism effect
 
 
 
@@ -130,132 +129,6 @@ a:hover .cur-page {
   text-decoration: none;
 }
 
-/* Text Style    ----------------------------------------------------- */
-
-.name_text_col {
-  font-size: 5.4rem;
-  color: var(--col-btn);
-  letter-spacing: 0.23rem;
-  font-weight: 700;
-}
-
-.name_text_gry {
-  font-size: 5.4rem;
-  color: var(--col-dark200);
-  letter-spacing: 0.23rem;
-  font-weight: 700;
-}
-
-.hd1 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.hd1_col {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--col-btn);
-}
-
-.hd1_gry {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--col-dark200);
-}
-
-.hd2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.hd2_col {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--col-btn);
-}
-
-.hd2_gry {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--col-dark200);
-}
-
-.hd3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.hd3_col {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--col-btn);
-}
-
-.hd3_gry {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--col-dark200);
-}
-
-.hd4 {
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.hd4_col {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--col-btn);
-}
-
-.hd4_gry {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--col-btn);
-  color: var(--col-dark200);
-}
-
-.simple_bold {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.simple_bold_col {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--col-btn);
-}
-
-.simple_bold_gry {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--col-dark200);
-}
-
-.simple_text {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--col-dark400);
-}
-
-.simple_text_col {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--col-btn);
-}
-
-.simple_text_gry {
-  letter-spacing: 0.04rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--col-dark200);
-}
-
 /* Image Icon ----------------------------------------- */
 
 .img-icon {
@@ -274,7 +147,7 @@ a:hover .cur-page {
   border: 3px solid var(--col-btn);
 }
 
-/* new Section ---------------------------------------------------- */
+/*     new Section ---------------------------------------------------- */
 
 .new-sec {
   width: 95%;
@@ -309,10 +182,6 @@ a:hover .cur-page {
 }
 
 /* Flip Card ------------------------------------------------ */
-
-.newline {
-  display: block;
-}
 
 .cardflip {
   width: 300px;
@@ -363,7 +232,6 @@ a:hover .cur-page {
   transition: 0.4s;
   overflow: hidden;
 }
-
 /* Card Slide -------------------------------- */
 .card {
   width: 200px;
@@ -387,22 +255,12 @@ a:hover .cur-page {
   border-radius: 1.2rem;
 }
 
-.line {
+.line{
   display: block;
   margin: 20px 0;
   height: 2px;
   width: 100%;
   background-color: var(--col-dark200);
-}
-
-/* Glassmorphism Effecs -------------------------------------*/
-
-.gm-div {
-  background: rgba(222, 221, 221, 0.2); /* Adjust the transparency as needed */
-  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile Version   -------------------------------------- */
@@ -456,7 +314,7 @@ a:hover .cur-page {
   #click {
     display: none;
   }
-
+ 
   .cur-page,
   #click:checked ~ .nav .d1 p {
     color: var(--col-white);
@@ -468,192 +326,5 @@ a:hover .cur-page {
 
   .nav .d4 ul a:hover {
     color: var(--col-white);
-  }
-}
-
-/* different Devices *************************************************************************************************/
-
-@media (max-width: 1400px) {
-  /* Text  ------------------- */
-
-  .name_text_col {
-    font-size: 5rem;
-  }
-
-  .name_text_gry {
-    font-size: 5rem;
-  }
-
-  .hd1 {
-    font-size: 1.8rem;
-  }
-
-  .hd1_col {
-    font-size: 1.8rem;
-  }
-
-  .hd1_gry {
-    font-size: 1.8rem;
-  }
-
-  .hd2 {
-    font-size: 1.3rem;
-  }
-
-  .hd2_col {
-    font-size: 1.3rem;
-  }
-
-  .hd2_gry {
-    font-size: 1.3rem;
-  }
-
-  .hd3 {
-    font-size: 1.1rem;
-  }
-
-  .hd3_col {
-    font-size: 1.1rem;
-  }
-
-  .hd3_gry {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 1300px) {
-  /* Text  ------------------- */
-
-  .name_text_col {
-    font-size: 5rem;
-  }
-
-  .name_text_gry {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 1250px) {
-  /* Text  ------------------- */
-
-  .name_text_col {
-    font-size: 4.5rem;
-  }
-
-  .name_text_gry {
-    font-size: 4.5rem;
-  }
-}
-
-@media (max-width: 1150px) {
-  /* Text  ------------------- */
-
-  .name_text_col {
-    font-size: 4rem;
-  }
-
-  .name_text_gry {
-    font-size: 4rem;
-  }
-
-  .hd1 {
-    font-size: 1.7rem;
-  }
-
-  .hd1_col {
-    font-size: 1.7rem;
-  }
-
-  .hd1_gry {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 1050px) {
-  /* Text  ------------------- */
-}
-
-@media (max-width: 680px) {
-}
-
-@media (max-width: 490px) {
-  .name_text_col {
-    font-size: 2.5rem;
-  }
-
-  .name_text_gry {
-    font-size: 2.5rem;
-  }
-
-  .hd1 {
-    font-size: 1.5rem;
-  }
-
-  .hd1_col {
-    font-size: 1.5rem;
-  }
-
-  .hd1_gry {
-    font-size: 1.5rem;
-  }
-
-  .hd2 {
-    font-size: 1.2rem;
-  }
-
-  .hd2_col {
-    font-size: 1.2rem;
-  }
-
-  .hd2_gry {
-    font-size: 1.2rem;
-  }
-
-  .hd3 {
-    font-size: 1.1rem;
-  }
-
-  .hd3_col {
-    font-size: 1.1rem;
-  }
-
-  .hd3_gry {
-    font-size: 1.1rem;
-  }
-
-  .hd4 {
-    font-size: 0.75rem;
-  }
-
-  .hd4_col {
-    font-size: 0.75rem;
-  }
-
-  .hd4_gry {
-    font-size: 0.75rem;
-  }
-
-  .simple_bold {
-    font-size: 0.9rem;
-  }
-
-  .simple_bold_col {
-    font-size: 0.9rem;
-  }
-
-  .simple_bold_gry {
-    font-size: 0.9rem;
-  }
-
-  .simple_text {
-    font-size: 0.9rem;
-  }
-
-  .simple_text_col {
-    font-size: 0.9rem;
-  }
-
-  .simple_text_gry {
-    font-size: 0.9rem;
   }
 }
