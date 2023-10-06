@@ -109,9 +109,6 @@
 
 .half-Stcky-scroll .left .about-d1 {
   flex: 50%;
-}
-
-.half-Stcky-scroll .left .about-d1 {
   position: relative;
   top: 110px;
   left: 20%;
@@ -155,7 +152,100 @@
   justify-content: center;
 }
 
-/* Education ********************************************************************************** */
+/* Projects ********************************************************************************** */
+
+.projects {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding: 30px;
+}
+
+.projects .line {
+  margin: 20px 0px;
+}
+
+/* Start Project Card --------------------------------------------- */
+
+.projects .sec2col {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(400px, auto));
+  gap: 10px;
+  padding: 10px;
+}
+
+.projects .box {
+  border: 1px solid var(--col-dark200);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.projects .box .hd3_col {
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.projects .descr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  /* transform: scale(0.9) translateX(15%); */
+}
+
+.projects .descr img {
+  width: 300px;
+  border-radius: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.projects .descr p {
+  text-align: justify;
+  opacity: 0;
+  display: none;
+}
+
+.projects .project-btn {
+  display: none;
+  transition: 1s;
+  gap: 20px;
+  padding: 0px;
+}
+
+.projects .project-btn .btn {
+  height: 35px;
+  font-size: var(--size1L);
+}
+
+.projects .descr div {
+  padding-left: 10px;
+  width: auto;
+  max-height: 300px;
+}
+
+.projects .box:hover {
+  border: 1px solid var(--col-btn);
+}
+
+.projects .box:hover .descr img {
+  display: none;
+}
+
+.projects .box:hover .descr p {
+  opacity: 1;
+  display: block;
+
+}
+
+.projects .box:hover .project-btn {
+  display: flex;
+}
+
+/* End Project Card --------------------------------------------- */
 
 /* different Devices *************************************************************************************************/
 
@@ -185,6 +275,34 @@
   .about-d1 .about-icon {
     flex-direction: column;
     margin-left: 50px;
+  }
+
+  .sec2col {
+    padding: 30px;
+  }
+
+  .half-Stcky-scroll {
+    flex-direction: column;
+  }
+
+  .half-Stcky-scroll .left,
+  .half-Stcky-scroll .right {
+    flex: 100%;
+  }
+
+  .half-Stcky-scroll .right {
+    order: 1;
+    padding: 20px;
+  }
+  .half-Stcky-scroll .left {
+    padding: 50px 20px;
+    order: 2;
+  }
+
+  .half-Stcky-scroll .left .about-d1 {
+    flex: 50%;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -237,5 +355,10 @@
   .about-img {
     height: 200px;
     width: 200px;
+  }
+
+  .sec2col {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto, 200px));
   }
 }

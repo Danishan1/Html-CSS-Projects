@@ -62,6 +62,7 @@ a : link
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -197,6 +198,12 @@ a:hover .cur-page {
   color: var(--col-btn);
 }
 
+.hd3_simple_col {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--col-btn);
+}
+
 .hd3_gry {
   font-size: 1.1rem;
   font-weight: 700;
@@ -301,7 +308,8 @@ a:hover .cur-page {
 .btn {
   background-color: var(--col-btn);
   color: var(--col-white);
-  width: 150px;
+  min-width: 150px;
+  padding: 10px;
   height: 50px;
   border-radius: 10px;
   display: flex;
@@ -400,7 +408,7 @@ a:hover .cur-page {
 .line {
   display: block;
   margin: 0px;
-  height: 3px;
+  height: 0.2rem;
   width: 100%;
   background-color: var(--col-dark200);
 }
