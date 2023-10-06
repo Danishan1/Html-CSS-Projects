@@ -149,6 +149,8 @@ a:hover .cur-page {
 .hd1 {
   font-size: 2rem;
   font-weight: 700;
+  color: var(--col-dark400);
+
 }
 
 .hd1_col {
@@ -166,6 +168,8 @@ a:hover .cur-page {
 .hd2 {
   font-size: 1.5rem;
   font-weight: 700;
+  color: var(--col-dark400);
+
 }
 
 .hd2_col {
@@ -183,6 +187,8 @@ a:hover .cur-page {
 .hd3 {
   font-size: 1.1rem;
   font-weight: 700;
+  color: var(--col-dark400);
+
 }
 
 .hd3_col {
@@ -200,6 +206,8 @@ a:hover .cur-page {
 .hd4 {
   font-size: 0.85rem;
   font-weight: 500;
+  color: var(--col-dark400);
+
 }
 
 .hd4_col {
@@ -219,6 +227,8 @@ a:hover .cur-page {
   letter-spacing: 0.04rem;
   font-size: 1rem;
   font-weight: 700;
+  color: var(--col-dark400);
+
 }
 
 .simple_bold_col {
@@ -389,8 +399,8 @@ a:hover .cur-page {
 
 .line {
   display: block;
-  margin: 20px 0;
-  height: 2px;
+  margin: 0px;
+  height: 3px;
   width: 100%;
   background-color: var(--col-dark200);
 }

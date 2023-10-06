@@ -95,6 +95,66 @@
   background-color: var(--col-mail);
 }
 
+/* About-sec-2  ********************************************************************************** */
+
+.half-Stcky-scroll {
+  display: flex;
+  min-height: 100vh;
+}
+
+.half-Stcky-scroll .left,
+.half-Stcky-scroll .right {
+  flex: 50%;
+}
+
+.half-Stcky-scroll .left .about-d1 {
+  flex: 50%;
+}
+
+.half-Stcky-scroll .left .about-d1 {
+  position: relative;
+  top: 110px;
+  left: 20%;
+}
+
+#changing-image {
+  /* width: 100%; */
+  /* height: auto; */
+  transition: 1s ease-in-out; /* Add a transition effect */
+}
+
+.half-Stcky-scroll .left .left-sticky.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.half-Stcky-scroll .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 2px solid red; */
+}
+
+.sec2col {
+  flex: 50%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(auto, 120px));
+  gap: 30px;
+  padding: 10px;
+  padding-right: 50px;
+}
+
+.info-card {
+  border: 1px solid var(--col-dark200);
+  border-radius: 0.5rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Education ********************************************************************************** */
 
 /* different Devices *************************************************************************************************/
