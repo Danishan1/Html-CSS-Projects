@@ -32,6 +32,26 @@
   gap: 20px;
 }
 
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--l-bg); /* Set the background color of the track */
+  width: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--l-gray-3); /* Set the color of the thumb (the draggable part) */
+}
+
+
+
+
+
+
 /* Tablet */
 @media (max-width: 920px) {
   .contentLayout {

@@ -13,7 +13,9 @@
 }
 
 .chatArea{
-    height: 100%;
+    height: calc(100vh - 2*var(--hei-30) - var(--hei-50));
+    overflow-y: scroll;
+    margin-right: 2px;
 }
 
 .msgBox{

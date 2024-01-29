@@ -1,20 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./MsgBox.module.css";
+import style from "./MsgBox.module.css";
 import defaultDp from "../../img/defaultDp.svg";
 
 
-const ChatBox = ({ sender, message, idDateTime, isSent }) => {
-  const chatBoxClasses = isSent
-    ? `${styles.chatBox} ${styles.sent}`
-    : `${styles.chatBox} ${styles.received}`;
+const Chat = ({ currentChat, previousChat }) => {
+  const isSameSender = previousChat && previousChat.sender.name === currentChat.sender.name;
+
+  const chatBoxSendSender = isSameSender ? style.continuation : style.newMessage;
+  const chatBoxIsSent = currentChat.isSent
+    ? `${style.chatBox} ${style.sent}`
+    : `${style.chatBox} ${style.received}`;
+
+  const chatBoxClasses = `${chatBoxIsSent} ${chatBoxSendSender}`;
 
   return (
     <div className={chatBoxClasses}>
-      <div className={styles.content}>
-        <SenderInfo sender={sender} />
-        <MessageText message={message} />
-        <IdDateTime idDateTime={idDateTime} />
+      <div className={style.content}>
+        {!isSameSender && <SenderInfo sender={currentChat.sender} />}
+        <MessageText message={currentChat.message} />
+        <IdDateTime idDateTime={currentChat.idDateTime} />
       </div>
       <ShareIcon />
     </div>
@@ -22,29 +27,29 @@ const ChatBox = ({ sender, message, idDateTime, isSent }) => {
 };
 
 const SenderInfo = ({ sender }) => (
-  <div className={styles.senderInfo}>
-    <div className={styles.dp}>
+  <div className={style.senderInfo}>
+    <div className={style.dp}>
       <a href="www.google.com">
         <img src={defaultDp} height={40} alt="Profile" />
       </a>
     </div>
-    <div className={styles.name}>{sender.name}</div>
+    <div className={style.name}>{sender.name}</div>
   </div>
 );
 
 const MessageText = ({ message }) => (
-  <div className={styles.msgText}>{message}</div>
+  <div className={style.msgText}>{message}</div>
 );
 
 const IdDateTime = ({ idDateTime }) => (
-  <div className={styles.idDateTime}>
-    <div className={styles.id}>{idDateTime.id}</div>
-    <div className={styles.time}>{idDateTime.time}</div>
+  <div className={style.idDateTime}>
+    <div className={style.id}>{idDateTime.id}</div>
+    <div className={style.time}>{idDateTime.time}</div>
   </div>
 );
 
 const ShareIcon = () => (
-  <div className={styles.share}>
+  <div className={`${style.share}`}>
     <a href="www.google.com">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,20 +59,23 @@ const ShareIcon = () => (
       >
         <path
           fill="black"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M18 2a3 3 0 0 0-2.947 3.562l-7.114 4.15a3 3 0 1 0 0 4.578l7.114 4.148a3 3 0 1 0 1.008-1.727l-7.114-4.15a3.011 3.011 0 0 0 0-1.123l7.114-4.15A3 3 0 1 0 18 2"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     </a>
   </div>
 );
 
-ChatBox.propTypes = {
-  sender: PropTypes.object.isRequired,
-  message: PropTypes.string.isRequired,
-  idDateTime: PropTypes.object.isRequired,
-  isSent: PropTypes.bool.isRequired,
+Chat.propTypes = {
+  currentChat: PropTypes.shape({
+    sender: PropTypes.object.isRequired,
+    message: PropTypes.string.isRequired,
+    idDateTime: PropTypes.object.isRequired,
+    isSent: PropTypes.bool.isRequired,
+  }).isRequired,
+  previousChat: PropTypes.object,
 };
 
 SenderInfo.propTypes = {
@@ -82,4 +90,4 @@ IdDateTime.propTypes = {
   idDateTime: PropTypes.object.isRequired,
 };
 
-export default ChatBox;
+export default Chat;

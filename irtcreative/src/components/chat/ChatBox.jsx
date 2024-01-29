@@ -1,38 +1,99 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./ChatBox.module.css";
 import Chat from "./MsgBox";
-
+import CenteredDateDisplay from "./CenteredDateDisplay";
 
 export default function ChatBox() {
-  var name, dp, msg, date, time, id, isSent;
-  name = "Danishan";
-  dp = "../../img/defaultDp.jpg";
-  msg = "Unable to load, kindly report this...";
-  isSent = false;
-  date = "Jan 20 2024";
-  time = "10:30 AM";
-  id = "id2012"; 
-  id = "~" + id; 
+  const [chats, setChats] = useState([
+    {
+      sender: { name: "Danishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: false,
+      idDateTime: { id: "~id2011", date: "Jan 20 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "Danishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: false,
+      idDateTime: { id: "~id2012", date: "Jan 22 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "SalmanDanishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: true,
+      idDateTime: { id: "~id2012", date: "Jan 22 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "SDanishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: true,
+      idDateTime: { id: "~id2012", date: "Jan 22 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "SaDanishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: true,
+      idDateTime: { id: "~id2012", date: "Jan 22 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "SalmDanishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: true,
+      idDateTime: { id: "~id2012", date: "Jan 22 2024", time: "10:30 AM" }
+    },
+    {
+      sender: { name: "Danishan", dp: "../../img/defaultDp.jpg" },
+      message: "Unable to load, kindly report this...",
+      isSent: false,
+      idDateTime: { id: "~id2012", date: "Jan 28 2024", time: "10:30 AM" }
+    },
+    // Add more chat data as needed
+  ]);
 
-  const sender = { name, dp },
-    idDateTime = { id , date, time };
+   const [latestDate, setLatestDate] = useState(null);
+
+  useEffect(() => {
+    if (chats.length > 0) {
+      const latestChatDate = chats[chats.length - 1].idDateTime.date;
+      if (latestDate !== latestChatDate) {
+        setLatestDate(latestChatDate);
+      }
+    }
+  }, [chats, latestDate]);
 
   return (
     <div className={style.chatBox}>
       <div className={style.header}>Man</div>
       <div className={style.chatArea}>
-        <Chat
-          sender={sender}
-          message={msg}
-          idDateTime={idDateTime}
-          isSent={isSent}
-        />
-        {/* <Chat
-          sender={sender}
-          message={msg}
-          idDateTime={idDateTime}
-          isSent={isSent}
-        /> */}
+        {/* {chats.map((chat, index) => (
+
+          <Chat
+            key={index}
+            currentChat={chat}
+            previousChat={index > 0 ? chats[index - 1] : null}
+          />
+        ))} */}
+
+        {chats.map((chat, index) => (
+          <React.Fragment key={index}>
+            {index === 0 || chat.idDateTime.date !== chats[index - 1].idDateTime.date ? (
+              <React.Fragment>
+                <CenteredDateDisplay newDate={chat.idDateTime.date} />
+                <Chat
+                  key={index}
+                  currentChat={chat}
+                  previousChat={index > 0 ? chats[index - 1] : null}
+                />
+              </React.Fragment>
+            ) : (
+              <Chat
+                key={index}
+                currentChat={chat}
+                previousChat={index > 0 ? chats[index - 1] : null}
+              />
+            )}
+          </React.Fragment>
+        ))}
       </div>
       <div className={style.msgBox}>Ran</div>
     </div>
