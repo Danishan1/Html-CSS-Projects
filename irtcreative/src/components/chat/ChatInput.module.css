@@ -18,12 +18,14 @@
 
 .inputField{
   width: calc(100% - 70px);
-  height: 35px;
+  height: 40px;
   background-color: inherit;
   border: 1px solid var(--l-gray-3);
+  color: var(--l-text);
   border-radius: 5px;
   padding: 10px 5px;
   resize: none;
+  overflow-y: auto;
 }
 
 .inputField:focus{

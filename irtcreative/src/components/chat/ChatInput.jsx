@@ -6,7 +6,7 @@ const ChatInput = ({ onSendMessage }) => {
 
   const handleInputChange = (e) => {
     setMessage(e.target.value);
-
+    // adjustTextareaHeight();
   };
 
   const handleSendMessage = () => {
@@ -16,14 +16,24 @@ const ChatInput = ({ onSendMessage }) => {
     }
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault(); // Prevents a new line in the input
-      handleSendMessage();
+  const handleKeyDown = (event) => {
+    // Check if Shift + Enter is pressed
+    if (event.key === 'Enter' && event.shiftKey) {
+      setMessage((prevMessage) => prevMessage + '\n');
+      event.preventDefault(); // Prevent default Enter behavior (newline)
+      // adjustTextareaHeight();
     }
   };
 
+  // const adjustTextareaHeight = () => {
+  //   const textarea = document.getElementById('adjustableInput');
+  //   if (textarea) {
+  //     textarea.style.height = 'auto'; // Reset height to auto to recalculate the scrollHeight
 
+  //     textarea.style.height = `${textarea.scrollHeight}px`;
+  //     textarea.style.maxHeight = `100px`;
+  //   }
+  // };
 
   return (
     <div className={style.chatInputContainer}>
@@ -40,8 +50,9 @@ const ChatInput = ({ onSendMessage }) => {
         </a>
       </div>
 
-      <input
+      <textarea
         placeholder="Type your message..."
+        id="adjustableInput"
         value={message}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
