@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "./ChatBox.module.css";
 import Chat from "./MsgBox";
 import CenteredDateDisplay from "./CenteredDateDisplay";
+import ChatInput from "./ChatInput";
 
 export default function ChatBox() {
   const [chats, setChats] = useState([
@@ -95,7 +96,9 @@ export default function ChatBox() {
           </React.Fragment>
         ))}
       </div>
-      <div className={style.msgBox}>Ran</div>
+      <div className={style.msgBox}>
+        <ChatInput/>
+      </div>
     </div>
   );
 }

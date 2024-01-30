@@ -13,12 +13,12 @@
 }
 
 .chatArea{
-    height: calc(100vh - 2*var(--hei-30) - var(--hei-50));
+    height: calc(100vh - 2*var(--hei-30) - 2*var(--hei-30));
     overflow-y: scroll;
     margin-right: 2px;
 }
 
 .msgBox{
-    height: var(--hei-50);
+    height: 2*var(--hei-30);
 
 }
