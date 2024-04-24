@@ -89,13 +89,13 @@ export default function ChatBox() {
             chat.idDateTime.date !== chats[index - 1].idDateTime.date ? (
               <React.Fragment>
                 <CenteredDateDisplay newDate={chat.idDateTime.date} />
-                {chat.type == "text" ? (
+                {chat.type === "text" ? (
                   <Chat
                     key={index}
                     currentChat={chat}
                     previousChat={index > 0 ? chats[index - 1] : null}
                   />
-                ) : chat.type == "contact" ? (
+                ) : chat.type === "contact" ? (
                   <ContactChat />
                 ) : null}
               </React.Fragment>
