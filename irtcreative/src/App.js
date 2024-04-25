@@ -1,12 +1,16 @@
 import "./App.css";
-import { Button, ButtonLL } from "./component/util/jsx/Button";
+import CardImg from "./component/util/jsx/Cards/CardSimpleInfo";
+import img3 from "./images/img3.jpg";
 
 function App() {
+  const title = "Zero-cost Possibilities";
+  const name = "Danishan";
+  const desc =
+    "Hubble lets users borrow USDH for a one-time 0.5% fee. No variable rates. No interest charged, ever.";
+
   return (
     <>
-      <Button text={"Button"} link="https://www.google.com/" />
-      <p>A</p>
-      <ButtonLL text={"B"} link="https://www.google.com/" />
+      <CardImg imgPath={img3} name={name} title={title} desc={desc} borderCol="red" />
     </>
   );
 }

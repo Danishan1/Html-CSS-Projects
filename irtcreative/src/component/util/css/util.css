@@ -58,6 +58,17 @@
   --hei-50: 50px; /*Code: ABAC037*/
 }
 
+::selection {
+  color: #ffffff; /* Selected text color */
+  background-color: var(--colorBlueHover); /* Highlight color */
+}
+
+/* For Firefox */
+::-moz-selection {
+  color: #ffffff;
+  background-color: var(--colorBlueHover);
+}
+
 /* Code: ABAB019 */
 .textSimple {
   font-size: var(--size);
@@ -90,31 +101,31 @@
 /* Code: ABAB01C */
 .textHead2 {
   font-size: calc(var(--size) * 2);
-  font-weight: var(--boldL2);
+  font-weight: var(--boldL3);
 }
 
 /* Code: ABAB01D */
 .textHead3 {
   font-size: calc(var(--size) * 1.8);
-  font-weight: var(--boldL2);
+  font-weight: var(--boldL3);
 }
 
 /* Code: ABAB01E */
 .textHead4 {
   font-size: calc(var(--size) * 1.4);
-  font-weight: var(--boldL2);
+  font-weight: var(--boldL3);
 }
 
 /* Code: ABAB01F */
 .textHead5 {
   font-size: calc(var(--size) * 1.3);
-  font-weight: var(--boldL2);
+  font-weight: var(--boldL3);
 }
 
 /* Code: ABAB020 */
 .textHead6 {
   font-size: calc(var(--size) * 1.1);
-  font-weight: var(--boldL2);
+  font-weight: var(--boldL3);
 }
 
 /* Code: ABAB021 */
