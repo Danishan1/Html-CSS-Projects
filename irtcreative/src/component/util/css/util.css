@@ -254,6 +254,56 @@
 }
 
 /* **************************************************************** */
+/* Code: ABAC038 */
+.bgColorBlue {
+  background-color: var(--colorBlue);
+}
+/* Code: ABAC039 */
+.bgColorYellow {
+  background-color: var(--colorYellow);
+}
+/* Code: ABAC03A */
+.bgColorRed {
+  background-color: var(--colorRed);
+}
+/* Code: ABAC03B */
+.bgColorCyan {
+  background-color: var(--colorCyan);
+}
+/* Code: ABAC03C */
+.bgColorGreen {
+  background-color: var(--colorGreen);
+}
+/* Code: ABAC03D */
+.bgColorSkyBlue {
+  background-color: var(--colorSkyBlue);
+}
+/* Code: ABAC03E */
+.bgColorGray1 {
+  background-color: var(--colorGray1);
+}
+/* Code: ABAC03F */
+.bgColorGray2 {
+  background-color: var(--colorGray2);
+}
+/* Code: ABAC040 */
+.bgColorGray3 {
+  background-color: var(--colorGray3);
+}
+/* Code: ABAC041 */
+.bgColorGray4 {
+  background-color: var(--colorGray4);
+}
+/* Code: ABAC042 */
+.bgColorGray5 {
+  background-color: var(--colorGray5);
+}
+/* Code: ABAC043 */
+.bgColorGray6 {
+  background-color: var(--colorGray6);
+}
+
+/* *************************************************************** */
 
 .boldL1 {
   font-weight: var(--boldL1);

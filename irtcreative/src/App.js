@@ -1,6 +1,6 @@
 import "./App.css";
-import CardImg from "./component/util/jsx/Cards/CardSimpleInfo";
-import img3 from "./images/img3.jpg";
+import CardImg from "./component/util/jsx/Cards/CardTextSliding";
+import img3 from "./images/img1.jpg";
 
 function App() {
   const title = "Zero-cost Possibilities";

@@ -10,9 +10,7 @@
 }
 
 .btn {
-  background-color: var(--colorBlue);
   height: var(--heiBtn);
-
   width: var(--widBtn);
   border-radius: var(--boderRad);
   padding: 0;
@@ -32,8 +30,23 @@
   width: var(--widBtnS);
 }
 
-.btn:hover {
+.btnHoverBlue:hover {
   background-color: var(--colorBlueHover);
+}
+.btnHoverRed:hover {
+  background-color: var(--colorRedHover);
+}
+.btnHoverYellow:hover {
+  background-color: var(--colorYellowHover);
+}
+.btnHoverGreen:hover {
+  background-color: var(--colorGreenHover);
+}
+.btnHoverCyan:hover {
+  background-color: var(--colorCyanHover);
+}
+.btnHoverGray:hover {
+  background-color: var(--colorGrayHover);
 }
 
 .btn:hover .link {
