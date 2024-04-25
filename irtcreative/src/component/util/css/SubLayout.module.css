@@ -1,0 +1,20 @@
+
+.main{
+    width: 100%;
+}
+
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--white); /* Set the background color of the track */
+    width: 5px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--colorGray4); /* Set the color of the thumb (the draggable part) */
+}

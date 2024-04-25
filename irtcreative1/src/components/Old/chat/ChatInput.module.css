@@ -1,0 +1,47 @@
+.chatInputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+
+}
+
+.add{
+    
+    width: 30px; 
+}
+.add svg {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.inputField{
+  width: calc(100% - 70px);
+  height: 40px;
+  background-color: inherit;
+  border: 1px solid var(--l-gray-3);
+  color: var(--l-text);
+  border-radius: 5px;
+  padding: 10px 5px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.inputField:focus{
+  outline: none;
+  border: 1px solid var(--l-sky-blue);
+}
+
+.sendButton{
+  width: 30px; 
+  background-color: inherit;
+  border: none;
+  
+}
+.sendButton svg{
+  width: 2.5em; 
+  height: 2.5em;
+
+}
+

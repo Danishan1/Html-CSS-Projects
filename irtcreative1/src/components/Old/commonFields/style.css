@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wix Madefor Display", sans-serif;
+  color: var(--l-text);
+  /* background-color: var(--l-bg); */
+}
+
+:root {
+  --l-redish: #ff5969;
+  --l-bluesh: #52c9bd;
+  --l-yellowish: #fec630;
+  --l-greenish: #92d050;
+  --l-light-sky-blue: #05e1e7;
+
+  --l-sky-blue: #50b8e7;
+  --l-sky-blue-a: #50b7e7cc;
+  --l-sky-blue-h: #6dc3eb;
+  --white : #fff;
+  --black : #000;
+
+
+  --l-bg: #f9f9f9;
+  --l-text: #404040;
+  --l-gray-1: #f2f2f2;
+  --l-gray-2: #d9d9d9;
+  --l-gray-3: #9c9b9b;
+  --l-gray-4: #7f7f7f;
+  --l-gray-5: #5d7373;
+
+  --hei-10: 10px;
+  --hei-20: 20px;
+  --hei-30: 30px;
+  --hei-40: 40px;
+  --hei-50: 50px;
+
+}

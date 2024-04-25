@@ -1,10 +1,13 @@
-import './App.css';
+import "./App.css";
+import { Button, ButtonLL } from "./component/util/jsx/Button";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Button text={"Button"} link="https://www.google.com/" />
+      <p>A</p>
+      <ButtonLL text={"B"} link="https://www.google.com/" />
+    </>
   );
 }
 
