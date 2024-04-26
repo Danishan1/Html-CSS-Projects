@@ -26,7 +26,7 @@ const CardTextSliding = ({
   productName,
   desc,
   btnLink = "#",
-  producID = null,
+  productID = null,
   color = "blue",
   orientation = "S",
 }) => {
@@ -73,11 +73,11 @@ const CardTextSliding = ({
         </article>
 
         {/* For product ID */}
-        {producID == null ? (
+        {productID == null ? (
           <></>
         ) : (
-          <div className={`${style.productID} textHeadSmall1`}>
-            <p className="textHeadSmall1">~ Product ID: {producID}</p>
+          <div className={`${style.productID} textHeadSmall2`}>
+            <p className="textHeadSmall2">~ Product ID: {productID}</p>
           </div>
         )}
       </div>
