@@ -1,6 +1,6 @@
 import "./App.css";
 import CardImg from "./component/util/jsx/Cards/CardTextSliding";
-import img3 from "./images/img1.jpg";
+import img3 from "./images/img2.jpg";
 
 function App() {
   const title = "Zero-cost Possibilities";
@@ -10,7 +10,15 @@ function App() {
 
   return (
     <>
-      <CardImg imgPath={img3} name={name} title={title} desc={desc} borderCol="red" />
+      <CardImg
+        imgPath={img3}
+        productName={name}
+        producID="A324B48"
+        desc={desc}
+        orientation="H"
+        color="cyan"
+        
+      />
     </>
   );
 }

@@ -1,39 +1,86 @@
+// Code: ABAB009
+
 import React from "react";
 import style from "../../css/Cards/CardTextSliding.module.css";
 import { ButtonL } from "../Button";
 
+// For Updating Line background based on color value passed by the user
+const titleLineCss = (color) => {
+  return color === "blue"
+    ? "bgLineBlue"
+    : color === "red"
+    ? "bgLineRed"
+    : color === "yellow"
+    ? "bgLineYellow"
+    : color === "cyan"
+    ? "bgLineCyan"
+    : color === "green"
+    ? "bgLineGreen"
+    : color === "gray"
+    ? "bgLineGray5"
+    : "";
+};
+
 const CardTextSliding = ({
   imgPath,
-  ProductName,
-  catagory,
+  productName,
   desc,
   btnLink = "#",
-  producID,
+  producID = null,
+  color = "blue",
+  orientation = "S",
 }) => {
   const cardContentCss = `${style.cardContent} | ${style.flow}`;
   const cardContentContainerCss = `${style.cardContentContainer} | ${style.flow}`;
+  const bgColorCss = titleLineCss(color);
+  const orientCss =
+    orientation === "V"
+      ? "vertical"
+      : orientation === "H"
+      ? "horizontal"
+      : "square";
   return (
     <>
-      <article className={style.card}>
-        <img
-          className={style.cardBackground}
-          src={imgPath}
-          alt=""
-          width="1920"
-          height="2193"
-        />
-        <div className={cardContentCss}>
-          <div className={cardContentContainerCss}>
-            <h2 className={style.cardTitle}>Colombia</h2>
-            <p className={style.cardDescription}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum in
-              labore laudantium deserunt fugiat numquam.
-            </p>
+      <div className={`${style.mainBox} ${style[orientCss]}`}>
+        {/* Main Card Continer */}
+        <article className={style.card}>
+          {/* Background Image */}
+          <img
+            className={style.cardBackground}
+            src={imgPath}
+            alt=""
+            width="1920"
+            height="2193"
+          />
+
+          {/* Content Section */}
+          <div className={cardContentCss}>
+            <div className={cardContentContainerCss}>
+              <h2 className={`${style.cardTitle} ${style[bgColorCss]}`}>
+                {productName}
+              </h2>
+              <p className={style.cardDescription}>{desc}</p>
+            </div>
+            <div className={style.cardButton}>
+              <ButtonL
+                text={"Get Expert View"}
+                link={btnLink}
+                target="_self"
+                color={color}
+              />
+            </div>
           </div>
-          <ButtonL className={style.cardButton} text={"Get Expert View"} link={btnLink} target="_self" />
-          <button className={style.cardButton}>Read more</button>
-        </div>
-      </article>
+        </article>
+
+        {/* For product ID */}
+        {producID == null ? (
+          <></>
+        ) : (
+          <div className={`${style.productID} textHeadSmall1`}>
+            <p className="textHeadSmall1">~ Product ID: {producID}</p>
+          </div>
+        )}
+      </div>
     </>
   );
 };

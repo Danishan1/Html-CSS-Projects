@@ -1,27 +1,30 @@
-:root {
-  /* Colors */
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
-  /* Fonts */
+/* Code: ABAB009 */
+
+.mainBox.horizontal {
+  height: 300px;
+  max-width: 500px;
 }
 
+.mainBox.vertical {
+  max-width: 300px;
+  height: 500px;
+}
 
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+.mainBox.square {
+  height: 300px;
+  width: 300px;
 }
 
 h2 {
   font-size: 2.25rem;
-  color: var(--white);
+  color: var(--colorWhite);
   line-height: 1.1;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--white);
+  color: var(--colorWhite);
 }
 
 .flow > * + * {
@@ -29,13 +32,11 @@ p {
 }
 
 /* CARD COMPONENT */
-
 .card {
   display: grid;
   place-items: center;
-  width: 300px;
-  max-width: 300px;
-  height: 28.125rem;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   border-radius: 0.625rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
@@ -58,12 +59,37 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  height: 55%;
+}
+
+.horizontal .cardContent {
+  height: 80%;
+  padding: 8% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 20%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.vertical .cardContent {
+  height: 60%;
   padding: 12% 1.25rem 1.875rem;
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.3) 10%,
+    hsla(0, 0%, 0%, 0.3) 20%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.square .cardContent {
+  height: 80%;
+  padding: 8% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 25%,
     hsl(0, 0%, 0%) 100%
   );
 }
@@ -85,27 +111,46 @@ p {
   width: calc(100% + 1.25rem);
   bottom: calc((1.25rem - 0.5rem) * -1);
   left: -1.25rem;
+}
+
+.bgLineBlue::after {
+  background-color: var(--colorBlue);
+}
+.bgLineRed::after {
   background-color: var(--colorRed);
+}
+.bgLineYellow::after {
+  background-color: var(--colorYellow);
+}
+.bgLineGreen::after {
+  background-color: var(--colorGreen);
+}
+.bgLineCyan::after {
+  background-color: var(--colorCyan);
+}
+.bgLineGray::after {
+  background-color: var(--colorGray);
+}
+
+.cardDescription {
+  text-align: justify;
 }
 
 .cardButton {
-  padding: 0.75em 1.6em;
-  border: 3px solid red;
-  margin: 20px;
-  width: fit-content;
-  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
-  font-variant: small-caps;
-  font-weight: bold;
-  border-radius: 0.45em;
-  border: none;
-  background-color: var(--colorRed);
-  font-size: 1.125rem;
-  color: var(--black);
+  display: flex;
+  justify-content: center;
 }
 
-.cardButton:focus {
-  outline: 2px solid black;
-  outline-offset: -5px;
+.productID {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  gap: 10px;
+}
+.productID p {
+  display: flex;
+  align-items: flex-end;
+  color: var(--colorGray6);
 }
 
 @media (any-hover: hover) and (any-pointer: fine) {
@@ -133,12 +178,6 @@ p {
     transition: transform 500ms ease-out, opacity 500ms ease-out;
   }
 
-  .card:hover,
-  .card:focus-within {
-    transform: scale(1.05);
-    transition: transform 500ms ease-in;
-  }
-
   .card:hover .cardContent,
   .card:focus-within .cardContent {
     transform: translateY(0);
@@ -149,15 +188,15 @@ p {
     transition-duration: 0ms;
   }
 
-  .card:hover .card__background,
-  .card:focus-within .card__background {
+  .card:hover .cardBackground,
+  .card:focus-within .cardBackground {
     transform: scale(1.3);
   }
 
   .card:hover .cardContentContainer > :not(.cardTitle),
-  .card:hover .card__button,
+  .card:hover .cardButton,
   .card:focus-within .cardContentContainer > :not(.cardTitle),
-  .card:focus-within .card__button {
+  .card:focus-within .cardButton {
     opacity: 1;
     transition: opacity 500ms ease-in;
     transition-delay: 1000ms;

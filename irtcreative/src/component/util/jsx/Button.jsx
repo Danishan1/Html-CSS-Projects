@@ -2,7 +2,7 @@ import React from "react";
 import style from "../css/Button.module.css";
 
 // To achieve the Multi Colored Buttons
-const btnColorCss = (btnColor) => {
+export const btnColorCss = (btnColor) => {
   return btnColor === "blue"
     ? "bgColorBlue"
     : btnColor === "red"
