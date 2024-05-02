@@ -28,3 +28,23 @@ const WindowDimensions = ({ onDimensionsChange }) => {
 };
 
 export default WindowDimensions;
+
+/***
+import React, { useState } from 'react';
+import WindowDimensions from './WindowDimensions';
+
+const ParentComponent = () => {
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  const handleDimensionsChange = (newDimensions) => {
+    setDimensions(newDimensions);
+  };
+
+  return (
+    <WindowDimensions onDimensionsChange={handleDimensionsChange} />
+  )
+
+*/

@@ -7,6 +7,11 @@
   font-family: "Wix Madefor Display", sans-serif;
   color: var(--colorSimple);
   font-size: var(--size);
+  background-color: var(--colorWhite);
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
