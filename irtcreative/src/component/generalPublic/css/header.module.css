@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.tab:hover a {
+.tab a:hover {
   text-decoration: underline;
   cursor: pointer;
   color: var(--colorRed);
@@ -36,14 +36,17 @@
   display: none;
 }
 
-@media (max-width: 1055px) {
+@media (max-width: 1000px) {
   .tabs {
     flex-direction: column;
     gap: 10px;
+    margin-right: 20px;
   }
 
   .tab {
-    width: 110px;
+    width: 80px;
+    display: flex;
+    align-items: flex-start;
   }
 
   .headerContainer {
@@ -59,9 +62,7 @@
     align-items: flex-end;
   }
 
-  .tab {
-    width: auto;
-  }
+
 }
 
 @media (max-width: 690px) {
@@ -102,8 +103,8 @@
   .navShowHide {
     display: flex;
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 30px;
   }
 
   .show {
@@ -122,7 +123,6 @@
   .hide {
     font-size: calc(var(--size) * 1.5);
     font-weight: var(--boldL3);
-    color: var(--colorRed) !important;
     background-color: var(--colorWhite);
     border-radius: 7px;
     padding: 3px;

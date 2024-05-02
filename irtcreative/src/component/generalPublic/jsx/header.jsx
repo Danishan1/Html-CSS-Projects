@@ -57,7 +57,7 @@ const Header = ({}) => {
                 <a href=""> Home</a>
               </div>
               <div className={`${style.ourServiceTab} ${style.tab}`}>
-                <a href=""> Our Services </a>
+                <a href=""> Services </a>
               </div>
               <div className={`${style.Gallery} ${style.tab}`}>
                 <a href=""> Gallery</a>
