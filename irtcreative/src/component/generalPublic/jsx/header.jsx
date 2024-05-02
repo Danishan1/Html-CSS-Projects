@@ -5,13 +5,7 @@ import CorssIcon from "../src/crossIcon";
 import LinesIcon from "../src/linesIcon";
 
 const Header = ({}) => {
-  // When Navigation is in Mobile Version: Show & hide the Tabs depending on Buttons (Cross & Lines)
   const [isNavOpen, setIsNavOpen] = useState(false);
-
-  // When Navigation is in large Device Mode: Make sure that their will no effect of buttons
-  const [isNavOpenOnSize, setIsNavOpenOnSize] = useState(
-    window.innerWidth > 690 ? true : false
-  );
 
   const closeNav = () => {
     setIsNavOpen(false);
@@ -23,8 +17,7 @@ const Header = ({}) => {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
-      setIsNavOpenOnSize(() => (window.innerWidth > 690 ? true : false));
+      setIsNavOpen(() => window.innerWidth > 690);
     };
 
     window.addEventListener("resize", handleResize);
@@ -34,7 +27,7 @@ const Header = ({}) => {
   }, []);
 
   useEffect(() => {
-    if (isNavOpen && window.innerWidth < 690) {
+    if (isNavOpen) {
       document.body.style.overflow = "hidden"; // Disable scroll
     } else {
       document.body.style.overflow = "auto"; // Enable scroll
@@ -44,15 +37,16 @@ const Header = ({}) => {
   return (
     <>
       <div className={style.navShowHide}>
-        {!isNavOpen && (
+        {!isNavOpen ? (
           <LinesIcon
             className={`${style.show} ${isNavOpen ? "open" : ""}`}
             onClick={openNav}
           />
+        ) : (
+          <CorssIcon className={style.hide} onClick={closeNav} />
         )}
-        {isNavOpen && <CorssIcon className={style.hide} onClick={closeNav} />}
       </div>
-      {(isNavOpen || isNavOpenOnSize) && (
+      {isNavOpen && (
         <div className={style.headerContainer}>
           <div className={style.logo}>
             <img src={logo} alt="itsRIGHTtime" />
