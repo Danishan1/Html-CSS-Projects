@@ -1,31 +1,45 @@
+// Code: ABAB011
+
 import React, { useEffect, useState } from "react";
-import style from "../css/header.module.css";
+import style from "../css/Header.module.css";
 import logo from "../src/irt name logo.png";
 import CorssIcon from "../src/crossIcon";
 import LinesIcon from "../src/linesIcon";
 
-const Header = ({}) => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+// Exportabl Component
+const Header = ({ onTabChange }) => {
+  // Mobile Version : Make sure to open & close the nav properly
+  const [isNavOpen, setIsNavOpen] = useState(true);
 
-  const closeNav = () => {
-    setIsNavOpen(false);
+  // To track on which tab you are working on
+  const [activeTab, setActiveTab] = useState(() => {
+    // Save current tab location in local Storage so that on refresh we get the same tab
+    const storedTab = localStorage.getItem("activeTab");
+    return storedTab ? storedTab : "home";
+  });
+
+  // Make Proper Arrangement on Click of the tab
+  const handleTabClick = (tab) => {
+    onTabChange(tab);
+    setActiveTab(tab);
+    localStorage.setItem("activeTab", tab); // Store active tab ID in localStorage
   };
 
-  const openNav = () => {
-    setIsNavOpen(true);
-  };
-
+  // Track the width of the current Window and set it true or false
   useEffect(() => {
     const handleResize = () => {
       setIsNavOpen(() => window.innerWidth > 690);
     };
 
     window.addEventListener("resize", handleResize);
+
+    // Clean up or removing event Listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  // Mobile Version : when Nav annel is open then Schrooling should be turned off else on
   useEffect(() => {
     if (isNavOpen) {
       document.body.style.overflow = "hidden"; // Disable scroll
@@ -34,50 +48,116 @@ const Header = ({}) => {
     }
   }, [isNavOpen]);
 
+  // Styling the Navigation buttons
+  const getButtonStyle = (tab) => {
+    return {
+      color: activeTab === tab ? "var(--colorRed)" : "var(--colorSimple)",
+      fontWeight: activeTab === tab ? "var(--boldL3)" : "var(--bold)",
+    };
+  };
+
   return (
     <>
       <div className={style.navShowHide}>
         {!isNavOpen ? (
           <LinesIcon
             className={`${style.show} ${isNavOpen ? "open" : ""}`}
-            onClick={openNav}
+            onClick={() => setIsNavOpen(true)}
           />
         ) : (
-          <CorssIcon className={style.hide} onClick={closeNav} />
+          <CorssIcon
+            className={style.hide}
+            onClick={() => setIsNavOpen(false)}
+          />
         )}
       </div>
+
       {isNavOpen && (
         <div className={style.headerContainer}>
           <div className={style.logo}>
             <img src={logo} alt="itsRIGHTtime" />
           </div>
-          <div className={`${style.tabs} boldL1`}>
+          <div className={`${style.tabs}`}>
             <div className={`${style.tabs1}`}>
-              <div className={`${style.homeTab} ${style.tab}`}>
-                <a href=""> Home</a>
+              <div
+                className={style.tab}
+                style={getButtonStyle("home")}
+                onClick={() => {
+                  handleTabClick("home");
+                }}
+              >
+                Home
               </div>
-              <div className={`${style.ourServiceTab} ${style.tab}`}>
-                <a href=""> Services </a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("services")}
+                onClick={() => {
+                  handleTabClick("services");
+                }}
+              >
+                Services
               </div>
-              <div className={`${style.Gallery} ${style.tab}`}>
-                <a href=""> Gallery</a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("gallery")}
+                onClick={() => {
+                  handleTabClick("gallery");
+                }}
+              >
+                Gallery
               </div>
-              <div className={`${style.QuotationTab} ${style.tab}`}>
-                <a href=""> Quotation</a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("quotation")}
+                onClick={() => {
+                  handleTabClick("quotation");
+                }}
+              >
+                Quotation
               </div>
             </div>
             <div className={`${style.tabs2}`}>
-              <div className={`${style.AboutUsTab} ${style.tab}`}>
-                <a href=""> About Us</a>
+              <div
+                className={style.tab}
+                style={getButtonStyle("aboutus")}
+                onClick={() => {
+                  handleTabClick("aboutus");
+                }}
+              >
+                About Us
               </div>
-              <div className={`${style.CareerTab} ${style.tab}`}>
-                <a href=""> Career</a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("career")}
+                onClick={() => {
+                  handleTabClick("career");
+                }}
+              >
+                Career
               </div>
-              <div className={`${style.helpDeskTab} ${style.tab}`}>
-                <a href=""> Helpdesk</a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("helpdesk")}
+                onClick={() => {
+                  handleTabClick("helpdesk");
+                }}
+              >
+                Helpdesk
               </div>
-              <div className={`${style.loginTab} ${style.tab}`}>
-                <a href=""> Login/Signup </a>
+
+              <div
+                className={style.tab}
+                style={getButtonStyle("loginsignup")}
+                onClick={() => {
+                  handleTabClick("loginsignup");
+                }}
+              >
+                Login/Signup
               </div>
             </div>
           </div>

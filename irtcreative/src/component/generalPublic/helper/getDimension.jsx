@@ -1,3 +1,5 @@
+// Code: ABAB00E
+
 import { useState, useEffect } from "react";
 
 const WindowDimensions = ({ onDimensionsChange }) => {

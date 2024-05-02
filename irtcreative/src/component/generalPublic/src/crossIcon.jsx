@@ -1,3 +1,5 @@
+// Code: ABAB00F
+
 import React from "react";
 
 export default function RadixIconsCross1(props) {
