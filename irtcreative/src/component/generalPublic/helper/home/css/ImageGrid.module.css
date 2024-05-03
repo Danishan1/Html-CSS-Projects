@@ -1,0 +1,15 @@
+.imageGrid {
+  height: 200px;
+  width: 200px;
+  border: 1px solid red;
+  display: grid;
+ 
+}
+
+.box {
+  border: 1px solid #d16d6d;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
