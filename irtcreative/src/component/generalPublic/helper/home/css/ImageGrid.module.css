@@ -1,18 +1,12 @@
 .imageGrid {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
  
 }
 
 .box {
-  border: 1px solid #d16d6d;
   background-color: transparent;
   justify-content: center;
   align-items: center;
   display: flex;
-}
-
-.selectedCell{
-  background-color: var(--colorYellow);
-
 }

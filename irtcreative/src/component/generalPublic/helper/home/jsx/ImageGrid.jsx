@@ -9,8 +9,8 @@ const ImageGrid = ({
   value = [5, 7, "8", "R1", "C4", "R4"], // which column, row, cell, or all should bs colored
   color = "--colorWhite", // Color that need to put on the Image
   border = "N", // Border should be present or not
+  showCellNo = false,
 }) => {
-  
   const gridContainerStyle = {
     width: size,
     height: size,
@@ -24,6 +24,10 @@ const ImageGrid = ({
     backgroundColor: `var(${color})`,
   };
 
+  const setBorder = {
+    border: `1px solid var(${color})`,
+  };
+
   let boxList = resolveImageGridID(value, grids);
   const gridItems = [];
   let boxListIndex = 0;
@@ -32,15 +36,39 @@ const ImageGrid = ({
     if (i === boxList[boxListIndex]) {
       boxListIndex++;
 
-      gridItems.push(
-        <div
-          key={i}
-          className={`${style.box} ${style.selectedCell}`}
-          style={selectedCell}
-        ></div>
-      );
+      if (border === "Y")
+        gridItems.push(
+          <div
+            key={i}
+            className={`${style.box} ${style.selectedCell}`}
+            style={{ ...selectedCell, ...setBorder }}
+          >
+            {showCellNo === true ? i : ""}
+          </div>
+        );
+      else
+        gridItems.push(
+          <div
+            key={i}
+            className={`${style.box} ${style.selectedCell}`}
+            style={selectedCell}
+          >
+            {showCellNo === true ? i : ""}
+          </div>
+        );
     } else {
-      gridItems.push(<div key={i} className={style.box}></div>);
+      if (border === "Y")
+        gridItems.push(
+          <div key={i} className={style.box} style={setBorder}>
+            {showCellNo === true ? i : ""}
+          </div>
+        );
+      else
+        gridItems.push(
+          <div key={i} className={style.box}>
+            {showCellNo === true ? i : ""}
+          </div>
+        );
     }
   }
 
