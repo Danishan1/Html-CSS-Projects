@@ -1,4 +1,7 @@
 
+// Code: ABAB013
+
+// This Function give the list of numbers that need to be color from RowID (R1, etc)
 export function getCellFromRowId(rowID, grid) {
   let id = rowID.slice(1);
   id = parseInt(id);
@@ -8,6 +11,7 @@ export function getCellFromRowId(rowID, grid) {
   return boxList;
 }
 
+// This Function give the list of numbers that need to be color from ColID (C1, etc)
 export function getCellFromColId(rowID, grid) {
   let id = rowID.slice(1);
   id = parseInt(id);
@@ -17,6 +21,7 @@ export function getCellFromColId(rowID, grid) {
   return boxList;
 }
 
+// This Function give the list of numbers that need to be color from entire list and skipping rowID, colID
 export function getNumbersOnlyFromList(list) {
   let numbersOnly = [];
 
@@ -36,6 +41,9 @@ export function getNumbersOnlyFromList(list) {
 
   return numbersOnly;
 }
+
+
+// This Function give the list of numbers that need to be color from list that have values, rowID, colID
 function getIdsfromList(list) {
   let rowIds = [];
   let colIds = [];
@@ -56,15 +64,25 @@ function getIdsfromList(list) {
   return { rowIds, colIds, values };
 }
 
-function resolveImageGridID(list, grid) {
+// This function do all the stuffs magically as this the combination of all above function to handle all the things easily
+function resolveImageGridID(
+  list,
+  grid,
+  sort = false,
+  duplicate = false,
+  rowCol = false
+) {
   let { rowIds, colIds, values } = getIdsfromList(list);
   let boxList = [];
 
-  for (let item of rowIds) boxList.push(...getCellFromRowId(item, grid));
-  for (let item of colIds) boxList.push(...getCellFromColId(item, grid));
+  if (rowCol === true) {
+    for (let item of rowIds) boxList.push(...getCellFromRowId(item, grid));
+    for (let item of colIds) boxList.push(...getCellFromColId(item, grid));
+  }
   boxList.push(...getNumbersOnlyFromList(values));
-  boxList = Array.from(new Set(boxList));
-  boxList.sort((a, b) => a - b);
+
+  if (duplicate === true) boxList = Array.from(new Set(boxList));
+  if (sort === true) boxList.sort((a, b) => a - b);
   return boxList;
 }
 

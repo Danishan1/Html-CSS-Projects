@@ -9,13 +9,13 @@ const Home = () => {
     <>
       <div className={style.home}>
         <ImageGrid3x3
-          size={350}
+          size={700}
           backgroundImage={backgroundImage}
           grids={12}
           color={"--colorWhite"}
           value={list4Color}
-          border="N"
-          showCellNo={false}
+          border={false}
+          showCellNo={true}
         />
       </div>
     </>

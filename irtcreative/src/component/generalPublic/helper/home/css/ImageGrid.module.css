@@ -1,7 +1,7 @@
+/* Code: ABAB012 */
+
 .imageGrid {
-  /* border: 1px solid red; */
   display: grid;
- 
 }
 
 .box {
