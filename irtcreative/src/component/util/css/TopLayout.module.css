@@ -33,6 +33,7 @@
 
 .midLayout{
   width: 100%;
+  overflow: scroll;
 }
 
 

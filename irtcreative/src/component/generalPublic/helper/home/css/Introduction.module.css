@@ -1,0 +1,9 @@
+.introduction {
+  height: 95vh;
+  width: 100vw;
+  border: 1px solid red;
+  background-image: url("../../../../../images/sofa02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

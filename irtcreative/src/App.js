@@ -7,6 +7,8 @@ import MidLayout from "./component/generalPublic/jsx/MidLayout";
 // import img3 from "./images/img1.jpg";
 
 function App() {
+  
+  // For Getting tab where user left from local browser storage  ##########
   const [selectedTab, setSelectedTab] = useState(() => {
     const storedTab = localStorage.getItem("activeTab");
     return storedTab ? storedTab : "home";
@@ -18,6 +20,8 @@ function App() {
   useEffect(() => {
     console.log(selectedTab);
   }, [selectedTab]);
+
+  // ##############################################
 
   return (
     <>
