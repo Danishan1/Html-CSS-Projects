@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <div className={style.home}>
-        <ImageGrid3x3
+        {/* <ImageGrid3x3
           size={700}
           backgroundImage={backgroundImage1}
           grids={8}
@@ -19,7 +19,7 @@ const Home = () => {
           value={list4Color}
           border={false}
           showCellNo={false}
-        />
+        /> */}
         <Introduction />
       </div>
     </>

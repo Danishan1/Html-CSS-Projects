@@ -7,6 +7,8 @@
   font-family: "Wix Madefor Display", sans-serif;
   color: var(--colorSimple);
   font-size: var(--size);
+}
+body {
   background-color: var(--colorWhite);
 }
 
@@ -338,10 +340,10 @@ a {
   font-weight: var(--boldX3);
 } /*Code : ABAC032*/
 
-
 /* ***************************************************************** */
 
 /* Scrollbar styles */
+/* Code: ABAB015 */
 ::-webkit-scrollbar {
   width: 3px;
 }

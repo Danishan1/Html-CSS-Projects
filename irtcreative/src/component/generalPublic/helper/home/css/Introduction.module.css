@@ -1,9 +1,28 @@
 .introduction {
-  height: 95vh;
+  height: 93.5vh;
   width: 100vw;
-  border: 1px solid red;
   background-image: url("../../../../../images/sofa02.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.welcomeLogo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* justify-content: center; */
+  border: 1px solid red;
+}
+
+.welcome {
+  display: inline;
+  font-size: calc(5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorWhite);
+  border: 1px solid red;
+}
+
+.logo{
+  border: 1px solid green;
 }

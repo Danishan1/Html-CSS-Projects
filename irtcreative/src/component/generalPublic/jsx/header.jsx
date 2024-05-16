@@ -5,6 +5,7 @@ import style from "../css/Header.module.css";
 import logo from "../src/irt name logo.png";
 import CorssIcon from "../src/crossIcon";
 import LinesIcon from "../src/linesIcon";
+import Logo from "../../util/jsx/Logo";
 
 // Exportabl Component
 const Header = ({ onTabChange }) => {
@@ -74,9 +75,7 @@ const Header = ({ onTabChange }) => {
 
       {isNavOpen && (
         <div className={style.headerContainer}>
-          <div className={style.logo}>
-            <img src={logo} alt="itsRIGHTtime" />
-          </div>
+          <Logo width={220} type={2}/>
           <div className={`${style.tabs}`}>
             <div className={`${style.tabs1}`}>
               <div

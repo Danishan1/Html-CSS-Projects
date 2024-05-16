@@ -6,30 +6,33 @@ import logoName from "../src/irtCre LogoName.png";
 import nameH from "../src/irtCre NameH.png";
 import nameV from "../src/irtCre NameV.png";
 
-const Logo = ({ width, type = 0}) => {
+const Logo = ({ width, type = 0, ...props }) => {
   return (
     <>
       {type === 0 ? (
-        <img
-          src={nameH}
-          className={Style.logo}
-          alt="itsRIGHTtime CREATIVE"
+        <div
+          className={Style.container}
+          {...props}
           style={{ width: `${width}px` }}
-        />
+        >
+          <img src={nameH} className={Style.logo} alt="itsRIGHTtime CREATIVE" />
+        </div>
       ) : type === 1 ? (
-        <img
-          src={nameV}
-          alt="itsRIGHTtime CREATIVE"
-          className={Style.logo}
+        <div
+          className={Style.container}
+          {...props}
           style={{ width: `${width}px` }}
-        />
+        >
+          <img src={nameV} alt="itsRIGHTtime CREATIVE" className={Style.logo} />
+        </div>
       ) : (
-        <img
-          src={logoName}
-          alt="Logo"
-          className={Style.logo}
+        <div
+          className={Style.container}
+          {...props}
           style={{ width: `${width}px` }}
-        />
+        >
+          <img src={logoName} alt="Logo" className={Style.logo} />
+        </div>
       )}
     </>
   );

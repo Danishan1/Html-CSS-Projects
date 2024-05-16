@@ -6,7 +6,10 @@ const Introduction = () => {
   return (
     <>
       <div className={Style.introduction}>
-        <Logo width={400} type={2} />
+        <div className={Style.welcomeLogo}>
+          <p className={Style.welcome}>Welcome to </p>
+          <Logo width={400} className={Style.logo} />
+        </div>
       </div>
     </>
   );
