@@ -3,33 +3,32 @@ import "./App.css";
 import Layout from "./component/util/jsx/TopLayout";
 import Header from "./component/generalPublic/jsx/Header";
 import MidLayout from "./component/generalPublic/jsx/MidLayout";
-// import Header from "./component/generalPublic/helper/temp";
-// import img3 from "./images/img1.jpg";
 
 function App() {
-  
   // For Getting tab where user left from local browser storage  ##########
   const [selectedTab, setSelectedTab] = useState(() => {
     const storedTab = localStorage.getItem("activeTab");
     return storedTab ? storedTab : "home";
   });
+
+  // Function calling from child Component
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
   };
 
-  useEffect(() => {
-    console.log(selectedTab);
-  }, [selectedTab]);
+  useEffect(() => {}, [selectedTab]);
 
   // ##############################################
 
   return (
     <>
       {/* <Header /> */}
-      <Layout
-        header={<Header onTabChange={handleTabChange} />}
-        midLayout={<MidLayout selectedTab={selectedTab} />}
-      />
+      <div className="App">
+        <Layout
+          header={<Header onTabChange={handleTabChange} />}
+          midLayout={<MidLayout selectedTab={selectedTab} />}
+        />
+      </div>
     </>
   );
 }

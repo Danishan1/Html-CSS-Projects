@@ -337,3 +337,19 @@ a {
 .boldX3 {
   font-weight: var(--boldX3);
 } /*Code : ABAC032*/
+
+
+/* ***************************************************************** */
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--colorGray2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--colorRed);
+}
