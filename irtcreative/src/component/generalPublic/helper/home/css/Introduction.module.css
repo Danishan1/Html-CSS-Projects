@@ -11,18 +11,37 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* justify-content: center; */
-  border: 1px solid red;
+  padding-top: 100px;
 }
 
 .welcome {
-  display: inline;
-  font-size: calc(5 * var(--size));
+  font-size: calc(7 * var(--size));
   font-weight: var(--boldL3);
   color: var(--colorWhite);
-  border: 1px solid red;
+  display: flex;
+  padding-left: 100px;
 }
 
-.logo{
-  border: 1px solid green;
+.logoBack {
+  width: 45%;
+  height: 80px;
+  background-color: var(--colorWhite);
+  padding-left: 0;
+}
+
+.logo {
+  width: 300px;
+  padding-left: 100px;
+  padding-top: 10px;
+}
+
+.sentance {
+  display: flex;
+  width: 45%;
+  padding: 20px 5px 0 100px;
+  text-align: justify;
+  font-size: calc(1.2 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorWhite);
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
 }

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import style from "../css/Header.module.css";
-import logo from "../src/irt name logo.png";
 import CorssIcon from "../src/crossIcon";
 import LinesIcon from "../src/linesIcon";
 import Logo from "../../util/jsx/Logo";
