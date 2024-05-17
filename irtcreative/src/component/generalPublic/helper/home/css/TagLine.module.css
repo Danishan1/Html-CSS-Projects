@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height:  950px;
+}
+
+.gridContainer {
+  position: relative;
+  width: 1200px;
+}
+.tagLine {
+  width: 700px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagLine p {
+  text-align: right;
+  font-size: calc(5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorBlue);
+  border-right: 10px solid var(--colorRed);
+  padding-right: 50px;
+  margin-right: 20px;
+}
+
+.gridItem {
+  position: absolute;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+.gridItem img {
+  width: 100%;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.gridItem img:hover {
+  transform: scale(1.5);
+  z-index: 2;
+  border-radius: 10px;
+}
+
+
+/* Define custom positions and sizes for each item */
+.item1 {
+  top: 50px;
+  left: 250px;
+  width: 250px;
+}
+
+.item2 {
+  top: 75px;
+  left: 510px;
+  width: 140px;
+}
+
+.item3 {
+  top: 33px;
+  left: 660px;
+  width: 350px;
+}
+
+.item4 {
+  top: 350px;
+  left: 90px;
+  width: 150px;
+}
+
+.item5 {
+  top: 227px;
+  left: 250px;
+  width: 400px;
+}
+
+.item6 {
+  top: 276px;
+  left: 660px;
+  width: 220px;
+}
+
+.item7 {
+  top: 276px;
+  left: 890px;
+  width: 200px;
+}
+
+.item8 {
+  top: 638px;
+  left: 248px;
+  width: 190px;
+}
+
+.item9 {
+  top: 637px;
+  left: 450px;
+  width: 180px;
+}
+
+.item10 {
+  top: 615px;
+  left: 660px;
+  width: 500px;
+}
+
+.item11 {
+  top: 30px;
+  left: 40px;
+  width: 200px;
+}
+
+.item12 {
+  top: 510px;
+  left: 60px;
+  width: 180px;
+}

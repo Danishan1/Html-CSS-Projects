@@ -349,7 +349,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--colorGray2);
+  background: var(--colorGray3);
 }
 
 ::-webkit-scrollbar-thumb {

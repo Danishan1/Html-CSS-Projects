@@ -2,6 +2,7 @@ import React from "react";
 import style from "../css/Home.module.css";
 // import ImageGrid3x3 from "../helper/home/jsx/ImageGrid";
 import Introduction from "../helper/home/jsx/Introduction";
+import TagLine from "../helper/home/jsx/TagLine";
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
           showCellNo={false}
         /> */}
         <Introduction />
+        <TagLine/>
       </div>
     </>
   );
