@@ -2,29 +2,19 @@
   display: flex;
   justify-content: center;
   align-self: center;
-  height:  950px;
+  height: 950px;
 }
 
 .gridContainer {
   position: relative;
   width: 1200px;
 }
-.tagLine {
-  width: 700px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .tagLine p {
-  text-align: right;
-  font-size: calc(5 * var(--size));
+  text-align: left;
+  font-size: calc(3 * var(--size));
   font-weight: var(--boldL3);
   color: var(--colorBlue);
-  border-right: 10px solid var(--colorRed);
-  padding-right: 50px;
-  margin-right: 20px;
 }
 
 .gridItem {
@@ -46,8 +36,15 @@
   border-radius: 10px;
 }
 
-
 /* Define custom positions and sizes for each item */
+
+.tagLine {
+  position: absolute;
+  width: 500px;
+  top: 430px;
+  left: 900px;
+}
+
 .item1 {
   top: 50px;
   left: 250px;
@@ -87,7 +84,7 @@
 .item7 {
   top: 276px;
   left: 890px;
-  width: 200px;
+  width: 150px;
 }
 
 .item8 {
@@ -118,4 +115,95 @@
   top: 510px;
   left: 60px;
   width: 180px;
+}
+
+@media (width < 1300px) {
+ 
+  .tagLine {
+    position: absolute;
+    width: 500px;
+    top: 430px;
+    left: 830px;
+  }
+  .tagLine p {
+    font-size: calc(1.5 * var(--size));
+  }
+
+  .item1 {
+    top: 50px;
+    left: 220px;
+    width: 220px;
+  }
+
+  .item2 {
+    top: 56px;
+    left: 450px;
+    width: 140px;
+  }
+
+  .item3 {
+    top: 33px;
+    left: 600px;
+    width: 320px;
+  }
+
+  .item4 {
+    top: 300px;
+    left: 110px;
+    width: 100px;
+  }
+
+  .item5 {
+    top: 207px;
+    left: 220px;
+    width: 370px;
+  }
+
+  .item6 {
+    top: 256px;
+    left: 600px;
+    width: 213px;
+  }
+
+  .item7 {
+    top: 256px;
+    left: 820px;
+    width: 120px;
+  }
+
+  .item8 {
+    top: 588px;
+    left: 218px;
+    width: 160px;
+  }
+
+  .item9 {
+    top: 589px;
+    left: 390px;
+    width: 150px;
+  }
+
+  .item10 {
+    top: 585px;
+    left: 550px;
+    width: 400px;
+  }
+
+  .item11 {
+    top: 30px;
+    left: 40px;
+    width: 170px;
+  }
+
+  .item12 {
+    top: 410px;
+    left: 60px;
+    width: 150px;
+  }
+}
+
+@media (width < 1000px) {
+  /* .tagLine p {
+    font-size: calc(2.3 * var(--size));
+  } */
 }

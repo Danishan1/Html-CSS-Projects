@@ -355,3 +355,17 @@ a {
 ::-webkit-scrollbar-thumb {
   background: var(--colorRed);
 }
+
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+  height: 3px ;
+}
+
+::-webkit-scrollbar-horizontal-track {
+  background: var(--colorGray3);
+}
+
+::-webkit-scrollbar-horizontal-thumb {
+  background: var(--colorRed);
+}

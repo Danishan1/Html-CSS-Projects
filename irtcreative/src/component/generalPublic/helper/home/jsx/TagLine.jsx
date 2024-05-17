@@ -46,12 +46,12 @@ const TagLine = () => {
             />
           </div>
         ))}
-      </div>
 
-      <div className={Style.tagLine}>
-        <p>Your Space</p>
-        <p>Your Style</p>
-        <p>Our Expertise</p>
+        <div className={Style.tagLine}>
+          <p>Your Space</p>
+          <p>Your Style</p>
+          <p>Our Expertise</p>
+        </div>
       </div>
     </div>
   );

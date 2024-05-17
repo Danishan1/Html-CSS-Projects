@@ -6,9 +6,6 @@
   overflow: hidden; /* Add this line to prevent unnecessary scrolling */
 }
 
-.headerLayout {
-  min-height: var(--hei-30);
-}
 
 .contentLayout {
   display: flex;
@@ -34,23 +31,6 @@
 
 .midLayout {
   width: 100%;
-}
-
-/* Tablet */
-@media (max-width: 920px) {
-  /* .contentLayout {
-    border: 1px solid red;
-    flex-direction: column;
-  }
-  .midLayout{
-    height: 100%;
-    order: 2;
-  }
-  .rightLayout{
-    order: 1;
-    border: 1px solid gray;
-  } */
-
 }
 
 /* Mobile */
