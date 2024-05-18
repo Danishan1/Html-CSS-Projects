@@ -1,3 +1,5 @@
+// Code: ABAB016
+
 import React from "react";
 import Style from "../css/TagLine.module.css";
 
@@ -15,6 +17,7 @@ import item10 from "../src/item10.jpg";
 import item11 from "../src/item11.jpg";
 import item12 from "../src/item12.jpg";
 
+// Making List of images for dynamic Rendring
 const images = [
   item1,
   item2,
@@ -34,6 +37,8 @@ const TagLine = () => {
   return (
     <div className={Style.container}>
       <div className={Style.gridContainer}>
+
+        {/* Rendering Images Dynamically */}
         {images.map((item, index) => (
           <div
             key={index}
@@ -47,6 +52,7 @@ const TagLine = () => {
           </div>
         ))}
 
+        {/* Tag Line */}
         <div className={Style.tagLine}>
           <p>Your Space</p>
           <p>Your Style</p>

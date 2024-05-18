@@ -1,7 +1,7 @@
+/* Code: ABAB017 */
 .container {
   display: flex;
   justify-content: center;
-  align-self: center;
   height: 950px;
 }
 
@@ -118,6 +118,14 @@
 }
 
 @media (width < 1300px) {
+  .container {
+    height: 850px;
+  }
+
+  .gridContainer {
+    width: 1000px;
+  }
+
   .tagLine {
     position: absolute;
     width: 500px;
@@ -204,10 +212,11 @@
 @media (width < 1000px) {
   .container {
     height: 720px;
-    border: 1px solid red;
   }
-  
 
+  .gridContainer {
+    width: 760px;
+  }
 
   .tagLine {
     position: absolute;
@@ -294,14 +303,69 @@
   }
 }
 
-@media (width < 780px) {
+@media (width < 760px) {
+  .container {
+    height: auto;
+  }
+
+  .gridContainer {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagLine {
+    position: static;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagLine p {
+    font-size: calc(3 * var(--size));
+    font-weight: var(--boldL3);
+  }
+
+  .gridItem {
+    position: static;
+    width: 90%;
+    padding: 0;
+
+    display: none;
+  }
+
+  .item5,
+  .item9 {
+    display: inline;
+    order: 1;
+  }
+
+  .gridItem img {
+    width: 100%;
+    position: static;
+    z-index: 1;
+  }
+
+  .gridItem img:hover {
+    transform: none;
+    z-index: 1;
+    border-radius: 0;
+  }
+
+  /* Define custom positions and sizes for each item */
 }
 
-@media (width < 640px) {
+@media (width < 500px) {
+  .tagLine p {
+    font-size: calc(2 * var(--size));
+  }
 }
 
 @media (width < 365px) {
-}
-
-@media (width < 365px) {
+  .tagLine p {
+    font-size: calc(1.6 * var(--size));
+  }
 }

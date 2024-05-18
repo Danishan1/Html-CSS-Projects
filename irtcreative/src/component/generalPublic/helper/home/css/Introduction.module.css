@@ -1,3 +1,6 @@
+/* Code: ABAB016 */
+
+
 .introduction {
   height: 93.5vh;
   width: 100vw;
@@ -64,6 +67,8 @@
 @media (width < 780px) {
   .introduction {
     background-image: url("../src/sofa03.jpg");
+    width: 100%;
+    max-height: 100vh;
   }
 
   .welcome {
