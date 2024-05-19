@@ -1,6 +1,6 @@
 /* Code: ABAB007 */
 
-article {
+.articleContainer {
   --img-scale: 1.001;
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
@@ -19,8 +19,8 @@ article {
   display: flex;
 }
 
-/* basic article elements styling */
-article h2 {
+/* basic .articleContainer elements styling */
+.articleContainer h2 {
   margin: 0 0 18px 0;
   font-size: calc(var(--size) * 1.8);
   letter-spacing: 0.06em;
@@ -35,7 +35,7 @@ figure {
   overflow: hidden;
 }
 
-article img {
+.articleContainer img {
   max-width: 100%;
   transform-origin: center;
   transform: scale(var(--img-scale));
@@ -46,19 +46,19 @@ article img {
   padding: 24px;
 }
 
-article a {
+.articleContainer a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: var(--colorCyan);
 }
 
-article a:hover {
+.articleContainer a:hover {
   font-weight: var(--boldL2);
 }
 
 /* using the has() relational pseudo selector to update our custom properties */
-article:has(:hover, :focus) {
+.articleContainer:has(:hover, :focus) {
   --img-scale: 1.1;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;

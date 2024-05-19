@@ -15,16 +15,16 @@
   width: 300px;
 }
 
-h2 {
+.cardTitle {
   font-size: 2.25rem;
   color: var(--colorWhite);
   line-height: 1.1;
 }
 
-p {
+.cardDescription {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--colorWhite);
+  color: var(--colorGray3);
 }
 
 .flow > * + * {

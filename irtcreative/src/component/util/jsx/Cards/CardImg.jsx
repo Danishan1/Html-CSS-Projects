@@ -1,7 +1,7 @@
+// Code: ABAB007
 import React from "react";
 import style from "../../css/Cards/CardImg.module.css";
 
-// Code: ABAB007
 const CardImg = ({
   imgPath,
   title,
@@ -11,7 +11,7 @@ const CardImg = ({
 }) => {
   return (
     <>
-      <article>
+      <article class={style.articleContainer}>
         <div class={style.articleWrapper}>
           <figure>
             <img src={imgPath} alt="" />

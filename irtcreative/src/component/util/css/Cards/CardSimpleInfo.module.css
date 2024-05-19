@@ -2,8 +2,8 @@
 /* Code: ABAB008 */
 
 .img {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   border-radius: 10px;
 }
 
@@ -12,7 +12,7 @@
   min-width: 200px;
   position: relative;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 10px;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -44,10 +44,16 @@
   filter: grayscale(100%);
 }
 
+
+.position{
+  text-align: left;
+}
+
 .desc {
   margin-top: 5px;
-  border-top: 1px solid var(--colorGray4);
+  border-top: 2px solid var(--colorGray4);
   font-size: calc(var(--size) * 0.82);
+  text-align: justify;
 }
 
 @media screen and (max-width: 315px) {

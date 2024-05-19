@@ -6,8 +6,8 @@ import style from "../../css/Cards/CardSimpleInfo.module.css";
 const CardSimpleInfo = ({
   imgPath,
   name,
-  title = null,
   desc,
+  title = null,
   borderCol = "cyan",
 }) => {
   // Selecting Border Color according the prop passed through the Component
