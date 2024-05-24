@@ -1,7 +1,9 @@
 import React from "react";
 import style from "../css/Services.module.css";
+import getServiceData from "../helper/services/jsx/getServiceData";
 
 const Services = () => {
+  const { columnNames, data } = getServiceData("Services");
   return (
     <>
       <div className={style.services}>
@@ -11,7 +13,9 @@ const Services = () => {
         </div>
         <div className={style.midSide}>
           <div className={style.filter3}></div>
-          <div className={style.mainService}></div>
+          <div className={style.mainService}>
+            
+          </div>
         </div>
       </div>
       <div className={style.tutorial}>Tutorials</div>
