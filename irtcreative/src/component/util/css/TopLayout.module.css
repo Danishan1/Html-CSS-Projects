@@ -37,6 +37,7 @@
 @media (max-width: 768px) {
   .contentLayout {
     grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    height: 100vh;
   }
 }
 
