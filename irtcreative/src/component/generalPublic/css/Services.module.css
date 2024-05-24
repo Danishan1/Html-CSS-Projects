@@ -18,6 +18,7 @@
 .leftSide {
   width: 280px;
   height: 100%;
+  border-right: 2px solid var(--colorGray1);
 }
 
 .midSide {
@@ -26,13 +27,13 @@
 }
 
 .filter1 {
-  height: 40%;
+  height: 25%;
   width: 100%;
   overflow-y: auto;
 }
 
 .filter2 {
-  height: 60%;
+  height: 75%;
   width: 100%;
   overflow-y: auto;
 }

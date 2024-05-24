@@ -1,0 +1,11 @@
+.tab {
+  /* border: 1px solid red; */
+  text-align: left;
+  padding: 3px 10px;
+  font-weight: var(--boldL2);
+}
+
+.tab a:hover {
+  text-decoration: underline;
+  color: var(--colorBlue);
+}

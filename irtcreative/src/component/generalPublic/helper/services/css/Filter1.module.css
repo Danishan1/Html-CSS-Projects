@@ -1,0 +1,11 @@
+.filter1 {
+  height: 100%;
+  width: 100%;
+}
+
+.name{
+    font-weight: var(--boldL2);
+    color: var(--colorCyan);
+    padding: 5px;
+
+}

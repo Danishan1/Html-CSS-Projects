@@ -1,0 +1,47 @@
+.searchBox {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 94%;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--colorCyan);
+}
+
+.input::placeholder {
+  color: var(--colorCyan);
+}
+
+.input:focus {
+  border: none;
+  border-bottom: 2px solid var(--colorBlue);
+  outline: none;
+  color: var(--colorBlue);
+}
+
+.suggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--colorWhite);
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 3px 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestionItem {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.suggestionItem:hover {
+  text-decoration: underline;
+  color: var(--colorBlue);
+  font-weight: var(--boldL2);
+}
