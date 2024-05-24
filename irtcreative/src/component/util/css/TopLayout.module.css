@@ -20,7 +20,7 @@
 .midLayout {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 1; /* Ensure all child elements of contentLayout expand to fill available space */
 }
 
