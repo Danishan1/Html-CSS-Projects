@@ -1,6 +1,5 @@
 import React from "react";
 import style from "../css/Services.module.css";
-import { ButtonL } from "../../util/jsx/Button";
 
 const Services = () => {
   return (
@@ -15,8 +14,7 @@ const Services = () => {
           <div className={style.mainService}></div>
         </div>
       </div>
-      <div className={style.tutorial}>Tutorial</div>
-      <ButtonL className={style.tutorial}/>
+      <div className={style.tutorial}>Tutorials</div>
     </>
   );
 };
