@@ -35,6 +35,7 @@ const Filter1 = () => {
       <div className={style.name}>Filter</div>
       <SearchBox suggestions={data4Search} />
       <div className={style.filter1}>
+        <Tab tabName={"Home"} link={"#"} />
         <Tab tabName={"All Services"} link={"#"} />
         <Tab tabName={"Divisions"} link={"#"} />
         <Tab tabName={"Departments"} link={"#"} />
