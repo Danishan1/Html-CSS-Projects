@@ -4,24 +4,25 @@ import React from "react";
 import style from "../css/onLoadScreen.module.css";
 import CompanyName from "../../../../util/jsx/CompanyName";
 import OurStructureApproch from "./OurStructureApproch";
+// import Line from "../../../../util/jsx/line";
 
 const OnLoadScreen = () => {
   return (
     <>
       <div className={style.onLoadScreen}>
         <div className={style.serviceIntro}>
-          <p className={style.p1}>Welcome to our Services page!</p>
           <div className={style.paragraph}>
+            <p className={style.p1}>Welcome to our Services page!</p>
             <p className={style.p2}>
               At <CompanyName />, where quality meets passion, we're committed
               to delivering excellence every step of the way. It's our job to
               give you more than your imagination, ensuring that every project
               exceeds your expectations. Our services are organized into various
               categories, covering a wide range of needs and preferences. With
-              over <span className="colorCyan boldL3">5</span> divisions,{" "}
-              <span className="colorCyan boldL3">30+</span> departments,{" "}
-              <span className="colorCyan boldL3">180+</span> specialized areas,
-              and <span className="colorCyan boldL3">1000+</span> specific
+              over <span className="boldL3">5</span> divisions,{" "}
+              <span className="boldL3">30+</span> departments,{" "}
+              <span className="boldL3">180+</span> specialized areas,
+              and <span className="boldL3">1000+</span> specific
               services, we offer a comprehensive solution for all your needs.
               Whether it's enhancing your home, optimizing your office, or
               transforming your hospitality space, we have the expertise and
@@ -33,6 +34,7 @@ const OnLoadScreen = () => {
             </p>
           </div>
         </div>
+        {/* <Line/> */}
         <OurStructureApproch />
       </div>
     </>

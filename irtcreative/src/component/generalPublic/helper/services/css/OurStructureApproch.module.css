@@ -1,0 +1,21 @@
+.ourStructureApproch {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourStructureApproch .p1 {
+  padding: 10px 20px;
+  font-size: calc(1.5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorCyan);
+  text-align: left;
+}
+
+.ourStructureApproch .p2 {
+  text-align: justify;
+  padding: 5px 20px;
+  max-width: 1400px;
+}
