@@ -1,0 +1,15 @@
+/* Code: ABAB01E */
+
+.LogoWriten {
+  display: inline;
+}
+
+.gray{
+    color: var(--colorGray5);
+    font-weight: var(--boldL1);
+}
+
+.color{
+    color: var(--colorBlue);
+    font-weight: var(--boldL3);
+}
