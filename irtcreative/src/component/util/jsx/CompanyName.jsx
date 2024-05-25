@@ -3,7 +3,7 @@
 import React from "react";
 import style from "../css/LogoWritten.module.css";
 
-const LogoWritten = ({size='1em'}) => {
+const CompanyName = ({size='1em'}) => {
   return (
     <>
       <div className={style.LogoWriten} >
@@ -16,4 +16,4 @@ const LogoWritten = ({size='1em'}) => {
   );
 };
 
-export default LogoWritten;
+export default CompanyName;

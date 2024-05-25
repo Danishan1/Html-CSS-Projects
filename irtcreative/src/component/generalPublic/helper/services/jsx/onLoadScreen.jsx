@@ -2,7 +2,8 @@
 
 import React from "react";
 import style from "../css/onLoadScreen.module.css";
-import LogoWritten from "../../../../util/jsx/LogoWritten";
+import CompanyName from "../../../../util/jsx/CompanyName";
+import OurStructureApproch from "./OurStructureApproch";
 
 const OnLoadScreen = () => {
   return (
@@ -12,7 +13,7 @@ const OnLoadScreen = () => {
           <p className={style.p1}>Welcome to our Services page!</p>
           <div className={style.paragraph}>
             <p className={style.p2}>
-              At <LogoWritten />, where quality meets passion, we're committed
+              At <CompanyName />, where quality meets passion, we're committed
               to delivering excellence every step of the way. It's our job to
               give you more than your imagination, ensuring that every project
               exceeds your expectations. Our services are organized into various
@@ -32,10 +33,7 @@ const OnLoadScreen = () => {
             </p>
           </div>
         </div>
-
-
-
-
+        <OurStructureApproch />
       </div>
     </>
   );
