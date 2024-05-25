@@ -2,6 +2,12 @@
   font-size: calc(1.5 * var(--size));
   fill: var(--colorGray4);
 }
+.svgMap{
+    border: 1px solid red;
+    width: 650px;
+    padding-top: 40px;
+    padding-left: 15px;
+}
 
 .land {
   fill: var(--colorGray1);
@@ -33,3 +39,17 @@
   visibility: visible;
   border: 1px solid red;
 }
+
+
+/* IndiaMap.module.css */
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 12px;
+    color: black;
+    z-index: 10;
+    pointer-events: none; /* Ensures the tooltip does not interfere with mouse events */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
