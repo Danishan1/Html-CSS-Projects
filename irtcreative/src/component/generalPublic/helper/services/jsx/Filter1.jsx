@@ -32,15 +32,14 @@ const Filter1 = () => {
   const data4Search = preparingDataforSearchBox();
   return (
     <>
+      <div className={style.name}>Filter</div>
+      <SearchBox suggestions={data4Search} />
       <div className={style.filter1}>
-        <div className={style.name}>Filter</div>
-        <SearchBox suggestions={data4Search}/>
-        <Tab tabName={"Tab"} link={"#"} />
+        <Tab tabName={"All Services"} link={"#"} />
         <Tab tabName={"Divisions"} link={"#"} />
         <Tab tabName={"Departments"} link={"#"} />
         <Tab tabName={"Sectors"} link={"#"} />
         <Tab tabName={"Units"} link={"#"} />
-        
       </div>
     </>
   );

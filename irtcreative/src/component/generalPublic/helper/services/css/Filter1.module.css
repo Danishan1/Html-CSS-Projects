@@ -1,13 +1,14 @@
 /* Code:ABAB01B */
 
 .filter1 {
-  height: 100%;
+  height: auto;
   width: 100%;
+  /* border: 1px solid red; */
+  overflow-y: auto;
 }
 
-.name{
-    font-weight: var(--boldL2);
-    color: var(--colorCyan);
-    padding: 5px;
-
+.name {
+  font-weight: var(--boldL2);
+  color: var(--colorCyan);
+  padding: 5px;
 }

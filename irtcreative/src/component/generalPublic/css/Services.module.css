@@ -27,13 +27,13 @@
 }
 
 .filter1 {
-  height: 25%;
+  height: 219px;
   width: 100%;
   overflow-y: auto;
 }
 
 .filter2 {
-  height: 75%;
+  height: calc(100% - 233px);
   width: 100%;
   overflow-y: auto;
 }
