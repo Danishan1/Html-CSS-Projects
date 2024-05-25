@@ -105,9 +105,7 @@
     height: calc(100% - 65px);
   }
 
-  .filter3 {
-  }
-
+  
   .mainService {
     flex-direction: column;
   }

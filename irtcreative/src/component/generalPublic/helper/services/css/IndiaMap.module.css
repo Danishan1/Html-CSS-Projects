@@ -1,0 +1,35 @@
+#title {
+  font-size: calc(1.5 * var(--size));
+  fill: var(--colorGray4);
+}
+
+.land {
+  fill: var(--colorGray1);
+  stroke: var(--colorGray4);
+  stroke-width: 1;
+  stroke-miterlimit: 1;
+}
+
+.land:hover {
+  fill: var(--colorBlue);
+  stroke: var(--colorGray5);
+  stroke-width: 1;
+  stroke-miterlimit: 1;
+}
+
+.label {
+  font-size: calc(1.5 * var(--size));
+}
+
+.tooltip_bg:hover {
+  visibility: visible;
+}
+
+.tooltip {
+    color: white;
+}
+
+.land:hover .tooltip {
+  visibility: visible;
+  border: 1px solid red;
+}
