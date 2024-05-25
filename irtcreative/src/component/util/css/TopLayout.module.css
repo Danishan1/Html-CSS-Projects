@@ -12,6 +12,7 @@
   width: 100%;
   min-height: calc(100vh - var(--hei-30));
   height: calc(100vh - var(--hei-30));
+  scroll-behavior: smooth;
   overflow: hidden; /* Add this line to enable vertical scrolling when needed */
 }
 

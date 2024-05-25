@@ -1,21 +1,9 @@
+// Code: ABAB01D
+
 import React, { useState } from "react";
 import style from "../css/Search.module.css"; // Import the CSS module
 
-const suggestions = [
-  "apple",
-  "appstle",
-  "appsle",
-  "apptle",
-  "banana",
-  "cherry",
-  "date",
-  "elderberry",
-  "fig",
-  "grape",
-  "honeydew",
-];
-
-const SearchBox = () => {
+const SearchBox = ({ suggestions }) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);

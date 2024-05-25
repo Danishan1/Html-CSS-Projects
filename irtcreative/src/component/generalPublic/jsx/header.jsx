@@ -23,7 +23,7 @@ const Header = ({ onTabChange }) => {
     onTabChange(tab);
     setActiveTab(tab);
     localStorage.setItem("activeTab", tab); // Store active tab ID in localStorage
-    setIsNavOpen(false)
+    window.innerWidth < 690 && setIsNavOpen(false)
   };
 
   // Track the width of the current Window and set it true or false
