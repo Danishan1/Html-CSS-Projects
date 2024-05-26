@@ -22,7 +22,7 @@ const OurStructureApproch = () => {
           </p>
 
           <p className={style.p2}>
-            <strong className={"colorCyan"}>Divisions </strong>represent the
+            <strong className={style.headName} >Divisions</strong> represent the
             broad areas of specialization within our company, each focusing on a
             specific aspect of our services. They ensure that every major
             component of our work receives dedicated attention and expertise. By
@@ -30,7 +30,7 @@ const OurStructureApproch = () => {
             processes and provide specialized care in each field.
           </p>
           <p className={style.p2}>
-            <strong className={"colorCyan"}>Departments </strong>within each
+            <strong className={style.headName}>Departments</strong> within each
             division break down the broad areas into more focused categories,
             allowing for even more specialized attention and expert management.
             This structure ensures that all aspects of a project are handled by
@@ -38,7 +38,7 @@ const OurStructureApproch = () => {
             particular area.
           </p>
           <p className={style.p2}>
-            <strong className={"colorCyan"}>Sectors </strong>within each
+            <strong className={style.headName}>Sectors</strong> within each
             department narrow down the focus further to address particular
             environments or types of spaces we work with. This allows us to
             tailor our services to the unique requirements and characteristics
@@ -47,7 +47,7 @@ const OurStructureApproch = () => {
             education.
           </p>
           <p className={style.p2}>
-            <strong className={"colorCyan"}>Services </strong>are the specific
+            <strong className={style.headName}>Services</strong> are the specific
             offerings we provide within each sector. They represent the
             individual tasks, solutions, and expertise we bring to each project.
             By detailing our services, we ensure that clients understand the

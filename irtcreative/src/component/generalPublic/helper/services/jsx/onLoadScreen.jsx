@@ -4,7 +4,7 @@ import React from "react";
 import style from "../css/onLoadScreen.module.css";
 import CompanyName from "../../../../util/jsx/CompanyName";
 import OurStructureApproch from "./OurStructureApproch";
-// import Line from "../../../../util/jsx/line";
+import Line from "../../../../util/jsx/line";
 
 const OnLoadScreen = () => {
   return (
@@ -30,11 +30,11 @@ const OnLoadScreen = () => {
             </p>
             <p className={style.p3}>
               Explore our services and experience the difference of working with
-              a team that prioritizes your satisfaction above all else!
+              a team that prioritizes your satisfaction above all else! <br /><br />
             </p>
           </div>
         </div>
-        {/* <Line/> */}
+        <Line/>
         <OurStructureApproch />
       </div>
     </>

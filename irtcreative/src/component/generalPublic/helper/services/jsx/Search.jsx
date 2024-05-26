@@ -23,6 +23,11 @@ const SearchBox = ({ suggestions }) => {
     }
   };
 
+  const handleInputBlur = () => {
+    setInputValue("");
+    setShowSuggestions(false);
+  };
+
   const handleSuggestionClick = (suggestion) => {
     setInputValue(suggestion);
     setShowSuggestions(false);
@@ -34,20 +39,25 @@ const SearchBox = ({ suggestions }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
+        onBlur={handleInputBlur}
         placeholder="Search..."
         className={style.input}
       />
       {showSuggestions && (
         <ul className={style.suggestionsList}>
-          {filteredSuggestions.map((suggestion, index) => (
-            <li
-              key={index}
-              onClick={() => handleSuggestionClick(suggestion)}
-              className={style.suggestionItem}
-            >
-              {suggestion}
-            </li>
-          ))}
+          {filteredSuggestions.length > 0 ? (
+            filteredSuggestions.map((suggestion, index) => (
+              <li
+                key={index}
+                onClick={() => handleSuggestionClick(suggestion)}
+                className={style.suggestionItem}
+              >
+                {suggestion}
+              </li>
+            ))
+          ) : (
+            <li className={style.suggestionItem}>Not Matched</li>
+          )}
         </ul>
       )}
     </div>

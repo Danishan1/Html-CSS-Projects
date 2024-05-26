@@ -19,3 +19,12 @@
   padding: 5px 20px;
   max-width: 1400px;
 }
+
+.ourStructureApproch .headName{
+  color: var(--colorCyan);
+  
+}
+.ourStructureApproch .headName:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}

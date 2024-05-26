@@ -1,6 +1,6 @@
 // Code: ABAB01B
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../css/Filter1.module.css";
 import Tab from "./Tab";
 import SearchBox from "./Search";
@@ -29,18 +29,35 @@ const preparingDataforSearchBox = () => {
 };
 
 const Filter1 = () => {
+  const [winWidth, setWinWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWinWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const data4Search = preparingDataforSearchBox();
   return (
     <>
-      <div className={style.name}>Filter</div>
-      <SearchBox suggestions={data4Search} />
-      <div className={style.filter1}>
-        <Tab tabName={"Home"} link={"#"} />
-        <Tab tabName={"All Services"} link={"#"} />
-        <Tab tabName={"Divisions"} link={"#"} />
-        <Tab tabName={"Departments"} link={"#"} />
-        <Tab tabName={"Sectors"} link={"#"} />
-        <Tab tabName={"Units"} link={"#"} />
+      <div className={style.filterContainer}>
+        <div className={style.name}>Filter</div>
+        <div className={style.searchBox}>
+          <SearchBox suggestions={data4Search} />
+        </div>
+        {winWidth < 690 && <div className={style.filterBtn}>Filter</div>}
+        <div className={style.filter1}>
+          <Tab tabName={"Home"} link={"#"} />
+          <Tab tabName={"All Services"} link={"#"} />
+          <Tab tabName={"Divisions"} link={"#"} />
+          <Tab tabName={"Departments"} link={"#"} />
+          <Tab tabName={"Sectors"} link={"#"} />
+          <Tab tabName={"Units"} link={"#"} />
+        </div>
       </div>
     </>
   );

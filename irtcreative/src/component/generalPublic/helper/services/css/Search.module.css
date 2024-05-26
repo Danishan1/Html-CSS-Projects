@@ -48,3 +48,48 @@
   color: var(--colorBlue);
   font-weight: var(--boldL2);
 }
+
+@media (max-width: 690px) {
+  .searchBox {
+    position: static;
+    width: 100%;
+  }
+
+ 
+  .suggestionsList {
+    top: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-height: 250px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 690px) {
+  .suggestionsList {
+    width: 280px;
+    left: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .suggestionsList {
+    width: 236px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .suggestionsList {
+    width: 190px;
+    left: 6px;
+
+  }
+}
+
+@media (max-width: 360px) {
+  .suggestionsList {
+    width: 160px;
+    left: 6px;
+
+  }
+}

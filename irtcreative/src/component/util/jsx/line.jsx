@@ -1,6 +1,6 @@
 import React from "react";
 
-const Line = ({ color = "--colorGray3", width = "95%", props }) => {
+const Line = ({ color = "--colorGray3", width = "100%", props }) => {
   const myStyle = {
     width: `${width}`, // Add desired width
     height: "2px", // Add desired height

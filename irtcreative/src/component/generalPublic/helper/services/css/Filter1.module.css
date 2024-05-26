@@ -3,7 +3,6 @@
 .filter1 {
   height: auto;
   width: 100%;
-  /* border: 1px solid red; */
   overflow-y: auto;
 }
 
@@ -11,4 +10,113 @@
   font-weight: var(--boldL2);
   color: var(--colorCyan);
   padding: 5px;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 820px) {
+}
+
+/* Mobile */
+@media (max-width: 690px) {
+  .filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    width: 85%;
+    overflow-y: visible;
+  }
+  .name {
+    display: none;
+  }
+  .filter1 {
+    display: none;
+    position: absolute;
+  }
+  .filterBtn {
+    width: 100px;
+    height: 30px;
+    background-color: var(--colorCyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    font-weight: var(--boldL3);
+    color: var(--colorWhite);
+  }
+
+  .filterBtn:hover {
+    cursor: pointer;
+    background-color: var(--colorCyanHover);
+  }
+  .filterBtn:hover + .filter1,
+  .filter1:hover {
+    display: flex;
+  }
+
+  .filter1 {
+    position: absolute;
+    right: 50px;
+    top: 48px;
+    width: 140px;
+    height: 175px;
+    flex-direction: column;
+    background-color: var(--colorWhite);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .searchBox {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchBox {
+    width: 250px;
+  }
+
+  .filterContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .searchBox {
+    width: 200px;
+  }
+
+  .filterContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 360px) {
+  .searchBox {
+    width: 150px;
+  }
+
+  .filterBtn {
+    width: 80px;
+  }
+
+  .filterContainer {
+    width: 77%;
+  }
+}
+
+@media (max-width: 300px) {
+  .searchBox {
+    width: 100px;
+  }
+
+  .filterBtn {
+    width: 70px;
+  }
+
+  .filterContainer {
+    width: 70%;
+  }
 }
