@@ -27,7 +27,7 @@ const CardTextSliding = ({
   desc,
   btnLink = "#",
   productID = null,
-  color = "blue",
+  color = "cyan",
   orientation = "S",
 }) => {
   const cardContentCss = `${style.cardContent} | ${style.flow}`;

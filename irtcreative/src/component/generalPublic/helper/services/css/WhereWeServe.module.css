@@ -1,9 +1,19 @@
+.whereWeServe{
+    margin-bottom: 50px;
+}
 
 .whereWeServe .p1 {
-    padding: 10px 20px;
-    font-size: calc(1.5 * var(--size));
-    font-weight: var(--boldL3);
-    color: var(--colorCyan);
-    text-align: left;
-  }
-  
+  padding: 10px 20px;
+  font-size: calc(1.5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorCyan);
+  text-align: left;
+}
+
+.serveContainer {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

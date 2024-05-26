@@ -15,8 +15,12 @@
   width: 300px;
 }
 
+.mainBox{
+  margin: auto;
+}
+
 .cardTitle {
-  font-size: 2.25rem;
+  font-size: 1.4rem;
   color: var(--colorWhite);
   line-height: 1.1;
 }
@@ -24,7 +28,9 @@
 .cardDescription {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--colorGray3);
+  color: var(--colorGray1);
+  text-align: left;
+  font-weight: var(--boldL1);
 }
 
 .flow > * + * {
@@ -132,9 +138,6 @@
   background-color: var(--colorGray);
 }
 
-.cardDescription {
-  text-align: justify;
-}
 
 .cardButton {
   display: flex;

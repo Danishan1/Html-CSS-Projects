@@ -1,6 +1,6 @@
 // Code: ABAB01A
 
-import Data from "../../../../../data/IRT Creative Structure.json";
+import Data from "../../../../../data/IRT Creative Structure";
 
 const getServiceData = (page) => {
   const data = Data[page];
