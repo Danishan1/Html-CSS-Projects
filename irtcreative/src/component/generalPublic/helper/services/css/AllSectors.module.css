@@ -1,0 +1,32 @@
+/* Code:  */
+
+/* .allSectors {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.allSectors .p1 {
+  padding: 10px 20px;
+  font-size: calc(1.5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorCyan);
+  text-align: left;
+}
+
+.allSectors .p2 {
+  text-align: justify;
+  padding: 5px 20px;
+  max-width: 1400px;
+}
+
+.allSectors .headName{
+  color: var(--colorCyan);
+  
+}
+.allSectors .headName:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
