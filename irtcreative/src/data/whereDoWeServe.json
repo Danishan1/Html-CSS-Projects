@@ -1,0 +1,80 @@
+{
+  "Residential Spaces": [
+    "Homes",
+    "Apartments",
+    "Condominiums",
+    "Townhouses",
+    "Villas"
+  ],
+  "Commercial Spaces": [
+    "Offices",
+    "Corporate Buildings",
+    "Retail Stores",
+    "Boutiques",
+    "Shopping Centres"
+  ],
+  "Hospitality and Dining": [
+    "Restaurants",
+    "Cafes",
+    "Bars",
+    "Hotels",
+    "Resorts"
+  ],
+  "Educational Institutions": [
+    "Schools",
+    "Colleges",
+    "Universities",
+    "Training Centres"
+  ],
+  "Healthcare Facilities": [
+    "Hospitals",
+    "Clinics",
+    "Dental Offices",
+    "Wellness Centres"
+  ],
+  "Recreational Spaces": [
+    "Gyms",
+    "Fitness Centres",
+    "Spas",
+    "Recreation Centres"
+  ],
+  "Public Spaces": [
+    "Libraries",
+    "Museums",
+    "Exhibition Halls",
+    "Community Centres"
+  ],
+  "Event Venues": [
+    "Conference Halls",
+    "Banquet Halls",
+    "Event Spaces",
+    "Auditoriums"
+  ],
+  "Industrial Spaces": ["Factories", "Warehouses", "Manufacturing Units"],
+  "Religious Spaces": ["Temples", "Churches", "Mosques", "Synagogues"],
+  "Outdoor Spaces": [
+    "Gardens",
+    "Courtyards",
+    "Terraces",
+    "Outdoor Seating Areas"
+  ],
+  "Technology and Innovation Spaces": [
+    "Tech Hubs",
+    "Innovation Centres",
+    "Research Facilities"
+  ],
+  "Community Spaces": [
+    "Community Centres",
+    "Social Halls",
+    "Residential Communities"
+  ],
+  "Entertainment Venues": ["Theatres", "Cinemas", "Gaming Centres"],
+  "Financial Institutions": ["Banks", "Financial Centres", "Investment Firms"],
+  "Art Galleries and Studios": ["Art Galleries", "Artist Studios"],
+  "Co-Working Spaces": ["Co-Working Offices", "Shared Workspaces"],
+  "Sports Facilities": [
+    "Sports Arenas",
+    "Fitness Studios",
+    "Training Facilities"
+  ]
+}

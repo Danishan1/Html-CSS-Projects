@@ -1,0 +1,9 @@
+
+.whereWeServe .p1 {
+    padding: 10px 20px;
+    font-size: calc(1.5 * var(--size));
+    font-weight: var(--boldL3);
+    color: var(--colorCyan);
+    text-align: left;
+  }
+  

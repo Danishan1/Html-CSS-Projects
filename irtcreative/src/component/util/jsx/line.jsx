@@ -1,3 +1,5 @@
+// Code: ABAB01F
+
 import React from "react";
 
 const Line = ({ color = "--colorGray3", width = "100%", props }) => {

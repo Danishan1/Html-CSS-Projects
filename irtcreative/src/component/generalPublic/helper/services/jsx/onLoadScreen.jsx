@@ -4,7 +4,8 @@ import React from "react";
 import style from "../css/onLoadScreen.module.css";
 import CompanyName from "../../../../util/jsx/CompanyName";
 import OurStructureApproch from "./OurStructureApproch";
-import Line from "../../../../util/jsx/line";
+import Line from "../../../../util/jsx/Line";
+import WhereWeServe from "./whereWeServe";
 
 const OnLoadScreen = () => {
   return (
@@ -21,21 +22,25 @@ const OnLoadScreen = () => {
               categories, covering a wide range of needs and preferences. With
               over <span className="boldL3">5</span> divisions,{" "}
               <span className="boldL3">30+</span> departments,{" "}
-              <span className="boldL3">180+</span> specialized areas,
-              and <span className="boldL3">1000+</span> specific
-              services, we offer a comprehensive solution for all your needs.
-              Whether it's enhancing your home, optimizing your office, or
-              transforming your hospitality space, we have the expertise and
-              resources to bring your vision to life.
+              <span className="boldL3">180+</span> specialized areas, and{" "}
+              <span className="boldL3">1000+</span> specific services, we offer
+              a comprehensive solution for all your needs. Whether it's
+              enhancing your home, optimizing your office, or transforming your
+              hospitality space, we have the expertise and resources to bring
+              your vision to life.
             </p>
             <p className={style.p3}>
               Explore our services and experience the difference of working with
-              a team that prioritizes your satisfaction above all else! <br /><br />
+              a team that prioritizes your satisfaction above all else! <br />
+              <br />
             </p>
           </div>
         </div>
-        <Line/>
+        <Line />
         <OurStructureApproch />
+        <br />
+        <Line />
+        <WhereWeServe />
       </div>
     </>
   );
