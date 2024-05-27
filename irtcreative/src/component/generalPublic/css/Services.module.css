@@ -64,6 +64,11 @@
   color: var(--colorWhite);
 }
 
+.tutorial:hover{
+  background-color: var(--colorCyanHover);
+  cursor: pointer;
+}
+
 @media (max-width: 1000px) {
 }
 

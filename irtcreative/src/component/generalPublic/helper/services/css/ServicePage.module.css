@@ -1,0 +1,42 @@
+/* Code: ABAB028 */
+
+.servicePage {
+  width: 100%;
+  height: 89.9vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.infoBox {
+  display: flex;
+  height: 89.9vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.infoBox p {
+  font-size: calc(1.5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorWhite);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.tutorial {
+  margin-top: 30px;
+  width: 190px;
+  height: 40px;
+  background-color: var(--colorCyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: var(--boldL3);
+  color: var(--colorWhite);
+}
+
+.tutorial:hover {
+  background-color: var(--colorCyanHover);
+  cursor: pointer;
+}

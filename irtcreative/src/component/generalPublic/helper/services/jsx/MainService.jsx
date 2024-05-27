@@ -3,15 +3,39 @@
 import React from "react";
 import style from "../css/MainService.module.css";
 import OnLoadScreen from "./onLoadScreen";
+import ServicePage from "./ServicePage";
+import img1 from "../../../../../images/img2.jpg"
 // import getServiceData from "./getServiceData";
 
-const MainService = () => {
+const MainService = ({ tab }) => {
   //   const { sectorColNames, sectorData } = getServiceData("Sectors");
+
+  let content;
+  switch (tab) {
+    case "home":
+      content = <OnLoadScreen />;
+      break;
+    case "service":
+      content = <ServicePage 
+        serviceCode={"NAB0D"}
+        ServiceName={"Interior Designing"}
+        DeptCode={"NA"}
+        DeptName={"Interior Design"}
+        SectCode={"NAB"}
+        SectName={"Design"}
+        DiviCode={"N"}
+        DiviName={"Design & Planning"}
+        imgPath={img1}
+      />;
+      break;
+    default:
+      content = <OnLoadScreen />;
+      break;
+  }
+
   return (
     <>
-      <div className={style.mainService}>
-        <OnLoadScreen />
-      </div>
+      <div className={style.mainService}>{content}</div>
     </>
   );
 };
