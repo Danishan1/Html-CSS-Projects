@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import style from "../css/Search.module.css"; // Import the CSS module
 
-const SearchBox = ({ suggestions }) => {
+const SearchBox = ({ suggestions, tab }) => {
   const [inputValue, setInputValue] = useState("");
-  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [filteredSuggestions, setFilteredSuggestions] = useState([{}]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const handleInputChange = (e) => {
@@ -13,9 +13,14 @@ const SearchBox = ({ suggestions }) => {
     setInputValue(value);
 
     if (value.length >= 3) {
-      const filtered = suggestions.filter((suggestion) =>
-        suggestion.toLowerCase().includes(value.toLowerCase())
-      );
+      const filtered = suggestions
+        .filter((suggestion) =>
+          suggestion.name.toLowerCase().includes(value.toLowerCase())
+        )
+        .map((suggestion) => ({
+          code: suggestion.code,
+          name: suggestion.name,
+        }));
       setFilteredSuggestions(filtered);
       setShowSuggestions(true);
     } else {
@@ -28,8 +33,10 @@ const SearchBox = ({ suggestions }) => {
     setShowSuggestions(false);
   };
 
-  const handleSuggestionClick = (suggestion) => {
-    setInputValue(suggestion);
+  const handleSuggestionClick = (suggestion, tab) => {
+    setInputValue(suggestion.name);
+    tab(suggestion.code);
+    console.log("suggestion");
     setShowSuggestions(false);
   };
 
@@ -49,10 +56,13 @@ const SearchBox = ({ suggestions }) => {
             filteredSuggestions.map((suggestion, index) => (
               <li
                 key={index}
-                onClick={() => handleSuggestionClick(suggestion)}
+                onClick={() => {
+                  console.log("suggestion");
+                  handleSuggestionClick(suggestion, tab);
+                }}
                 className={style.suggestionItem}
               >
-                {suggestion}
+                {suggestion.name}
               </li>
             ))
           ) : (
