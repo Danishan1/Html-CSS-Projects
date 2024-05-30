@@ -6,9 +6,7 @@ import OnLoadScreen from "./onLoadScreen";
 import ServicePage from "./ServicePage";
 import img1 from "../../../../../images/img2.jpg";
 import MainShowContainer from "./MainShowContainer";
-import getDivDep from "./DataExtrector/getDivDep";
-import getSecSer from "./DataExtrector/getSecSer";
-import getprocessedData from "./DataExtrector/getDepSec";
+import getprocessedData from "./DataExtrector/getprocessedData";
 // import getServiceData from "./getServiceData";
 
 const MainService = ({ tab }) => {
@@ -36,19 +34,20 @@ const MainService = ({ tab }) => {
       );
       break;
     case "all":
-      data = getSecSer();
+      data = getprocessedData("Sectors", "Services");
       content = <MainShowContainer data={data} title="Our Services" />;
       break;
     case "dep":
-      data = getDivDep();
+      data = getprocessedData("Divisions", "Departments");
       content = <MainShowContainer data={data} title="Our Departments" />;
       break;
     case "div":
-      content = <MainShowContainer data={data} />;
+      data = getprocessedData("Divisions", "Divisions");
+      content = <MainShowContainer data={data} title="Our Divisions" />;
       break;
     case "sec":
       data = getprocessedData("Departments", "Sectors");
-      content = <MainShowContainer data={data} />;
+      content = <MainShowContainer data={data} title="Our Sectors" />;
       break;
     default:
       content = <OnLoadScreen />;

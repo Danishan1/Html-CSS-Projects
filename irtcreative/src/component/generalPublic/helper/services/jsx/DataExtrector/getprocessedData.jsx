@@ -27,7 +27,6 @@ const getprocessedData = (clusterName, listingName) => {
   const list4listing = getServiceData(listingName).data;
   const finalSendableData = {};
   list4listing.forEach((listing) => {
-    console.log(listing[`${colmnName} Code`])
     const codeLetters = listing[`${colmnName} Code`].substring(0, codeLen);
     const cluster = clusterList[codeLetters];
     if (cluster) {

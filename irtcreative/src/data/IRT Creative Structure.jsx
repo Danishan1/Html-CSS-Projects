@@ -28332,11 +28332,6 @@ const OurSturture = {
       Sector: "Ceiling Repair and Restoration",
     },
     {
-      Sr: 89,
-      "Sector Code": "LGG",
-      Sector: "Ceiling Repair and Restoration",
-    },
-    {
       Sr: 90,
       "Sector Code": "LHA",
       Sector: "Ambient Lighting Design",
