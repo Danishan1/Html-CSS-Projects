@@ -3,7 +3,7 @@
 import React from "react";
 import style from "../css/Filter2.module.css";
 import Tab from "./Tab";
-import getServiceData from "./getServiceData";
+import getServiceData from "./DataExtrector/getServiceData";
 
 const Filter2 = () => {
   const { columnNames: sectorColNames, data: sectorData } =

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import style from "../css/Filter1.module.css";
 import Tab from "./Tab";
 import SearchBox from "./Search";
-import getServiceData from "./getServiceData";
+import getServiceData from "./DataExtrector/getServiceData";
 
 const preparingDataforSearchBox = () => {
   const { columnNames: deptColNames, data: deptData } =
@@ -28,7 +28,7 @@ const preparingDataforSearchBox = () => {
   return searchData.filter(Boolean);
 };
 
-const Filter1 = () => {
+const Filter1 = ({ onTabClick }) => {
   const [winWidth, setWinWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -42,6 +42,14 @@ const Filter1 = () => {
   }, []);
 
   const data4Search = preparingDataforSearchBox();
+  const tabs = [
+    "Home",
+    "All Services",
+    "Divisions",
+    "Departments",
+    "Sectors",
+    "Units",
+  ];
   return (
     <>
       <div className={style.filterContainer}>
@@ -51,12 +59,13 @@ const Filter1 = () => {
         </div>
         {winWidth < 690 && <div className={style.filterBtn}>Filter</div>}
         <div className={style.filter1}>
-          <Tab tabName={"Home"} link={"#"} />
-          <Tab tabName={"All Services"} link={"#"} />
-          <Tab tabName={"Divisions"} link={"#"} />
-          <Tab tabName={"Departments"} link={"#"} />
-          <Tab tabName={"Sectors"} link={"#"} />
-          <Tab tabName={"Units"} link={"#"} />
+          {tabs.map((tabName) => (
+            <Tab
+              key={tabName}
+              tabName={tabName}
+              onClick={() => onTabClick(tabName)}
+            />
+          ))}
         </div>
       </div>
     </>

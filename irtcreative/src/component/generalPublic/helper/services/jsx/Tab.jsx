@@ -3,11 +3,11 @@
 import React from "react";
 import style from "../css/Tab.module.css";
 
-const Tab = ({ tabName, link }) => {
+const Tab = ({ tabName, onClick }) => {
   return (
     <>
-      <div className={style.tab}>
-        <a href={link}>{tabName}</a>
+      <div className={style.tab} onClick={onClick}>
+        {tabName}
       </div>
     </>
   );

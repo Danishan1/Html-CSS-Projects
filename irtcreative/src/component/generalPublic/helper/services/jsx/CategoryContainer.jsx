@@ -1,21 +1,19 @@
-// Code: 
+// Code:
 
 import React from "react";
 import style from "../css/CategoryContainer.module.css";
-import getServiceData from "./getServiceData";
 import NameCode from "./NameCode";
 
-const CategoryContainer = () => {
-  const data = getServiceData("Mapped");
-  console.log(data)
+const CategoryContainer = ({ title, list = [] }) => {
   return (
     <>
-      <div className={style.categoryContainer}>
-      <p className={style.p1}>
-        <NameCode code={"DCFS25"} name={"Interior Design"}/>
-        
-      </p>
-       
+      <div className={style.categoryContainer} key={title}>
+        <p>{title}</p>
+        <div className={style.p1}>
+          {list.map((value) => (
+            <NameCode key={value} code={"DCFS25"} name={value} />
+          ))}
+        </div>
       </div>
     </>
   );

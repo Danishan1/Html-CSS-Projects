@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../css/Services.module.css";
 // import getServiceData from "../helper/services/jsx/getServiceData";
 import Filter1 from "../helper/services/jsx/Filter1";
@@ -7,12 +7,19 @@ import MainService from "../helper/services/jsx/MainService";
 
 const Services = () => {
   // const { columnNames, data } = getServiceData("Divisions");
+
+  const [filterData, setFilterData] = useState("");
+
+  const handleTabClick = (tabName) => {
+    setFilterData(tabName.substring(0, 3).toLowerCase());
+  };
+
   return (
     <>
       <div className={style.services}>
         <div className={style.leftSide}>
           <div className={style.filter1}>
-            <Filter1 />
+            <Filter1 onTabClick={handleTabClick} />
           </div>
           <div className={style.filter2}>
             <Filter2 />
@@ -21,7 +28,7 @@ const Services = () => {
         <div className={style.midSide}>
           <div className={style.filter3}></div>
           <div className={style.mainService}>
-            <MainService tab={"container"}/>
+            <MainService tab={filterData} />
           </div>
         </div>
       </div>

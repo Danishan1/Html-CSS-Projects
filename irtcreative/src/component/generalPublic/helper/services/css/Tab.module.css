@@ -7,7 +7,8 @@
   font-weight: var(--boldL2);
 }
 
-.tab a:hover {
+.tab:hover {
   text-decoration: underline;
   color: var(--colorBlue);
+  cursor: pointer;
 }

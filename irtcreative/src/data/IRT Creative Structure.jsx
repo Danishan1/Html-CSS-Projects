@@ -27710,27 +27710,27 @@ const OurSturture = {
     {
       Sr: 1,
       "Division Code": "K",
-      "Division ": "Design and Planning",
+      Division: "Design and Planning",
     },
     {
       Sr: 2,
       "Division Code": "L",
-      "Division ": "Renovation and Construction",
+      Division: "Renovation and Construction",
     },
     {
       Sr: 3,
       "Division Code": "M",
-      "Division ": "Decor and Styling",
+      Division: "Decor and Styling",
     },
     {
       Sr: 4,
       "Division Code": "N",
-      "Division ": "Sustainable and Smart Solutions",
+      Division: "Sustainable and Smart Solutions",
     },
     {
       Sr: 5,
       "Division Code": "O",
-      "Division ": "Support and Education",
+      Division: "Support and Education",
     },
   ],
   Departments: [
