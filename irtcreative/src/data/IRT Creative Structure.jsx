@@ -28775,6941 +28775,6941 @@ const OurSturture = {
   Services: [
     {
       Sr: 1,
-      "Sevice Code": "KAA01",
+      "Service Code": "KAA01",
       Service: "Space Planning and Layout Design",
     },
     {
       Sr: 2,
-      "Sevice Code": "KAA02",
+      "Service Code": "KAA02",
       Service: "Colour Consultation",
     },
     {
       Sr: 3,
-      "Sevice Code": "KAA03",
+      "Service Code": "KAA03",
       Service: "Material and Finish Selection",
     },
     {
       Sr: 4,
-      "Sevice Code": "KAA04",
+      "Service Code": "KAA04",
       Service: "Furniture Selection and Procurement",
     },
     {
       Sr: 5,
-      "Sevice Code": "KAA05",
+      "Service Code": "KAA05",
       Service: "Lighting Design",
     },
     {
       Sr: 6,
-      "Sevice Code": "KAA06",
+      "Service Code": "KAA06",
       Service: "Custom Millwork and Cabinetry Design",
     },
     {
       Sr: 7,
-      "Sevice Code": "KAA07",
+      "Service Code": "KAA07",
       Service: "Window Treatments and Soft Furnishings",
     },
     {
       Sr: 8,
-      "Sevice Code": "KAA08",
+      "Service Code": "KAA08",
       Service: "Artwork and Decor Selection",
     },
     {
       Sr: 9,
-      "Sevice Code": "KAB09",
+      "Service Code": "KAB09",
       Service: "Functional Workspace Planning",
     },
     {
       Sr: 10,
-      "Sevice Code": "KAB0A",
+      "Service Code": "KAB0A",
       Service: "Ergonomic Furniture Solutions",
     },
     {
       Sr: 11,
-      "Sevice Code": "KAB0B",
+      "Service Code": "KAB0B",
       Service: "Brand Integration and Corporate Identity",
     },
     {
       Sr: 12,
-      "Sevice Code": "KAB0C",
+      "Service Code": "KAB0C",
       Service: "Collaborative Space Design",
     },
     {
       Sr: 13,
-      "Sevice Code": "KAB0D",
+      "Service Code": "KAB0D",
       Service: "Reception and Waiting Area Design",
     },
     {
       Sr: 14,
-      "Sevice Code": "KAB0E",
+      "Service Code": "KAB0E",
       Service: "Meeting Room Design",
     },
     {
       Sr: 15,
-      "Sevice Code": "KAB0F",
+      "Service Code": "KAB0F",
       Service: "Breakroom and Lounge Design",
     },
     {
       Sr: 16,
-      "Sevice Code": "KAB10",
+      "Service Code": "KAB10",
       Service: "Technology Integration (AV systems, etc.)",
     },
     {
       Sr: 17,
-      "Sevice Code": "KAC11",
+      "Service Code": "KAC11",
       Service: "Dining Area Layout Design",
     },
     {
       Sr: 18,
-      "Sevice Code": "KAC12",
+      "Service Code": "KAC12",
       Service: "Bar and Lounge Design",
     },
     {
       Sr: 19,
-      "Sevice Code": "KAC13",
+      "Service Code": "KAC13",
       Service: "Kitchen Design and Layout",
     },
     {
       Sr: 20,
-      "Sevice Code": "KAC14",
+      "Service Code": "KAC14",
       Service: "Ambient Lighting Design",
     },
     {
       Sr: 21,
-      "Sevice Code": "KAC15",
+      "Service Code": "KAC15",
       Service: "Theme and Concept Development",
     },
     {
       Sr: 22,
-      "Sevice Code": "KAC16",
+      "Service Code": "KAC16",
       Service: "Seating Configuration and Comfort",
     },
     {
       Sr: 23,
-      "Sevice Code": "KAC17",
+      "Service Code": "KAC17",
       Service: "Acoustic Solutions",
     },
     {
       Sr: 24,
-      "Sevice Code": "KAC18",
+      "Service Code": "KAC18",
       Service: "Signage and Menu Board Design",
     },
     {
       Sr: 25,
-      "Sevice Code": "KAD19",
+      "Service Code": "KAD19",
       Service: "Whole-House Remodelling",
     },
     {
       Sr: 26,
-      "Sevice Code": "KAD1A",
+      "Service Code": "KAD1A",
       Service: "Kitchen and Bathroom Renovation",
     },
     {
       Sr: 27,
-      "Sevice Code": "KAD1B",
+      "Service Code": "KAD1B",
       Service: "Open Concept Floor Plans",
     },
     {
       Sr: 28,
-      "Sevice Code": "KAD1C",
+      "Service Code": "KAD1C",
       Service: "Structural Changes and Space Optimization",
     },
     {
       Sr: 29,
-      "Sevice Code": "KAD1D",
+      "Service Code": "KAD1D",
       Service: "Historical Restoration",
     },
     {
       Sr: 30,
-      "Sevice Code": "KAD1E",
+      "Service Code": "KAD1E",
       Service: "Adaptive Reuse Projects",
     },
     {
       Sr: 31,
-      "Sevice Code": "KAD1F",
+      "Service Code": "KAD1F",
       Service: "Smart Home Integration",
     },
     {
       Sr: 32,
-      "Sevice Code": "KAD20",
+      "Service Code": "KAD20",
       Service: "Aging-in-Place Design",
     },
     {
       Sr: 33,
-      "Sevice Code": "KAE21",
+      "Service Code": "KAE21",
       Service: "Custom Home Design",
     },
     {
       Sr: 34,
-      "Sevice Code": "KAE22",
+      "Service Code": "KAE22",
       Service: "Interior Architecture",
     },
     {
       Sr: 35,
-      "Sevice Code": "KAE23",
+      "Service Code": "KAE23",
       Service: "Bedroom and Living Room Design",
     },
     {
       Sr: 36,
-      "Sevice Code": "KAE24",
+      "Service Code": "KAE24",
       Service: "Children's Room Design",
     },
     {
       Sr: 37,
-      "Sevice Code": "KAE25",
+      "Service Code": "KAE25",
       Service: "Home Office Design",
     },
     {
       Sr: 38,
-      "Sevice Code": "KAE26",
+      "Service Code": "KAE26",
       Service: "Outdoor Living Space Design (Patios, Decks, etc.)",
     },
     {
       Sr: 39,
-      "Sevice Code": "KAE27",
+      "Service Code": "KAE27",
       Service: "Sustainable Home Design",
     },
     {
       Sr: 40,
-      "Sevice Code": "KAE28",
+      "Service Code": "KAE28",
       Service: "Multi-generational Living Solutions",
     },
     {
       Sr: 41,
-      "Sevice Code": "KAF29",
+      "Service Code": "KAF29",
       Service: "Retail Store Design",
     },
     {
       Sr: 42,
-      "Sevice Code": "KAF2A",
+      "Service Code": "KAF2A",
       Service: "Boutique and Shop Layouts",
     },
     {
       Sr: 43,
-      "Sevice Code": "KAF2B",
+      "Service Code": "KAF2B",
       Service: "Office Fitouts",
     },
     {
       Sr: 44,
-      "Sevice Code": "KAF2C",
+      "Service Code": "KAF2C",
       Service: "Hospitality Spaces (Hotels, Resorts, etc.)",
     },
     {
       Sr: 45,
-      "Sevice Code": "KAF2D",
+      "Service Code": "KAF2D",
       Service: "Healthcare Facilities Design",
     },
     {
       Sr: 46,
-      "Sevice Code": "KAF2E",
+      "Service Code": "KAF2E",
       Service: "Educational Institutions Design",
     },
     {
       Sr: 47,
-      "Sevice Code": "KAF2F",
+      "Service Code": "KAF2F",
       Service: "Cultural and Civic Spaces Design",
     },
     {
       Sr: 48,
-      "Sevice Code": "KAF30",
+      "Service Code": "KAF30",
       Service: "Industrial and Warehouse Spaces Design",
     },
     {
       Sr: 49,
-      "Sevice Code": "KAG31",
+      "Service Code": "KAG31",
       Service: "High-end Material Selection (Marble, Exotic Woods, etc.)",
     },
     {
       Sr: 50,
-      "Sevice Code": "KAG32",
+      "Service Code": "KAG32",
       Service: "Custom Furniture and Fixtures Design",
     },
     {
       Sr: 51,
-      "Sevice Code": "KAG33",
+      "Service Code": "KAG33",
       Service: "Art Collection Curation",
     },
     {
       Sr: 52,
-      "Sevice Code": "KAG34",
+      "Service Code": "KAG34",
       Service: "Bespoke Lighting Solutions",
     },
     {
       Sr: 53,
-      "Sevice Code": "KAG35",
+      "Service Code": "KAG35",
       Service: "Home Automation Integration",
     },
     {
       Sr: 54,
-      "Sevice Code": "KAG36",
+      "Service Code": "KAG36",
       Service: "Exclusive Finishings and Textiles",
     },
     {
       Sr: 55,
-      "Sevice Code": "KAG37",
+      "Service Code": "KAG37",
       Service: "Private Spa and Wellness Areas",
     },
     {
       Sr: 56,
-      "Sevice Code": "KAG38",
+      "Service Code": "KAG38",
       Service: "Personalized Concierge Services",
     },
     {
       Sr: 57,
-      "Sevice Code": "KAH39",
+      "Service Code": "KAH39",
       Service: "Value Engineering Solutions",
     },
     {
       Sr: 58,
-      "Sevice Code": "KAH3A",
+      "Service Code": "KAH3A",
       Service: "Cost-Effective Material Selection",
     },
     {
       Sr: 59,
-      "Sevice Code": "KAH3B",
+      "Service Code": "KAH3B",
       Service: "Prefabricated and Modular Furniture Solutions",
     },
     {
       Sr: 60,
-      "Sevice Code": "KAH3C",
+      "Service Code": "KAH3C",
       Service: "DIY-friendly Design Recommendations",
     },
     {
       Sr: 61,
-      "Sevice Code": "KAH3D",
+      "Service Code": "KAH3D",
       Service: "Sustainable and Eco-friendly Design Options",
     },
     {
       Sr: 62,
-      "Sevice Code": "KAH3E",
+      "Service Code": "KAH3E",
       Service: "Strategic Renovation Planning",
     },
     {
       Sr: 63,
-      "Sevice Code": "KAH3F",
+      "Service Code": "KAH3F",
       Service: "Vendor and Contractor Negotiation Assistance",
     },
     {
       Sr: 64,
-      "Sevice Code": "KAH40",
+      "Service Code": "KAH40",
       Service: "Creative Upcycling and Repurposing Ideas",
     },
     {
       Sr: 65,
-      "Sevice Code": "KBA01",
+      "Service Code": "KBA01",
       Service: "Assessing and Analysing Space Requirements",
     },
     {
       Sr: 66,
-      "Sevice Code": "KBA02",
+      "Service Code": "KBA02",
       Service: "Creating Functional Floor Plans",
     },
     {
       Sr: 67,
-      "Sevice Code": "KBA03",
+      "Service Code": "KBA03",
       Service: "Optimizing Traffic Flow and Accessibility",
     },
     {
       Sr: 68,
-      "Sevice Code": "KBA04",
+      "Service Code": "KBA04",
       Service: "Zoning Different Areas for Specific Functions",
     },
     {
       Sr: 69,
-      "Sevice Code": "KBA05",
+      "Service Code": "KBA05",
       Service: "Maximizing Natural Light and Ventilation",
     },
     {
       Sr: 70,
-      "Sevice Code": "KBA06",
+      "Service Code": "KBA06",
       Service: "Incorporating Flexibility for Future Needs",
     },
     {
       Sr: 71,
-      "Sevice Code": "KBB07",
+      "Service Code": "KBB07",
       Service: "Identifying Underutilized Areas for Improvement",
     },
     {
       Sr: 72,
-      "Sevice Code": "KBB08",
+      "Service Code": "KBB08",
       Service: "Implementing Storage Solutions to Reduce Clutter",
     },
     {
       Sr: 73,
-      "Sevice Code": "KBB09",
+      "Service Code": "KBB09",
       Service: "Utilizing Vertical Space with Shelving and Storage Units",
     },
     {
       Sr: 74,
-      "Sevice Code": "KBB0A",
+      "Service Code": "KBB0A",
       Service: "Multi-purpose Furniture Recommendations",
     },
     {
       Sr: 75,
-      "Sevice Code": "KBB0B",
+      "Service Code": "KBB0B",
       Service: "Creating Seamless Transitions Between Spaces",
     },
     {
       Sr: 76,
-      "Sevice Code": "KBB0C",
+      "Service Code": "KBB0C",
       Service: "Designing Custom Solutions for Awkward Spaces",
     },
     {
       Sr: 77,
-      "Sevice Code": "KBC0D",
+      "Service Code": "KBC0D",
       Service: "Designing Furniture Arrangements for Optimal Functionality",
     },
     {
       Sr: 78,
-      "Sevice Code": "KBC0E",
+      "Service Code": "KBC0E",
       Service: "Considering Proportions and Scale of Furniture Pieces",
     },
     {
       Sr: 79,
-      "Sevice Code": "KBC0F",
+      "Service Code": "KBC0F",
       Service: "Balancing Aesthetics with Practicality",
     },
     {
       Sr: 80,
-      "Sevice Code": "KBC10",
+      "Service Code": "KBC10",
       Service: "Incorporating Focal Points and Conversation Areas",
     },
     {
       Sr: 81,
-      "Sevice Code": "KBC11",
+      "Service Code": "KBC11",
       Service: "Adhering to Universal Design Principles for Accessibility",
     },
     {
       Sr: 82,
-      "Sevice Code": "KBC12",
+      "Service Code": "KBC12",
       Service: "Offering Multiple Layout Options for Client Consideration",
     },
     {
       Sr: 83,
-      "Sevice Code": "KBD13",
+      "Service Code": "KBD13",
       Service: "Collaborating with Clients to Design Custom Furniture Pieces",
     },
     {
       Sr: 84,
-      "Sevice Code": "KBD14",
+      "Service Code": "KBD14",
       Service: "Creating Concept Sketches and Renderings",
     },
     {
       Sr: 85,
-      "Sevice Code": "KBD15",
+      "Service Code": "KBD15",
       Service: "Selecting Materials and Finishes to Match Client Preferences",
     },
     {
       Sr: 86,
-      "Sevice Code": "KBD16",
+      "Service Code": "KBD16",
       Service: "Partnering with Artisans and Craftsmen for Production",
     },
     {
       Sr: 87,
-      "Sevice Code": "KBD17",
+      "Service Code": "KBD17",
       Service: "Ensuring Furniture Designs Align with Overall Design Concept",
     },
     {
       Sr: 88,
-      "Sevice Code": "KBD18",
+      "Service Code": "KBD18",
       Service: "Providing Prototypes and Samples for Client Approval",
     },
     {
       Sr: 89,
-      "Sevice Code": "KBE19",
+      "Service Code": "KBE19",
       Service:
         "Designing Custom Cabinetry Solutions for Kitchens, Bathrooms, and Beyond",
     },
     {
       Sr: 90,
-      "Sevice Code": "KBE1A",
+      "Service Code": "KBE1A",
       Service: "Maximizing Storage Capacity with Thoughtful Design",
     },
     {
       Sr: 91,
-      "Sevice Code": "KBE1B",
+      "Service Code": "KBE1B",
       Service:
         "Incorporating Functional Features like Pull-Out Shelves and Drawer Organizers",
     },
     {
       Sr: 92,
-      "Sevice Code": "KBE1C",
+      "Service Code": "KBE1C",
       Service: "Offering a Wide Range of Material and Finish Options",
     },
     {
       Sr: 93,
-      "Sevice Code": "KBE1D",
+      "Service Code": "KBE1D",
       Service: "Ensuring Seamless Integration with Overall Room Design",
     },
     {
       Sr: 94,
-      "Sevice Code": "KBE1E",
+      "Service Code": "KBE1E",
       Service: "Providing Detailed Drawings and Specifications for Production",
     },
     {
       Sr: 95,
-      "Sevice Code": "KBF1F",
+      "Service Code": "KBF1F",
       Service: "Brainstorming Unique Design Concepts and Themes",
     },
     {
       Sr: 96,
-      "Sevice Code": "KBF20",
+      "Service Code": "KBF20",
       Service: "Thinking Outside the Box to Create Memorable Spaces",
     },
     {
       Sr: 97,
-      "Sevice Code": "KBF21",
+      "Service Code": "KBF21",
       Service: "Incorporating Artistic Elements and Installations",
     },
     {
       Sr: 98,
-      "Sevice Code": "KBF22",
+      "Service Code": "KBF22",
       Service: "Exploring Alternative Uses for Traditional Spaces",
     },
     {
       Sr: 99,
-      "Sevice Code": "KBF23",
+      "Service Code": "KBF23",
       Service: "Encouraging Client Collaboration and Input",
     },
     {
       Sr: 100,
-      "Sevice Code": "KBF24",
+      "Service Code": "KBF24",
       Service:
         "Bringing Imagination to Life Through Innovative Design Solutions",
     },
     {
       Sr: 101,
-      "Sevice Code": "KCA01",
+      "Service Code": "KCA01",
       Service: "Interior and Exterior Painting",
     },
     {
       Sr: 102,
-      "Sevice Code": "KCA02",
+      "Service Code": "KCA02",
       Service: "Surface Preparation (Cleaning, Sanding, Priming)",
     },
     {
       Sr: 103,
-      "Sevice Code": "KCA03",
+      "Service Code": "KCA03",
       Service: "Colour Consultation and Selection",
     },
     {
       Sr: 104,
-      "Sevice Code": "KCA04",
+      "Service Code": "KCA04",
       Service: "Custom Paint Finishes (Texture, Faux, Metallic)",
     },
     {
       Sr: 105,
-      "Sevice Code": "KCA05",
+      "Service Code": "KCA05",
       Service: "Protective Coatings (Waterproofing, Anti-Mold)",
     },
     {
       Sr: 106,
-      "Sevice Code": "KCA06",
+      "Service Code": "KCA06",
       Service: "Specialized Painting Techniques (Stencil, Mural)",
     },
     {
       Sr: 107,
-      "Sevice Code": "KCA07",
+      "Service Code": "KCA07",
       Service: "Touch-up and Repainting Services",
     },
     {
       Sr: 108,
-      "Sevice Code": "KCA08",
+      "Service Code": "KCA08",
       Service: "Eco-Friendly Paint Options",
     },
     {
       Sr: 109,
-      "Sevice Code": "KCB09",
+      "Service Code": "KCB09",
       Service: "Hardwood Flooring Installation and Refinishing",
     },
     {
       Sr: 110,
-      "Sevice Code": "KCB0A",
+      "Service Code": "KCB0A",
       Service: "Laminate Flooring Installation",
     },
     {
       Sr: 111,
-      "Sevice Code": "KCB0B",
+      "Service Code": "KCB0B",
       Service:
         "Tile and Stone Flooring Installation (Ceramic, Porcelain, Marble)",
     },
     {
       Sr: 112,
-      "Sevice Code": "KCB0C",
+      "Service Code": "KCB0C",
       Service: "Vinyl Flooring Installation",
     },
     {
       Sr: 113,
-      "Sevice Code": "KCB0D",
+      "Service Code": "KCB0D",
       Service: "Carpet Installation and Replacement",
     },
     {
       Sr: 114,
-      "Sevice Code": "KCB0E",
+      "Service Code": "KCB0E",
       Service: "Eco-Friendly Flooring Options (Bamboo, Cork)",
     },
     {
       Sr: 115,
-      "Sevice Code": "KCB0F",
+      "Service Code": "KCB0F",
       Service: "Subfloor Repair and Preparation",
     },
     {
       Sr: 116,
-      "Sevice Code": "KCB10",
+      "Service Code": "KCB10",
       Service: "Floor Sealing and Finishing",
     },
     {
       Sr: 117,
-      "Sevice Code": "KCC11",
+      "Service Code": "KCC11",
       Service: "Wallpaper Installation and Removal",
     },
     {
       Sr: 118,
-      "Sevice Code": "KCC12",
+      "Service Code": "KCC12",
       Service: "Textured Wall Finishes (Venetian Plaster, Stucco)",
     },
     {
       Sr: 119,
-      "Sevice Code": "KCC13",
+      "Service Code": "KCC13",
       Service: "Decorative Wall Panels Installation",
     },
     {
       Sr: 120,
-      "Sevice Code": "KCC14",
+      "Service Code": "KCC14",
       Service: "Wainscoting and Chair Rail Installation",
     },
     {
       Sr: 121,
-      "Sevice Code": "KCC15",
+      "Service Code": "KCC15",
       Service: "Accent Wall Design and Installation",
     },
     {
       Sr: 122,
-      "Sevice Code": "KCC16",
+      "Service Code": "KCC16",
       Service: "Custom Melding and Trim Work",
     },
     {
       Sr: 123,
-      "Sevice Code": "KCC17",
+      "Service Code": "KCC17",
       Service: "Drywall Repair and Patching",
     },
     {
       Sr: 124,
-      "Sevice Code": "KCC18",
+      "Service Code": "KCC18",
       Service: "Soundproofing Solutions",
     },
     {
       Sr: 125,
-      "Sevice Code": "KCD19",
+      "Service Code": "KCD19",
       Service: "Lighting Layout and Fixture Placement",
     },
     {
       Sr: 126,
-      "Sevice Code": "KCD1A",
+      "Service Code": "KCD1A",
       Service: "Ambient, Task, and Accent Lighting Design",
     },
     {
       Sr: 127,
-      "Sevice Code": "KCD1B",
+      "Service Code": "KCD1B",
       Service: "Selection of Light Fixtures (Chandeliers, Pendants, Sconces)",
     },
     {
       Sr: 128,
-      "Sevice Code": "KCD1C",
+      "Service Code": "KCD1C",
       Service: "Energy-Efficient Lighting Solutions (LED, CFL)",
     },
     {
       Sr: 129,
-      "Sevice Code": "KCD1D",
+      "Service Code": "KCD1D",
       Service: "Smart Lighting Systems Integration",
     },
     {
       Sr: 130,
-      "Sevice Code": "KCD1E",
+      "Service Code": "KCD1E",
       Service:
         "Outdoor Lighting Design (Landscape Lighting, Security Lighting)",
     },
     {
       Sr: 131,
-      "Sevice Code": "KCD1F",
+      "Service Code": "KCD1F",
       Service: "Lighting Controls and Dimming Systems",
     },
     {
       Sr: 132,
-      "Sevice Code": "KCD20",
+      "Service Code": "KCD20",
       Service: "Lighting Fixture Installation and Wiring",
     },
     {
       Sr: 133,
-      "Sevice Code": "KCE21",
+      "Service Code": "KCE21",
       Service: "Custom Colour Palette Development",
     },
     {
       Sr: 134,
-      "Sevice Code": "KCE22",
+      "Service Code": "KCE22",
       Service: "Harmonious Colour Scheme Selection",
     },
     {
       Sr: 135,
-      "Sevice Code": "KCE23",
+      "Service Code": "KCE23",
       Service: "Mood Board Creation for Colour Inspiration",
     },
     {
       Sr: 136,
-      "Sevice Code": "KCE24",
+      "Service Code": "KCE24",
       Service: "Colour Psychology Consultation",
     },
     {
       Sr: 137,
-      "Sevice Code": "KCE25",
+      "Service Code": "KCE25",
       Service: "Coordinating Colours for Different Spaces",
     },
     {
       Sr: 138,
-      "Sevice Code": "KCE26",
+      "Service Code": "KCE26",
       Service: "Creating Visual Interest with Colour Accents",
     },
     {
       Sr: 139,
-      "Sevice Code": "KCE27",
+      "Service Code": "KCE27",
       Service: "Colour Swatch Sampling and Testing",
     },
     {
       Sr: 140,
-      "Sevice Code": "KCE28",
+      "Service Code": "KCE28",
       Service: "Colour Scheme Adjustment Based on Lighting and Room Size",
     },
     {
       Sr: 141,
-      "Sevice Code": "KCF29",
+      "Service Code": "KCF29",
       Service: "Window Treatments (Curtains, Blinds, Shades)",
     },
     {
       Sr: 142,
-      "Sevice Code": "KCF2A",
+      "Service Code": "KCF2A",
       Service: "Decorative Hardware Selection (Knobs, Pulls, Handles)",
     },
     {
       Sr: 143,
-      "Sevice Code": "KCF2B",
+      "Service Code": "KCF2B",
       Service: "Trim and Melding Installation",
     },
     {
       Sr: 144,
-      "Sevice Code": "KCF2C",
+      "Service Code": "KCF2C",
       Service: "Crown Melding and Baseboard Installation",
     },
     {
       Sr: 145,
-      "Sevice Code": "KCF2D",
+      "Service Code": "KCF2D",
       Service: "Custom Built-ins and Shelving",
     },
     {
       Sr: 146,
-      "Sevice Code": "KCF2E",
+      "Service Code": "KCF2E",
       Service: "Artwork and Decor Placement",
     },
     {
       Sr: 147,
-      "Sevice Code": "KCF2F",
+      "Service Code": "KCF2F",
       Service: "Styling with Soft Furnishings (Throw Pillows, Rugs)",
     },
     {
       Sr: 148,
-      "Sevice Code": "KCF30",
+      "Service Code": "KCF30",
       Service: "Personalized Decorative Accents",
     },
     {
       Sr: 149,
-      "Sevice Code": "KCG31",
+      "Service Code": "KCG31",
       Service: "Curating Design Inspiration Boards",
     },
     {
       Sr: 150,
-      "Sevice Code": "KCG32",
+      "Service Code": "KCG32",
       Service: "Providing Design Mood Boards",
     },
     {
       Sr: 151,
-      "Sevice Code": "KCG33",
+      "Service Code": "KCG33",
       Service: "Offering Design Catalogs and Lookbooks",
     },
     {
       Sr: 152,
-      "Sevice Code": "KCG34",
+      "Service Code": "KCG34",
       Service: "Creating Visual References for Clients",
     },
     {
       Sr: 153,
-      "Sevice Code": "KCG35",
+      "Service Code": "KCG35",
       Service: "Sharing Design Trends and Ideas",
     },
     {
       Sr: 154,
-      "Sevice Code": "KCG36",
+      "Service Code": "KCG36",
       Service: "Showcasing Past Projects as Design References",
     },
     {
       Sr: 155,
-      "Sevice Code": "KCG37",
+      "Service Code": "KCG37",
       Service: "Collaborating with Clients to Understand Preferences",
     },
     {
       Sr: 156,
-      "Sevice Code": "KCG38",
+      "Service Code": "KCG38",
       Service: "Translating Design References into Customized Solutions",
     },
     {
       Sr: 157,
-      "Sevice Code": "KDA01",
+      "Service Code": "KDA01",
       Service:
         "Consultation on Flooring Materials (Hardwood, Laminate, Tile, Vinyl, Carpet, etc.)",
     },
     {
       Sr: 158,
-      "Sevice Code": "KDA02",
+      "Service Code": "KDA02",
       Service:
         "Flooring Selection Based on Client Preferences, Budget, and Lifestyle",
     },
     {
       Sr: 159,
-      "Sevice Code": "KDA03",
+      "Service Code": "KDA03",
       Service:
         "Assessment of Flooring Requirements for Different Spaces (Residential, Commercial, Industrial)",
     },
     {
       Sr: 160,
-      "Sevice Code": "KDA04",
+      "Service Code": "KDA04",
       Service: "Providing Samples and Demonstrations of Flooring Options",
     },
     {
       Sr: 161,
-      "Sevice Code": "KDA05",
+      "Service Code": "KDA05",
       Service: "Installation Services by Skilled Professionals",
     },
     {
       Sr: 162,
-      "Sevice Code": "KDA06",
+      "Service Code": "KDA06",
       Service: "Flooring Maintenance Advice and Tips",
     },
     {
       Sr: 163,
-      "Sevice Code": "KDA07",
+      "Service Code": "KDA07",
       Service:
         "Specialized Flooring Solutions for Specific Needs (Waterproof, Eco-friendly, Soundproof)",
     },
     {
       Sr: 164,
-      "Sevice Code": "KDA08",
+      "Service Code": "KDA08",
       Service: "Refinishing and Restoration of Existing Floors",
     },
     {
       Sr: 165,
-      "Sevice Code": "KDB09",
+      "Service Code": "KDB09",
       Service:
         "Collaborative Consultation to Determine Client Needs and Preferences",
     },
     {
       Sr: 166,
-      "Sevice Code": "KDB0A",
+      "Service Code": "KDB0A",
       Service:
         "Curating a Range of Fixture Options (Lighting, Plumbing, Hardware)",
     },
     {
       Sr: 167,
-      "Sevice Code": "KDB0B",
+      "Service Code": "KDB0B",
       Service:
         "Offering Recommendations Based on Design Aesthetic and Functionality",
     },
     {
       Sr: 168,
-      "Sevice Code": "KDB0C",
+      "Service Code": "KDB0C",
       Service: "Providing Samples and Demonstrations of Fixture Options",
     },
     {
       Sr: 169,
-      "Sevice Code": "KDB0D",
+      "Service Code": "KDB0D",
       Service:
         "Assisting with Fixture Selection to Complement Overall Design Concept",
     },
     {
       Sr: 170,
-      "Sevice Code": "KDB0E",
+      "Service Code": "KDB0E",
       Service:
         "Ensuring Compatibility with Existing Infrastructure and Design Elements",
     },
     {
       Sr: 171,
-      "Sevice Code": "KDB0F",
+      "Service Code": "KDB0F",
       Service: "Managing Procurement and Delivery of Selected Fixtures",
     },
     {
       Sr: 172,
-      "Sevice Code": "KDB10",
+      "Service Code": "KDB10",
       Service: "Offering Installation Services by Skilled Professionals",
     },
     {
       Sr: 173,
-      "Sevice Code": "KDC11",
+      "Service Code": "KDC11",
       Service:
         "Designing and Implementing Architectural Elements (Melding, Trim, Columns, etc.)",
     },
     {
       Sr: 174,
-      "Sevice Code": "KDC12",
+      "Service Code": "KDC12",
       Service:
         "Incorporating Architectural Features for Visual Interest and Character",
     },
     {
       Sr: 175,
-      "Sevice Code": "KDC13",
+      "Service Code": "KDC13",
       Service:
         "Customizing Architectural Details to Enhance Overall Design Concept",
     },
     {
       Sr: 176,
-      "Sevice Code": "KDC14",
+      "Service Code": "KDC14",
       Service: "Restoring and Preserving Historical Architectural Details",
     },
     {
       Sr: 177,
-      "Sevice Code": "KDC15",
+      "Service Code": "KDC15",
       Service:
         "Creating Custom Architectural Details for New Construction Projects",
     },
     {
       Sr: 178,
-      "Sevice Code": "KDC16",
+      "Service Code": "KDC16",
       Service:
         "Collaborating with Architects and Contractors to Ensure Seamless Integration",
     },
     {
       Sr: 179,
-      "Sevice Code": "KDC17",
+      "Service Code": "KDC17",
       Service: "Providing Consultation on Architectural Styles and Periods",
     },
     {
       Sr: 180,
-      "Sevice Code": "KDC18",
+      "Service Code": "KDC18",
       Service:
         "Offering 3D Visualization of Architectural Details for Client Approval",
     },
     {
       Sr: 181,
-      "Sevice Code": "KDD19",
+      "Service Code": "KDD19",
       Service: "Collaborating with Clients to Design Custom Furniture Pieces",
     },
     {
       Sr: 182,
-      "Sevice Code": "KDD1A",
+      "Service Code": "KDD1A",
       Service: "Creating Concept Sketches and Renderings",
     },
     {
       Sr: 183,
-      "Sevice Code": "KDD1B",
+      "Service Code": "KDD1B",
       Service: "Selecting Materials and Finishes to Match Client Preferences",
     },
     {
       Sr: 184,
-      "Sevice Code": "KDD1C",
+      "Service Code": "KDD1C",
       Service: "Partnering with Artisans and Craftsmen for Production",
     },
     {
       Sr: 185,
-      "Sevice Code": "KDD1D",
+      "Service Code": "KDD1D",
       Service: "Ensuring Furniture Designs Align with Overall Design Concept",
     },
     {
       Sr: 186,
-      "Sevice Code": "KDD1E",
+      "Service Code": "KDD1E",
       Service: "Providing Prototypes and Samples for Client Approval",
     },
     {
       Sr: 187,
-      "Sevice Code": "KDD1F",
+      "Service Code": "KDD1F",
       Service:
         "Offering Customization Options to Suit Individual Needs and Preferences",
     },
     {
       Sr: 188,
-      "Sevice Code": "KDD20",
+      "Service Code": "KDD20",
       Service: "Managing Production Process from Design to Delivery",
     },
     {
       Sr: 189,
-      "Sevice Code": "KDE21",
+      "Service Code": "KDE21",
       Service:
         "Designing Custom Cabinetry Solutions for Kitchens, Bathrooms, and Beyond",
     },
     {
       Sr: 190,
-      "Sevice Code": "KDE22",
+      "Service Code": "KDE22",
       Service: "Maximizing Storage Capacity with Thoughtful Design",
     },
     {
       Sr: 191,
-      "Sevice Code": "KDE23",
+      "Service Code": "KDE23",
       Service:
         "Incorporating Functional Features like Pull-Out Shelves and Drawer Organizers",
     },
     {
       Sr: 192,
-      "Sevice Code": "KDE24",
+      "Service Code": "KDE24",
       Service: "Offering a Wide Range of Material and Finish Options",
     },
     {
       Sr: 193,
-      "Sevice Code": "KDE25",
+      "Service Code": "KDE25",
       Service: "Ensuring Seamless Integration with Overall Room Design",
     },
     {
       Sr: 194,
-      "Sevice Code": "KDE26",
+      "Service Code": "KDE26",
       Service: "Providing Detailed Drawings and Specifications for Production",
     },
     {
       Sr: 195,
-      "Sevice Code": "KDE27",
+      "Service Code": "KDE27",
       Service: "Collaborating with Skilled Cabinetmakers for Construction",
     },
     {
       Sr: 196,
-      "Sevice Code": "KDE28",
+      "Service Code": "KDE28",
       Service:
         "Overseeing Installation Process to Ensure Quality and Precision",
     },
     {
       Sr: 197,
-      "Sevice Code": "KEA01",
+      "Service Code": "KEA01",
       Service:
         "Trend Analysis and Forecasting for Various Industries (Interior Design, Fashion, Technology, etc.)",
     },
     {
       Sr: 198,
-      "Sevice Code": "KEA02",
+      "Service Code": "KEA02",
       Service: "Curating Trend Reports and Presentations",
     },
     {
       Sr: 199,
-      "Sevice Code": "KEA03",
+      "Service Code": "KEA03",
       Service:
         "Providing Insight into Emerging Design Trends (Colours, Materials, Patterns, Styles)",
     },
     {
       Sr: 200,
-      "Sevice Code": "KEA04",
+      "Service Code": "KEA04",
       Service:
         "Offering Recommendations on Incorporating Trends into Design Projects",
     },
     {
       Sr: 201,
-      "Sevice Code": "KEA05",
+      "Service Code": "KEA05",
       Service:
         "Tailoring Design Solutions to Align with Current and Future Trends",
     },
     {
       Sr: 202,
-      "Sevice Code": "KEA06",
+      "Service Code": "KEA06",
       Service:
         "Staying Updated on Global Design Trends through Research and Networking",
     },
     {
       Sr: 203,
-      "Sevice Code": "KEA07",
+      "Service Code": "KEA07",
       Service:
         "Hosting Trend Workshops and Seminars for Clients and Industry Professionals",
     },
     {
       Sr: 204,
-      "Sevice Code": "KEA08",
+      "Service Code": "KEA08",
       Service:
         "Collaborating with Suppliers and Manufacturers to Source Trendy Materials and Products",
     },
     {
       Sr: 205,
-      "Sevice Code": "KEB09",
+      "Service Code": "KEB09",
       Service: "Curating Design Mood Boards and Inspiration Boards",
     },
     {
       Sr: 206,
-      "Sevice Code": "KEB0A",
+      "Service Code": "KEB0A",
       Service: "Offering Design Inspiration Packages for Clients",
     },
     {
       Sr: 207,
-      "Sevice Code": "KEB0B",
+      "Service Code": "KEB0B",
       Service:
         "Providing Access to a Library of Design References (Magazines, Books, Online Resources)",
     },
     {
       Sr: 208,
-      "Sevice Code": "KEB0C",
+      "Service Code": "KEB0C",
       Service:
         "Organizing Design Tours and Visits to Inspirational Spaces (Museums, Galleries, Showrooms)",
     },
     {
       Sr: 209,
-      "Sevice Code": "KEB0D",
+      "Service Code": "KEB0D",
       Service:
         "Hosting Design Events and Exhibitions to Showcase Inspirational Work",
     },
     {
       Sr: 210,
-      "Sevice Code": "KEB0E",
+      "Service Code": "KEB0E",
       Service:
         "Collaborating with Artists and Designers to Create Unique Inspirational Pieces",
     },
     {
       Sr: 211,
-      "Sevice Code": "KEB0F",
+      "Service Code": "KEB0F",
       Service:
         "Conducting Design Brainstorming Sessions with Clients to Explore Ideas and Concepts",
     },
     {
       Sr: 212,
-      "Sevice Code": "KEB10",
+      "Service Code": "KEB10",
       Service: "Sharing Personal Design Journeys and Stories to Inspire Others",
     },
     {
       Sr: 213,
-      "Sevice Code": "KEC11",
+      "Service Code": "KEC11",
       Service: "Designing Spaces that Evoke Emotion and Creativity",
     },
     {
       Sr: 214,
-      "Sevice Code": "KEC12",
+      "Service Code": "KEC12",
       Service: "Incorporating Biophilic Design Elements to Connect with Nature",
     },
     {
       Sr: 215,
-      "Sevice Code": "KEC13",
+      "Service Code": "KEC13",
       Service:
         "Creating Multisensory Experiences through Design (Sight, Sound, Touch, Smell)",
     },
     {
       Sr: 216,
-      "Sevice Code": "KEC14",
+      "Service Code": "KEC14",
       Service:
         "Fostering Collaboration and Innovation through Inspiring Workspaces",
     },
     {
       Sr: 217,
-      "Sevice Code": "KEC15",
+      "Service Code": "KEC15",
       Service:
         "Designing Relaxing and Tranquil Spaces for Wellness and Mindfulness",
     },
     {
       Sr: 218,
-      "Sevice Code": "KEC16",
+      "Service Code": "KEC16",
       Service: "Transforming Ordinary Spaces into Extraordinary Experiences",
     },
     {
       Sr: 219,
-      "Sevice Code": "KEC17",
+      "Service Code": "KEC17",
       Service: "Showcasing Inspirational Projects and Case Studies",
     },
     {
       Sr: 220,
-      "Sevice Code": "KEC18",
+      "Service Code": "KEC18",
       Service:
         "Encouraging Personalization and Customization to Create Meaningful Spaces",
     },
     {
       Sr: 221,
-      "Sevice Code": "KFA01",
+      "Service Code": "KFA01",
       Service: "Conducting Virtual Meetings to Assess Client Spaces",
     },
     {
       Sr: 222,
-      "Sevice Code": "KFA02",
+      "Service Code": "KFA02",
       Service:
         "Utilizing Digital Tools and Software for Space Measurement and Planning",
     },
     {
       Sr: 223,
-      "Sevice Code": "KFA03",
+      "Service Code": "KFA03",
       Service:
         "Collaborating with Clients to Determine Layout and Functionality Needs",
     },
     {
       Sr: 224,
-      "Sevice Code": "KFA04",
+      "Service Code": "KFA04",
       Service:
         "Providing Virtual Floor Plans and 3D Renderings for Space Visualization",
     },
     {
       Sr: 225,
-      "Sevice Code": "KFA05",
+      "Service Code": "KFA05",
       Service: "Offering Multiple Design Options for Client Consideration",
     },
     {
       Sr: 226,
-      "Sevice Code": "KFA06",
+      "Service Code": "KFA06",
       Service:
         "Incorporating Client Feedback and Revisions into Virtual Space Plans",
     },
     {
       Sr: 227,
-      "Sevice Code": "KFA07",
+      "Service Code": "KFA07",
       Service:
         "Ensuring Compatibility with Virtual Reality (VR) Platforms for Enhanced Visualization",
     },
     {
       Sr: 228,
-      "Sevice Code": "KFB08",
+      "Service Code": "KFB08",
       Service:
         "Offering Convenient Online Consultation Sessions via Video Conferencing Platforms",
     },
     {
       Sr: 229,
-      "Sevice Code": "KFB09",
+      "Service Code": "KFB09",
       Service:
         "Discussing Client Design Preferences, Goals, and Budgets Remotely",
     },
     {
       Sr: 230,
-      "Sevice Code": "KFB0A",
+      "Service Code": "KFB0A",
       Service:
         "Providing Expert Advice and Recommendations for Design Projects",
     },
     {
       Sr: 231,
-      "Sevice Code": "KFB0B",
+      "Service Code": "KFB0B",
       Service:
         "Answering Client Questions and Addressing Design Concerns in Real-time",
     },
     {
       Sr: 232,
-      "Sevice Code": "KFB0C",
+      "Service Code": "KFB0C",
       Service:
         "Offering Design Solutions Tailored to Client Needs and Preferences",
     },
     {
       Sr: 233,
-      "Sevice Code": "KFB0D",
+      "Service Code": "KFB0D",
       Service:
         "Facilitating Collaboration and Communication Between Clients and Designers",
     },
     {
       Sr: 234,
-      "Sevice Code": "KFB0E",
+      "Service Code": "KFB0E",
       Service:
         "Ensuring Flexibility and Accessibility for Clients with Busy Schedules",
     },
     {
       Sr: 235,
-      "Sevice Code": "KFC0F",
+      "Service Code": "KFC0F",
       Service:
         "Creating Digital Mood Boards to Capture Design Inspirations and Ideas",
     },
     {
       Sr: 236,
-      "Sevice Code": "KFC10",
+      "Service Code": "KFC10",
       Service:
         "Curating Images, Colours, Textures, and Patterns to Convey Design Concepts",
     },
     {
       Sr: 237,
-      "Sevice Code": "KFC11",
+      "Service Code": "KFC11",
       Service:
         "Presenting Digital Mood Boards to Clients for Design Direction and Approval",
     },
     {
       Sr: 238,
-      "Sevice Code": "KFC12",
+      "Service Code": "KFC12",
       Service:
         "Incorporating Client Feedback to Refine and Finalize Design Concepts",
     },
     {
       Sr: 239,
-      "Sevice Code": "KFC13",
+      "Service Code": "KFC13",
       Service:
         "Providing Detailed Descriptions and Annotations for Mood Board Elements",
     },
     {
       Sr: 240,
-      "Sevice Code": "KFC14",
+      "Service Code": "KFC14",
       Service:
         "Offering Multiple Mood Board Options to Explore Different Design Directions",
     },
     {
       Sr: 241,
-      "Sevice Code": "KFC15",
+      "Service Code": "KFC15",
       Service:
         "Delivering High-Quality Digital Presentations for Client Review and Presentation",
     },
     {
       Sr: 242,
-      "Sevice Code": "KFD16",
+      "Service Code": "KFD16",
       Service:
         "Offering Remote Styling Consultations via Video Calls or Messaging Platforms",
     },
     {
       Sr: 243,
-      "Sevice Code": "KFD17",
+      "Service Code": "KFD17",
       Service:
         "Providing Personalized Styling Advice for Furniture Arrangement and Decor Placement",
     },
     {
       Sr: 244,
-      "Sevice Code": "KFD18",
+      "Service Code": "KFD18",
       Service:
         "Offering Recommendations for Colour Schemes, Textiles, and Accessories",
     },
     {
       Sr: 245,
-      "Sevice Code": "KFD19",
+      "Service Code": "KFD19",
       Service: "Assisting Clients in Creating Cohesive Design Schemes Remotely",
     },
     {
       Sr: 246,
-      "Sevice Code": "KFD1A",
+      "Service Code": "KFD1A",
       Service:
         "Offering Tips and Tricks for Enhancing Visual Appeal and Functionality",
     },
     {
       Sr: 247,
-      "Sevice Code": "KFD1B",
+      "Service Code": "KFD1B",
       Service:
         "Providing Virtual Tours of Styled Spaces for Client Visualization",
     },
     {
       Sr: 248,
-      "Sevice Code": "KFD1C",
+      "Service Code": "KFD1C",
       Service:
         "Delivering Styling Guides and Tutorials for DIY Styling Projects",
     },
     {
       Sr: 249,
-      "Sevice Code": "KFE1D",
+      "Service Code": "KFE1D",
       Service:
         "Offering Virtual Home Staging Services for Real Estate Professionals and Home Sellers",
     },
     {
       Sr: 250,
-      "Sevice Code": "KFE1E",
+      "Service Code": "KFE1E",
       Service:
         "Utilizing Digital Tools to Stage Empty or Vacant Properties Virtually",
     },
     {
       Sr: 251,
-      "Sevice Code": "KFE1F",
+      "Service Code": "KFE1F",
       Service:
         "Incorporating Furniture, Decor, and Accessories to Enhance Visual Appeal",
     },
     {
       Sr: 252,
-      "Sevice Code": "KFE20",
+      "Service Code": "KFE20",
       Service: "Providing Virtual Tours and Walkthroughs of Staged Spaces",
     },
     {
       Sr: 253,
-      "Sevice Code": "KFE21",
+      "Service Code": "KFE21",
       Service:
         "Offering Customizable Staging Packages to Meet Client Needs and Budgets",
     },
     {
       Sr: 254,
-      "Sevice Code": "KFE22",
+      "Service Code": "KFE22",
       Service:
         "Delivering High-Quality Images and Videos for Online Listings and Marketing Materials",
     },
     {
       Sr: 255,
-      "Sevice Code": "KFE23",
+      "Service Code": "KFE23",
       Service:
         "Facilitating Remote Collaboration Between Home Sellers and Stagers",
     },
     {
       Sr: 256,
-      "Sevice Code": "KFE24",
+      "Service Code": "KFE24",
       Service: "Ensuring Quick Turnaround Times for Virtual Staging Projects",
     },
     {
       Sr: 257,
-      "Sevice Code": "KGA01",
+      "Service Code": "KGA01",
       Service:
         "Collaborating with Clients to Understand Their Needs, Preferences, and Lifestyle",
     },
     {
       Sr: 258,
-      "Sevice Code": "KGA02",
+      "Service Code": "KGA02",
       Service:
         "Creating Custom Furniture Designs That Reflect Client's Personal Style and Functional Requirements",
     },
     {
       Sr: 259,
-      "Sevice Code": "KGA03",
+      "Service Code": "KGA03",
       Service:
         "Offering Concept Sketches, 3D Renderings, and Prototypes for Client Approval",
     },
     {
       Sr: 260,
-      "Sevice Code": "KGA04",
+      "Service Code": "KGA04",
       Service:
         "Selecting High-quality Materials and Finishes to Match Client's Taste and Budget",
     },
     {
       Sr: 261,
-      "Sevice Code": "KGA05",
+      "Service Code": "KGA05",
       Service:
         "Partnering with Skilled Craftsmen and Artisans to Bring Designs to Life",
     },
     {
       Sr: 262,
-      "Sevice Code": "KGA06",
+      "Service Code": "KGA06",
       Service:
         "Ensuring Attention to Detail and Quality Craftsmanship in Every Piece",
     },
     {
       Sr: 263,
-      "Sevice Code": "KGA07",
+      "Service Code": "KGA07",
       Service:
         "Providing Delivery and Installation Services to Ensure Client Satisfaction",
     },
     {
       Sr: 264,
-      "Sevice Code": "KGB08",
+      "Service Code": "KGB08",
       Service:
         "Working Closely with Clients to Capture Their Vision and Inspiration for Artwork",
     },
     {
       Sr: 265,
-      "Sevice Code": "KGB09",
+      "Service Code": "KGB09",
       Service:
         "Creating Original Artwork and Installations That Complement the Surrounding Space",
     },
     {
       Sr: 266,
-      "Sevice Code": "KGB0A",
+      "Service Code": "KGB0A",
       Service:
         "Offering a Range of Artistic Styles, Mediums, and Techniques to Suit Client Preferences",
     },
     {
       Sr: 267,
-      "Sevice Code": "KGB0B",
+      "Service Code": "KGB0B",
       Service:
         "Providing Site-specific Artwork and Installations for Residential and Commercial Spaces",
     },
     {
       Sr: 268,
-      "Sevice Code": "KGB0C",
+      "Service Code": "KGB0C",
       Service:
         "Collaborating with Local Artists and Artisans to Commission Custom Pieces",
     },
     {
       Sr: 269,
-      "Sevice Code": "KGB0D",
+      "Service Code": "KGB0D",
       Service:
         "Ensuring Artwork Enhances the Overall Design Concept and Ambiance of the Space",
     },
     {
       Sr: 270,
-      "Sevice Code": "KGB0E",
+      "Service Code": "KGB0E",
       Service:
         "Offering Consultation on Art Placement and Display for Maximum Impact",
     },
     {
       Sr: 271,
-      "Sevice Code": "KGC0F",
+      "Service Code": "KGC0F",
       Service:
         "Offering a Wide Selection of Window Treatment Options (Curtains, Drapes, Blinds, Shades, Shutters)",
     },
     {
       Sr: 272,
-      "Sevice Code": "KGC10",
+      "Service Code": "KGC10",
       Service:
         "Providing Customization Options for Fabric, Colour, Texture, and Pattern",
     },
     {
       Sr: 273,
-      "Sevice Code": "KGC11",
+      "Service Code": "KGC11",
       Service:
         "Designing Window Treatments to Enhance Privacy, Light Control, and Energy Efficiency",
     },
     {
       Sr: 274,
-      "Sevice Code": "KGC12",
+      "Service Code": "KGC12",
       Service:
         "Offering Motorized and Smart Window Treatment Solutions for Convenience and Automation",
     },
     {
       Sr: 275,
-      "Sevice Code": "KGC13",
+      "Service Code": "KGC13",
       Service:
         "Providing Professional Measurement and Installation Services for a Perfect Fit",
     },
     {
       Sr: 276,
-      "Sevice Code": "KGC14",
+      "Service Code": "KGC14",
       Service:
         "Ensuring Window Treatments Complement the Overall Design Aesthetic of the Space",
     },
     {
       Sr: 277,
-      "Sevice Code": "KGC15",
+      "Service Code": "KGC15",
       Service:
         "Offering Consultation on Window Treatment Styles and Designs to Suit Client Preferences",
     },
     {
       Sr: 278,
-      "Sevice Code": "KGD16",
+      "Service Code": "KGD16",
       Service:
         "Curating Collections of Unique and Personalized Home Accessories",
     },
     {
       Sr: 279,
-      "Sevice Code": "KGD17",
+      "Service Code": "KGD17",
       Service:
         "Offering Customization Options for Accessories Such as Mirrors, Lamps, Vases, and Decorative Objects",
     },
     {
       Sr: 280,
-      "Sevice Code": "KGD18",
+      "Service Code": "KGD18",
       Service:
         "Providing Monogramming and Engraving Services for Personalized Touches",
     },
     {
       Sr: 281,
-      "Sevice Code": "KGD19",
+      "Service Code": "KGD19",
       Service:
         "Recommending Accessories That Reflect Client's Personality, Hobbies, and Interests",
     },
     {
       Sr: 282,
-      "Sevice Code": "KGD1A",
+      "Service Code": "KGD1A",
       Service:
         "Offering Seasonal and Holiday-themed Accessories for Festive Celebrations",
     },
     {
       Sr: 283,
-      "Sevice Code": "KGD1B",
+      "Service Code": "KGD1B",
       Service:
         "Ensuring Accessories Enhance the Overall Design Scheme and Add Personality to the Space",
     },
     {
       Sr: 284,
-      "Sevice Code": "KGD1C",
+      "Service Code": "KGD1C",
       Service:
         "Providing Gift Selection Services for Special Occasions and Celebrations",
     },
     {
       Sr: 285,
-      "Sevice Code": "KGE1D",
+      "Service Code": "KGE1D",
       Service:
         "Offering a Range of Fabric Options for Upholstery, Drapery, and Soft Furnishings",
     },
     {
       Sr: 286,
-      "Sevice Code": "KGE1E",
+      "Service Code": "KGE1E",
       Service:
         "Providing Customization Options for Fabric Colour, Pattern, Texture, and Weave",
     },
     {
       Sr: 287,
-      "Sevice Code": "KGE1F",
+      "Service Code": "KGE1F",
       Service:
         "Designing Custom Textile Patterns and Prints to Suit Client Preferences and Design Themes",
     },
     {
       Sr: 288,
-      "Sevice Code": "KGE20",
+      "Service Code": "KGE20",
       Service:
         "Offering Bespoke Upholstery Services for Furniture, Cushions, and Pillows",
     },
     {
       Sr: 289,
-      "Sevice Code": "KGE21",
+      "Service Code": "KGE21",
       Service:
         "Ensuring High-quality Workmanship and Attention to Detail in Textile Design and Production",
     },
     {
       Sr: 290,
-      "Sevice Code": "KGE22",
+      "Service Code": "KGE22",
       Service:
         "Collaborating with Skilled Artisans and Manufacturers to Create Custom Textile Products",
     },
     {
       Sr: 291,
-      "Sevice Code": "KGE23",
+      "Service Code": "KGE23",
       Service:
         "Providing Consultation on Fabric Selection and Upholstery Techniques to Achieve Desired Results",
     },
     {
       Sr: 292,
-      "Sevice Code": "KHA01",
+      "Service Code": "KHA01",
       Service:
         "Collaborating with Retailers to Understand Brand Identity and Customer Experience Goals",
     },
     {
       Sr: 293,
-      "Sevice Code": "KHA02",
+      "Service Code": "KHA02",
       Service:
         "Designing Retail Spaces That Enhance Brand Visibility, Engagement, and Sales",
     },
     {
       Sr: 294,
-      "Sevice Code": "KHA03",
+      "Service Code": "KHA03",
       Service:
         "Offering Layout Optimization for Product Display, Traffic Flow, and Customer Interaction",
     },
     {
       Sr: 295,
-      "Sevice Code": "KHA04",
+      "Service Code": "KHA04",
       Service:
         "Providing Lighting Design Solutions to Highlight Merchandise and Create Ambiance",
     },
     {
       Sr: 296,
-      "Sevice Code": "KHA05",
+      "Service Code": "KHA05",
       Service:
         "Incorporating Branding Elements, Signage, and Graphics for Brand Consistency",
     },
     {
       Sr: 297,
-      "Sevice Code": "KHA06",
+      "Service Code": "KHA06",
       Service:
         "Ensuring Compliance with ADA (Americans with Disabilities Act) and Safety Regulations",
     },
     {
       Sr: 298,
-      "Sevice Code": "KHA07",
+      "Service Code": "KHA07",
       Service:
         "Offering Consultation on Store Fixtures, Shelving, and Retail Furniture Selection",
     },
     {
       Sr: 299,
-      "Sevice Code": "KHA08",
+      "Service Code": "KHA08",
       Service:
         "Providing Visual Merchandising Services to Create Appealing Product Displays",
     },
     {
       Sr: 300,
-      "Sevice Code": "KHB09",
+      "Service Code": "KHB09",
       Service:
         "Collaborating with Hospitality Clients to Define Brand Identity, Guest Experience, and Operational Needs",
     },
     {
       Sr: 301,
-      "Sevice Code": "KHB0A",
+      "Service Code": "KHB0A",
       Service:
         "Designing Guest Rooms, Lobbies, Restaurants, and Common Areas to Create Memorable Experiences",
     },
     {
       Sr: 302,
-      "Sevice Code": "KHB0B",
+      "Service Code": "KHB0B",
       Service:
         "Offering Space Planning Solutions for Maximum Efficiency and Guest Comfort",
     },
     {
       Sr: 303,
-      "Sevice Code": "KHB0C",
+      "Service Code": "KHB0C",
       Service:
         "Providing Interior Design Concepts That Reflect Local Culture, Heritage, and Surroundings",
     },
     {
       Sr: 304,
-      "Sevice Code": "KHB0D",
+      "Service Code": "KHB0D",
       Service:
         "Incorporating Sustainable Design Practices for Eco-friendly Hospitality Spaces",
     },
     {
       Sr: 305,
-      "Sevice Code": "KHB0E",
+      "Service Code": "KHB0E",
       Service:
         "Offering FF&E (Furniture, Fixtures, and Equipment) Procurement Services",
     },
     {
       Sr: 306,
-      "Sevice Code": "KHB0F",
+      "Service Code": "KHB0F",
       Service:
         "Providing Project Management and Construction Administration Services for Hospitality Projects",
     },
     {
       Sr: 307,
-      "Sevice Code": "KHB10",
+      "Service Code": "KHB10",
       Service:
         "Ensuring Compliance with Industry Standards and Regulations for Hospitality Design",
     },
     {
       Sr: 308,
-      "Sevice Code": "KHC11",
+      "Service Code": "KHC11",
       Service:
         "Collaborating with Corporate Clients to Define Brand Identity, Company Culture, and Employee Needs",
     },
     {
       Sr: 309,
-      "Sevice Code": "KHC12",
+      "Service Code": "KHC12",
       Service:
         "Designing Office Spaces That Support Collaboration, Productivity, and Well-being",
     },
     {
       Sr: 310,
-      "Sevice Code": "KHC13",
+      "Service Code": "KHC13",
       Service:
         "Offering Space Planning Solutions for Open Offices, Private Offices, Meeting Rooms, and Collaboration Areas",
     },
     {
       Sr: 311,
-      "Sevice Code": "KHC14",
+      "Service Code": "KHC14",
       Service:
         "Providing Workplace Strategy Services to Optimize Space Utilization and Employee Experience",
     },
     {
       Sr: 312,
-      "Sevice Code": "KHC15",
+      "Service Code": "KHC15",
       Service:
         "Incorporating Biophilic Design Elements and Wellness Initiatives for Healthier Work Environments",
     },
     {
       Sr: 313,
-      "Sevice Code": "KHC16",
+      "Service Code": "KHC16",
       Service:
         "Offering Ergonomic Furniture Solutions for Employee Comfort and Safety",
     },
     {
       Sr: 314,
-      "Sevice Code": "KHC17",
+      "Service Code": "KHC17",
       Service:
         "Providing Technology Integration Services for Smart Offices and Collaboration Tools",
     },
     {
       Sr: 315,
-      "Sevice Code": "KHC18",
+      "Service Code": "KHC18",
       Service:
         "Ensuring Compliance with Building Codes, Accessibility Requirements, and Workplace Standards",
     },
     {
       Sr: 316,
-      "Sevice Code": "KHD19",
+      "Service Code": "KHD19",
       Service:
         "Collaborating with Educational Institutions to Define Educational Pedagogy, Student Experience, and Campus Identity",
     },
     {
       Sr: 317,
-      "Sevice Code": "KHD1A",
+      "Service Code": "KHD1A",
       Service:
         "Designing Learning Spaces That Support Different Teaching Methods and Student Learning Styles",
     },
     {
       Sr: 318,
-      "Sevice Code": "KHD1B",
+      "Service Code": "KHD1B",
       Service:
         "Offering Space Planning Solutions for Classrooms, Laboratories, Libraries, and Common Areas",
     },
     {
       Sr: 319,
-      "Sevice Code": "KHD1C",
+      "Service Code": "KHD1C",
       Service:
         "Providing Interior Design Concepts That Promote Collaboration, Creativity, and Innovation",
     },
     {
       Sr: 320,
-      "Sevice Code": "KHD1D",
+      "Service Code": "KHD1D",
       Service:
         "Incorporating Flexible Furniture and Technology Solutions for Adaptive Learning Environments",
     },
     {
       Sr: 321,
-      "Sevice Code": "KHD1E",
+      "Service Code": "KHD1E",
       Service:
         "Offering Sustainable Design Practices for Energy-efficient and Healthy Learning Spaces",
     },
     {
       Sr: 322,
-      "Sevice Code": "KHD1F",
+      "Service Code": "KHD1F",
       Service:
         "Providing Safety and Security Solutions for Educational Facilities",
     },
     {
       Sr: 323,
-      "Sevice Code": "KHD20",
+      "Service Code": "KHD20",
       Service:
         "Ensuring Compliance with Educational Standards, Building Codes, and Accessibility Guidelines",
     },
     {
       Sr: 324,
-      "Sevice Code": "KHE21",
+      "Service Code": "KHE21",
       Service:
         "Collaborating with Healthcare Providers to Define Patient Experience, Staff Efficiency, and Healing Environments",
     },
     {
       Sr: 325,
-      "Sevice Code": "KHE22",
+      "Service Code": "KHE22",
       Service:
         "Designing Healthcare Spaces That Prioritize Patient Comfort, Safety, and Privacy",
     },
     {
       Sr: 326,
-      "Sevice Code": "KHE23",
+      "Service Code": "KHE23",
       Service:
         "Offering Space Planning Solutions for Patient Rooms, Waiting Areas, Treatment Areas, and Support Spaces",
     },
     {
       Sr: 327,
-      "Sevice Code": "KHE24",
+      "Service Code": "KHE24",
       Service:
         "Providing Evidence-based Design Solutions for Stress Reduction and Healing",
     },
     {
       Sr: 328,
-      "Sevice Code": "KHE25",
+      "Service Code": "KHE25",
       Service:
         "Incorporating Infection Control Measures and Healthcare Compliance Standards",
     },
     {
       Sr: 329,
-      "Sevice Code": "KHE26",
+      "Service Code": "KHE26",
       Service:
         "Offering Furniture and Equipment Selection for Healthcare Environments",
     },
     {
       Sr: 330,
-      "Sevice Code": "KHE27",
+      "Service Code": "KHE27",
       Service: "Providing Wayfinding and Signage Solutions for Easy Navigation",
     },
     {
       Sr: 331,
-      "Sevice Code": "KHE28",
+      "Service Code": "KHE28",
       Service:
         "Ensuring Compliance with HIPAA (Health Insurance Portability and Accountability Act) and Healthcare Regulations",
     },
     {
       Sr: 332,
-      "Sevice Code": "KIA01",
+      "Service Code": "KIA01",
       Service:
         "Consulting with Clients to Understand Their Design Preferences, Functional Needs, and Budget",
     },
     {
       Sr: 333,
-      "Sevice Code": "KIA02",
+      "Service Code": "KIA02",
       Service:
         "Creating Detailed Design Concepts and Drawings for Custom Furniture Pieces",
     },
     {
       Sr: 334,
-      "Sevice Code": "KIA03",
+      "Service Code": "KIA03",
       Service:
         "Selecting High-quality Materials and Finishes to Match Client Requirements",
     },
     {
       Sr: 335,
-      "Sevice Code": "KIA04",
+      "Service Code": "KIA04",
       Service:
         "Offering Customization Options Including Size, Color, Upholstery, and Detailing",
     },
     {
       Sr: 336,
-      "Sevice Code": "KIA05",
+      "Service Code": "KIA05",
       Service:
         "Collaborating with Skilled Craftsmen to Manufacture Unique, Made-to-order Furniture",
     },
     {
       Sr: 337,
-      "Sevice Code": "KIA06",
+      "Service Code": "KIA06",
       Service:
         "Providing Quality Control Throughout the Manufacturing Process to Ensure Precision and Excellence",
     },
     {
       Sr: 338,
-      "Sevice Code": "KIA07",
+      "Service Code": "KIA07",
       Service:
         "Offering Delivery and Installation Services to Ensure Proper Placement and Setup",
     },
     {
       Sr: 339,
-      "Sevice Code": "KIB08",
+      "Service Code": "KIB08",
       Service:
         "Developing Initial Concepts and Sketches for New Furniture Designs",
     },
     {
       Sr: 340,
-      "Sevice Code": "KIB09",
+      "Service Code": "KIB09",
       Service: "Creating 3D Models and Renderings to Visualize the Design",
     },
     {
       Sr: 341,
-      "Sevice Code": "KIB0A",
+      "Service Code": "KIB0A",
       Service:
         "Producing Physical Prototypes to Test Design, Functionality, and Ergonomics",
     },
     {
       Sr: 342,
-      "Sevice Code": "KIB0B",
+      "Service Code": "KIB0B",
       Service: "Iterating on Design Based on Feedback and Testing Results",
     },
     {
       Sr: 343,
-      "Sevice Code": "KIB0C",
+      "Service Code": "KIB0C",
       Service:
         "Ensuring Prototypes Meet Quality Standards and Design Specifications",
     },
     {
       Sr: 344,
-      "Sevice Code": "KIB0D",
+      "Service Code": "KIB0D",
       Service:
         "Offering Prototyping Services for Custom Pieces, Limited Editions, and New Collections",
     },
     {
       Sr: 345,
-      "Sevice Code": "KIB0E",
+      "Service Code": "KIB0E",
       Service:
         "Providing Consultation on Material Selection and Manufacturing Techniques",
     },
     {
       Sr: 346,
-      "Sevice Code": "KIC0F",
+      "Service Code": "KIC0F",
       Service:
         "Designing Exclusive Furniture Pieces in Limited Quantities to Ensure Uniqueness",
     },
     {
       Sr: 347,
-      "Sevice Code": "KIC10",
+      "Service Code": "KIC10",
       Service:
         "Creating Designs That Reflect Current Trends, Client Preferences, and Artistic Vision",
     },
     {
       Sr: 348,
-      "Sevice Code": "KIC11",
+      "Service Code": "KIC11",
       Service:
         "Offering Numbered and Signed Editions to Enhance Value and Collectability",
     },
     {
       Sr: 349,
-      "Sevice Code": "KIC12",
+      "Service Code": "KIC12",
       Service:
         "Collaborating with Clients to Customize Limited Edition Pieces to Their Specifications",
     },
     {
       Sr: 350,
-      "Sevice Code": "KIC13",
+      "Service Code": "KIC13",
       Service:
         "Providing Marketing and Promotional Support to Highlight the Exclusivity of Limited Editions",
     },
     {
       Sr: 351,
-      "Sevice Code": "KIC14",
+      "Service Code": "KIC14",
       Service:
         "Ensuring High-quality Craftsmanship and Attention to Detail in Each Piece",
     },
     {
       Sr: 352,
-      "Sevice Code": "KIC15",
+      "Service Code": "KIC15",
       Service:
         "Offering Certification and Documentation for Authenticity and Provenance",
     },
     {
       Sr: 353,
-      "Sevice Code": "KID16",
+      "Service Code": "KID16",
       Service:
         "Partnering with Local Artisans and Craftsmen to Create Unique, Handcrafted Furniture",
     },
     {
       Sr: 354,
-      "Sevice Code": "KID17",
+      "Service Code": "KID17",
       Service:
         "Highlighting and Celebrating Local Craftsmanship and Traditional Techniques",
     },
     {
       Sr: 355,
-      "Sevice Code": "KID18",
+      "Service Code": "KID18",
       Service:
         "Offering Custom Design Services That Incorporate Artisan Skills and Materials",
     },
     {
       Sr: 356,
-      "Sevice Code": "KID19",
+      "Service Code": "KID19",
       Service:
         "Providing a Platform for Local Artisans to Showcase Their Work Through Collaborative Projects",
     },
     {
       Sr: 357,
-      "Sevice Code": "KID1A",
+      "Service Code": "KID1A",
       Service:
         "Ensuring Fair Trade Practices and Supporting Sustainable, Local Economies",
     },
     {
       Sr: 358,
-      "Sevice Code": "KID1B",
+      "Service Code": "KID1B",
       Service:
         "Offering Clients the Opportunity to Commission One-of-a-kind Pieces with Cultural Significance",
     },
     {
       Sr: 359,
-      "Sevice Code": "KID1C",
+      "Service Code": "KID1C",
       Service:
         "Promoting Collaborations Through Marketing, Events, and Exhibitions",
     },
     {
       Sr: 360,
-      "Sevice Code": "KJA01",
+      "Service Code": "KJA01",
       Service:
         "Creating Detailed 3D Models of Interior Spaces for Accurate VR Visualization",
     },
     {
       Sr: 361,
-      "Sevice Code": "KJA02",
+      "Service Code": "KJA02",
       Service:
         "Using Advanced VR Technology to Allow Clients to Experience Designs in a Virtual Environment",
     },
     {
       Sr: 362,
-      "Sevice Code": "KJA03",
+      "Service Code": "KJA03",
       Service:
         "Providing Real-time Adjustments and Customizations During VR Sessions",
     },
     {
       Sr: 363,
-      "Sevice Code": "KJA04",
+      "Service Code": "KJA04",
       Service:
         "Offering High-quality Visuals That Accurately Represent Colors, Textures, and Lighting",
     },
     {
       Sr: 364,
-      "Sevice Code": "KJA05",
+      "Service Code": "KJA05",
       Service:
         "Enabling Clients to Walk Through and Interact with the Virtual Space to Get a True Sense of Scale and Layout",
     },
     {
       Sr: 365,
-      "Sevice Code": "KJA06",
+      "Service Code": "KJA06",
       Service:
         "Using VR to Showcase Different Design Options and Scenarios for Better Decision-making",
     },
     {
       Sr: 366,
-      "Sevice Code": "KJA07",
+      "Service Code": "KJA07",
       Service:
         "Integrating VR Visualization into the Design Process to Enhance Client Understanding and Satisfaction",
     },
     {
       Sr: 367,
-      "Sevice Code": "KJB08",
+      "Service Code": "KJB08",
       Service:
         "Developing Interactive 3D Prototypes That Clients Can Explore and Manipulate in VR",
     },
     {
       Sr: 368,
-      "Sevice Code": "KJB09",
+      "Service Code": "KJB09",
       Service:
         "Providing Functional Simulations of Design Elements, Such as Opening Doors and Switching Lights",
     },
     {
       Sr: 369,
-      "Sevice Code": "KJB0A",
+      "Service Code": "KJB0A",
       Service:
         "Allowing Clients to Change Materials, Finishes, and Furnishings in Real-time to See Immediate Results",
     },
     {
       Sr: 370,
-      "Sevice Code": "KJB0B",
+      "Service Code": "KJB0B",
       Service:
         "Offering Interactive Floor Plans and Room Layouts for Enhanced Spatial Understanding",
     },
     {
       Sr: 371,
-      "Sevice Code": "KJB0C",
+      "Service Code": "KJB0C",
       Service:
         "Using VR to Test and Refine Design Concepts Based on Client Feedback and Interaction",
     },
     {
       Sr: 372,
-      "Sevice Code": "KJB0D",
+      "Service Code": "KJB0D",
       Service:
         "Providing Detailed Annotations and Explanations Within the VR Environment for Clarity",
     },
     {
       Sr: 373,
-      "Sevice Code": "KJB0E",
+      "Service Code": "KJB0E",
       Service:
         "Enabling Clients to Save and Share Interactive Prototypes for Review and Collaboration",
     },
     {
       Sr: 374,
-      "Sevice Code": "KJC0F",
+      "Service Code": "KJC0F",
       Service:
         "Creating Immersive VR Tours of Completed Projects or Model Homes for Marketing and Sales",
     },
     {
       Sr: 375,
-      "Sevice Code": "KJC10",
+      "Service Code": "KJC10",
       Service:
         "Offering Virtual Open Houses That Allow Potential Buyers to Explore Properties Remotely",
     },
     {
       Sr: 376,
-      "Sevice Code": "KJC11",
+      "Service Code": "KJC11",
       Service:
         "Providing Guided Tours with Narration and Information Points to Highlight Key Features",
     },
     {
       Sr: 377,
-      "Sevice Code": "KJC12",
+      "Service Code": "KJC12",
       Service:
         "Allowing Users to Navigate Through Different Rooms and Spaces at Their Own Pace",
     },
     {
       Sr: 378,
-      "Sevice Code": "KJC13",
+      "Service Code": "KJC13",
       Service:
         "Offering Virtual Staging Options to Showcase Different Decor and Layout Possibilities",
     },
     {
       Sr: 379,
-      "Sevice Code": "KJC14",
+      "Service Code": "KJC14",
       Service:
         "Providing High-resolution VR Tours That Can Be Accessed on Various Devices, Including VR Headsets, Computers, and Mobile Devices",
     },
     {
       Sr: 380,
-      "Sevice Code": "KJC15",
+      "Service Code": "KJC15",
       Service:
         "Using VR Home Tours to Attract a Wider Audience and Enhance the Buying Experience",
     },
     {
       Sr: 381,
-      "Sevice Code": "KJD16",
+      "Service Code": "KJD16",
       Service:
         "Conducting Client Meetings and Presentations Using VR to Showcase Design Proposals",
     },
     {
       Sr: 382,
-      "Sevice Code": "KJD17",
+      "Service Code": "KJD17",
       Service:
         "Offering Fully Immersive Experiences Where Clients Can Interact with the Design in a Virtual Setting",
     },
     {
       Sr: 383,
-      "Sevice Code": "KJD18",
+      "Service Code": "KJD18",
       Service:
         "Using VR to Present Complex Design Concepts and Spatial Arrangements Clearly and Effectively",
     },
     {
       Sr: 384,
-      "Sevice Code": "KJD19",
+      "Service Code": "KJD19",
       Service:
         "Providing Real-time Modifications and Customization During Presentations Based on Client Input",
     },
     {
       Sr: 385,
-      "Sevice Code": "KJD1A",
+      "Service Code": "KJD1A",
       Service:
         "Using VR to Illustrate the Impact of Different Lighting Conditions and Times of Day on the Design",
     },
     {
       Sr: 386,
-      "Sevice Code": "KJD1B",
+      "Service Code": "KJD1B",
       Service:
         "Offering VR Presentations as a Tool for Stakeholder Engagement and Approval Processes",
     },
     {
       Sr: 387,
-      "Sevice Code": "KJD1C",
+      "Service Code": "KJD1C",
       Service:
         "Enhancing Client Confidence and Decision-making Through Immersive and Tangible Experiences",
     },
     {
       Sr: 388,
-      "Sevice Code": "LAA01",
+      "Service Code": "LAA01",
       Service: "Consultation and Needs Assessment",
     },
     {
       Sr: 389,
-      "Sevice Code": "LAA02",
+      "Service Code": "LAA02",
       Service: "Design and Planning Services",
     },
     {
       Sr: 390,
-      "Sevice Code": "LAA03",
+      "Service Code": "LAA03",
       Service: "Structural Changes and Permit Acquisition",
     },
     {
       Sr: 391,
-      "Sevice Code": "LAA04",
+      "Service Code": "LAA04",
       Service: "Interior and Exterior Renovation",
     },
     {
       Sr: 392,
-      "Sevice Code": "LAA05",
+      "Service Code": "LAA05",
       Service: "Kitchen and Bathroom Remodelling",
     },
     {
       Sr: 393,
-      "Sevice Code": "LAA06",
+      "Service Code": "LAA06",
       Service: "Flooring Replacement or Refinishing",
     },
     {
       Sr: 394,
-      "Sevice Code": "LAA07",
+      "Service Code": "LAA07",
       Service: "Plumbing and Electrical Upgrades",
     },
     {
       Sr: 395,
-      "Sevice Code": "LAA08",
+      "Service Code": "LAA08",
       Service: "Painting and Finishing Touches",
     },
     {
       Sr: 396,
-      "Sevice Code": "LAB09",
+      "Service Code": "LAB09",
       Service: "Documenting the Initial State of the Space",
     },
     {
       Sr: 397,
-      "Sevice Code": "LAB0A",
+      "Service Code": "LAB0A",
       Service: "Design Conceptualization for Transformation",
     },
     {
       Sr: 398,
-      "Sevice Code": "LAB0B",
+      "Service Code": "LAB0B",
       Service: "Progress Updates and Behind-the-Scenes Content",
     },
     {
       Sr: 399,
-      "Sevice Code": "LAB0C",
+      "Service Code": "LAB0C",
       Service: "Revealing the Final Transformation",
     },
     {
       Sr: 400,
-      "Sevice Code": "LAB0D",
+      "Service Code": "LAB0D",
       Service: "Side-by-Side Comparisons of Before and After",
     },
     {
       Sr: 401,
-      "Sevice Code": "LAB0E",
+      "Service Code": "LAB0E",
       Service: "Highlighting Key Design Changes and Improvements",
     },
     {
       Sr: 402,
-      "Sevice Code": "LAC0F",
+      "Service Code": "LAC0F",
       Service: "Curating Featured Projects for Display",
     },
     {
       Sr: 403,
-      "Sevice Code": "LAC10",
+      "Service Code": "LAC10",
       Service:
         "Showcasing Completed Works in Various Formats (Digital, Print, etc.)",
     },
     {
       Sr: 404,
-      "Sevice Code": "LAC11",
+      "Service Code": "LAC11",
       Service: "Creating Engaging Presentation Materials",
     },
     {
       Sr: 405,
-      "Sevice Code": "LAC12",
+      "Service Code": "LAC12",
       Service: "Hosting In-person or Virtual Showcases",
     },
     {
       Sr: 406,
-      "Sevice Code": "LAC13",
+      "Service Code": "LAC13",
       Service: "Inviting Clients and Prospective Clients to View Projects",
     },
     {
       Sr: 407,
-      "Sevice Code": "LAC14",
+      "Service Code": "LAC14",
       Service: "Providing Detailed Information about Each Showcase Project",
     },
     {
       Sr: 408,
-      "Sevice Code": "LAD15",
+      "Service Code": "LAD15",
       Service: "Compiling an Extensive Collection of Past Projects",
     },
     {
       Sr: 409,
-      "Sevice Code": "LAD16",
+      "Service Code": "LAD16",
       Service: "Organizing Projects by Type, Style, or Location",
     },
     {
       Sr: 410,
-      "Sevice Code": "LAD17",
+      "Service Code": "LAD17",
       Service: "Professionally Photographing Completed Projects",
     },
     {
       Sr: 411,
-      "Sevice Code": "LAD18",
+      "Service Code": "LAD18",
       Service: "Creating Digital and Print Versions of the Portfolio",
     },
     {
       Sr: 412,
-      "Sevice Code": "LAD19",
+      "Service Code": "LAD19",
       Service: "Showcasing Diverse Design Styles and Techniques",
     },
     {
       Sr: 413,
-      "Sevice Code": "LAD1A",
+      "Service Code": "LAD1A",
       Service: "Updating Portfolio Regularly with New Projects",
     },
     {
       Sr: 414,
-      "Sevice Code": "LAE1B",
+      "Service Code": "LAE1B",
       Service: "Collecting Feedback from Satisfied Clients",
     },
     {
       Sr: 415,
-      "Sevice Code": "LAE1C",
+      "Service Code": "LAE1C",
       Service: "Showcasing Testimonials on Website and Marketing Materials",
     },
     {
       Sr: 416,
-      "Sevice Code": "LAE1D",
+      "Service Code": "LAE1D",
       Service: "Featuring Client Stories and Experiences",
     },
     {
       Sr: 417,
-      "Sevice Code": "LAE1E",
+      "Service Code": "LAE1E",
       Service: "Highlighting Successful Collaborations and Partnerships",
     },
     {
       Sr: 418,
-      "Sevice Code": "LAE1F",
+      "Service Code": "LAE1F",
       Service: "Sharing Before and After Stories from Clients' Perspectives",
     },
     {
       Sr: 419,
-      "Sevice Code": "LAE20",
+      "Service Code": "LAE20",
       Service: "Encouraging Clients to Share Their Positive Experiences",
     },
     {
       Sr: 420,
-      "Sevice Code": "LBA01",
+      "Service Code": "LBA01",
       Service: "Structural Analysis and Design",
     },
     {
       Sr: 421,
-      "Sevice Code": "LBA02",
+      "Service Code": "LBA02",
       Service: "Wall Additions and Removals",
     },
     {
       Sr: 422,
-      "Sevice Code": "LBA03",
+      "Service Code": "LBA03",
       Service: "Room Reconfiguration",
     },
     {
       Sr: 423,
-      "Sevice Code": "LBA04",
+      "Service Code": "LBA04",
       Service: "Floor Plan Adjustments",
     },
     {
       Sr: 424,
-      "Sevice Code": "LBA05",
+      "Service Code": "LBA05",
       Service: "Ceiling Alterations",
     },
     {
       Sr: 425,
-      "Sevice Code": "LBA06",
+      "Service Code": "LBA06",
       Service: "Exterior Facade Adjustments",
     },
     {
       Sr: 426,
-      "Sevice Code": "LBA07",
+      "Service Code": "LBA07",
       Service: "Waterproofing and Damp Proofing",
     },
     {
       Sr: 427,
-      "Sevice Code": "LBA08",
+      "Service Code": "LBA08",
       Service: "Finishing Touches",
     },
     {
       Sr: 428,
-      "Sevice Code": "LBB09",
+      "Service Code": "LBB09",
       Service: "Custom Furniture Design and Construction",
     },
     {
       Sr: 429,
-      "Sevice Code": "LBB0A",
+      "Service Code": "LBB0A",
       Service: "Interior Wood Panelling and Cladding",
     },
     {
       Sr: 430,
-      "Sevice Code": "LBB0B",
+      "Service Code": "LBB0B",
       Service: "Built-in Cabinetry and Shelving",
     },
     {
       Sr: 431,
-      "Sevice Code": "LBB0C",
+      "Service Code": "LBB0C",
       Service: "Doors and Windows Installation",
     },
     {
       Sr: 432,
-      "Sevice Code": "LBB0D",
+      "Service Code": "LBB0D",
       Service: "Staircase Design and Construction",
     },
     {
       Sr: 433,
-      "Sevice Code": "LBB0E",
+      "Service Code": "LBB0E",
       Service: "Flooring Installation (Hardwood, Laminate, Engineered Wood)",
     },
     {
       Sr: 434,
-      "Sevice Code": "LBB0F",
+      "Service Code": "LBB0F",
       Service: "Decking and Outdoor Woodwork",
     },
     {
       Sr: 435,
-      "Sevice Code": "LBB10",
+      "Service Code": "LBB10",
       Service: "Wood Treatment and Finishing",
     },
     {
       Sr: 436,
-      "Sevice Code": "LBC11",
+      "Service Code": "LBC11",
       Service: "Wiring and Rewiring Services",
     },
     {
       Sr: 437,
-      "Sevice Code": "LBC12",
+      "Service Code": "LBC12",
       Service: "Electrical Panel Upgrades and Installations",
     },
     {
       Sr: 438,
-      "Sevice Code": "LBC13",
+      "Service Code": "LBC13",
       Service:
         "Lighting Fixture Installation (Chandeliers, Recessed Lighting, Sconces)",
     },
     {
       Sr: 439,
-      "Sevice Code": "LBC14",
+      "Service Code": "LBC14",
       Service: "Power Outlet and Switch Installation",
     },
     {
       Sr: 440,
-      "Sevice Code": "LBC15",
+      "Service Code": "LBC15",
       Service: "Ceiling Fan Installation",
     },
     {
       Sr: 441,
-      "Sevice Code": "LBC16",
+      "Service Code": "LBC16",
       Service: "Appliance Wiring and Installation",
     },
     {
       Sr: 442,
-      "Sevice Code": "LBC17",
+      "Service Code": "LBC17",
       Service: "Electrical Troubleshooting and Repairs",
     },
     {
       Sr: 443,
-      "Sevice Code": "LBC18",
+      "Service Code": "LBC18",
       Service: "Energy-efficient Lighting Solutions",
     },
     {
       Sr: 444,
-      "Sevice Code": "LBD19",
+      "Service Code": "LBD19",
       Service: "New Plumbing Installations (Piping, Fixtures)",
     },
     {
       Sr: 445,
-      "Sevice Code": "LBD1A",
+      "Service Code": "LBD1A",
       Service: "Plumbing Fixture Replacement and Repair",
     },
     {
       Sr: 446,
-      "Sevice Code": "LBD1B",
+      "Service Code": "LBD1B",
       Service: "Drainage System Installation and Maintenance",
     },
     {
       Sr: 447,
-      "Sevice Code": "LBD1C",
+      "Service Code": "LBD1C",
       Service: "Water Heater Installation and Repair",
     },
     {
       Sr: 448,
-      "Sevice Code": "LBD1D",
+      "Service Code": "LBD1D",
       Service: "Toilet, Sink, and Shower Installation",
     },
     {
       Sr: 449,
-      "Sevice Code": "LBD1E",
+      "Service Code": "LBD1E",
       Service: "Leak Detection and Repair",
     },
     {
       Sr: 450,
-      "Sevice Code": "LBD1F",
+      "Service Code": "LBD1F",
       Service: "Water Filtration System Installation",
     },
     {
       Sr: 451,
-      "Sevice Code": "LBD20",
+      "Service Code": "LBD20",
       Service: "Emergency Plumbing Services",
     },
     {
       Sr: 452,
-      "Sevice Code": "LBE21",
+      "Service Code": "LBE21",
       Service:
         "Collaborative Consultation to Determine Client Needs and Preferences",
     },
     {
       Sr: 453,
-      "Sevice Code": "LBE22",
+      "Service Code": "LBE22",
       Service:
         "Curating a Range of Fixture Options (Lighting, Plumbing, Hardware)",
     },
     {
       Sr: 454,
-      "Sevice Code": "LBE23",
+      "Service Code": "LBE23",
       Service:
         "Offering Recommendations Based on Design Aesthetic and Functionality",
     },
     {
       Sr: 455,
-      "Sevice Code": "LBE24",
+      "Service Code": "LBE24",
       Service: "Providing Samples and Demonstrations of Fixture Options",
     },
     {
       Sr: 456,
-      "Sevice Code": "LBE25",
+      "Service Code": "LBE25",
       Service:
         "Assisting with Fixture Selection to Complement Overall Design Concept",
     },
     {
       Sr: 457,
-      "Sevice Code": "LBE26",
+      "Service Code": "LBE26",
       Service:
         "Ensuring Compatibility with Existing Infrastructure and Design Elements",
     },
     {
       Sr: 458,
-      "Sevice Code": "LBE27",
+      "Service Code": "LBE27",
       Service: "Managing Procurement and Delivery of Selected Fixtures",
     },
     {
       Sr: 459,
-      "Sevice Code": "LBE28",
+      "Service Code": "LBE28",
       Service: "Offering Installation Services by Skilled Professionals",
     },
     {
       Sr: 460,
-      "Sevice Code": "LCA01",
+      "Service Code": "LCA01",
       Service:
         "Collaborating with Clients to Understand Their Art Preferences, Style, and Budget",
     },
     {
       Sr: 461,
-      "Sevice Code": "LCA02",
+      "Service Code": "LCA02",
       Service:
         "Curating Art Collections That Reflect Client's Personal Taste and Enhance Interior Spaces",
     },
     {
       Sr: 462,
-      "Sevice Code": "LCA03",
+      "Service Code": "LCA03",
       Service:
         "Offering Guidance on Art Selection Based on Theme, Colour Palette, and Aesthetic Appeal",
     },
     {
       Sr: 463,
-      "Sevice Code": "LCA04",
+      "Service Code": "LCA04",
       Service:
         "Providing Access to a Diverse Range of Artists, Styles, and Mediums to Suit Client Preferences",
     },
     {
       Sr: 464,
-      "Sevice Code": "LCA05",
+      "Service Code": "LCA05",
       Service:
         "Offering Virtual and In-person Art Consultations and Viewing Sessions",
     },
     {
       Sr: 465,
-      "Sevice Code": "LCA06",
+      "Service Code": "LCA06",
       Service:
         "Providing Curatorial Expertise to Ensure Cohesive and Harmonious Art Collections",
     },
     {
       Sr: 466,
-      "Sevice Code": "LCA07",
+      "Service Code": "LCA07",
       Service:
         "Assisting Clients in Building Art Collections Over Time Through Strategic Acquisitions",
     },
     {
       Sr: 467,
-      "Sevice Code": "LCB08",
+      "Service Code": "LCB08",
       Service:
         "Offering Art Procurement Services to Source and Acquire Artwork on Behalf of Clients",
     },
     {
       Sr: 468,
-      "Sevice Code": "LCB09",
+      "Service Code": "LCB09",
       Service:
         "Leveraging Relationships with Artists, Galleries, and Art Dealers to Access Exclusive Pieces",
     },
     {
       Sr: 469,
-      "Sevice Code": "LCB0A",
+      "Service Code": "LCB0A",
       Service:
         "Providing Assistance with Negotiating Prices, Handling Transactions, and Shipping Logistics",
     },
     {
       Sr: 470,
-      "Sevice Code": "LCB0B",
+      "Service Code": "LCB0B",
       Service:
         "Offering Expertise in Art Authentication, Condition Assessment, and Documentation",
     },
     {
       Sr: 471,
-      "Sevice Code": "LCB0C",
+      "Service Code": "LCB0C",
       Service:
         "Ensuring Compliance with Legal and Ethical Standards in Art Procurement",
     },
     {
       Sr: 472,
-      "Sevice Code": "LCB0D",
+      "Service Code": "LCB0D",
       Service:
         "Providing Certificates of Authenticity and Provenance Documentation for Acquired Artwork",
     },
     {
       Sr: 473,
-      "Sevice Code": "LCB0E",
+      "Service Code": "LCB0E",
       Service:
         "Offering Professional Appraisal Services for Artwork Valuation and Insurance Purposes",
     },
     {
       Sr: 474,
-      "Sevice Code": "LCC0F",
+      "Service Code": "LCC0F",
       Service:
         "Facilitating Custom Art Commissions to Create Original Artwork Tailored to Client Specifications",
     },
     {
       Sr: 475,
-      "Sevice Code": "LCC10",
+      "Service Code": "LCC10",
       Service:
         "Collaborating with Artists to Translate Client Vision and Concepts into Artistic Creations",
     },
     {
       Sr: 476,
-      "Sevice Code": "LCC11",
+      "Service Code": "LCC11",
       Service:
         "Offering Guidance on Commissioning Process, Budgeting, and Timeline",
     },
     {
       Sr: 477,
-      "Sevice Code": "LCC12",
+      "Service Code": "LCC12",
       Service:
         "Providing Concept Development, Sketches, and Mock-ups for Client Approval",
     },
     {
       Sr: 478,
-      "Sevice Code": "LCC13",
+      "Service Code": "LCC13",
       Service:
         "Managing Communication and Collaboration Between Clients and Artists Throughout the Commissioning Process",
     },
     {
       Sr: 479,
-      "Sevice Code": "LCC14",
+      "Service Code": "LCC14",
       Service:
         "Ensuring Quality Control and Client Satisfaction with Finished Artwork",
     },
     {
       Sr: 480,
-      "Sevice Code": "LCC15",
+      "Service Code": "LCC15",
       Service:
         "Offering Installation and Unveiling Services for Custom Art Commissions",
     },
     {
       Sr: 481,
-      "Sevice Code": "LCD16",
+      "Service Code": "LCD16",
       Service:
         "Designing Gallery Walls That Showcase Artwork in Stylish and Impactful Arrangements",
     },
     {
       Sr: 482,
-      "Sevice Code": "LCD17",
+      "Service Code": "LCD17",
       Service:
         "Offering Layout Design and Planning for Gallery Walls Based on Artwork Size, Shape, and Theme",
     },
     {
       Sr: 483,
-      "Sevice Code": "LCD18",
+      "Service Code": "LCD18",
       Service:
         "Providing Guidance on Framing Options, Matting, and Display Methods for Artwork",
     },
     {
       Sr: 484,
-      "Sevice Code": "LCD19",
+      "Service Code": "LCD19",
       Service:
         "Offering Visualization Tools Such as Mock-ups and Templates to Preview Gallery Wall Designs",
     },
     {
       Sr: 485,
-      "Sevice Code": "LCD1A",
+      "Service Code": "LCD1A",
       Service:
         "Incorporating Personal Photos, Memorabilia, and Three-dimensional Objects into Gallery Wall Displays",
     },
     {
       Sr: 486,
-      "Sevice Code": "LCD1B",
+      "Service Code": "LCD1B",
       Service:
         "Providing Installation Services for Gallery Walls, Ensuring Proper Alignment and Balance",
     },
     {
       Sr: 487,
-      "Sevice Code": "LCD1C",
+      "Service Code": "LCD1C",
       Service:
         "Offering Recommendations for Lighting Design to Enhance Gallery Wall Displays",
     },
     {
       Sr: 488,
-      "Sevice Code": "LCE1D",
+      "Service Code": "LCE1D",
       Service:
         "Offering Professional Art Placement Services to Enhance Visual Impact and Balance in Interior Spaces",
     },
     {
       Sr: 489,
-      "Sevice Code": "LCE1E",
+      "Service Code": "LCE1E",
       Service:
         "Providing Guidance on Optimal Placement of Artwork Based on Proportion, Scale, and Focal Points",
     },
     {
       Sr: 490,
-      "Sevice Code": "LCE1F",
+      "Service Code": "LCE1F",
       Service:
         "Offering Installation Services for Artwork, Including Wall-mounted, Suspended, and Free-standing Pieces",
     },
     {
       Sr: 491,
-      "Sevice Code": "LCE20",
+      "Service Code": "LCE20",
       Service:
         "Ensuring Proper Hanging Hardware and Anchoring Methods for Secure Art Installation",
     },
     {
       Sr: 492,
-      "Sevice Code": "LCE21",
+      "Service Code": "LCE21",
       Service:
         "Providing Consultation on Lighting Design and Placement to Highlight Artwork",
     },
     {
       Sr: 493,
-      "Sevice Code": "LCE22",
+      "Service Code": "LCE22",
       Service:
         "Offering Arrangement and Grouping Strategies for Multiple Art Pieces Within a Space",
     },
     {
       Sr: 494,
-      "Sevice Code": "LCE23",
+      "Service Code": "LCE23",
       Service:
         "Providing Maintenance and Care Recommendations to Preserve Artwork Over Time",
     },
     {
       Sr: 495,
-      "Sevice Code": "LDA01",
+      "Service Code": "LDA01",
       Service:
         "Providing Pre-move Consultation to Assess Client Needs and Develop a Moving Plan",
     },
     {
       Sr: 496,
-      "Sevice Code": "LDA02",
+      "Service Code": "LDA02",
       Service:
         "Coordinating with Moving Companies to Schedule Pick-up and Delivery Dates",
     },
     {
       Sr: 497,
-      "Sevice Code": "LDA03",
+      "Service Code": "LDA03",
       Service:
         "Offering Detailed Moving Checklists and Timelines to Ensure a Smooth Transition",
     },
     {
       Sr: 498,
-      "Sevice Code": "LDA04",
+      "Service Code": "LDA04",
       Service:
         "Managing Communication Between Clients and Moving Companies for Updates and Issues",
     },
     {
       Sr: 499,
-      "Sevice Code": "LDA05",
+      "Service Code": "LDA05",
       Service: "Providing Inventory Management to Track All Items Being Moved",
     },
     {
       Sr: 500,
-      "Sevice Code": "LDA06",
+      "Service Code": "LDA06",
       Service:
         "Offering Assistance with Obtaining Necessary Permits and Parking Arrangements for Moving Trucks",
     },
     {
       Sr: 501,
-      "Sevice Code": "LDA07",
+      "Service Code": "LDA07",
       Service:
         "Ensuring Compliance with Local Regulations and Moving Best Practices",
     },
     {
       Sr: 502,
-      "Sevice Code": "LDB08",
+      "Service Code": "LDB08",
       Service:
         "Offering Professional Packing Services Using High-quality Packing Materials and Techniques",
     },
     {
       Sr: 503,
-      "Sevice Code": "LDB09",
+      "Service Code": "LDB09",
       Service:
         "Providing Specialized Packing for Fragile, Valuable, and Oversized Items",
     },
     {
       Sr: 504,
-      "Sevice Code": "LDB0A",
+      "Service Code": "LDB0A",
       Service:
         "Labelling Boxes Clearly for Easy Identification and Efficient Unpacking",
     },
     {
       Sr: 505,
-      "Sevice Code": "LDB0B",
+      "Service Code": "LDB0B",
       Service:
         "Offering Unpacking Services to Arrange Items in the New Space According to Client Preferences",
     },
     {
       Sr: 506,
-      "Sevice Code": "LDB0C",
+      "Service Code": "LDB0C",
       Service:
         "Providing Disposal and Recycling of Packing Materials Post-move",
     },
     {
       Sr: 507,
-      "Sevice Code": "LDB0D",
+      "Service Code": "LDB0D",
       Service:
         "Ensuring Items Are Handled with Care to Prevent Damage During Transit",
     },
     {
       Sr: 508,
-      "Sevice Code": "LDB0E",
+      "Service Code": "LDB0E",
       Service:
         "Offering Customized Packing Solutions for Specific Client Needs (e.g., Eco-friendly Packing Options)",
     },
     {
       Sr: 509,
-      "Sevice Code": "LDC0F",
+      "Service Code": "LDC0F",
       Service:
         "Providing Space Planning Services to Determine Optimal Furniture Placement in the New Space",
     },
     {
       Sr: 510,
-      "Sevice Code": "LDC10",
+      "Service Code": "LDC10",
       Service: "Offering Furniture Assembly and Disassembly Services as Needed",
     },
     {
       Sr: 511,
-      "Sevice Code": "LDC11",
+      "Service Code": "LDC11",
       Service:
         "Arranging Furniture and Decor According to Client Preferences and Design Principles",
     },
     {
       Sr: 512,
-      "Sevice Code": "LDC12",
+      "Service Code": "LDC12",
       Service:
         "Ensuring Proper Placement for Functionality, Flow, and Aesthetics",
     },
     {
       Sr: 513,
-      "Sevice Code": "LDC13",
+      "Service Code": "LDC13",
       Service:
         "Providing Solutions for New Furniture Purchases and Integrating Them with Existing Pieces",
     },
     {
       Sr: 514,
-      "Sevice Code": "LDC14",
+      "Service Code": "LDC14",
       Service:
         "Offering Tips and Guidance on Creating a Comfortable and Functional Living Environment",
     },
     {
       Sr: 515,
-      "Sevice Code": "LDC15",
+      "Service Code": "LDC15",
       Service:
         "Providing Layout Adjustments and Fine-tuning Post-move to Ensure Client Satisfaction",
     },
     {
       Sr: 516,
-      "Sevice Code": "LDD16",
+      "Service Code": "LDD16",
       Service:
         "Offering Interior Design Services to Personalize and Enhance the New Space",
     },
     {
       Sr: 517,
-      "Sevice Code": "LDD17",
+      "Service Code": "LDD17",
       Service:
         "Providing Installation Services for Artwork, Shelving, Window Treatments, and Lighting Fixtures",
     },
     {
       Sr: 518,
-      "Sevice Code": "LDD18",
+      "Service Code": "LDD18",
       Service:
         "Setting Up Home Offices, Kitchens, and Other Functional Areas for Immediate Use",
     },
     {
       Sr: 519,
-      "Sevice Code": "LDD19",
+      "Service Code": "LDD19",
       Service:
         "Offering Organization Services for Closets, Pantries, and Storage Areas",
     },
     {
       Sr: 520,
-      "Sevice Code": "LDD1A",
+      "Service Code": "LDD1A",
       Service:
         "Providing Technology Setup Services for Home Entertainment Systems, Smart Home Devices, and Office Equipment",
     },
     {
       Sr: 521,
-      "Sevice Code": "LDD1B",
+      "Service Code": "LDD1B",
       Service:
         "Offering Decor and Styling Services to Make the New Space Feel Like Home",
     },
     {
       Sr: 522,
-      "Sevice Code": "LDD1C",
+      "Service Code": "LDD1C",
       Service:
         "Providing Follow-up Visits to Address Any Additional Setup Needs or Adjustments",
     },
     {
       Sr: 523,
-      "Sevice Code": "LEA01",
+      "Service Code": "LEA01",
       Service:
         "Consulting with Clients to Understand Project Scope, Objectives, and Requirements",
     },
     {
       Sr: 524,
-      "Sevice Code": "LEA02",
+      "Service Code": "LEA02",
       Service:
         "Developing a Detailed Project Plan Outlining All Phases from Concept to Completion",
     },
     {
       Sr: 525,
-      "Sevice Code": "LEA03",
+      "Service Code": "LEA03",
       Service:
         "Coordinating All Aspects of the Project Including Design, Procurement, Construction, and Installation",
     },
     {
       Sr: 526,
-      "Sevice Code": "LEA04",
+      "Service Code": "LEA04",
       Service:
         "Serving as the Primary Point of Contact for Clients, Contractors, and Vendors",
     },
     {
       Sr: 527,
-      "Sevice Code": "LEA05",
+      "Service Code": "LEA05",
       Service:
         "Managing Communication and Ensuring All Stakeholders Are Informed and Aligned",
     },
     {
       Sr: 528,
-      "Sevice Code": "LEA06",
+      "Service Code": "LEA06",
       Service:
         "Handling Permits, Approvals, and Compliance with Local Regulations",
     },
     {
       Sr: 529,
-      "Sevice Code": "LEA07",
+      "Service Code": "LEA07",
       Service:
         "Providing Regular Progress Reports to Clients and Addressing Any Issues Promptly",
     },
     {
       Sr: 530,
-      "Sevice Code": "LEB08",
+      "Service Code": "LEB08",
       Service:
         "Creating a Detailed Budget Based on Project Scope and Client Requirements",
     },
     {
       Sr: 531,
-      "Sevice Code": "LEB09",
+      "Service Code": "LEB09",
       Service:
         "Monitoring Project Expenses to Ensure Adherence to the Approved Budget",
     },
     {
       Sr: 532,
-      "Sevice Code": "LEB0A",
+      "Service Code": "LEB0A",
       Service:
         "Identifying Cost-saving Opportunities Without Compromising Quality",
     },
     {
       Sr: 533,
-      "Sevice Code": "LEB0B",
+      "Service Code": "LEB0B",
       Service:
         "Managing Financial Resources Efficiently and Allocating Funds Appropriately",
     },
     {
       Sr: 534,
-      "Sevice Code": "LEB0C",
+      "Service Code": "LEB0C",
       Service:
         "Providing Transparent Reporting on Budget Status, Variances, and Financial Health",
     },
     {
       Sr: 535,
-      "Sevice Code": "LEB0D",
+      "Service Code": "LEB0D",
       Service:
         "Handling Payment Schedules, Invoicing, and Financial Documentation",
     },
     {
       Sr: 536,
-      "Sevice Code": "LEB0E",
+      "Service Code": "LEB0E",
       Service:
         "Negotiating Contracts with Vendors and Contractors to Achieve Cost-effective Solutions",
     },
     {
       Sr: 537,
-      "Sevice Code": "LEC0F",
+      "Service Code": "LEC0F",
       Service:
         "Developing a Comprehensive Project Timeline with Clear Milestones and Deadlines",
     },
     {
       Sr: 538,
-      "Sevice Code": "LEC10",
+      "Service Code": "LEC10",
       Service:
         "Setting Realistic and Achievable Goals for Each Phase of the Project",
     },
     {
       Sr: 539,
-      "Sevice Code": "LEC11",
+      "Service Code": "LEC11",
       Service:
         "Using Project Management Tools to Track Progress and Ensure Timely Completion",
     },
     {
       Sr: 540,
-      "Sevice Code": "LEC12",
+      "Service Code": "LEC12",
       Service:
         "Adjusting Schedules as Necessary to Address Delays or Changes in Scope",
     },
     {
       Sr: 541,
-      "Sevice Code": "LEC13",
+      "Service Code": "LEC13",
       Service:
         "Providing Clients with Regular Updates on Project Status and Milestone Achievements",
     },
     {
       Sr: 542,
-      "Sevice Code": "LEC14",
+      "Service Code": "LEC14",
       Service:
         "Ensuring All Team Members and Contractors Are Adhering to the Project Schedule",
     },
     {
       Sr: 543,
-      "Sevice Code": "LEC15",
+      "Service Code": "LEC15",
       Service: "Implementing Contingency Plans to Mitigate Potential Delays",
     },
     {
       Sr: 544,
-      "Sevice Code": "LED16",
+      "Service Code": "LED16",
       Service:
         "Sourcing and Selecting Qualified Contractors and Vendors for the Project",
     },
     {
       Sr: 545,
-      "Sevice Code": "LED17",
+      "Service Code": "LED17",
       Service:
         "Negotiating Contracts and Agreements to Define Scope, Deliverables, and Terms",
     },
     {
       Sr: 546,
-      "Sevice Code": "LED18",
+      "Service Code": "LED18",
       Service:
         "Coordinating the Work of Contractors, Subcontractors, and Suppliers",
     },
     {
       Sr: 547,
-      "Sevice Code": "LED19",
+      "Service Code": "LED19",
       Service:
         "Ensuring Quality Control and Compliance with Project Specifications and Standards",
     },
     {
       Sr: 548,
-      "Sevice Code": "LED1A",
+      "Service Code": "LED1A",
       Service: "Managing Communication and Conflict Resolution Between Parties",
     },
     {
       Sr: 549,
-      "Sevice Code": "LED1B",
+      "Service Code": "LED1B",
       Service:
         "Conducting Regular Site Visits and Inspections to Monitor Work Progress",
     },
     {
       Sr: 550,
-      "Sevice Code": "LED1C",
+      "Service Code": "LED1C",
       Service:
         "Handling Logistics, Delivery Schedules, and Installation Coordination",
     },
     {
       Sr: 551,
-      "Sevice Code": "LFA01",
+      "Service Code": "LFA01",
       Service:
         "Consulting with Clients to Select the Right Type and Style of Hardwood for Their Space",
     },
     {
       Sr: 552,
-      "Sevice Code": "LFA02",
+      "Service Code": "LFA02",
       Service: "Providing Custom Hardwood Floor Design and Layout Planning",
     },
     {
       Sr: 553,
-      "Sevice Code": "LFA03",
+      "Service Code": "LFA03",
       Service:
         "Offering Professional Installation Services Including Subfloor Preparation, Moisture Barriers, and Precision Cutting",
     },
     {
       Sr: 554,
-      "Sevice Code": "LFA04",
+      "Service Code": "LFA04",
       Service:
         "Ensuring High-quality Workmanship with Proper Nailing, Gluing, and Finishing Techniques",
     },
     {
       Sr: 555,
-      "Sevice Code": "LFA05",
+      "Service Code": "LFA05",
       Service:
         "Providing Options for Staining and Finishing to Match Desired Aesthetic",
     },
     {
       Sr: 556,
-      "Sevice Code": "LFA06",
+      "Service Code": "LFA06",
       Service:
         "Offering Maintenance Tips and Services to Keep Hardwood Floors Looking New",
     },
     {
       Sr: 557,
-      "Sevice Code": "LFA07",
+      "Service Code": "LFA07",
       Service:
         "Ensuring Compliance with Warranty Requirements and Providing Follow-up Services",
     },
     {
       Sr: 558,
-      "Sevice Code": "LFB08",
+      "Service Code": "LFB08",
       Service:
         "Assisting Clients in Selecting the Right Type, Texture, and Color of Carpet",
     },
     {
       Sr: 559,
-      "Sevice Code": "LFB09",
+      "Service Code": "LFB09",
       Service:
         "Providing Professional Installation Services Including Carpet Padding, Stretching, and Seaming",
     },
     {
       Sr: 560,
-      "Sevice Code": "LFB0A",
+      "Service Code": "LFB0A",
       Service:
         "Offering Carpet Removal and Disposal Services for Existing Carpets",
     },
     {
       Sr: 561,
-      "Sevice Code": "LFB0B",
+      "Service Code": "LFB0B",
       Service: "Ensuring Accurate Measurements and Custom Cuts for Perfect Fit",
     },
     {
       Sr: 562,
-      "Sevice Code": "LFB0C",
+      "Service Code": "LFB0C",
       Service:
         "Providing Options for Carpet Stairs, Hallways, and Unique Room Shapes",
     },
     {
       Sr: 563,
-      "Sevice Code": "LFB0D",
+      "Service Code": "LFB0D",
       Service: "Offering Carpet Maintenance and Cleaning Services",
     },
     {
       Sr: 564,
-      "Sevice Code": "LFB0E",
+      "Service Code": "LFB0E",
       Service:
         "Ensuring Installation Meets Industry Standards for Durability and Comfort",
     },
     {
       Sr: 565,
-      "Sevice Code": "LFC0F",
+      "Service Code": "LFC0F",
       Service:
         "Consulting with Clients to Select the Best Tile or Stone Material for Their Needs and Style Preferences",
     },
     {
       Sr: 566,
-      "Sevice Code": "LFC10",
+      "Service Code": "LFC10",
       Service:
         "Offering Custom Design Services Including Layout Planning and Pattern Selection",
     },
     {
       Sr: 567,
-      "Sevice Code": "LFC11",
+      "Service Code": "LFC11",
       Service:
         "Providing Professional Installation Services Including Surface Preparation, Laying, and Grouting",
     },
     {
       Sr: 568,
-      "Sevice Code": "LFC12",
+      "Service Code": "LFC12",
       Service:
         "Ensuring Precise Cutting and Fitting for Intricate Designs and Tight Spaces",
     },
     {
       Sr: 569,
-      "Sevice Code": "LFC13",
+      "Service Code": "LFC13",
       Service:
         "Offering Sealing and Finishing Services to Protect Tile and Stone Surfaces",
     },
     {
       Sr: 570,
-      "Sevice Code": "LFC14",
+      "Service Code": "LFC14",
       Service:
         "Providing Maintenance and Cleaning Services for Longevity and Appearance",
     },
     {
       Sr: 571,
-      "Sevice Code": "LFC15",
+      "Service Code": "LFC15",
       Service:
         "Ensuring Compliance with All Building Codes and Safety Standards",
     },
     {
       Sr: 572,
-      "Sevice Code": "LFD16",
+      "Service Code": "LFD16",
       Service:
         "Assisting Clients in Choosing the Right Laminate or Vinyl Flooring Options to Suit Their Budget and Style",
     },
     {
       Sr: 573,
-      "Sevice Code": "LFD17",
+      "Service Code": "LFD17",
       Service:
         "Offering Professional Installation Services Including Surface Preparation and Underlayment Installation",
     },
     {
       Sr: 574,
-      "Sevice Code": "LFD18",
+      "Service Code": "LFD18",
       Service:
         "Providing Durable and Water-resistant Options for Kitchens, Bathrooms, and High-traffic Areas",
     },
     {
       Sr: 575,
-      "Sevice Code": "LFD19",
+      "Service Code": "LFD19",
       Service:
         "Ensuring Seamless Installation with Tight Fitting and Precise Cutting",
     },
     {
       Sr: 576,
-      "Sevice Code": "LFD1A",
+      "Service Code": "LFD1A",
       Service:
         "Offering Maintenance Services and Tips for Longevity and Performance",
     },
     {
       Sr: 577,
-      "Sevice Code": "LFD1B",
+      "Service Code": "LFD1B",
       Service: "Providing Eco-friendly and Sustainable Flooring Options",
     },
     {
       Sr: 578,
-      "Sevice Code": "LFD1C",
+      "Service Code": "LFD1C",
       Service:
         "Ensuring Quick and Efficient Installation to Minimize Disruption",
     },
     {
       Sr: 579,
-      "Sevice Code": "LFE1D",
+      "Service Code": "LFE1D",
       Service:
         "Consulting with Clients on the Benefits and Options for Heated Flooring Systems",
     },
     {
       Sr: 580,
-      "Sevice Code": "LFE1E",
+      "Service Code": "LFE1E",
       Service:
         "Providing Custom Design and Layout Services to Integrate Heated Flooring into Existing or New Floors",
     },
     {
       Sr: 581,
-      "Sevice Code": "LFE1F",
+      "Service Code": "LFE1F",
       Service:
         "Offering Professional Installation Services Including Electrical and Hydronic Systems",
     },
     {
       Sr: 582,
-      "Sevice Code": "LFE20",
+      "Service Code": "LFE20",
       Service:
         "Ensuring Compatibility with Various Flooring Types Such as Tile, Stone, and Laminate",
     },
     {
       Sr: 583,
-      "Sevice Code": "LFE21",
+      "Service Code": "LFE21",
       Service:
         "Providing Maintenance and Troubleshooting Services for Optimal Performance",
     },
     {
       Sr: 584,
-      "Sevice Code": "LFE22",
+      "Service Code": "LFE22",
       Service:
         "Offering Energy-efficient Solutions and Integration with Smart Home Systems",
     },
     {
       Sr: 585,
-      "Sevice Code": "LFE23",
+      "Service Code": "LFE23",
       Service: "Ensuring Compliance with Safety Standards and Electrical Codes",
     },
     {
       Sr: 586,
-      "Sevice Code": "LFF24",
+      "Service Code": "LFF24",
       Service:
         "Offering Professional Repair Services for Damaged Hardwood, Tile, Carpet, and Other Flooring Types",
     },
     {
       Sr: 587,
-      "Sevice Code": "LFF25",
+      "Service Code": "LFF25",
       Service:
         "Providing Routine Maintenance Services to Extend the Life of Flooring",
     },
     {
       Sr: 588,
-      "Sevice Code": "LFF26",
+      "Service Code": "LFF26",
       Service:
         "Offering Solutions for Scratches, Stains, Cracks, and Other Common Issues",
     },
     {
       Sr: 589,
-      "Sevice Code": "LFF27",
+      "Service Code": "LFF27",
       Service:
         "Providing Professional Cleaning Services for Carpets, Tiles, and Hardwood Floors",
     },
     {
       Sr: 590,
-      "Sevice Code": "LFF28",
+      "Service Code": "LFF28",
       Service:
         "Offering Sealing and Refinishing Services for Hardwood and Tile Floors",
     },
     {
       Sr: 591,
-      "Sevice Code": "LFF29",
+      "Service Code": "LFF29",
       Service: "Providing Emergency Repair Services for Immediate Needs",
     },
     {
       Sr: 592,
-      "Sevice Code": "LFF2A",
+      "Service Code": "LFF2A",
       Service: "Offering Maintenance Contracts for Regular Upkeep and Care",
     },
     {
       Sr: 593,
-      "Sevice Code": "LFG2B",
+      "Service Code": "LFG2B",
       Service:
         "Working with Clients to Create Unique and Personalized Flooring Designs",
     },
     {
       Sr: 594,
-      "Sevice Code": "LFG2C",
+      "Service Code": "LFG2C",
       Service: "Offering Custom Inlays, Borders, Patterns, and Color Schemes",
     },
     {
       Sr: 595,
-      "Sevice Code": "LFG2D",
+      "Service Code": "LFG2D",
       Service:
         "Providing Design Services for Specialty Spaces Such as Entryways, Kitchens, and Bathrooms",
     },
     {
       Sr: 596,
-      "Sevice Code": "LFG2E",
+      "Service Code": "LFG2E",
       Service:
         "Collaborating with Clients to Integrate Flooring with Overall Interior Design",
     },
     {
       Sr: 597,
-      "Sevice Code": "LFG2F",
+      "Service Code": "LFG2F",
       Service:
         "Offering Custom Solutions for Commercial Spaces, Including Logos and Branding Elements",
     },
     {
       Sr: 598,
-      "Sevice Code": "LFG30",
+      "Service Code": "LFG30",
       Service:
         "Providing Samples and Visualizations to Help Clients Make Informed Decisions",
     },
     {
       Sr: 599,
-      "Sevice Code": "LFG31",
+      "Service Code": "LFG31",
       Service: "Ensuring High-quality Craftsmanship and Attention to Detail",
     },
     {
       Sr: 600,
-      "Sevice Code": "LGA01",
+      "Service Code": "LGA01",
       Service:
         "Consulting with Clients to Determine the Need for Suspended or Drop Ceilings",
     },
     {
       Sr: 601,
-      "Sevice Code": "LGA02",
+      "Service Code": "LGA02",
       Service:
         "Offering Design Options to Enhance Aesthetics and Functionality",
     },
     {
       Sr: 602,
-      "Sevice Code": "LGA03",
+      "Service Code": "LGA03",
       Service:
         "Providing Professional Installation Services Including Suspended Grid Systems and Ceiling Tiles",
     },
     {
       Sr: 603,
-      "Sevice Code": "LGA04",
+      "Service Code": "LGA04",
       Service:
         "Offering a Variety of Ceiling Tile Options Including Acoustic, Fire-rated, and Decorative Tiles",
     },
     {
       Sr: 604,
-      "Sevice Code": "LGA05",
+      "Service Code": "LGA05",
       Service:
         "Ensuring Proper Alignment, Leveling, and Stability of the Ceiling Structure",
     },
     {
       Sr: 605,
-      "Sevice Code": "LGA06",
+      "Service Code": "LGA06",
       Service:
         "Providing Solutions for Lighting Integration, Ventilation, and Access Panels",
     },
     {
       Sr: 606,
-      "Sevice Code": "LGA07",
+      "Service Code": "LGA07",
       Service:
         "Offering Maintenance and Repair Services for Suspended Ceilings",
     },
     {
       Sr: 607,
-      "Sevice Code": "LGB08",
+      "Service Code": "LGB08",
       Service:
         "Collaborating with Clients to Design Custom Coffered and Tray Ceilings",
     },
     {
       Sr: 608,
-      "Sevice Code": "LGB09",
+      "Service Code": "LGB09",
       Service:
         "Providing Design Options Including Different Shapes, Sizes, and Patterns",
     },
     {
       Sr: 609,
-      "Sevice Code": "LGB0A",
+      "Service Code": "LGB0A",
       Service:
         "Offering Professional Installation Services for Coffered and Tray Ceilings",
     },
     {
       Sr: 610,
-      "Sevice Code": "LGB0B",
+      "Service Code": "LGB0B",
       Service:
         "Providing Customization Options for Lighting Fixtures and Decorative Elements",
     },
     {
       Sr: 611,
-      "Sevice Code": "LGB0C",
+      "Service Code": "LGB0C",
       Service:
         "Ensuring Precision and Attention to Detail in Ceiling Construction",
     },
     {
       Sr: 612,
-      "Sevice Code": "LGB0D",
+      "Service Code": "LGB0D",
       Service:
         "Offering Solutions for Integrating Coffered Ceilings with Existing Architectural Features",
     },
     {
       Sr: 613,
-      "Sevice Code": "LGB0E",
+      "Service Code": "LGB0E",
       Service:
         "Providing Painting and Finishing Services to Enhance the Appearance of Coffered and Tray Ceilings",
     },
     {
       Sr: 614,
-      "Sevice Code": "LGC0F",
+      "Service Code": "LGC0F",
       Service:
         "Offering Design and Fabrication Services for Custom Beam and Panel Ceilings",
     },
     {
       Sr: 615,
-      "Sevice Code": "LGC10",
+      "Service Code": "LGC10",
       Service:
         "Providing Options for Different Types of Beams Including Wood, Metal, and Composite Materials",
     },
     {
       Sr: 616,
-      "Sevice Code": "LGC11",
+      "Service Code": "LGC11",
       Service:
         "Collaborating with Clients to Determine Panel Layout, Size, and Configuration",
     },
     {
       Sr: 617,
-      "Sevice Code": "LGC12",
+      "Service Code": "LGC12",
       Service:
         "Offering Professional Installation Services for Beam and Panel Ceilings",
     },
     {
       Sr: 618,
-      "Sevice Code": "LGC13",
+      "Service Code": "LGC13",
       Service:
         "Providing Solutions for Concealing Structural Elements and Utilities Within Panels",
     },
     {
       Sr: 619,
-      "Sevice Code": "LGC14",
+      "Service Code": "LGC14",
       Service:
         "Ensuring Seamless Integration with Existing Ceiling Structures and Architectural Features",
     },
     {
       Sr: 620,
-      "Sevice Code": "LGC15",
+      "Service Code": "LGC15",
       Service:
         "Offering Maintenance and Repair Services to Preserve the Integrity of Beam and Panel Ceilings",
     },
     {
       Sr: 621,
-      "Sevice Code": "LGD16",
+      "Service Code": "LGD16",
       Service:
         "Consulting with Clients to Address Acoustic Needs and Noise Control Requirements",
     },
     {
       Sr: 622,
-      "Sevice Code": "LGD17",
+      "Service Code": "LGD17",
       Service:
         "Offering Acoustic Ceiling Solutions Including Sound-absorbing Panels and Tiles",
     },
     {
       Sr: 623,
-      "Sevice Code": "LGD18",
+      "Service Code": "LGD18",
       Service:
         "Providing Customization Options for Acoustic Ceiling Designs and Layouts",
     },
     {
       Sr: 624,
-      "Sevice Code": "LGD19",
+      "Service Code": "LGD19",
       Service:
         "Offering Professional Installation Services for Acoustic Ceiling Systems",
     },
     {
       Sr: 625,
-      "Sevice Code": "LGD1A",
+      "Service Code": "LGD1A",
       Service: "Conducting Acoustic Testing and Analysis to Ensure Performance",
     },
     {
       Sr: 626,
-      "Sevice Code": "LGD1B",
+      "Service Code": "LGD1B",
       Service:
         "Providing Solutions for Retrofitting Existing Spaces with Acoustic Ceilings",
     },
     {
       Sr: 627,
-      "Sevice Code": "LGD1C",
+      "Service Code": "LGD1C",
       Service:
         "Offering Maintenance and Cleaning Services for Acoustic Ceiling Panels",
     },
     {
       Sr: 628,
-      "Sevice Code": "LGE1D",
+      "Service Code": "LGE1D",
       Service:
         "Collaborating with Clients to Design Custom Decorative Ceiling Treatments",
     },
     {
       Sr: 629,
-      "Sevice Code": "LGE1E",
+      "Service Code": "LGE1E",
       Service:
         "Providing Options for Decorative Molding, Medallions, and Ornaments",
     },
     {
       Sr: 630,
-      "Sevice Code": "LGE1F",
+      "Service Code": "LGE1F",
       Service:
         "Offering Professional Installation Services for Decorative Ceiling Elements",
     },
     {
       Sr: 631,
-      "Sevice Code": "LGE20",
+      "Service Code": "LGE20",
       Service: "Providing Customization Options for Size, Shape, and Finish",
     },
     {
       Sr: 632,
-      "Sevice Code": "LGE21",
+      "Service Code": "LGE21",
       Service:
         "Ensuring Compatibility with Existing Ceiling Structures and Architectural Features",
     },
     {
       Sr: 633,
-      "Sevice Code": "LGE22",
+      "Service Code": "LGE22",
       Service:
         "Offering Painting and Finishing Services to Enhance the Appearance of Decorative Ceiling Treatments",
     },
     {
       Sr: 634,
-      "Sevice Code": "LGE23",
+      "Service Code": "LGE23",
       Service:
         "Providing Maintenance and Repair Services to Preserve the Integrity of Decorative Ceilings",
     },
     {
       Sr: 635,
-      "Sevice Code": "LGF24",
+      "Service Code": "LGF24",
       Service:
         "Offering Painting and Finishing Services for New and Existing Ceilings",
     },
     {
       Sr: 636,
-      "Sevice Code": "LGF25",
+      "Service Code": "LGF25",
       Service:
         "Providing Options for Different Paint Colors, Textures, and Finishes",
     },
     {
       Sr: 637,
-      "Sevice Code": "LGF26",
+      "Service Code": "LGF26",
       Service: "Ensuring Proper Preparation and Priming of Ceiling Surfaces",
     },
     {
       Sr: 638,
-      "Sevice Code": "LGF27",
+      "Service Code": "LGF27",
       Service:
         "Using High-quality Paints and Finishes for Long-lasting Results",
     },
     {
       Sr: 639,
-      "Sevice Code": "LGF28",
+      "Service Code": "LGF28",
       Service:
         "Providing Solutions for Specialty Finishes Including Textured, Metallic, and Faux Finishes",
     },
     {
       Sr: 640,
-      "Sevice Code": "LGF29",
+      "Service Code": "LGF29",
       Service:
         "Offering Customization Options for Stenciling, Murals, and Decorative Painting",
     },
     {
       Sr: 641,
-      "Sevice Code": "LGF2A",
+      "Service Code": "LGF2A",
       Service:
         "Providing Maintenance and Touch-up Services to Keep Ceilings Looking Fresh",
     },
     {
       Sr: 642,
-      "Sevice Code": "LGG2B",
+      "Service Code": "LGG2B",
       Service: "Offering Repair and Restoration Services for Damaged Ceilings",
     },
     {
       Sr: 643,
-      "Sevice Code": "LGG2C",
+      "Service Code": "LGG2C",
       Service:
         "Providing Solutions for Cracks, Water Damage, Stains, and Sagging",
     },
     {
       Sr: 644,
-      "Sevice Code": "LGG2D",
+      "Service Code": "LGG2D",
       Service: "Offering Patching, Plastering, and Drywall Repair Services",
     },
     {
       Sr: 645,
-      "Sevice Code": "LGG2E",
+      "Service Code": "LGG2E",
       Service:
         "Providing Structural Repair Services for Ceiling Beams, Panels, and Supports",
     },
     {
       Sr: 646,
-      "Sevice Code": "LGG2F",
+      "Service Code": "LGG2F",
       Service:
         "Offering Matching Services for Existing Ceiling Finishes and Textures",
     },
     {
       Sr: 647,
-      "Sevice Code": "LGG30",
+      "Service Code": "LGG30",
       Service:
         "Providing Solutions for Historical Ceiling Restoration Projects",
     },
     {
       Sr: 648,
-      "Sevice Code": "LGG31",
+      "Service Code": "LGG31",
       Service: "Offering Emergency Repair Services for Immediate Needs",
     },
     {
       Sr: 649,
-      "Sevice Code": "LHA01",
+      "Service Code": "LHA01",
       Service:
         "Collaborating with Clients to Design Ambient Lighting Schemes That Create Overall Illumination and Atmosphere in a Space",
     },
     {
       Sr: 650,
-      "Sevice Code": "LHA02",
+      "Service Code": "LHA02",
       Service:
         "Providing Recommendations for Lighting Fixtures and Placement to Achieve Even Distribution of Light",
     },
     {
       Sr: 651,
-      "Sevice Code": "LHA03",
+      "Service Code": "LHA03",
       Service:
         "Considering Factors Such as Room Size, Ceiling Height, and Natural Light Sources",
     },
     {
       Sr: 652,
-      "Sevice Code": "LHA04",
+      "Service Code": "LHA04",
       Service:
         "Offering Solutions for Different Types of Ambient Lighting Including Ceiling-mounted Fixtures, Recessed Lighting, and Wall Sconces",
     },
     {
       Sr: 653,
-      "Sevice Code": "LHA05",
+      "Service Code": "LHA05",
       Service:
         "Incorporating Dimming Controls and Lighting Scenes for Versatility and Mood-setting",
     },
     {
       Sr: 654,
-      "Sevice Code": "LHB06",
+      "Service Code": "LHB06",
       Service:
         "Assessing Specific Tasks and Activities in Each Space to Determine Task Lighting Requirements",
     },
     {
       Sr: 655,
-      "Sevice Code": "LHB07",
+      "Service Code": "LHB07",
       Service:
         "Providing Task Lighting Solutions Such as Under-cabinet Lighting in Kitchens, Desk Lamps in Offices, and Vanity Lights in Bathrooms",
     },
     {
       Sr: 656,
-      "Sevice Code": "LHB08",
+      "Service Code": "LHB08",
       Service:
         "Offering Adjustable Task Lighting Fixtures to Provide Precise and Direct Illumination Where Needed",
     },
     {
       Sr: 657,
-      "Sevice Code": "LHB09",
+      "Service Code": "LHB09",
       Service:
         "Ensuring Proper Placement and Angling of Task Lights to Minimize Glare and Shadows",
     },
     {
       Sr: 658,
-      "Sevice Code": "LHB0A",
+      "Service Code": "LHB0A",
       Service:
         "Incorporating Dimming and Color Temperature Controls for Task-specific Needs",
     },
     {
       Sr: 659,
-      "Sevice Code": "LHC0B",
+      "Service Code": "LHC0B",
       Service:
         "Creating Focal Points and Visual Interest Through Accent and Decorative Lighting",
     },
     {
       Sr: 660,
-      "Sevice Code": "LHC0C",
+      "Service Code": "LHC0C",
       Service:
         "Offering Solutions Such as Track Lighting, Picture Lights, and Display Cabinet Lighting to Highlight Artwork, Architectural Features, and Decorative Objects",
     },
     {
       Sr: 661,
-      "Sevice Code": "LHC0D",
+      "Service Code": "LHC0D",
       Service:
         "Providing Customizable Options for Beam Angles, Intensity, and Color Rendering",
     },
     {
       Sr: 662,
-      "Sevice Code": "LHC0E",
+      "Service Code": "LHC0E",
       Service:
         "Incorporating Decorative Pendants, Chandeliers, and Wall Washers to Enhance Aesthetics",
     },
     {
       Sr: 663,
-      "Sevice Code": "LHC0F",
+      "Service Code": "LHC0F",
       Service:
         "Offering Lighting Controls to Adjust Accent Lighting Levels Based on Changing Needs and Occasions",
     },
     {
       Sr: 664,
-      "Sevice Code": "LHD10",
+      "Service Code": "LHD10",
       Service:
         "Collaborating with Clients to Design Outdoor Lighting Schemes That Enhance Safety, Security, and Ambiance",
     },
     {
       Sr: 665,
-      "Sevice Code": "LHD11",
+      "Service Code": "LHD11",
       Service:
         "Providing Solutions for Landscape Lighting, Pathway Lighting, and Architectural Lighting",
     },
     {
       Sr: 666,
-      "Sevice Code": "LHD12",
+      "Service Code": "LHD12",
       Service:
         "Incorporating Energy-efficient LED Fixtures for Longevity and Durability",
     },
     {
       Sr: 667,
-      "Sevice Code": "LHD13",
+      "Service Code": "LHD13",
       Service:
         "Offering Timers, Motion Sensors, and Smart Controls for Automated Outdoor Lighting Systems",
     },
     {
       Sr: 668,
-      "Sevice Code": "LHD14",
+      "Service Code": "LHD14",
       Service:
         "Providing Options for Color-changing LED Lights and Effects for Special Events and Holidays",
     },
     {
       Sr: 669,
-      "Sevice Code": "LHE15",
+      "Service Code": "LHE15",
       Service:
         "Offering Smart Lighting Solutions That Allow Clients to Control and Customize Their Lighting Environment",
     },
     {
       Sr: 670,
-      "Sevice Code": "LHE16",
+      "Service Code": "LHE16",
       Service:
         "Providing Integration with Home Automation Systems for Seamless Control of Lighting, Shades, and HVAC Systems",
     },
     {
       Sr: 671,
-      "Sevice Code": "LHE17",
+      "Service Code": "LHE17",
       Service:
         "Offering Voice Control Options Through Integration with Virtual Assistants Such as Amazon Alexa and Google Assistant",
     },
     {
       Sr: 672,
-      "Sevice Code": "LHE18",
+      "Service Code": "LHE18",
       Service:
         "Providing Mobile Apps and Interfaces for Remote Control and Monitoring of Lighting Systems",
     },
     {
       Sr: 673,
-      "Sevice Code": "LHE19",
+      "Service Code": "LHE19",
       Service:
         "Offering Customizable Scenes and Presets for Different Activities, Moods, and Times of Day",
     },
     {
       Sr: 674,
-      "Sevice Code": "LHF1A",
+      "Service Code": "LHF1A",
       Service:
         "Collaborating with Clients to Design and Fabricate Custom Light Fixtures That Suit Their Design Vision and Requirements",
     },
     {
       Sr: 675,
-      "Sevice Code": "LHF1B",
+      "Service Code": "LHF1B",
       Service:
         "Providing Options for Different Materials, Finishes, and Sizes to Match Design Aesthetic",
     },
     {
       Sr: 676,
-      "Sevice Code": "LHF1C",
+      "Service Code": "LHF1C",
       Service:
         "Offering Lighting Design Services to Ensure Custom Fixtures Meet Illumination and Performance Standards",
     },
     {
       Sr: 677,
-      "Sevice Code": "LHF1D",
+      "Service Code": "LHF1D",
       Service:
         "Working with Skilled Craftsmen and Artisans to Create Unique and One-of-a-kind Lighting Pieces",
     },
     {
       Sr: 678,
-      "Sevice Code": "LHF1E",
+      "Service Code": "LHF1E",
       Service:
         "Providing Installation and Integration Services for Custom Light Fixtures",
     },
     {
       Sr: 679,
-      "Sevice Code": "LHG1F",
+      "Service Code": "LHG1F",
       Service:
         "Assessing Existing Lighting Systems to Identify Opportunities for Retrofitting and Upgrades",
     },
     {
       Sr: 680,
-      "Sevice Code": "LHG20",
+      "Service Code": "LHG20",
       Service:
         "Providing Energy Audits to Determine Potential Cost-saving Opportunities Through Lighting Upgrades",
     },
     {
       Sr: 681,
-      "Sevice Code": "LHG21",
+      "Service Code": "LHG21",
       Service:
         "Offering LED Retrofit Solutions to Replace Inefficient Incandescent and Fluorescent Lighting",
     },
     {
       Sr: 682,
-      "Sevice Code": "LHG22",
+      "Service Code": "LHG22",
       Service:
         "Providing Solutions for Upgrading Lighting Controls and Sensors for Increased Efficiency and Convenience",
     },
     {
       Sr: 683,
-      "Sevice Code": "LHG23",
+      "Service Code": "LHG23",
       Service:
         "Offering Rebate and Incentive Programs to Offset the Cost of Lighting Upgrades",
     },
     {
       Sr: 684,
-      "Sevice Code": "LHG24",
+      "Service Code": "LHG24",
       Service:
         "Ensuring Compliance with Energy Codes and Standards for Lighting Retrofit Projects",
     },
     {
       Sr: 685,
-      "Sevice Code": "LHH25",
+      "Service Code": "LHH25",
       Service:
         "Providing Energy-efficient Lighting Solutions That Help Clients Reduce Energy Consumption and Lower Utility Costs",
     },
     {
       Sr: 686,
-      "Sevice Code": "LHH26",
+      "Service Code": "LHH26",
       Service:
         "Offering LED Lighting Options That Provide Significant Energy Savings Compared to Traditional Lighting Technologies",
     },
     {
       Sr: 687,
-      "Sevice Code": "LHH27",
+      "Service Code": "LHH27",
       Service:
         "Providing Lighting Design Services to Optimize Energy Efficiency Without Compromising Illumination Quality",
     },
     {
       Sr: 688,
-      "Sevice Code": "LHH28",
+      "Service Code": "LHH28",
       Service:
         "Offering Daylight Harvesting and Sensor-based Lighting Controls to Further Reduce Energy Usage",
     },
     {
       Sr: 689,
-      "Sevice Code": "LHH29",
+      "Service Code": "LHH29",
       Service:
         "Providing Sustainability Consulting to Help Clients Achieve Green Building Certifications and Goals",
     },
     {
       Sr: 690,
-      "Sevice Code": "LIA01",
+      "Service Code": "LIA01",
       Service:
         "Offering Interior and Exterior Painting Services for Residential and Commercial Spaces",
     },
     {
       Sr: 691,
-      "Sevice Code": "LIA02",
+      "Service Code": "LIA02",
       Service:
         "Providing Color Consultation and Selection Services to Help Clients Choose the Right Paint Colors",
     },
     {
       Sr: 692,
-      "Sevice Code": "LIA03",
+      "Service Code": "LIA03",
       Service:
         "Offering Prep Work Including Surface Cleaning, Patching, and Priming",
     },
     {
       Sr: 693,
-      "Sevice Code": "LIA04",
+      "Service Code": "LIA04",
       Service:
         "Providing Professional Painting Techniques for Smooth and Even Finish",
     },
     {
       Sr: 694,
-      "Sevice Code": "LIA05",
+      "Service Code": "LIA05",
       Service:
         "Using High-quality Paints and Finishes for Long-lasting Results",
     },
     {
       Sr: 695,
-      "Sevice Code": "LIA06",
+      "Service Code": "LIA06",
       Service:
         "Offering Custom Painting Effects Such as Faux Finishes, Murals, and Trompe-l'œil",
     },
     {
       Sr: 696,
-      "Sevice Code": "LIA07",
+      "Service Code": "LIA07",
       Service: "Ensuring Clean-up and Proper Disposal of Painting Materials",
     },
     {
       Sr: 697,
-      "Sevice Code": "LIB08",
+      "Service Code": "LIB08",
       Service:
         "Offering a Wide Range of Wallpaper Options Including Traditional, Vinyl, and Textured Wallpapers",
     },
     {
       Sr: 698,
-      "Sevice Code": "LIB09",
+      "Service Code": "LIB09",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Wallpaper Design and Pattern",
     },
     {
       Sr: 699,
-      "Sevice Code": "LIB0A",
+      "Service Code": "LIB0A",
       Service:
         "Offering Prep Work Including Wall Priming and Smoothing for Seamless Installation",
     },
     {
       Sr: 700,
-      "Sevice Code": "LIB0B",
+      "Service Code": "LIB0B",
       Service:
         "Providing Professional Installation Services for Precise Alignment and Pattern Matching",
     },
     {
       Sr: 701,
-      "Sevice Code": "LIB0C",
+      "Service Code": "LIB0C",
       Service:
         "Ensuring Proper Adhesive Application and Finishing Techniques for Smooth and Durable Results",
     },
     {
       Sr: 702,
-      "Sevice Code": "LIB0D",
+      "Service Code": "LIB0D",
       Service:
         "Offering Removal and Replacement Services for Existing Wallpaper",
     },
     {
       Sr: 703,
-      "Sevice Code": "LIB0E",
+      "Service Code": "LIB0E",
       Service: "Providing Maintenance Tips for Longevity and Care of Wallpaper",
     },
     {
       Sr: 704,
-      "Sevice Code": "LIC0F",
+      "Service Code": "LIC0F",
       Service:
         "Offering Custom Wall Panelling Solutions to Enhance Aesthetics and Texture",
     },
     {
       Sr: 705,
-      "Sevice Code": "LIC10",
+      "Service Code": "LIC10",
       Service:
         "Providing Consultation and Design Services to Determine the Right Paneling Style and Material",
     },
     {
       Sr: 706,
-      "Sevice Code": "LIC11",
+      "Service Code": "LIC11",
       Service:
         "Offering Installation Services for Wood, MDF, PVC, and Other Paneling Materials",
     },
     {
       Sr: 707,
-      "Sevice Code": "LIC12",
+      "Service Code": "LIC12",
       Service:
         "Providing Options for Traditional Paneling Styles Such as Wainscoting and Beadboard",
     },
     {
       Sr: 708,
-      "Sevice Code": "LIC13",
+      "Service Code": "LIC13",
       Service:
         "Offering Modern and Contemporary Paneling Designs to Suit Different Design Preferences",
     },
     {
       Sr: 709,
-      "Sevice Code": "LIC14",
+      "Service Code": "LIC14",
       Service:
         "Providing Finishing and Painting Services to Enhance the Appearance of Wall Paneling",
     },
     {
       Sr: 710,
-      "Sevice Code": "LIC15",
+      "Service Code": "LIC15",
       Service:
         "Ensuring Proper Sealing and Protection Against Moisture and Wear",
     },
     {
       Sr: 711,
-      "Sevice Code": "LID16",
+      "Service Code": "LID16",
       Service:
         "Offering Texture Application Services to Add Depth and Dimension to Walls",
     },
     {
       Sr: 712,
-      "Sevice Code": "LID17",
+      "Service Code": "LID17",
       Service:
         "Providing Options for Different Texture Techniques Such as Venetian Plaster, Stucco, and Faux Finishes",
     },
     {
       Sr: 713,
-      "Sevice Code": "LID18",
+      "Service Code": "LID18",
       Service:
         "Offering Customization Options for Texture Patterns, Colors, and Effects",
     },
     {
       Sr: 714,
-      "Sevice Code": "LID19",
+      "Service Code": "LID19",
       Service:
         "Providing Consultation and Design Services to Determine the Right Texture for Each Space",
     },
     {
       Sr: 715,
-      "Sevice Code": "LID1A",
+      "Service Code": "LID1A",
       Service:
         "Ensuring Proper Surface Preparation and Priming for Texture Application",
     },
     {
       Sr: 716,
-      "Sevice Code": "LID1B",
+      "Service Code": "LID1B",
       Service:
         "Offering Sealing and Protective Coatings to Preserve Texture Finish",
     },
     {
       Sr: 717,
-      "Sevice Code": "LID1C",
+      "Service Code": "LID1C",
       Service:
         "Providing Maintenance Tips for Cleaning and Refreshing Textured Walls",
     },
     {
       Sr: 718,
-      "Sevice Code": "LIE1D",
+      "Service Code": "LIE1D",
       Service:
         "Offering a Wide Range of Wallcovering Options Including Fabric, Vinyl, Cork, and Grasscloth",
     },
     {
       Sr: 719,
-      "Sevice Code": "LIE1E",
+      "Service Code": "LIE1E",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Wallcovering Material and Design",
     },
     {
       Sr: 720,
-      "Sevice Code": "LIE1F",
+      "Service Code": "LIE1F",
       Service:
         "Offering Customization Options for Wallcovering Patterns, Colors, and Textures",
     },
     {
       Sr: 721,
-      "Sevice Code": "LIE20",
+      "Service Code": "LIE20",
       Service:
         "Providing Professional Installation Services for Seamless and Durable Results",
     },
     {
       Sr: 722,
-      "Sevice Code": "LIE21",
+      "Service Code": "LIE21",
       Service:
         "Offering Removal and Replacement Services for Existing Wallcoverings",
     },
     {
       Sr: 723,
-      "Sevice Code": "LIE22",
+      "Service Code": "LIE22",
       Service:
         "Ensuring Proper Adhesive Application and Finishing Techniques for Smooth and Long-lasting Finish",
     },
     {
       Sr: 724,
-      "Sevice Code": "LIE23",
+      "Service Code": "LIE23",
       Service:
         "Providing Maintenance Tips for Cleaning and Care of Wallcoverings",
     },
     {
       Sr: 725,
-      "Sevice Code": "LIF24",
+      "Service Code": "LIF24",
       Service:
         "Offering Design and Installation Services for Accent Walls to Create Focal Points and Visual Interest",
     },
     {
       Sr: 726,
-      "Sevice Code": "LIF25",
+      "Service Code": "LIF25",
       Service:
         "Providing Consultation on Accent Wall Placement, Color Selection, and Design Options",
     },
     {
       Sr: 727,
-      "Sevice Code": "LIF26",
+      "Service Code": "LIF26",
       Service:
         "Offering a Variety of Accent Wall Materials Including Paint, Wallpaper, Tile, and Wood Panels",
     },
     {
       Sr: 728,
-      "Sevice Code": "LIF27",
+      "Service Code": "LIF27",
       Service:
         "Providing Customization Options for Accent Wall Patterns, Textures, and Finishes",
     },
     {
       Sr: 729,
-      "Sevice Code": "LIF28",
+      "Service Code": "LIF28",
       Service:
         "Ensuring Proper Installation Techniques to Achieve Seamless Integration with Existing Walls",
     },
     {
       Sr: 730,
-      "Sevice Code": "LIF29",
+      "Service Code": "LIF29",
       Service: "Offering Lighting Solutions to Enhance Accent Wall Features",
     },
     {
       Sr: 731,
-      "Sevice Code": "LIF2A",
+      "Service Code": "LIF2A",
       Service:
         "Providing Maintenance Tips for Preserving the Look and Integrity of Accent Walls",
     },
     {
       Sr: 732,
-      "Sevice Code": "LIG2B",
+      "Service Code": "LIG2B",
       Service:
         "Providing Custom Wall Treatment Solutions to Enhance Aesthetics and Functionality",
     },
     {
       Sr: 733,
-      "Sevice Code": "LIG2C",
+      "Service Code": "LIG2C",
       Service:
         "Offering Options for Decorative Molding, Trim, and Millwork Installation",
     },
     {
       Sr: 734,
-      "Sevice Code": "LIG2D",
+      "Service Code": "LIG2D",
       Service:
         "Providing Consultation and Design Services to Determine the Right Wall Treatment Style and Material",
     },
     {
       Sr: 735,
-      "Sevice Code": "LIG2E",
+      "Service Code": "LIG2E",
       Service:
         "Offering Installation Services for Crown Molding, Chair Rail, Baseboards, and Panel Mouldings",
     },
     {
       Sr: 736,
-      "Sevice Code": "LIG2F",
+      "Service Code": "LIG2F",
       Service:
         "Ensuring Proper Measurement, Cutting, and Joinery Techniques for Seamless Installation",
     },
     {
       Sr: 737,
-      "Sevice Code": "LIG30",
+      "Service Code": "LIG30",
       Service:
         "Providing Finishing and Painting Services to Enhance the Appearance of Wall Treatments",
     },
     {
       Sr: 738,
-      "Sevice Code": "LIG31",
+      "Service Code": "LIG31",
       Service:
         "Offering Maintenance Tips for Cleaning and Care of Wall Treatments",
     },
     {
       Sr: 739,
-      "Sevice Code": "LIH32",
+      "Service Code": "LIH32",
       Service:
         "Offering Repair and Restoration Services for Damaged Walls Including Cracks, Holes, and Water Damage",
     },
     {
       Sr: 740,
-      "Sevice Code": "LIH33",
+      "Service Code": "LIH33",
       Service: "Providing Patching, Plastering, and Drywall Repair Services",
     },
     {
       Sr: 741,
-      "Sevice Code": "LIH34",
+      "Service Code": "LIH34",
       Service:
         "Offering Matching Services for Existing Wall Finishes and Textures",
     },
     {
       Sr: 742,
-      "Sevice Code": "LIH35",
+      "Service Code": "LIH35",
       Service: "Providing Solutions for Structural Repairs and Reinforcements",
     },
     {
       Sr: 743,
-      "Sevice Code": "LIH36",
+      "Service Code": "LIH36",
       Service: "Offering Preservation Services for Historic and Heritage Walls",
     },
     {
       Sr: 744,
-      "Sevice Code": "LIH37",
+      "Service Code": "LIH37",
       Service:
         "Providing Cleaning and Refinishing Services for Stained or Discolored Walls",
     },
     {
       Sr: 745,
-      "Sevice Code": "LIH38",
+      "Service Code": "LIH38",
       Service: "Offering Emergency Repair Services for Immediate Needs",
     },
     {
       Sr: 746,
-      "Sevice Code": "LII39",
+      "Service Code": "LII39",
       Service:
         "Collaborating with Clients and Artists to Design and Install Custom Art Installations for Walls",
     },
     {
       Sr: 747,
-      "Sevice Code": "LII3A",
+      "Service Code": "LII3A",
       Service:
         "Providing Options for Different Types of Art Installations Including Sculptures, Murals, and Wall Hangings",
     },
     {
       Sr: 748,
-      "Sevice Code": "LII3B",
+      "Service Code": "LII3B",
       Service:
         "Offering Consultation and Design Services to Determine the Right Artwork Size, Placement, and Style",
     },
     {
       Sr: 749,
-      "Sevice Code": "LII3C",
+      "Service Code": "LII3C",
       Service:
         "Providing Professional Installation Services to Ensure Secure and Proper Display of Artwork",
     },
     {
       Sr: 750,
-      "Sevice Code": "LII3D",
+      "Service Code": "LII3D",
       Service:
         "Ensuring Proper Lighting and Framing to Enhance the Appearance of Art Installations",
     },
     {
       Sr: 751,
-      "Sevice Code": "LII3E",
+      "Service Code": "LII3E",
       Service:
         "Offering Maintenance and Cleaning Services to Preserve the Integrity of Artwork",
     },
     {
       Sr: 752,
-      "Sevice Code": "LII3F",
+      "Service Code": "LII3F",
       Service:
         "Ensuring Compliance with Safety and Security Standards for Art Installations",
     },
     {
       Sr: 753,
-      "Sevice Code": "LJA01",
+      "Service Code": "LJA01",
       Service:
         "Providing End-to-End Kitchen Renovation Services from Design to Completion",
     },
     {
       Sr: 754,
-      "Sevice Code": "LJA02",
+      "Service Code": "LJA02",
       Service:
         "Collaborating with Clients to Understand Their Needs, Preferences, and Budget",
     },
     {
       Sr: 755,
-      "Sevice Code": "LJA03",
+      "Service Code": "LJA03",
       Service:
         "Offering Design Consultation and Space Planning Services to Maximize Functionality and Aesthetics",
     },
     {
       Sr: 756,
-      "Sevice Code": "LJA04",
+      "Service Code": "LJA04",
       Service:
         "Managing All Aspects of the Renovation Process Including Demolition, Construction, and Finishing",
     },
     {
       Sr: 757,
-      "Sevice Code": "LJA05",
+      "Service Code": "LJA05",
       Service:
         "Ensuring Quality Craftsmanship and Attention to Detail Throughout the Renovation Project",
     },
     {
       Sr: 758,
-      "Sevice Code": "LJA06",
+      "Service Code": "LJA06",
       Service:
         "Providing Timely Updates and Communication to Keep Clients Informed Throughout the Renovation Process",
     },
     {
       Sr: 759,
-      "Sevice Code": "LJB07",
+      "Service Code": "LJB07",
       Service:
         "Offering Custom Cabinetry Design and Fabrication Services to Maximize Storage and Efficiency",
     },
     {
       Sr: 760,
-      "Sevice Code": "LJB08",
+      "Service Code": "LJB08",
       Service:
         "Providing Options for Different Cabinet Styles, Materials, Finishes, and Hardware",
     },
     {
       Sr: 761,
-      "Sevice Code": "LJB09",
+      "Service Code": "LJB09",
       Service:
         "Collaborating with Clients to Design Customized Storage Solutions for Pantries, Drawers, and Cabinets",
     },
     {
       Sr: 762,
-      "Sevice Code": "LJB0A",
+      "Service Code": "LJB0A",
       Service:
         "Ensuring Precise Measurement and Installation of Custom Cabinetry for Seamless Integration with Existing Kitchen Layout",
     },
     {
       Sr: 763,
-      "Sevice Code": "LJB0B",
+      "Service Code": "LJB0B",
       Service:
         "Offering Solutions for Specialty Cabinets Such as Pull-out Shelves, Lazy Susans, and Spice Racks",
     },
     {
       Sr: 764,
-      "Sevice Code": "LJB0C",
+      "Service Code": "LJB0C",
       Service:
         "Providing Professional Installation Services to Ensure Proper Functionality and Durability of Custom Cabinetry",
     },
     {
       Sr: 765,
-      "Sevice Code": "LJC0D",
+      "Service Code": "LJC0D",
       Service:
         "Offering a Wide Range of Countertop Materials Including Granite, Quartz, Marble, and Solid Surface",
     },
     {
       Sr: 766,
-      "Sevice Code": "LJC0E",
+      "Service Code": "LJC0E",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Countertop Material Based on Client Preferences and Budget",
     },
     {
       Sr: 767,
-      "Sevice Code": "LJC0F",
+      "Service Code": "LJC0F",
       Service:
         "Collaborating with Clients to Design Custom Countertop Layouts and Edge Profiles",
     },
     {
       Sr: 768,
-      "Sevice Code": "LJC10",
+      "Service Code": "LJC10",
       Service:
         "Providing Professional Installation Services for Precise Measurement and Fitting of Countertops",
     },
     {
       Sr: 769,
-      "Sevice Code": "LJC11",
+      "Service Code": "LJC11",
       Service:
         "Ensuring Proper Sealing and Finishing of Countertops for Durability and Longevity",
     },
     {
       Sr: 770,
-      "Sevice Code": "LJC12",
+      "Service Code": "LJC12",
       Service:
         "Offering Maintenance Tips for Cleaning and Care of Countertops to Preserve Their Appearance",
     },
     {
       Sr: 771,
-      "Sevice Code": "LJD13",
+      "Service Code": "LJD13",
       Service:
         "Offering Design Consultation and Assistance in Choosing the Right Backsplash Material and Style",
     },
     {
       Sr: 772,
-      "Sevice Code": "LJD14",
+      "Service Code": "LJD14",
       Service:
         "Providing Options for Different Backsplash Materials Including Tile, Glass, Stone, and Metal",
     },
     {
       Sr: 773,
-      "Sevice Code": "LJD15",
+      "Service Code": "LJD15",
       Service:
         "Collaborating with Clients to Design Custom Backsplash Patterns and Layouts",
     },
     {
       Sr: 774,
-      "Sevice Code": "LJD16",
+      "Service Code": "LJD16",
       Service:
         "Providing Professional Installation Services for Precise Placement and Grouting of Backsplash Tiles",
     },
     {
       Sr: 775,
-      "Sevice Code": "LJD17",
+      "Service Code": "LJD17",
       Service:
         "Ensuring Proper Sealing and Finishing of Backsplash Materials for Easy Maintenance and Cleaning",
     },
     {
       Sr: 776,
-      "Sevice Code": "LJD18",
+      "Service Code": "LJD18",
       Service:
         "Offering Customization Options for Backsplash Accents, Borders, and Insets",
     },
     {
       Sr: 777,
-      "Sevice Code": "LJE19",
+      "Service Code": "LJE19",
       Service:
         "Offering Design Consultation and Space Planning Services to Determine the Right Layout and Configuration for Kitchen Islands and Peninsulas",
     },
     {
       Sr: 778,
-      "Sevice Code": "LJE1A",
+      "Service Code": "LJE1A",
       Service:
         "Providing Options for Different Island and Peninsula Styles, Sizes, and Features",
     },
     {
       Sr: 779,
-      "Sevice Code": "LJE1B",
+      "Service Code": "LJE1B",
       Service:
         "Collaborating with Clients to Design Custom Kitchen Islands and Peninsulas to Suit Their Needs and Preferences",
     },
     {
       Sr: 780,
-      "Sevice Code": "LJE1C",
+      "Service Code": "LJE1C",
       Service:
         "Offering Solutions for Storage, Seating, and Built-in Appliances within Kitchen Islands and Peninsulas",
     },
     {
       Sr: 781,
-      "Sevice Code": "LJE1D",
+      "Service Code": "LJE1D",
       Service:
         "Providing Professional Installation Services for Precise Assembly and Integration of Kitchen Islands and Peninsulas with Existing Kitchen Layout",
     },
     {
       Sr: 782,
-      "Sevice Code": "LJF1E",
+      "Service Code": "LJF1E",
       Service:
         "Offering Design Consultation and Assistance in Choosing the Right Lighting Fixtures for Different Areas of the Kitchen",
     },
     {
       Sr: 783,
-      "Sevice Code": "LJF1F",
+      "Service Code": "LJF1F",
       Service:
         "Providing Options for Ambient, Task, and Accent Lighting to Enhance Functionality and Aesthetics",
     },
     {
       Sr: 784,
-      "Sevice Code": "LJF20",
+      "Service Code": "LJF20",
       Service:
         "Collaborating with Clients to Design Custom Lighting Plans and Layouts to Suit Their Needs and Preferences",
     },
     {
       Sr: 785,
-      "Sevice Code": "LJF21",
+      "Service Code": "LJF21",
       Service:
         "Offering Solutions for Under-cabinet Lighting, Recessed Lighting, Pendant Lights, and Track Lighting",
     },
     {
       Sr: 786,
-      "Sevice Code": "LJF22",
+      "Service Code": "LJF22",
       Service:
         "Providing Professional Installation Services for Proper Wiring and Placement of Lighting Fixtures",
     },
     {
       Sr: 787,
-      "Sevice Code": "LJG23",
+      "Service Code": "LJG23",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Appliances Based on Client Preferences, Budget, and Space Constraints",
     },
     {
       Sr: 788,
-      "Sevice Code": "LJG24",
+      "Service Code": "LJG24",
       Service:
         "Offering Options for Different Appliance Brands, Styles, and Features",
     },
     {
       Sr: 789,
-      "Sevice Code": "LJG25",
+      "Service Code": "LJG25",
       Service:
         "Collaborating with Clients to Design Custom Appliance Layouts and Configurations to Maximize Functionality and Efficiency",
     },
     {
       Sr: 790,
-      "Sevice Code": "LJG26",
+      "Service Code": "LJG26",
       Service:
         "Providing Professional Installation Services for Precise Placement and Connection of Appliances",
     },
     {
       Sr: 791,
-      "Sevice Code": "LJG27",
+      "Service Code": "LJG27",
       Service:
         "Offering Solutions for Built-in Appliances, Appliance Panels, and Specialty Appliances",
     },
     {
       Sr: 792,
-      "Sevice Code": "LJH28",
+      "Service Code": "LJH28",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Plumbing Fixtures Including Sinks, Faucets, and Hardware",
     },
     {
       Sr: 793,
-      "Sevice Code": "LJH29",
+      "Service Code": "LJH29",
       Service:
         "Offering Options for Different Fixture Styles, Finishes, and Features",
     },
     {
       Sr: 794,
-      "Sevice Code": "LJH2A",
+      "Service Code": "LJH2A",
       Service:
         "Collaborating with Clients to Design Custom Plumbing Layouts and Configurations",
     },
     {
       Sr: 795,
-      "Sevice Code": "LJH2B",
+      "Service Code": "LJH2B",
       Service:
         "Providing Professional Installation Services for Proper Placement and Connection of Plumbing Fixtures",
     },
     {
       Sr: 796,
-      "Sevice Code": "LJH2C",
+      "Service Code": "LJH2C",
       Service:
         "Ensuring Proper Sealing and Finishing of Plumbing Fixtures to Prevent Leaks and Water Damage",
     },
     {
       Sr: 797,
-      "Sevice Code": "LJI2D",
+      "Service Code": "LJI2D",
       Service:
         "Offering a Wide Range of Flooring Options Including Hardwood, Tile, Laminate, Vinyl, and Engineered Wood",
     },
     {
       Sr: 798,
-      "Sevice Code": "LJI2E",
+      "Service Code": "LJI2E",
       Service:
         "Providing Consultation and Assistance in Choosing the Right Flooring Material Based on Client Preferences, Budget, and Lifestyle",
     },
     {
       Sr: 799,
-      "Sevice Code": "LJI2F",
+      "Service Code": "LJI2F",
       Service:
         "Collaborating with Clients to Design Custom Flooring Layouts and Patterns to Enhance Aesthetics and Functionality",
     },
     {
       Sr: 800,
-      "Sevice Code": "LJI30",
+      "Service Code": "LJI30",
       Service:
         "Providing Professional Installation Services for Precise Measurement and Fitting of Flooring Materials",
     },
     {
       Sr: 801,
-      "Sevice Code": "LJI31",
+      "Service Code": "LJI31",
       Service:
         "Ensuring Proper Sealing and Finishing of Flooring Materials for Durability and Longevity",
     },
     {
       Sr: 802,
-      "Sevice Code": "LJJ32",
+      "Service Code": "LJJ32",
       Service:
         "Assessing Ventilation Needs Based on Kitchen Size, Cooking Habits, and Appliance Configuration",
     },
     {
       Sr: 803,
-      "Sevice Code": "LJJ33",
+      "Service Code": "LJJ33",
       Service: "Offering Solutions for Range Hoods, Exhaust Fans, and Vent",
     },
     {
       Sr: 804,
-      "Sevice Code": "MAA01",
+      "Service Code": "MAA01",
       Service: "Customized Décor Solutions",
     },
     {
       Sr: 805,
-      "Sevice Code": "MAA02",
+      "Service Code": "MAA02",
       Service: "Furniture and Accessories Selection",
     },
     {
       Sr: 806,
-      "Sevice Code": "MAA03",
+      "Service Code": "MAA03",
       Service: "Wall Art and Décor Installation",
     },
     {
       Sr: 807,
-      "Sevice Code": "MAA04",
+      "Service Code": "MAA04",
       Service: "Textile and Soft Furnishing Recommendations",
     },
     {
       Sr: 808,
-      "Sevice Code": "MAA05",
+      "Service Code": "MAA05",
       Service: "Styling Consultations for Different Rooms",
     },
     {
       Sr: 809,
-      "Sevice Code": "MAA06",
+      "Service Code": "MAA06",
       Service: "Seasonal and Holiday Décor Services",
     },
     {
       Sr: 810,
-      "Sevice Code": "MAA07",
+      "Service Code": "MAA07",
       Service: "Feng Shui and Vaastu Shastra Consultation",
     },
     {
       Sr: 811,
-      "Sevice Code": "MAB08",
+      "Service Code": "MAB08",
       Service: "Corporate Art Selection and Installation",
     },
     {
       Sr: 812,
-      "Sevice Code": "MAB09",
+      "Service Code": "MAB09",
       Service: "Brand Integration through Decor",
     },
     {
       Sr: 813,
-      "Sevice Code": "MAB0A",
+      "Service Code": "MAB0A",
       Service: "Reception Area Styling",
     },
     {
       Sr: 814,
-      "Sevice Code": "MAB0B",
+      "Service Code": "MAB0B",
       Service: "Office Plant and Greenery Installation",
     },
     {
       Sr: 815,
-      "Sevice Code": "MAB0C",
+      "Service Code": "MAB0C",
       Service: "Ergonomic and Aesthetically Pleasing Furniture Selection",
     },
     {
       Sr: 816,
-      "Sevice Code": "MAB0D",
+      "Service Code": "MAB0D",
       Service: "Functional Decor for Meeting and Conference Rooms",
     },
     {
       Sr: 817,
-      "Sevice Code": "MAB0E",
+      "Service Code": "MAB0E",
       Service: "Employee Workstation Personalization",
     },
     {
       Sr: 818,
-      "Sevice Code": "MAC0F",
+      "Service Code": "MAC0F",
       Service: "Theme Development and Conceptualization",
     },
     {
       Sr: 819,
-      "Sevice Code": "MAC10",
+      "Service Code": "MAC10",
       Service: "Table Setting and Centrepiece Design",
     },
     {
       Sr: 820,
-      "Sevice Code": "MAC11",
+      "Service Code": "MAC11",
       Service: "Wall Murals and Art Installations",
     },
     {
       Sr: 821,
-      "Sevice Code": "MAC12",
+      "Service Code": "MAC12",
       Service: "Lighting Design to Enhance Ambiance",
     },
     {
       Sr: 822,
-      "Sevice Code": "MAC13",
+      "Service Code": "MAC13",
       Service: "Outdoor Patio Design and Decoration",
     },
     {
       Sr: 823,
-      "Sevice Code": "MAC14",
+      "Service Code": "MAC14",
       Service: "Menu Board and Signage Design",
     },
     {
       Sr: 824,
-      "Sevice Code": "MAC15",
+      "Service Code": "MAC15",
       Service: "Seasonal Decor Changes to Reflect Holidays or Events",
     },
     {
       Sr: 825,
-      "Sevice Code": "MAD16",
+      "Service Code": "MAD16",
       Service: "Decorative Accents Selection (Vases, Sculptures, etc.)",
     },
     {
       Sr: 826,
-      "Sevice Code": "MAD17",
+      "Service Code": "MAD17",
       Service: "Statement Piece Recommendations",
     },
     {
       Sr: 827,
-      "Sevice Code": "MAD18",
+      "Service Code": "MAD18",
       Service: "Rug and Carpet Selection",
     },
     {
       Sr: 828,
-      "Sevice Code": "MAD19",
+      "Service Code": "MAD19",
       Service: "Throw Pillows and Cushions Styling",
     },
     {
       Sr: 829,
-      "Sevice Code": "MAD1A",
+      "Service Code": "MAD1A",
       Service: "Shelving and Display Unit Styling",
     },
     {
       Sr: 830,
-      "Sevice Code": "MAD1B",
+      "Service Code": "MAD1B",
       Service: "Accent Lighting Suggestions",
     },
     {
       Sr: 831,
-      "Sevice Code": "MAD1C",
+      "Service Code": "MAD1C",
       Service: "Personalized Accessories for Individual Preferences",
     },
     {
       Sr: 832,
-      "Sevice Code": "MAE1D",
+      "Service Code": "MAE1D",
       Service: "Shelf and Mantel Styling",
     },
     {
       Sr: 833,
-      "Sevice Code": "MAE1E",
+      "Service Code": "MAE1E",
       Service: "Coffee Table and Side Table Decor",
     },
     {
       Sr: 834,
-      "Sevice Code": "MAE1F",
+      "Service Code": "MAE1F",
       Service: "Bookcase Arrangement",
     },
     {
       Sr: 835,
-      "Sevice Code": "MAE20",
+      "Service Code": "MAE20",
       Service: "Arranging and Styling Collections",
     },
     {
       Sr: 836,
-      "Sevice Code": "MAE21",
+      "Service Code": "MAE21",
       Service: "Colour Palette Coordination",
     },
     {
       Sr: 837,
-      "Sevice Code": "MAE22",
+      "Service Code": "MAE22",
       Service: "Seasonal Styling Updates",
     },
     {
       Sr: 838,
-      "Sevice Code": "MAE23",
+      "Service Code": "MAE23",
       Service: "Rental Property Staging for Sale or Lease",
     },
     {
       Sr: 839,
-      "Sevice Code": "MAF24",
+      "Service Code": "MAF24",
       Service: "Texture and Pattern Selection",
     },
     {
       Sr: 840,
-      "Sevice Code": "MAF25",
+      "Service Code": "MAF25",
       Service: "Colour Scheme Development",
     },
     {
       Sr: 841,
-      "Sevice Code": "MAF26",
+      "Service Code": "MAF26",
       Service: "Statement Piece Recommendations (Chandeliers, Artwork, etc.)",
     },
     {
       Sr: 842,
-      "Sevice Code": "MAF27",
+      "Service Code": "MAF27",
       Service: "Material Selection (Wood, Metal, Glass, etc.)",
     },
     {
       Sr: 843,
-      "Sevice Code": "MAF28",
+      "Service Code": "MAF28",
       Service: "Scale and Proportion Consideration",
     },
     {
       Sr: 844,
-      "Sevice Code": "MAF29",
+      "Service Code": "MAF29",
       Service: "Balance and Harmony Incorporation",
     },
     {
       Sr: 845,
-      "Sevice Code": "MAF2A",
+      "Service Code": "MAF2A",
       Service: "Eclectic Mix and Match Suggestions",
     },
     {
       Sr: 846,
-      "Sevice Code": "MAG2B",
+      "Service Code": "MAG2B",
       Service: "Mood Board Creation",
     },
     {
       Sr: 847,
-      "Sevice Code": "MAG2C",
+      "Service Code": "MAG2C",
       Service: "Trend Analysis and Forecasting",
     },
     {
       Sr: 848,
-      "Sevice Code": "MAG2D",
+      "Service Code": "MAG2D",
       Service: "Design Blog or Newsletter Publication",
     },
     {
       Sr: 849,
-      "Sevice Code": "MAG2E",
+      "Service Code": "MAG2E",
       Service: "Social Media Content Creation (Instagram, Pinterest, etc.)",
     },
     {
       Sr: 850,
-      "Sevice Code": "MAG2F",
+      "Service Code": "MAG2F",
       Service: "Design Workshops and Seminars",
     },
     {
       Sr: 851,
-      "Sevice Code": "MAG30",
+      "Service Code": "MAG30",
       Service: "Design Tours (Visiting Inspirational Spaces)",
     },
     {
       Sr: 852,
-      "Sevice Code": "MAG31",
+      "Service Code": "MAG31",
       Service: "Customized Design Inspiration Packages for Clients",
     },
     {
       Sr: 853,
-      "Sevice Code": "MAH32",
+      "Service Code": "MAH32",
       Service: "Conceptual Sketches and Renderings",
     },
     {
       Sr: 854,
-      "Sevice Code": "MAH33",
+      "Service Code": "MAH33",
       Service: "3D Visualization of Design Ideas",
     },
     {
       Sr: 855,
-      "Sevice Code": "MAH34",
+      "Service Code": "MAH34",
       Service: "Storyboard Creation",
     },
     {
       Sr: 856,
-      "Sevice Code": "MAH35",
+      "Service Code": "MAH35",
       Service: "Design Concept Presentations",
     },
     {
       Sr: 857,
-      "Sevice Code": "MAH36",
+      "Service Code": "MAH36",
       Service: "Client Collaboration Workshops",
     },
     {
       Sr: 858,
-      "Sevice Code": "MAH37",
+      "Service Code": "MAH37",
       Service: "Prototype Development",
     },
     {
       Sr: 859,
-      "Sevice Code": "MAH38",
+      "Service Code": "MAH38",
       Service: "Design Concept Testing and Feedback Sessions",
     },
     {
       Sr: 860,
-      "Sevice Code": "MAI39",
+      "Service Code": "MAI39",
       Service: "Creative Use of Space Planning Techniques",
     },
     {
       Sr: 861,
-      "Sevice Code": "MAI3A",
+      "Service Code": "MAI3A",
       Service: "Transformation of Unused Spaces into Functional Areas",
     },
     {
       Sr: 862,
-      "Sevice Code": "MAI3B",
+      "Service Code": "MAI3B",
       Service: "Innovative Storage Solutions",
     },
     {
       Sr: 863,
-      "Sevice Code": "MAI3C",
+      "Service Code": "MAI3C",
       Service: "Adaptive Reuse Projects",
     },
     {
       Sr: 864,
-      "Sevice Code": "MAI3D",
+      "Service Code": "MAI3D",
       Service: "Biophilic Design Integration (Bringing Nature Indoors)",
     },
     {
       Sr: 865,
-      "Sevice Code": "MAI3E",
+      "Service Code": "MAI3E",
       Service: "Multifunctional Furniture Recommendations",
     },
     {
       Sr: 866,
-      "Sevice Code": "MAI3F",
+      "Service Code": "MAI3F",
       Service: "Personalized Space Enhancements based on Client's Lifestyle",
     },
     {
       Sr: 867,
-      "Sevice Code": "MAJ40",
+      "Service Code": "MAJ40",
       Service: "Furniture Arrangement Plans",
     },
     {
       Sr: 868,
-      "Sevice Code": "MAJ41",
+      "Service Code": "MAJ41",
       Service: "Traffic Flow Analysis",
     },
     {
       Sr: 869,
-      "Sevice Code": "MAJ42",
+      "Service Code": "MAJ42",
       Service: "Functional Layout Optimization",
     },
     {
       Sr: 870,
-      "Sevice Code": "MAJ43",
+      "Service Code": "MAJ43",
       Service: "Open Concept Design Solutions",
     },
     {
       Sr: 871,
-      "Sevice Code": "MAJ44",
+      "Service Code": "MAJ44",
       Service: "Room Zoning and Division Suggestions",
     },
     {
       Sr: 872,
-      "Sevice Code": "MAJ45",
+      "Service Code": "MAJ45",
       Service: "Small Space Maximization Techniques",
     },
     {
       Sr: 873,
-      "Sevice Code": "MAJ46",
+      "Service Code": "MAJ46",
       Service: "Custom Layout Designs for Specific Client Needs",
     },
     {
       Sr: 874,
-      "Sevice Code": "MBA01",
+      "Service Code": "MBA01",
       Service:
         "Identifying and Sourcing Products from a Wide Range of Suppliers and Manufacturers",
     },
     {
       Sr: 875,
-      "Sevice Code": "MBA02",
+      "Service Code": "MBA02",
       Service:
         "Researching and Evaluating Products Based on Quality, Durability, and Style",
     },
     {
       Sr: 876,
-      "Sevice Code": "MBA03",
+      "Service Code": "MBA03",
       Service:
         "Accessing a Diverse Network of Suppliers to Meet Client Needs and Preferences",
     },
     {
       Sr: 877,
-      "Sevice Code": "MBA04",
+      "Service Code": "MBA04",
       Service: "Offering Recommendations for Unique and Hard-to-Find Items",
     },
     {
       Sr: 878,
-      "Sevice Code": "MBA05",
+      "Service Code": "MBA05",
       Service:
         "Negotiating Pricing and Terms with Suppliers to Ensure Competitive Rates",
     },
     {
       Sr: 879,
-      "Sevice Code": "MBA06",
+      "Service Code": "MBA06",
       Service: "Providing Expertise in Niche Markets and Specialized Products",
     },
     {
       Sr: 880,
-      "Sevice Code": "MBA07",
+      "Service Code": "MBA07",
       Service: "Managing Product Logistics from Ordering to Delivery",
     },
     {
       Sr: 881,
-      "Sevice Code": "MBB08",
+      "Service Code": "MBB08",
       Service:
         "Arranging and Conducting Visits to Furniture Stores, Showrooms, and Design Canters",
     },
     {
       Sr: 882,
-      "Sevice Code": "MBB09",
+      "Service Code": "MBB09",
       Service:
         "Assisting Clients in Navigating Store Layouts and Product Displays",
     },
     {
       Sr: 883,
-      "Sevice Code": "MBB0A",
+      "Service Code": "MBB0A",
       Service:
         "Offering Guidance and Advice on Product Selection Based on Client Requirements",
     },
     {
       Sr: 884,
-      "Sevice Code": "MBB0B",
+      "Service Code": "MBB0B",
       Service:
         "Providing Information on Product Features, Materials, and Customization Options",
     },
     {
       Sr: 885,
-      "Sevice Code": "MBB0C",
+      "Service Code": "MBB0C",
       Service: "Facilitating Product Demonstrations and Testimonials",
     },
     {
       Sr: 886,
-      "Sevice Code": "MBB0D",
+      "Service Code": "MBB0D",
       Service:
         "Coordinating Store Visits to Align with Design Project Timelines and Budgets",
     },
     {
       Sr: 887,
-      "Sevice Code": "MBB0E",
+      "Service Code": "MBB0E",
       Service: "Managing Transportation and Delivery of Purchased Items",
     },
     {
       Sr: 888,
-      "Sevice Code": "MBC0F",
+      "Service Code": "MBC0F",
       Service:
         "Offering One-on-One Consultations to Understand Client Needs and Preferences",
     },
     {
       Sr: 889,
-      "Sevice Code": "MBC10",
+      "Service Code": "MBC10",
       Service: "Creating Personalized Shopping Lists and Wish Lists",
     },
     {
       Sr: 890,
-      "Sevice Code": "MBC11",
+      "Service Code": "MBC11",
       Service: "Providing Guidance on Budget Allocation and Prioritization",
     },
     {
       Sr: 891,
-      "Sevice Code": "MBC12",
+      "Service Code": "MBC12",
       Service: "Accompanying Clients on Shopping Trips and Sourcing Excursions",
     },
     {
       Sr: 892,
-      "Sevice Code": "MBC13",
+      "Service Code": "MBC13",
       Service:
         "Offering Feedback and Recommendations Throughout the Shopping Process",
     },
     {
       Sr: 893,
-      "Sevice Code": "MBC14",
+      "Service Code": "MBC14",
       Service: "Negotiating Discounts and Special Offers on Behalf of Clients",
     },
     {
       Sr: 894,
-      "Sevice Code": "MBC15",
+      "Service Code": "MBC15",
       Service:
         "Streamlining the Shopping Experience to Save Time and Effort for Clients",
     },
     {
       Sr: 895,
-      "Sevice Code": "MBD16",
+      "Service Code": "MBD16",
       Service:
         "Curating a Selection of Furniture Options to Suit Client Style and Space Requirements",
     },
     {
       Sr: 896,
-      "Sevice Code": "MBD17",
+      "Service Code": "MBD17",
       Service:
         "Offering Recommendations for Quality and Comfortable Furniture Pieces",
     },
     {
       Sr: 897,
-      "Sevice Code": "MBD18",
+      "Service Code": "MBD18",
       Service: "Providing Insight into Furniture Trends and Styles",
     },
     {
       Sr: 898,
-      "Sevice Code": "MBD19",
+      "Service Code": "MBD19",
       Service: "Assisting with Custom Furniture Orders and Specifications",
     },
     {
       Sr: 899,
-      "Sevice Code": "MBD1A",
+      "Service Code": "MBD1A",
       Service: "Coordinating Furniture Delivery and Installation",
     },
     {
       Sr: 900,
-      "Sevice Code": "MBD1B",
+      "Service Code": "MBD1B",
       Service:
         "Ensuring Proper Furniture Placement and Layout within the Space",
     },
     {
       Sr: 901,
-      "Sevice Code": "MBD1C",
+      "Service Code": "MBD1C",
       Service: "Offering Post-Purchase Support and Follow-up Services",
     },
     {
       Sr: 902,
-      "Sevice Code": "MBE1D",
+      "Service Code": "MBE1D",
       Service:
         "Selecting Stylish and Functional Accessories to Enhance Interior Spaces",
     },
     {
       Sr: 903,
-      "Sevice Code": "MBE1E",
+      "Service Code": "MBE1E",
       Service:
         "Curating Collections of Decorative Accents, Cushions, and Throws",
     },
     {
       Sr: 904,
-      "Sevice Code": "MBE1F",
+      "Service Code": "MBE1F",
       Service:
         "Offering Advice on Scale, Proportion, and Balance with Accessories",
     },
     {
       Sr: 905,
-      "Sevice Code": "MBE20",
+      "Service Code": "MBE20",
       Service:
         "Sourcing Unique and Handcrafted Accessories from Artisans and Designers",
     },
     {
       Sr: 906,
-      "Sevice Code": "MBE21",
+      "Service Code": "MBE21",
       Service: "Providing Seasonal and Holiday-themed Accessories",
     },
     {
       Sr: 907,
-      "Sevice Code": "MBE22",
+      "Service Code": "MBE22",
       Service:
         "Incorporating Personalized and Meaningful Accessories into Design Schemes",
     },
     {
       Sr: 908,
-      "Sevice Code": "MBF23",
+      "Service Code": "MBF23",
       Service:
         "Curating Artwork Collections to Complement Interior Design Themes",
     },
     {
       Sr: 909,
-      "Sevice Code": "MBF24",
+      "Service Code": "MBF24",
       Service:
         "Offering Guidance on Art Selection Based on Style, Colour, and Medium",
     },
     {
       Sr: 910,
-      "Sevice Code": "MBF25",
+      "Service Code": "MBF25",
       Service: "Assisting with Art Acquisition and Commissioning",
     },
     {
       Sr: 911,
-      "Sevice Code": "MBF26",
+      "Service Code": "MBF26",
       Service: "Providing Custom Framing Services",
     },
     {
       Sr: 912,
-      "Sevice Code": "MBF27",
+      "Service Code": "MBF27",
       Service:
         "Sourcing Decorative Objects and Sculptures to Add Visual Interest",
     },
     {
       Sr: 913,
-      "Sevice Code": "MBF28",
+      "Service Code": "MBF28",
       Service: "Offering Advice on Wall Decor Placement and Arrangement",
     },
     {
       Sr: 914,
-      "Sevice Code": "MBF29",
+      "Service Code": "MBF29",
       Service: "Facilitating Art and Decor Installations",
     },
     {
       Sr: 915,
-      "Sevice Code": "MBG2A",
+      "Service Code": "MBG2A",
       Service:
         "Assisting Clients in Selecting Appliances Based on Functionality and Aesthetics",
     },
     {
       Sr: 916,
-      "Sevice Code": "MBG2B",
+      "Service Code": "MBG2B",
       Service:
         "Providing Recommendations for Energy-efficient and Eco-friendly Appliances",
     },
     {
       Sr: 917,
-      "Sevice Code": "MBG2C",
+      "Service Code": "MBG2C",
       Service: "Offering Insight into Appliance Features, Brands, and Models",
     },
     {
       Sr: 918,
-      "Sevice Code": "MBG2D",
+      "Service Code": "MBG2D",
       Service: "Coordinating Appliance Delivery and Installation",
     },
     {
       Sr: 919,
-      "Sevice Code": "MBG2E",
+      "Service Code": "MBG2E",
       Service: "Managing Appliance Warranty and Service Requests",
     },
     {
       Sr: 920,
-      "Sevice Code": "MBG2F",
+      "Service Code": "MBG2F",
       Service:
         "Integrating Appliances Seamlessly into Kitchen and Laundry Room Designs",
     },
     {
       Sr: 921,
-      "Sevice Code": "MBH30",
+      "Service Code": "MBH30",
       Service:
         "Curating a Range of Fixture Options for Lighting, Plumbing, and Hardware",
     },
     {
       Sr: 922,
-      "Sevice Code": "MBH31",
+      "Service Code": "MBH31",
       Service:
         "Offering Recommendations Based on Design Aesthetic and Functionality",
     },
     {
       Sr: 923,
-      "Sevice Code": "MBH32",
+      "Service Code": "MBH32",
       Service: "Providing Samples and Demonstrations of Fixture Options",
     },
     {
       Sr: 924,
-      "Sevice Code": "MBH33",
+      "Service Code": "MBH33",
       Service:
         "Assisting with Fixture Selection to Complement Overall Design Concept",
     },
     {
       Sr: 925,
-      "Sevice Code": "MBH34",
+      "Service Code": "MBH34",
       Service:
         "Ensuring Compatibility with Existing Infrastructure and Design Elements",
     },
     {
       Sr: 926,
-      "Sevice Code": "MBH35",
+      "Service Code": "MBH35",
       Service: "Managing Procurement and Delivery of Selected Fixtures",
     },
     {
       Sr: 927,
-      "Sevice Code": "MBH36",
+      "Service Code": "MBH36",
       Service: "Offering Installation Services by Skilled Professionals",
     },
     {
       Sr: 928,
-      "Sevice Code": "MBI37",
+      "Service Code": "MBI37",
       Service: "Providing Expertise in Furniture Placement and Room Layouts",
     },
     {
       Sr: 929,
-      "Sevice Code": "MBI38",
+      "Service Code": "MBI38",
       Service:
         "Offering Advice on Styling and Arranging Furniture and Accessories",
     },
     {
       Sr: 930,
-      "Sevice Code": "MBI39",
+      "Service Code": "MBI39",
       Service: "Creating Balanced and Harmonious Design Schemes",
     },
     {
       Sr: 931,
-      "Sevice Code": "MBI3A",
+      "Service Code": "MBI3A",
       Service: "Optimizing Space Functionality and Flow",
     },
     {
       Sr: 932,
-      "Sevice Code": "MBI3B",
+      "Service Code": "MBI3B",
       Service:
         "Incorporating Principles of Feng Shui and Vaastu Shastra for Positive Energy Flow",
     },
     {
       Sr: 933,
-      "Sevice Code": "MBI3C",
+      "Service Code": "MBI3C",
       Service: "Personalizing Spaces with Meaningful Decorative Touches",
     },
     {
       Sr: 934,
-      "Sevice Code": "MBI3D",
+      "Service Code": "MBI3D",
       Service:
         "Ensuring Attention to Detail in Placement and Styling to Achieve Desired Aesthetic",
     },
     {
       Sr: 935,
-      "Sevice Code": "MBJ3E",
+      "Service Code": "MBJ3E",
       Service:
         "Managing Custom Orders for Furniture, Cabinetry, and Specialty Items",
     },
     {
       Sr: 936,
-      "Sevice Code": "MBJ3F",
+      "Service Code": "MBJ3F",
       Service:
         "Coordinating with Suppliers and Manufacturers to Ensure Timely Production and Delivery",
     },
     {
       Sr: 937,
-      "Sevice Code": "MBJ40",
+      "Service Code": "MBJ40",
       Service:
         "Providing Updates and Status Reports on Custom Orders to Clients",
     },
     {
       Sr: 938,
-      "Sevice Code": "MBJ41",
+      "Service Code": "MBJ41",
       Service:
         "Resolving Issues and Addressing Concerns Throughout the Custom Order Process",
     },
     {
       Sr: 939,
-      "Sevice Code": "MBJ42",
+      "Service Code": "MBJ42",
       Service:
         "Ensuring Quality Control and Compliance with Design Specifications",
     },
     {
       Sr: 940,
-      "Sevice Code": "MBJ43",
+      "Service Code": "MBJ43",
       Service:
         "Facilitating Installation and Integration of Custom Items into Design Projects",
     },
     {
       Sr: 941,
-      "Sevice Code": "MBJ44",
+      "Service Code": "MBJ44",
       Service: "Offering Post-Installation Support and Follow-up Services",
     },
     {
       Sr: 942,
-      "Sevice Code": "MCA01",
+      "Service Code": "MCA01",
       Service:
         "Assessing the Property to Determine Staging Needs and Objectives",
     },
     {
       Sr: 943,
-      "Sevice Code": "MCA02",
+      "Service Code": "MCA02",
       Service:
         "Decluttering and Depersonalizing the Space to Appeal to a Wide Range of Buyers",
     },
     {
       Sr: 944,
-      "Sevice Code": "MCA03",
+      "Service Code": "MCA03",
       Service:
         "Rearranging Furniture and Decor to Maximize Space and Highlight Key Features",
     },
     {
       Sr: 945,
-      "Sevice Code": "MCA04",
+      "Service Code": "MCA04",
       Service:
         "Incorporating Neutral Colour Schemes and Contemporary Design Elements to Enhance Appeal",
     },
     {
       Sr: 946,
-      "Sevice Code": "MCA05",
+      "Service Code": "MCA05",
       Service:
         "Bringing in Rental Furniture and Decor Pieces to Create a Welcoming and Inviting Atmosphere",
     },
     {
       Sr: 947,
-      "Sevice Code": "MCA06",
+      "Service Code": "MCA06",
       Service:
         "Adding Finishing Touches such as Fresh Flowers, Artwork, and Soft Furnishings to Complete the Look",
     },
     {
       Sr: 948,
-      "Sevice Code": "MCA07",
+      "Service Code": "MCA07",
       Service:
         "Providing Professional Photography Services to Showcase Staged Spaces in Listings",
     },
     {
       Sr: 949,
-      "Sevice Code": "MCB08",
+      "Service Code": "MCB08",
       Service:
         "Evaluating the Office Space to Identify Staging Opportunities and Challenges",
     },
     {
       Sr: 950,
-      "Sevice Code": "MCB09",
+      "Service Code": "MCB09",
       Service:
         "Creating Functional and Productive Work Environments That Appeal to Potential Tenants",
     },
     {
       Sr: 951,
-      "Sevice Code": "MCB0A",
+      "Service Code": "MCB0A",
       Service:
         "Arranging Furniture and Layouts to Optimize Space Utilization and Workflow Efficiency",
     },
     {
       Sr: 952,
-      "Sevice Code": "MCB0B",
+      "Service Code": "MCB0B",
       Service:
         "Incorporating Branding Elements and Corporate Identity to Reflect Tenant Values and Culture",
     },
     {
       Sr: 953,
-      "Sevice Code": "MCB0C",
+      "Service Code": "MCB0C",
       Service:
         "Enhancing Reception Areas and Meeting Spaces to Make a Positive First Impression",
     },
     {
       Sr: 954,
-      "Sevice Code": "MCB0D",
+      "Service Code": "MCB0D",
       Service:
         "Providing Ergonomic Furniture Solutions for Comfort and Well-being",
     },
     {
       Sr: 955,
-      "Sevice Code": "MCB0E",
+      "Service Code": "MCB0E",
       Service:
         "Offering Virtual Tours and 3D Renderings to Showcase Staged Office Spaces",
     },
     {
       Sr: 956,
-      "Sevice Code": "MCC0F",
+      "Service Code": "MCC0F",
       Service:
         "Collaborating with Event Planners and Venue Managers to Design Memorable Event Spaces",
     },
     {
       Sr: 957,
-      "Sevice Code": "MCC10",
+      "Service Code": "MCC10",
       Service:
         "Creating Ambiance and Atmosphere Through Strategic Lighting, Decor, and Styling",
     },
     {
       Sr: 958,
-      "Sevice Code": "MCC11",
+      "Service Code": "MCC11",
       Service:
         "Selecting Furniture and Seating Arrangements to Accommodate Event Requirements and Guest Comfort",
     },
     {
       Sr: 959,
-      "Sevice Code": "MCC12",
+      "Service Code": "MCC12",
       Service:
         "Incorporating Branding and Theme Elements to Reflect Event Objectives and Audience",
     },
     {
       Sr: 960,
-      "Sevice Code": "MCC13",
+      "Service Code": "MCC13",
       Service:
         "Offering Customization Options for Corporate Events, Weddings, Parties, and Other Occasions",
     },
     {
       Sr: 961,
-      "Sevice Code": "MCC14",
+      "Service Code": "MCC14",
       Service:
         "Providing On-site Support and Coordination to Ensure Smooth Execution of Staging Plans",
     },
     {
       Sr: 962,
-      "Sevice Code": "MCC15",
+      "Service Code": "MCC15",
       Service:
         "Offering Post-event Clean-up and Restoration Services as Needed",
     },
     {
       Sr: 963,
-      "Sevice Code": "MCD16",
+      "Service Code": "MCD16",
       Service:
         "Offering Seasonal Decor Services for Homes, Offices, and Event Spaces",
     },
     {
       Sr: 964,
-      "Sevice Code": "MCD17",
+      "Service Code": "MCD17",
       Service:
         "Creating Festive and Inviting Atmospheres for Holidays Such as Christmas, Halloween, and Thanksgiving",
     },
     {
       Sr: 965,
-      "Sevice Code": "MCD18",
+      "Service Code": "MCD18",
       Service:
         "Incorporating Seasonal Decorations, Ornaments, and Accents to Enhance Ambiance and Celebratory Spirit",
     },
     {
       Sr: 966,
-      "Sevice Code": "MCD19",
+      "Service Code": "MCD19",
       Service:
         "Providing Customized Decor Packages Tailored to Client Preferences and Design Themes",
     },
     {
       Sr: 967,
-      "Sevice Code": "MCD1A",
+      "Service Code": "MCD1A",
       Service:
         "Offering Installation and Removal Services for Holiday Decorations and Displays",
     },
     {
       Sr: 968,
-      "Sevice Code": "MCD1B",
+      "Service Code": "MCD1B",
       Service:
         "Ensuring Safety and Compliance with Fire Codes and Regulations for Decorative Lighting and Displays",
     },
     {
       Sr: 969,
-      "Sevice Code": "MCD1C",
+      "Service Code": "MCD1C",
       Service:
         "Providing Storage Solutions for Seasonal Decor Items During Off-seasons",
     },
     {
       Sr: 970,
-      "Sevice Code": "MDA01",
+      "Service Code": "MDA01",
       Service:
         "Collaborating with Clients to Define Brand Identity, Values, and Messaging",
     },
     {
       Sr: 971,
-      "Sevice Code": "MDA02",
+      "Service Code": "MDA02",
       Service:
         "Conducting Brand Analysis and Market Research to Understand Target Audience and Competitive Landscape",
     },
     {
       Sr: 972,
-      "Sevice Code": "MDA03",
+      "Service Code": "MDA03",
       Service:
         "Offering Logo Design, Branding Collateral, and Brand Style Guide Development",
     },
     {
       Sr: 973,
-      "Sevice Code": "MDA04",
+      "Service Code": "MDA04",
       Service:
         "Providing Brand Naming, Tagline Creation, and Brand Storytelling Services",
     },
     {
       Sr: 974,
-      "Sevice Code": "MDA05",
+      "Service Code": "MDA05",
       Service:
         "Offering Visual Identity Design Including Colour Palette, Typography, and Graphic Elements",
     },
     {
       Sr: 975,
-      "Sevice Code": "MDA06",
+      "Service Code": "MDA06",
       Service:
         "Ensuring Consistency Across Brand Touchpoints (Print, Digital, Physical)",
     },
     {
       Sr: 976,
-      "Sevice Code": "MDB07",
+      "Service Code": "MDB07",
       Service:
         "Designing Retail Displays That Showcase Products in an Engaging and Sales-boosting Manner",
     },
     {
       Sr: 977,
-      "Sevice Code": "MDB08",
+      "Service Code": "MDB08",
       Service:
         "Offering Space Planning and Layout Design to Maximize Product Visibility and Accessibility",
     },
     {
       Sr: 978,
-      "Sevice Code": "MDB09",
+      "Service Code": "MDB09",
       Service:
         "Providing Custom Display Fixture Design and Fabrication Services",
     },
     {
       Sr: 979,
-      "Sevice Code": "MDB0A",
+      "Service Code": "MDB0A",
       Service:
         "Offering Visual Merchandising Strategies to Highlight Key Products and Promotions",
     },
     {
       Sr: 980,
-      "Sevice Code": "MDB0B",
+      "Service Code": "MDB0B",
       Service:
         "Incorporating Branding Elements and Signage for Brand Consistency",
     },
     {
       Sr: 981,
-      "Sevice Code": "MDB0C",
+      "Service Code": "MDB0C",
       Service:
         "Providing Consultation on Product Placement, Grouping, and Pricing Strategies",
     },
     {
       Sr: 982,
-      "Sevice Code": "MDB0D",
+      "Service Code": "MDB0D",
       Service: "Ensuring Compliance with Safety and Accessibility Standards",
     },
     {
       Sr: 983,
-      "Sevice Code": "MDC0E",
+      "Service Code": "MDC0E",
       Service:
         "Designing Showrooms That Reflect Brand Identity and Create Memorable Brand Experiences",
     },
     {
       Sr: 984,
-      "Sevice Code": "MDC0F",
+      "Service Code": "MDC0F",
       Service:
         "Offering Layout Design and Space Planning for Maximum Product Exposure and Customer Flow",
     },
     {
       Sr: 985,
-      "Sevice Code": "MDC10",
+      "Service Code": "MDC10",
       Service:
         "Providing Interior Design Services to Create Inviting and Inspirational Showroom Environments",
     },
     {
       Sr: 986,
-      "Sevice Code": "MDC11",
+      "Service Code": "MDC11",
       Service:
         "Offering Custom Fixture Design and Fabrication Services for Showroom Displays",
     },
     {
       Sr: 987,
-      "Sevice Code": "MDC12",
+      "Service Code": "MDC12",
       Service:
         "Incorporating Branding Elements, Signage, and Graphics to Reinforce Brand Messaging",
     },
     {
       Sr: 988,
-      "Sevice Code": "MDC13",
+      "Service Code": "MDC13",
       Service:
         "Providing Technology Integration Solutions for Interactive and Digital Displays",
     },
     {
       Sr: 989,
-      "Sevice Code": "MDC14",
+      "Service Code": "MDC14",
       Service:
         "Ensuring Flexibility and Adaptability for Product Changes and Seasonal Updates",
     },
     {
       Sr: 990,
-      "Sevice Code": "MDD15",
+      "Service Code": "MDD15",
       Service:
         "Offering Visual Merchandising Strategies to Optimize Product Presentation and Sales Performance",
     },
     {
       Sr: 991,
-      "Sevice Code": "MDD16",
+      "Service Code": "MDD16",
       Service:
         "Providing Seasonal and Holiday-themed Merchandising Concepts and Displays",
     },
     {
       Sr: 992,
-      "Sevice Code": "MDD17",
+      "Service Code": "MDD17",
       Service:
         "Offering Window Display Design and Installation Services to Attract Foot Traffic",
     },
     {
       Sr: 993,
-      "Sevice Code": "MDD18",
+      "Service Code": "MDD18",
       Service:
         "Providing Planogram Development and Implementation for Effective Product Placement",
     },
     {
       Sr: 994,
-      "Sevice Code": "MDD19",
+      "Service Code": "MDD19",
       Service:
         "Offering Product Grouping and Storytelling Strategies to Create Compelling Visual Narratives",
     },
     {
       Sr: 995,
-      "Sevice Code": "MDD1A",
+      "Service Code": "MDD1A",
       Service:
         "Incorporating Lighting Design to Highlight Products and Enhance Atmosphere",
     },
     {
       Sr: 996,
-      "Sevice Code": "MDD1B",
+      "Service Code": "MDD1B",
       Service:
         "Providing Training and Education on Visual Merchandising Best Practices for Retail Staff",
     },
     {
       Sr: 997,
-      "Sevice Code": "MDE1C",
+      "Service Code": "MDE1C",
       Service:
         "Designing Pop-up Shops That Create Excitement and Drive Engagement with Brand Fans",
     },
     {
       Sr: 998,
-      "Sevice Code": "MDE1D",
+      "Service Code": "MDE1D",
       Service:
         "Offering Portable and Modular Fixture Design Solutions for Easy Setup and Tear-down",
     },
     {
       Sr: 999,
-      "Sevice Code": "MDE1E",
+      "Service Code": "MDE1E",
       Service:
         "Providing Branding and Signage Solutions for Temporary Pop-up Locations",
     },
     {
       Sr: 1000,
-      "Sevice Code": "MDE1F",
+      "Service Code": "MDE1F",
       Service:
         "Offering Customized Pop-up Shop Designs That Reflect Brand Identity and Theme",
     },
     {
       Sr: 1001,
-      "Sevice Code": "MDE20",
+      "Service Code": "MDE20",
       Service:
         "Incorporating Interactive Elements and Experiential Marketing Concepts into Pop-up Designs",
     },
     {
       Sr: 1002,
-      "Sevice Code": "MDE21",
+      "Service Code": "MDE21",
       Service:
         "Providing Logistics and Planning Services for Pop-up Shop Events",
     },
     {
       Sr: 1003,
-      "Sevice Code": "MDE22",
+      "Service Code": "MDE22",
       Service:
         "Ensuring Compliance with Permitting and Regulations for Temporary Retail Spaces",
     },
     {
       Sr: 1004,
-      "Sevice Code": "MEA01",
+      "Service Code": "MEA01",
       Service:
         "Consulting with Clients to Understand the Purpose, Theme, and Vision for the Event",
     },
     {
       Sr: 1005,
-      "Sevice Code": "MEA02",
+      "Service Code": "MEA02",
       Service:
         "Designing Event Layouts to Maximize Space Usage and Enhance Guest Experience",
     },
     {
       Sr: 1006,
-      "Sevice Code": "MEA03",
+      "Service Code": "MEA03",
       Service:
         "Offering Solutions for Event Flow, Seating Arrangements, and Traffic Management",
     },
     {
       Sr: 1007,
-      "Sevice Code": "MEA04",
+      "Service Code": "MEA04",
       Service:
         "Providing Custom Decor Concepts to Match the Event Theme and Style",
     },
     {
       Sr: 1008,
-      "Sevice Code": "MEA05",
+      "Service Code": "MEA05",
       Service:
         "Incorporating Lighting Design, Stage Setup, and Audio-visual Equipment to Enhance Ambiance",
     },
     {
       Sr: 1009,
-      "Sevice Code": "MEA06",
+      "Service Code": "MEA06",
       Service:
         "Providing Solutions for Temporary Structures, Tents, and Outdoor Event Setup",
     },
     {
       Sr: 1010,
-      "Sevice Code": "MEA07",
+      "Service Code": "MEA07",
       Service:
         "Offering Coordination with Vendors for Furniture, Decor, and Equipment Rentals",
     },
     {
       Sr: 1011,
-      "Sevice Code": "MEB08",
+      "Service Code": "MEB08",
       Service:
         "Collaborating with Couples to Create Personalized and Memorable Wedding Decor",
     },
     {
       Sr: 1012,
-      "Sevice Code": "MEB09",
+      "Service Code": "MEB09",
       Service:
         "Offering Theme Development and Colour Palette Selection to Reflect the Couple’s Vision",
     },
     {
       Sr: 1013,
-      "Sevice Code": "MEB0A",
+      "Service Code": "MEB0A",
       Service:
         "Providing Custom Floral Arrangements, Centrepieces, and Table Settings",
     },
     {
       Sr: 1014,
-      "Sevice Code": "MEB0B",
+      "Service Code": "MEB0B",
       Service:
         "Designing Ceremony Backdrops, Altar Decorations, and Aisle Arrangements",
     },
     {
       Sr: 1015,
-      "Sevice Code": "MEB0C",
+      "Service Code": "MEB0C",
       Service:
         "Offering Reception Decor Solutions Including Dance Floor, Lighting, and Lounge Areas",
     },
     {
       Sr: 1016,
-      "Sevice Code": "MEB0D",
+      "Service Code": "MEB0D",
       Service:
         "Providing Coordination and Setup Services for Wedding Favors, Signage, and Place Cards",
     },
     {
       Sr: 1017,
-      "Sevice Code": "MEB0E",
+      "Service Code": "MEB0E",
       Service:
         "Offering Decor Services for Pre-wedding Events (Engagement Parties, Bridal Showers, etc.)",
     },
     {
       Sr: 1018,
-      "Sevice Code": "MEC0F",
+      "Service Code": "MEC0F",
       Service:
         "Consulting with Corporate Clients to Understand Event Goals and Branding Requirements",
     },
     {
       Sr: 1019,
-      "Sevice Code": "MEC10",
+      "Service Code": "MEC10",
       Service:
         "Designing Event Spaces to Reflect Corporate Identity and Enhance Brand Presence",
     },
     {
       Sr: 1020,
-      "Sevice Code": "MEC11",
+      "Service Code": "MEC11",
       Service:
         "Offering Solutions for Stage Design, Podium Setup, and Presentation Areas",
     },
     {
       Sr: 1021,
-      "Sevice Code": "MEC12",
+      "Service Code": "MEC12",
       Service: "Providing Custom Branding Elements, Signage, and Banners",
     },
     {
       Sr: 1022,
-      "Sevice Code": "MEC13",
+      "Service Code": "MEC13",
       Service:
         "Offering Decor Solutions for Networking Areas, Breakout Rooms, and Exhibit Booths",
     },
     {
       Sr: 1023,
-      "Sevice Code": "MEC14",
+      "Service Code": "MEC14",
       Service:
         "Incorporating Interactive Elements and Technology Integration for Engaging Experiences",
     },
     {
       Sr: 1024,
-      "Sevice Code": "MEC15",
+      "Service Code": "MEC15",
       Service:
         "Providing Coordination and Setup Services for Corporate Dinners, Award Ceremonies, and Product Launches",
     },
     {
       Sr: 1025,
-      "Sevice Code": "MED16",
+      "Service Code": "MED16",
       Service:
         "Designing Decor Concepts for Seasonal and Holiday Events (Christmas, New Year, Halloween, etc.)",
     },
     {
       Sr: 1026,
-      "Sevice Code": "MED17",
+      "Service Code": "MED17",
       Service:
         "Offering Theme Development and Colour Palette Selection for Seasonal Events",
     },
     {
       Sr: 1027,
-      "Sevice Code": "MED18",
+      "Service Code": "MED18",
       Service:
         "Providing Custom Decor Elements, Including Wreaths, Garlands, and Ornaments",
     },
     {
       Sr: 1028,
-      "Sevice Code": "MED19",
+      "Service Code": "MED19",
       Service:
         "Offering Solutions for Holiday Lighting, Tree Decoration, and Outdoor Displays",
     },
     {
       Sr: 1029,
-      "Sevice Code": "MED1A",
+      "Service Code": "MED1A",
       Service:
         "Providing Decor Services for Holiday Parties, Community Events, and Festive Gatherings",
     },
     {
       Sr: 1030,
-      "Sevice Code": "MED1B",
+      "Service Code": "MED1B",
       Service:
         "Incorporating Seasonal Florals, Table Settings, and Centrepieces",
     },
     {
       Sr: 1031,
-      "Sevice Code": "MED1C",
+      "Service Code": "MED1C",
       Service:
         "Offering Setup and Take-down Services for Seasonal and Holiday Decor",
     },
     {
       Sr: 1032,
-      "Sevice Code": "MFA01",
+      "Service Code": "MFA01",
       Service:
         "Consulting with Clients to Understand Branding, Themes, and Promotional Goals",
     },
     {
       Sr: 1033,
-      "Sevice Code": "MFA02",
+      "Service Code": "MFA02",
       Service:
         "Designing Eye-catching and Engaging Window Displays to Attract Customers",
     },
     {
       Sr: 1034,
-      "Sevice Code": "MFA03",
+      "Service Code": "MFA03",
       Service:
         "Incorporating Seasonal Themes, Holiday Elements, and Current Trends into Display Concepts",
     },
     {
       Sr: 1035,
-      "Sevice Code": "MFA04",
+      "Service Code": "MFA04",
       Service:
         "Using Visual Merchandising Techniques to Highlight Key Products and Promotions",
     },
     {
       Sr: 1036,
-      "Sevice Code": "MFA05",
+      "Service Code": "MFA05",
       Service:
         "Offering Solutions for Lighting, Backdrops, Props, and Mannequins",
     },
     {
       Sr: 1037,
-      "Sevice Code": "MFA06",
+      "Service Code": "MFA06",
       Service:
         "Providing Installation and Regular Updates to Keep Displays Fresh and Relevant",
     },
     {
       Sr: 1038,
-      "Sevice Code": "MFA07",
+      "Service Code": "MFA07",
       Service:
         "Ensuring Displays Reflect the Store’s Brand Identity and Message",
     },
     {
       Sr: 1039,
-      "Sevice Code": "MFB08",
+      "Service Code": "MFB08",
       Service:
         "Designing Clear and Visually Appealing In-store Signage to Guide Customers",
     },
     {
       Sr: 1040,
-      "Sevice Code": "MFB09",
+      "Service Code": "MFB09",
       Service:
         "Offering Custom Signage Solutions Including Directional Signs, Informational Signs, and Promotional Signs",
     },
     {
       Sr: 1041,
-      "Sevice Code": "MFB0A",
+      "Service Code": "MFB0A",
       Service:
         "Incorporating Branding Elements and Consistent Graphics Across All Signage",
     },
     {
       Sr: 1042,
-      "Sevice Code": "MFB0B",
+      "Service Code": "MFB0B",
       Service:
         "Providing Digital Signage Solutions for Dynamic Content Display",
     },
     {
       Sr: 1043,
-      "Sevice Code": "MFB0C",
+      "Service Code": "MFB0C",
       Service:
         "Ensuring Signage Placement Enhances Customer Navigation and Shopping Experience",
     },
     {
       Sr: 1044,
-      "Sevice Code": "MFB0D",
+      "Service Code": "MFB0D",
       Service:
         "Offering ADA-compliant Signage Solutions to Accommodate All Customers",
     },
     {
       Sr: 1045,
-      "Sevice Code": "MFB0E",
+      "Service Code": "MFB0E",
       Service:
         "Providing Installation and Maintenance Services for In-store Signage",
     },
     {
       Sr: 1046,
-      "Sevice Code": "MFC0F",
+      "Service Code": "MFC0F",
       Service:
         "Analysing Product Lines and Customer Behaviour to Create Effective Display Strategies",
     },
     {
       Sr: 1047,
-      "Sevice Code": "MFC10",
+      "Service Code": "MFC10",
       Service:
         "Offering Solutions for Product Grouping, Placement, and Presentation",
     },
     {
       Sr: 1048,
-      "Sevice Code": "MFC11",
+      "Service Code": "MFC11",
       Service:
         "Providing Custom Display Fixtures and Shelving to Enhance Product Visibility",
     },
     {
       Sr: 1049,
-      "Sevice Code": "MFC12",
+      "Service Code": "MFC12",
       Service:
         "Incorporating Interactive and Experiential Elements to Engage Customers",
     },
     {
       Sr: 1050,
-      "Sevice Code": "MFC13",
+      "Service Code": "MFC13",
       Service:
         "Offering Solutions for Highlighting New Arrivals, Bestsellers, and Promotional Items",
     },
     {
       Sr: 1051,
-      "Sevice Code": "MFC14",
+      "Service Code": "MFC14",
       Service:
         "Providing Merchandising Guidelines and Training for Store Staff",
     },
     {
       Sr: 1052,
-      "Sevice Code": "MFC15",
+      "Service Code": "MFC15",
       Service:
         "Ensuring Displays Align with Brand Standards and Marketing Objectives",
     },
     {
       Sr: 1053,
-      "Sevice Code": "MFD16",
+      "Service Code": "MFD16",
       Service:
         "Consulting with Clients to Understand Store Goals, Target Audience, and Brand Identity",
     },
     {
       Sr: 1054,
-      "Sevice Code": "MFD17",
+      "Service Code": "MFD17",
       Service:
         "Designing Store Layouts to Optimize Space Utilization and Enhance Customer Flow",
     },
     {
       Sr: 1055,
-      "Sevice Code": "MFD18",
+      "Service Code": "MFD18",
       Service:
         "Offering Solutions for Zoning, Traffic Flow, and Product Placement",
     },
     {
       Sr: 1056,
-      "Sevice Code": "MFD19",
+      "Service Code": "MFD19",
       Service:
         "Providing Fixture and Furniture Selection to Match Store Aesthetic and Functionality",
     },
     {
       Sr: 1057,
-      "Sevice Code": "MFD1A",
+      "Service Code": "MFD1A",
       Service:
         "Incorporating Elements Such as Lighting, Flooring, and Wall Treatments into the Layout Design",
     },
     {
       Sr: 1058,
-      "Sevice Code": "MFD1B",
+      "Service Code": "MFD1B",
       Service:
         "Offering Space Planning for Key Areas Including Entrances, Checkout Areas, and Customer Service Zones",
     },
     {
       Sr: 1059,
-      "Sevice Code": "MFD1C",
+      "Service Code": "MFD1C",
       Service:
         "Ensuring Compliance with Building Codes, Safety Regulations, and Accessibility Standards",
     },
     {
       Sr: 1060,
-      "Sevice Code": "NAA01",
+      "Service Code": "NAA01",
       Service:
         "Offering a Range of Sustainable Materials for Clients to Choose From (Bamboo, Cork, Reclaimed Wood, Recycled Glass, etc.)",
     },
     {
       Sr: 1061,
-      "Sevice Code": "NAA02",
+      "Service Code": "NAA02",
       Service:
         "Providing Information and Education on the Environmental Impact of Different Materials",
     },
     {
       Sr: 1062,
-      "Sevice Code": "NAA03",
+      "Service Code": "NAA03",
       Service:
         "Collaborating with Suppliers and Manufacturers That Prioritize Sustainable Practices",
     },
     {
       Sr: 1063,
-      "Sevice Code": "NAA04",
+      "Service Code": "NAA04",
       Service:
         "Recommending Low- or Zero-VOC (Volatile Organic Compounds) Paints and Finishes",
     },
     {
       Sr: 1064,
-      "Sevice Code": "NAA05",
+      "Service Code": "NAA05",
       Service:
         "Sourcing Materials That Are Certified by Recognized Sustainability Standards (LEED, FSC, etc.)",
     },
     {
       Sr: 1065,
-      "Sevice Code": "NAA06",
+      "Service Code": "NAA06",
       Service:
         "Promoting Biodegradable and Renewable Materials for Design Projects",
     },
     {
       Sr: 1066,
-      "Sevice Code": "NAA07",
+      "Service Code": "NAA07",
       Service:
         "Providing Guidance on the Lifecycle of Materials and Their Environmental Footprint",
     },
     {
       Sr: 1067,
-      "Sevice Code": "NAB08",
+      "Service Code": "NAB08",
       Service:
         "Curating Collections of Furniture and Decor Items Made from Sustainable Materials",
     },
     {
       Sr: 1068,
-      "Sevice Code": "NAB09",
+      "Service Code": "NAB09",
       Service:
         "Offering Products That Are Fair Trade Certified or Ethically Sourced",
     },
     {
       Sr: 1069,
-      "Sevice Code": "NAB0A",
+      "Service Code": "NAB0A",
       Service:
         "Supporting Local Artisans and Craftsmen Who Utilize Eco-friendly Practices",
     },
     {
       Sr: 1070,
-      "Sevice Code": "NAB0B",
+      "Service Code": "NAB0B",
       Service:
         "Recommending Furniture and Decor Pieces That Are Durable and Long-lasting",
     },
     {
       Sr: 1071,
-      "Sevice Code": "NAB0C",
+      "Service Code": "NAB0C",
       Service:
         "Promoting Minimalist Design Principles to Reduce Consumption and Waste",
     },
     {
       Sr: 1072,
-      "Sevice Code": "NAB0D",
+      "Service Code": "NAB0D",
       Service:
         "Encouraging Upcycling and Repurposing of Existing Furniture and Decor Items",
     },
     {
       Sr: 1073,
-      "Sevice Code": "NAB0E",
+      "Service Code": "NAB0E",
       Service:
         "Providing Information on Product Sustainability Certifications and Labels",
     },
     {
       Sr: 1074,
-      "Sevice Code": "NAC0F",
+      "Service Code": "NAC0F",
       Service:
         "Designing Lighting Layouts That Maximize Natural Light and Reduce Energy Consumption",
     },
     {
       Sr: 1075,
-      "Sevice Code": "NAC10",
+      "Service Code": "NAC10",
       Service:
         "Recommending LED (Light Emitting Diode) Lighting Solutions for Energy Efficiency",
     },
     {
       Sr: 1076,
-      "Sevice Code": "NAC11",
+      "Service Code": "NAC11",
       Service:
         "Incorporating Daylighting Strategies to Minimize the Need for Artificial Lighting",
     },
     {
       Sr: 1077,
-      "Sevice Code": "NAC12",
+      "Service Code": "NAC12",
       Service:
         "Implementing Lighting Controls and Sensors to Optimize Energy Usage",
     },
     {
       Sr: 1078,
-      "Sevice Code": "NAC13",
+      "Service Code": "NAC13",
       Service:
         "Offering Smart Lighting Systems That Can Be Programmed for Energy Savings",
     },
     {
       Sr: 1079,
-      "Sevice Code": "NAC14",
+      "Service Code": "NAC14",
       Service:
         "Providing Guidance on Energy-efficient Lighting Fixtures and Bulbs",
     },
     {
       Sr: 1080,
-      "Sevice Code": "NAC15",
+      "Service Code": "NAC15",
       Service:
         "Collaborating with Electrical Contractors to Ensure Proper Installation and Integration",
     },
     {
       Sr: 1081,
-      "Sevice Code": "NAD16",
+      "Service Code": "NAD16",
       Service:
         "Integrating Sustainable Design Principles into New Construction and Renovation Projects",
     },
     {
       Sr: 1082,
-      "Sevice Code": "NAD17",
+      "Service Code": "NAD17",
       Service:
         "Recommending Energy-efficient Building Materials and Construction Techniques",
     },
     {
       Sr: 1083,
-      "Sevice Code": "NAD18",
+      "Service Code": "NAD18",
       Service:
         "Incorporating Passive Design Strategies for Natural Heating and Cooling",
     },
     {
       Sr: 1084,
-      "Sevice Code": "NAD19",
+      "Service Code": "NAD19",
       Service: "Designing Water-efficient Plumbing Systems and Fixtures",
     },
     {
       Sr: 1085,
-      "Sevice Code": "NAD1A",
+      "Service Code": "NAD1A",
       Service:
         "Offering Green Roof and Living Wall Solutions for Urban Environments",
     },
     {
       Sr: 1086,
-      "Sevice Code": "NAD1B",
+      "Service Code": "NAD1B",
       Service:
         "Ensuring Proper Insulation and Air Sealing to Reduce Energy Loss",
     },
     {
       Sr: 1087,
-      "Sevice Code": "NAD1C",
+      "Service Code": "NAD1C",
       Service:
         "Providing Guidance on Renewable Energy Integration (Solar Panels, Wind Turbines, etc.)",
     },
     {
       Sr: 1088,
-      "Sevice Code": "NAE1D",
+      "Service Code": "NAE1D",
       Service: "Promoting Design Strategies That Minimize Construction Waste",
     },
     {
       Sr: 1089,
-      "Sevice Code": "NAE1E",
+      "Service Code": "NAE1E",
       Service: "Encouraging the Use of Recyclable and Biodegradable Materials",
     },
     {
       Sr: 1090,
-      "Sevice Code": "NAE1F",
+      "Service Code": "NAE1F",
       Service:
         "Offering Recommendations for Construction Waste Management and Recycling Programs",
     },
     {
       Sr: 1091,
-      "Sevice Code": "NAE20",
+      "Service Code": "NAE20",
       Service:
         "Supporting Demolition and Deconstruction Practices That Salvage and Reuse Materials",
     },
     {
       Sr: 1092,
-      "Sevice Code": "NAE21",
+      "Service Code": "NAE21",
       Service:
         "Incorporating Built-in Recycling and Composting Solutions into Design Plans",
     },
     {
       Sr: 1093,
-      "Sevice Code": "NAE22",
+      "Service Code": "NAE22",
       Service:
         "Educating Clients on Sustainable Lifestyle Practices to Reduce Household Waste",
     },
     {
       Sr: 1094,
-      "Sevice Code": "NAE23",
+      "Service Code": "NAE23",
       Service:
         "Collaborating with Waste Management Companies to Implement Sustainable Waste Solutions",
     },
     {
       Sr: 1095,
-      "Sevice Code": "NBA01",
+      "Service Code": "NBA01",
       Service:
         "Designing Lighting Layouts That Incorporate Smart Lighting Solutions (Smart Bulbs, Smart Switches, etc.)",
     },
     {
       Sr: 1096,
-      "Sevice Code": "NBA02",
+      "Service Code": "NBA02",
       Service:
         "Offering Recommendations on Lighting Control Systems (Smart Dimmers, Motion Sensors, etc.)",
     },
     {
       Sr: 1097,
-      "Sevice Code": "NBA03",
+      "Service Code": "NBA03",
       Service:
         "Integrating Lighting Control with Home Automation Platforms for Seamless Operation",
     },
     {
       Sr: 1098,
-      "Sevice Code": "NBA04",
+      "Service Code": "NBA04",
       Service:
         "Providing Customized Lighting Scenes and Presets for Different Activities and Moods",
     },
     {
       Sr: 1099,
-      "Sevice Code": "NBA05",
+      "Service Code": "NBA05",
       Service:
         "Collaborating with Electricians and Contractors to Ensure Proper Installation and Wiring",
     },
     {
       Sr: 1100,
-      "Sevice Code": "NBA06",
+      "Service Code": "NBA06",
       Service:
         "Offering Education and Training on Smart Lighting Systems for Clients",
     },
     {
       Sr: 1101,
-      "Sevice Code": "NBB07",
+      "Service Code": "NBB07",
       Service:
         "Recommending Smart Thermostats and HVAC (Heating, Ventilation, and Air Conditioning) Systems",
     },
     {
       Sr: 1102,
-      "Sevice Code": "NBB08",
+      "Service Code": "NBB08",
       Service:
         "Designing Zoned Heating and Cooling Systems for Energy Efficiency",
     },
     {
       Sr: 1103,
-      "Sevice Code": "NBB09",
+      "Service Code": "NBB09",
       Service:
         "Integrating Climate Control with Home Automation Platforms for Remote Monitoring and Control",
     },
     {
       Sr: 1104,
-      "Sevice Code": "NBB0A",
+      "Service Code": "NBB0A",
       Service:
         "Providing Programming and Scheduling Options to Optimize Energy Usage",
     },
     {
       Sr: 1105,
-      "Sevice Code": "NBB0B",
+      "Service Code": "NBB0B",
       Service:
         "Offering Geofencing and Occupancy Detection Features for Automatic Adjustment of Temperature Settings",
     },
     {
       Sr: 1106,
-      "Sevice Code": "NBB0C",
+      "Service Code": "NBB0C",
       Service:
         "Collaborating with HVAC Contractors to Ensure Compatibility and Proper Installation",
     },
     {
       Sr: 1107,
-      "Sevice Code": "NBC0D",
+      "Service Code": "NBC0D",
       Service:
         "Designing Comprehensive Home Security Solutions That Include Intrusion Detection, Surveillance, and Access Control",
     },
     {
       Sr: 1108,
-      "Sevice Code": "NBC0E",
+      "Service Code": "NBC0E",
       Service:
         "Recommending Smart Door Locks, Window Sensors, and Security Cameras",
     },
     {
       Sr: 1109,
-      "Sevice Code": "NBC0F",
+      "Service Code": "NBC0F",
       Service:
         "Integrating Security Systems with Home Automation Platforms for Centralized Monitoring and Control",
     },
     {
       Sr: 1110,
-      "Sevice Code": "NBC10",
+      "Service Code": "NBC10",
       Service:
         "Providing Remote Access and Alerts for Security Events (Burglary, Fire, etc.)",
     },
     {
       Sr: 1111,
-      "Sevice Code": "NBC11",
+      "Service Code": "NBC11",
       Service:
         "Offering 24/7 Monitoring Services through Partner Security Companies",
     },
     {
       Sr: 1112,
-      "Sevice Code": "NBC12",
+      "Service Code": "NBC12",
       Service:
         "Collaborating with Security Experts to Ensure System Reliability and Compliance with Safety Standards",
     },
     {
       Sr: 1113,
-      "Sevice Code": "NBD13",
+      "Service Code": "NBD13",
       Service:
         "Assisting Clients in Selecting Smart Home Devices Based on Their Needs and Preferences",
     },
     {
       Sr: 1114,
-      "Sevice Code": "NBD14",
+      "Service Code": "NBD14",
       Service:
         "Offering Recommendations on Smart Speakers, Voice Assistants, and Smart Displays",
     },
     {
       Sr: 1115,
-      "Sevice Code": "NBD15",
+      "Service Code": "NBD15",
       Service:
         "Providing Guidance on Smart Appliances, Home Entertainment Systems, and Wi-Fi Enabled Gadgets",
     },
     {
       Sr: 1116,
-      "Sevice Code": "NBD16",
+      "Service Code": "NBD16",
       Service:
         "Ensuring Compatibility and Interoperability of Smart Devices within the Home Ecosystem",
     },
     {
       Sr: 1117,
-      "Sevice Code": "NBD17",
+      "Service Code": "NBD17",
       Service:
         "Offering Education and Training on Smart Home Device Setup and Configuration",
     },
     {
       Sr: 1118,
-      "Sevice Code": "NBD18",
+      "Service Code": "NBD18",
       Service:
         "Providing Support and Troubleshooting Services for Existing Smart Home Systems",
     },
     {
       Sr: 1119,
-      "Sevice Code": "NBE19",
+      "Service Code": "NBE19",
       Service:
         "Collaborating with Clients to Define Automation Goals and Objectives",
     },
     {
       Sr: 1120,
-      "Sevice Code": "NBE1A",
+      "Service Code": "NBE1A",
       Service:
         "Designing Customized Home Automation Solutions That Suit Client Lifestyle and Preferences",
     },
     {
       Sr: 1121,
-      "Sevice Code": "NBE1B",
+      "Service Code": "NBE1B",
       Service:
         "Offering Integration of Smart Home Devices and Systems for Seamless Operation",
     },
     {
       Sr: 1122,
-      "Sevice Code": "NBE1C",
+      "Service Code": "NBE1C",
       Service:
         "Providing Centralized Control Interfaces (Smartphone Apps, Touchscreen Panels, Voice Commands)",
     },
     {
       Sr: 1123,
-      "Sevice Code": "NBE1D",
+      "Service Code": "NBE1D",
       Service:
         "Offering Scalable Solutions That Allow for Future Expansion and Upgrades",
     },
     {
       Sr: 1124,
-      "Sevice Code": "NBE1E",
+      "Service Code": "NBE1E",
       Service:
         "Collaborating with Home Automation Installers and Programmers to Implement Automation Plans",
     },
     {
       Sr: 1125,
-      "Sevice Code": "NBE1F",
+      "Service Code": "NBE1F",
       Service:
         "Providing Training and Education on Home Automation Features and Functionality",
     },
     {
       Sr: 1126,
-      "Sevice Code": "NCA01",
+      "Service Code": "NCA01",
       Service:
         "Consulting with Clients to Understand Their Preferences, Space, and Budget for a Home Theatre",
     },
     {
       Sr: 1127,
-      "Sevice Code": "NCA02",
+      "Service Code": "NCA02",
       Service:
         "Designing Custom Home Theatre Layouts for Optimal Viewing and Sound Quality",
     },
     {
       Sr: 1128,
-      "Sevice Code": "NCA03",
+      "Service Code": "NCA03",
       Service:
         "Offering Recommendations for Audio-visual Equipment, Including Screens, Projectors, and Sound Systems",
     },
     {
       Sr: 1129,
-      "Sevice Code": "NCA04",
+      "Service Code": "NCA04",
       Service:
         "Providing Acoustic Treatment Solutions to Enhance Sound Quality and Minimize External Noise",
     },
     {
       Sr: 1130,
-      "Sevice Code": "NCA05",
+      "Service Code": "NCA05",
       Service:
         "Installing Theatre Seating, Lighting, and Control Systems for a Complete Theatre Experience",
     },
     {
       Sr: 1131,
-      "Sevice Code": "NCA06",
+      "Service Code": "NCA06",
       Service:
         "Integrating Smart Controls for Easy Operation of the Home Theatre System",
     },
     {
       Sr: 1132,
-      "Sevice Code": "NCA07",
+      "Service Code": "NCA07",
       Service:
         "Offering Calibration Services to Ensure Optimal Performance of Audio-visual Equipment",
     },
     {
       Sr: 1133,
-      "Sevice Code": "NCB08",
+      "Service Code": "NCB08",
       Service:
         "Consulting with Clients to Understand Their Audio Preferences and Requirements",
     },
     {
       Sr: 1134,
-      "Sevice Code": "NCB09",
+      "Service Code": "NCB09",
       Service:
         "Designing and Installing Custom Sound Systems for Home Theatres, Living Rooms, and Other Spaces",
     },
     {
       Sr: 1135,
-      "Sevice Code": "NCB0A",
+      "Service Code": "NCB0A",
       Service:
         "Offering Whole-home Audio Solutions with Multi-room Speaker Systems",
     },
     {
       Sr: 1136,
-      "Sevice Code": "NCB0B",
+      "Service Code": "NCB0B",
       Service:
         "Providing High-quality Speaker and Subwoofer Installation for Immersive Sound",
     },
     {
       Sr: 1137,
-      "Sevice Code": "NCB0C",
+      "Service Code": "NCB0C",
       Service:
         "Integrating Sound Systems with Smart Home Controls for Convenient Operation",
     },
     {
       Sr: 1138,
-      "Sevice Code": "NCB0D",
+      "Service Code": "NCB0D",
       Service:
         "Offering Wireless Sound System Solutions for Flexibility and Clean Installation",
     },
     {
       Sr: 1139,
-      "Sevice Code": "NCB0E",
+      "Service Code": "NCB0E",
       Service:
         "Providing Calibration and Tuning Services to Optimize Sound Quality",
     },
     {
       Sr: 1140,
-      "Sevice Code": "NCC0F",
+      "Service Code": "NCC0F",
       Service:
         "Assessing the Current Network Infrastructure and Identifying Areas for Improvement",
     },
     {
       Sr: 1141,
-      "Sevice Code": "NCC10",
+      "Service Code": "NCC10",
       Service:
         "Designing and Installing Robust Wired and Wireless Network Solutions",
     },
     {
       Sr: 1142,
-      "Sevice Code": "NCC11",
+      "Service Code": "NCC11",
       Service:
         "Providing High-speed Internet Solutions and Extending Wi-Fi Coverage Throughout the Home",
     },
     {
       Sr: 1143,
-      "Sevice Code": "NCC12",
+      "Service Code": "NCC12",
       Service:
         "Offering Network Security Solutions to Protect Against Cyber Threats",
     },
     {
       Sr: 1144,
-      "Sevice Code": "NCC13",
+      "Service Code": "NCC13",
       Service:
         "Setting Up and Configuring Routers, Modems, and Access Points for Optimal Performance",
     },
     {
       Sr: 1145,
-      "Sevice Code": "NCC14",
+      "Service Code": "NCC14",
       Service:
         "Offering Troubleshooting and Maintenance Services to Ensure Network Reliability",
     },
     {
       Sr: 1146,
-      "Sevice Code": "NCC15",
+      "Service Code": "NCC15",
       Service:
         "Providing Solutions for Integrating Smart Home Devices into the Network",
     },
     {
       Sr: 1147,
-      "Sevice Code": "NCD16",
+      "Service Code": "NCD16",
       Service:
         "Consulting with Clients to Identify Their Smart Home Needs and Preferences",
     },
     {
       Sr: 1148,
-      "Sevice Code": "NCD17",
+      "Service Code": "NCD17",
       Service:
         "Recommending and Procuring Smart Home Devices, Including Thermostats, Lighting, Security Systems, and More",
     },
     {
       Sr: 1149,
-      "Sevice Code": "NCD18",
+      "Service Code": "NCD18",
       Service:
         "Installing and Configuring Smart Home Devices for Seamless Integration",
     },
     {
       Sr: 1150,
-      "Sevice Code": "NCD19",
+      "Service Code": "NCD19",
       Service:
         "Offering Customized Automation Solutions for Enhanced Convenience and Efficiency",
     },
     {
       Sr: 1151,
-      "Sevice Code": "NCD1A",
+      "Service Code": "NCD1A",
       Service:
         "Providing Training and Support to Clients on Using and Managing Their Smart Home Systems",
     },
     {
       Sr: 1152,
-      "Sevice Code": "NCD1B",
+      "Service Code": "NCD1B",
       Service:
         "Ensuring Compatibility Between Different Smart Home Devices and Platforms",
     },
     {
       Sr: 1153,
-      "Sevice Code": "NCD1C",
+      "Service Code": "NCD1C",
       Service:
         "Offering Ongoing Maintenance and Support Services for Smart Home Systems",
     },
     {
       Sr: 1154,
-      "Sevice Code": "OAA01",
+      "Service Code": "OAA01",
       Service:
         "Collaborating with Clients to Understand Their Outdoor Living Needs and Preferences",
     },
     {
       Sr: 1155,
-      "Sevice Code": "OAA02",
+      "Service Code": "OAA02",
       Service:
         "Designing Functional and Stylish Patio and Deck Layouts to Maximize Space Utilization",
     },
     {
       Sr: 1156,
-      "Sevice Code": "OAA03",
+      "Service Code": "OAA03",
       Service:
         "Offering a Range of Material Options for Patio and Deck Surfaces (Wood, Composite, Stone, Concrete, etc.)",
     },
     {
       Sr: 1157,
-      "Sevice Code": "OAA04",
+      "Service Code": "OAA04",
       Service:
         "Providing 3D Renderings and Visualizations to Help Clients Visualize the Design Concept",
     },
     {
       Sr: 1158,
-      "Sevice Code": "OAA05",
+      "Service Code": "OAA05",
       Service:
         "Incorporating Features such as Built-in Seating, Firepits, and Planters for Added Comfort and Aesthetics",
     },
     {
       Sr: 1159,
-      "Sevice Code": "OAA06",
+      "Service Code": "OAA06",
       Service: "Ensuring Compliance with Local Building Codes and Regulations",
     },
     {
       Sr: 1160,
-      "Sevice Code": "OAA07",
+      "Service Code": "OAA07",
       Service:
         "Offering Consultation on Furniture Placement and Outdoor Decor to Enhance the Space",
     },
     {
       Sr: 1161,
-      "Sevice Code": "OAB08",
+      "Service Code": "OAB08",
       Service:
         "Assessing Site Conditions and Environmental Factors to Inform Landscape Design",
     },
     {
       Sr: 1162,
-      "Sevice Code": "OAB09",
+      "Service Code": "OAB09",
       Service:
         "Creating Custom Garden and Landscape Designs That Reflect Client's Aesthetic Preferences",
     },
     {
       Sr: 1163,
-      "Sevice Code": "OAB0A",
+      "Service Code": "OAB0A",
       Service:
         "Offering Plant Selection and Placement Recommendations Based on Climate, Soil, and Sunlight Conditions",
     },
     {
       Sr: 1164,
-      "Sevice Code": "OAB0B",
+      "Service Code": "OAB0B",
       Service:
         "Incorporating Sustainable and Water-efficient Landscaping Practices",
     },
     {
       Sr: 1165,
-      "Sevice Code": "OAB0C",
+      "Service Code": "OAB0C",
       Service:
         "Providing Hardscape Design Elements Such as Pathways, Retaining Walls, and Water Features",
     },
     {
       Sr: 1166,
-      "Sevice Code": "OAB0D",
+      "Service Code": "OAB0D",
       Service:
         "Offering Seasonal Planting Plans and Maintenance Schedules to Ensure Long-term Health and Beauty of the Garden",
     },
     {
       Sr: 1167,
-      "Sevice Code": "OAC0E",
+      "Service Code": "OAC0E",
       Service:
         "Curating Collections of Outdoor Furniture That Combine Style, Comfort, and Durability",
     },
     {
       Sr: 1168,
-      "Sevice Code": "OAC0F",
+      "Service Code": "OAC0F",
       Service:
         "Offering a Range of Furniture Options Including Dining Sets, Lounge Chairs, Benches, and Hammocks",
     },
     {
       Sr: 1169,
-      "Sevice Code": "OAC10",
+      "Service Code": "OAC10",
       Service:
         "Recommending Materials That Are Suitable for Outdoor Use (Teak, Aluminium, Wicker, etc.)",
     },
     {
       Sr: 1170,
-      "Sevice Code": "OAC11",
+      "Service Code": "OAC11",
       Service:
         "Providing Customization Options for Fabric and Cushion Colours and Patterns",
     },
     {
       Sr: 1171,
-      "Sevice Code": "OAC12",
+      "Service Code": "OAC12",
       Service:
         "Ensuring Furniture Selection Complements the Overall Design Aesthetic of the Outdoor Space",
     },
     {
       Sr: 1172,
-      "Sevice Code": "OAC13",
+      "Service Code": "OAC13",
       Service:
         "Offering Guidance on Furniture Maintenance and Care to Extend Lifespan",
     },
     {
       Sr: 1173,
-      "Sevice Code": "OAD14",
+      "Service Code": "OAD14",
       Service:
         "Designing Outdoor Lighting Plans to Enhance Safety, Security, and Aesthetics",
     },
     {
       Sr: 1174,
-      "Sevice Code": "OAD15",
+      "Service Code": "OAD15",
       Service:
         "Incorporating a Variety of Lighting Fixtures Such as Path Lights, Deck Lights, and Wall Sconces",
     },
     {
       Sr: 1175,
-      "Sevice Code": "OAD16",
+      "Service Code": "OAD16",
       Service:
         "Offering Energy-efficient Lighting Solutions Such as LED Fixtures and Solar-powered Lights",
     },
     {
       Sr: 1176,
-      "Sevice Code": "OAD17",
+      "Service Code": "OAD17",
       Service:
         "Providing Lighting Controls and Automation Options for Convenience and Flexibility",
     },
     {
       Sr: 1177,
-      "Sevice Code": "OAD18",
+      "Service Code": "OAD18",
       Service:
         "Creating Ambiance and Mood with Accent Lighting and Landscape Lighting",
     },
     {
       Sr: 1178,
-      "Sevice Code": "OAD19",
+      "Service Code": "OAD19",
       Service:
         "Ensuring Proper Placement and Angling of Fixtures for Maximum Effectiveness",
     },
     {
       Sr: 1179,
-      "Sevice Code": "OAD1A",
+      "Service Code": "OAD1A",
       Service:
         "Offering Consultation on Lighting Design Techniques to Highlight Architectural Features and Landscape Elements",
     },
     {
       Sr: 1180,
-      "Sevice Code": "OAE1B",
+      "Service Code": "OAE1B",
       Service:
         "Designing Custom Outdoor Kitchens That Combine Functionality and Style",
     },
     {
       Sr: 1181,
-      "Sevice Code": "OAE1C",
+      "Service Code": "OAE1C",
       Service:
         "Offering Layout Options That Include Grills, Countertops, Sinks, and Storage Solutions",
     },
     {
       Sr: 1182,
-      "Sevice Code": "OAE1D",
+      "Service Code": "OAE1D",
       Service:
         "Providing Recommendations for Durable and Weather-resistant Materials for Outdoor Kitchen Surfaces",
     },
     {
       Sr: 1183,
-      "Sevice Code": "OAE1E",
+      "Service Code": "OAE1E",
       Service:
         "Designing Entertainment Spaces That Include Seating Areas, Firepits, and Outdoor TVs",
     },
     {
       Sr: 1184,
-      "Sevice Code": "OAE1F",
+      "Service Code": "OAE1F",
       Service:
         "Offering Design Solutions for Shade and Shelter Such as Pergolas, Gazebos, and Umbrellas",
     },
     {
       Sr: 1185,
-      "Sevice Code": "OAE20",
+      "Service Code": "OAE20",
       Service:
         "Incorporating Audio and Visual Systems for Outdoor Entertainment",
     },
     {
       Sr: 1186,
-      "Sevice Code": "OAE21",
+      "Service Code": "OAE21",
       Service:
         "Ensuring Seamless Integration of Outdoor Kitchen and Entertainment Spaces with the Overall Landscape Design",
     },
     {
       Sr: 1187,
-      "Sevice Code": "OBA01",
+      "Service Code": "OBA01",
       Service:
         "Providing Scheduled Maintenance Services to Keep Interior Spaces Clean, Fresh, and Well-maintained",
     },
     {
       Sr: 1188,
-      "Sevice Code": "OBA02",
+      "Service Code": "OBA02",
       Service:
         "Offering Cleaning and Maintenance Plans Tailored to Client Needs and Preferences",
     },
     {
       Sr: 1189,
-      "Sevice Code": "OBA03",
+      "Service Code": "OBA03",
       Service:
         "Performing Routine Cleaning Tasks Such as Dusting, Vacuuming, Mopping, and Surface Wiping",
     },
     {
       Sr: 1190,
-      "Sevice Code": "OBA04",
+      "Service Code": "OBA04",
       Service:
         "Inspecting and Maintaining Fixtures, Appliances, and Furniture for Functionality and Safety",
     },
     {
       Sr: 1191,
-      "Sevice Code": "OBA05",
+      "Service Code": "OBA05",
       Service: "Providing Touch-up Painting and Minor Repairs as Needed",
     },
     {
       Sr: 1192,
-      "Sevice Code": "OBA06",
+      "Service Code": "OBA06",
       Service:
         "Offering Pest Control Services to Prevent Infestations and Maintain Hygiene",
     },
     {
       Sr: 1193,
-      "Sevice Code": "OBA07",
+      "Service Code": "OBA07",
       Service:
         "Providing Recommendations for Preventive Maintenance and Upkeep of Interior Spaces",
     },
     {
       Sr: 1194,
-      "Sevice Code": "OBB08",
+      "Service Code": "OBB08",
       Service:
         "Offering Seasonal Refresh Services to Update Interior Decor and Atmosphere",
     },
     {
       Sr: 1195,
-      "Sevice Code": "OBB09",
+      "Service Code": "OBB09",
       Service:
         "Providing Seasonal Decor Installation and Removal Services for Holidays and Special Occasions",
     },
     {
       Sr: 1196,
-      "Sevice Code": "OBB0A",
+      "Service Code": "OBB0A",
       Service:
         "Offering Seasonal Colour Palette and Textile Updates to Reflect Changing Seasons and Trends",
     },
     {
       Sr: 1197,
-      "Sevice Code": "OBB0B",
+      "Service Code": "OBB0B",
       Service:
         "Refreshing Indoor Plants and Floral Arrangements for Seasonal Appeal",
     },
     {
       Sr: 1198,
-      "Sevice Code": "OBB0C",
+      "Service Code": "OBB0C",
       Service:
         "Providing Seasonal Maintenance Services for HVAC Systems, Fireplaces, and Other Seasonal Features",
     },
     {
       Sr: 1199,
-      "Sevice Code": "OBB0D",
+      "Service Code": "OBB0D",
       Service:
         "Offering Seasonal Cleaning and Organization Services to Prepare for Seasonal Transitions",
     },
     {
       Sr: 1200,
-      "Sevice Code": "OBB0E",
+      "Service Code": "OBB0E",
       Service:
         "Providing Seasonal Inspections and Maintenance Checks for Safety and Comfort",
     },
     {
       Sr: 1201,
-      "Sevice Code": "OBC0F",
+      "Service Code": "OBC0F",
       Service:
         "Offering Professional Cleaning Services for Upholstered Furniture, Drapery, and Soft Furnishings",
     },
     {
       Sr: 1202,
-      "Sevice Code": "OBC10",
+      "Service Code": "OBC10",
       Service:
         "Providing Steam Cleaning, Dry Cleaning, or Spot Cleaning Based on Fabric Type and Condition",
     },
     {
       Sr: 1203,
-      "Sevice Code": "OBC11",
+      "Service Code": "OBC11",
       Service:
         "Offering Furniture Polishing and Surface Treatment Services for Wood and Metal Furniture",
     },
     {
       Sr: 1204,
-      "Sevice Code": "OBC12",
+      "Service Code": "OBC12",
       Service:
         "Providing Specialized Cleaning Services for Delicate Decor Items, Artwork, and Collectibles",
     },
     {
       Sr: 1205,
-      "Sevice Code": "OBC13",
+      "Service Code": "OBC13",
       Service:
         "Offering Odor Removal and Fabric Protection Treatments for Long-term Maintenance",
     },
     {
       Sr: 1206,
-      "Sevice Code": "OBC14",
+      "Service Code": "OBC14",
       Service:
         "Providing Recommendations for DIY Maintenance and Spot Cleaning Between Professional Services",
     },
     {
       Sr: 1207,
-      "Sevice Code": "OBC15",
+      "Service Code": "OBC15",
       Service:
         "Ensuring Gentle and Non-toxic Cleaning Products and Methods to Preserve Fabric and Finish Quality",
     },
     {
       Sr: 1208,
-      "Sevice Code": "OBD16",
+      "Service Code": "OBD16",
       Service:
         "Providing Post-renovation Cleaning Services to Remove Dust, Debris, and Construction Residue",
     },
     {
       Sr: 1209,
-      "Sevice Code": "OBD17",
+      "Service Code": "OBD17",
       Service:
         "Offering Deep Cleaning and Detailing Services for Newly Renovated Spaces",
     },
     {
       Sr: 1210,
-      "Sevice Code": "OBD18",
+      "Service Code": "OBD18",
       Service:
         "Providing Air Purification and Ventilation Services to Eliminate Construction Odors and Particles",
     },
     {
       Sr: 1211,
-      "Sevice Code": "OBD19",
+      "Service Code": "OBD19",
       Service:
         "Offering Surface Restoration and Polishing Services for Floors, Countertops, and Fixtures",
     },
     {
       Sr: 1212,
-      "Sevice Code": "OBD1A",
+      "Service Code": "OBD1A",
       Service:
         "Cleaning and Inspecting HVAC Systems and Air Ducts for Improved Indoor Air Quality",
     },
     {
       Sr: 1213,
-      "Sevice Code": "OBD1B",
+      "Service Code": "OBD1B",
       Service:
         "Providing Final Touches and Finishing Details to Ensure Move-in Readiness",
     },
     {
       Sr: 1214,
-      "Sevice Code": "OBD1C",
+      "Service Code": "OBD1C",
       Service:
         "Offering Recommendations for Post-renovation Maintenance and Care",
     },
     {
       Sr: 1215,
-      "Sevice Code": "OBE1D",
+      "Service Code": "OBE1D",
       Service:
         "Offering Professional Organizing Services to Declutter and Streamline Interior Spaces",
     },
     {
       Sr: 1216,
-      "Sevice Code": "OBE1E",
+      "Service Code": "OBE1E",
       Service:
         "Providing Customized Organizational Solutions for Closets, Cabinets, Pantries, and Storage Areas",
     },
     {
       Sr: 1217,
-      "Sevice Code": "OBE1F",
+      "Service Code": "OBE1F",
       Service:
         "Offering Space Optimization Strategies to Maximize Storage and Functionality",
     },
     {
       Sr: 1218,
-      "Sevice Code": "OBE20",
+      "Service Code": "OBE20",
       Service:
         "Providing Sorting, Purging, and Donation Services for Unwanted Items",
     },
     {
       Sr: 1219,
-      "Sevice Code": "OBE21",
+      "Service Code": "OBE21",
       Service:
         "Offering Labelling and Categorization Systems for Easy Retrieval and Maintenance",
     },
     {
       Sr: 1220,
-      "Sevice Code": "OBE22",
+      "Service Code": "OBE22",
       Service:
         "Providing Solutions for Managing Paperwork, Mail, and Digital Clutter",
     },
     {
       Sr: 1221,
-      "Sevice Code": "OBE23",
+      "Service Code": "OBE23",
       Service:
         "Offering Maintenance Plans to Ensure Long-term Organization and Clutter-free Living Spaces",
     },

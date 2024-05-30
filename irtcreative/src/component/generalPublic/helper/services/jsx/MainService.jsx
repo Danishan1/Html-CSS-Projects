@@ -7,6 +7,8 @@ import ServicePage from "./ServicePage";
 import img1 from "../../../../../images/img2.jpg";
 import MainShowContainer from "./MainShowContainer";
 import getDivDep from "./DataExtrector/getDivDep";
+import getSecSer from "./DataExtrector/getSecSer";
+import getprocessedData from "./DataExtrector/getDepSec";
 // import getServiceData from "./getServiceData";
 
 const MainService = ({ tab }) => {
@@ -34,7 +36,8 @@ const MainService = ({ tab }) => {
       );
       break;
     case "all":
-      content = <MainShowContainer data={data} />;
+      data = getSecSer();
+      content = <MainShowContainer data={data} title="Our Services" />;
       break;
     case "dep":
       data = getDivDep();
@@ -44,6 +47,7 @@ const MainService = ({ tab }) => {
       content = <MainShowContainer data={data} />;
       break;
     case "sec":
+      data = getprocessedData("Departments", "Sectors");
       content = <MainShowContainer data={data} />;
       break;
     default:

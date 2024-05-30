@@ -1,42 +1,50 @@
 import getServiceData from "./getServiceData";
 
-const departments = getServiceData("Departments").data;
-const divisions = getServiceData("Divisions").data;
-
 // Convert the Divisions into the key value pair of {DivisionCode:DivisionName}
-const divListFun = () => {
+const clusterListFun = (clusterName) => {
+  const colmnName = clusterName.substring(0, clusterName.length - 1);
   const dict = {};
-  divisions.forEach((division) => {
-    dict[division["Division Code"]] = {
-      name: division.Division,
-      code: division["Division Code"],
+  const list4cluster = getServiceData(clusterName).data;
+  list4cluster.forEach((cluster) => {
+    // cluster = Object.entries(cluster);
+    // console.log(cluster);
+    dict[cluster[`${colmnName} Code`]] = {
+      name: cluster[colmnName],
+      code: cluster[`${colmnName} Code`],
     };
   });
-  return dict;
+
+  const codeLen = list4cluster[0][`${colmnName} Code`].length;
+
+  return { dict, codeLen };
 };
 
-// Make a dist that ha list of Departments as value, and divisions as keys
-const getDivDep = () => {
-  const divisionList = divListFun();
-  const divDep = {};
-  departments.forEach((dept) => {
-    const firstLetter = dept["Department Code"][0];
-    const division = divisionList[firstLetter];
-    if (division) {
-      if (!divDep[division.code]) {
-        divDep[division.code] = {
-          name: division.name,
+// Make a dist that ha list of Departments as value, and list4cluster as keys
+const getprocessedData = (clusterName, listingName) => {
+  const colmnName = listingName.substring(0, listingName.length - 1);
+  const clusterList = clusterListFun(clusterName).dict;
+  const codeLen = clusterListFun(clusterName).codeLen;
+  const list4listing = getServiceData(listingName).data;
+  const finalSendableData = {};
+  list4listing.forEach((listing) => {
+    console.log(listing[`${colmnName} Code`])
+    const codeLetters = listing[`${colmnName} Code`].substring(0, codeLen);
+    const cluster = clusterList[codeLetters];
+    if (cluster) {
+      if (!finalSendableData[cluster.code]) {
+        finalSendableData[cluster.code] = {
+          name: cluster.name,
           list: [],
         };
       }
-      divDep[division.code].list.push({
-        name: dept.Department,
-        code: dept["Department Code"],
+      finalSendableData[cluster.code].list.push({
+        name: listing[colmnName],
+        code: listing[`${colmnName} Code`],
       });
     }
   });
 
-  return divDep;
+  return finalSendableData;
 };
 
-export default getDivDep;
+export default getprocessedData;

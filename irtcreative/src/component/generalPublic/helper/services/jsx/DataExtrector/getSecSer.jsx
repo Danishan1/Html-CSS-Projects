@@ -1,42 +1,43 @@
 import getServiceData from "./getServiceData";
 
-const departments = getServiceData("Departments").data;
-const divisions = getServiceData("Divisions").data;
+const services = getServiceData("Services").data;
+const sectors = getServiceData("Sectors").data;
 
-// Convert the Divisions into the key value pair of {DivisionCode:DivisionName}
-const divListFun = () => {
+// Convert the Sectors into the key value pair of {DivisionCode:DivisionName}
+const secListFun = () => {
   const dict = {};
-  divisions.forEach((division) => {
-    dict[division["Division Code"]] = {
-      name: division.Division,
-      code: division["Division Code"],
+  sectors.forEach((sector) => {
+    dict[sector["Sector Code"]] = {
+      name: sector.Sector,
+      code: sector["Sector Code"],
     };
   });
   return dict;
 };
 
-// Make a dist that ha list of Departments as value, and divisions as keys
-const getDivDep = () => {
-  const divisionList = divListFun();
-  const divDep = {};
-  departments.forEach((dept) => {
-    const firstLetter = dept["Department Code"][0];
-    const division = divisionList[firstLetter];
-    if (division) {
-      if (!divDep[division.code]) {
-        divDep[division.code] = {
-          name: division.name,
+// Make a dist that ha list of Services as value, and sectors as keys
+const getSecSer = () => {
+  const SectorList = secListFun();
+  const secSer = {};
+  services.forEach((ser) => {
+    const firstThreeLetters = ser["Service Code"].substring(0, 3);
+
+    const sector = SectorList[firstThreeLetters];
+    if (sector) {
+      if (!secSer[sector.code]) {
+        secSer[sector.code] = {
+          name: sector.name,
           list: [],
         };
       }
-      divDep[division.code].list.push({
-        name: dept.Department,
-        code: dept["Department Code"],
+      secSer[sector.code].list.push({
+        name: ser.Service,
+        code: ser["Service Code"],
       });
     }
   });
 
-  return divDep;
+  return secSer;
 };
 
-export default getDivDep;
+export default getSecSer;
