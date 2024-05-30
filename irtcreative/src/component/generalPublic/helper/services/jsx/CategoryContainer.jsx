@@ -8,7 +8,7 @@ const CategoryContainer = ({ title, list = [] }) => {
   return (
     <>
       <div className={style.categoryContainer} key={title}>
-        <p>{title}</p>
+        <p  className={style.headName}>{title}</p>
         <div className={style.p1}>
           {list.map((value) => (
             <NameCode key={value} code={"DCFS25"} name={value} />
