@@ -2,13 +2,16 @@ import React from "react";
 import style from "../css/MainShowContainer.module.css";
 import CategoryContainer from "./CategoryContainer";
 
-const MainShowContainer = ({ data }) => {
+const MainShowContainer = ({ data, title = "Title" }) => {
   return (
     <>
       <div className={style.mainShowContainer}>
-        {Object.entries(data).map(([key, value]) => (
-          <CategoryContainer key={key} title={key} list={value} />
-        ))}
+        <p className={style.p1}>{title}</p>
+        <div className={style.showContainer}>
+          {Object.entries(data).map(([code, { name, list }]) => (
+            <CategoryContainer key={code} title={name} list={list} />
+          ))}
+        </div>
       </div>
     </>
   );

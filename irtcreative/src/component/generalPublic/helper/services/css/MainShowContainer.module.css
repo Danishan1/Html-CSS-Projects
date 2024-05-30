@@ -1,5 +1,14 @@
-.mainShowContainer{
-    border: 1px solid red;
-    display: grid;
-    
+.showContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
 }
+
+
+.mainShowContainer .p1 {
+    padding: 10px 20px;
+    font-size: calc(1.5 * var(--size));
+    font-weight: var(--boldL3);
+    color: var(--colorCyan);
+  }

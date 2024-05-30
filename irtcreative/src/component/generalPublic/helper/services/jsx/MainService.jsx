@@ -38,7 +38,7 @@ const MainService = ({ tab }) => {
       break;
     case "dep":
       data = getDivDep();
-      content = <MainShowContainer data={data} />;
+      content = <MainShowContainer data={data} title="Our Departments" />;
       break;
     case "div":
       content = <MainShowContainer data={data} />;
