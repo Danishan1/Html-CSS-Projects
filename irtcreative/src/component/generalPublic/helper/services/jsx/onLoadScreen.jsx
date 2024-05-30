@@ -6,7 +6,6 @@ import ServiceIntro from "./ServiceIntro";
 import OurStructureApproch from "./OurStructureApproch";
 import Line from "../../../../util/jsx/Line";
 import WhereWeServe from "./whereWeServe";
-import AllServices from "./AllSectors";
 
 const OnLoadScreen = () => {
   return (
@@ -18,8 +17,6 @@ const OnLoadScreen = () => {
         <br />
         <Line />
         <WhereWeServe />
-        <Line />
-        <AllServices />
       </div>
     </>
   );

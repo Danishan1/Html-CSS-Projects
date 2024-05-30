@@ -1,0 +1,13 @@
+.nameCode {
+  border: 1px solid red;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.nameCode .name:hover,
+.nameCode .code:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: var(--boldL2);
+  color: var(--colorBlue);
+}

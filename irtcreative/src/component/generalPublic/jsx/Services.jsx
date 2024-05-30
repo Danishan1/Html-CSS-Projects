@@ -21,7 +21,7 @@ const Services = () => {
         <div className={style.midSide}>
           <div className={style.filter3}></div>
           <div className={style.mainService}>
-            <MainService tab={"service"}/>
+            <MainService tab={"container"}/>
           </div>
         </div>
       </div>
