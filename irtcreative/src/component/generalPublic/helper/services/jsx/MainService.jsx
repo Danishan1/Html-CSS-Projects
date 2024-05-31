@@ -8,6 +8,7 @@ import img1 from "../../../../../images/img2.jpg";
 import MainShowContainer from "./MainShowContainer";
 import getprocessedData from "./DataExtrector/getprocessedData";
 // import getServiceData from "./getServiceData";
+import getInfoFromID from "./DataExtrector/getInfoFromID";
 
 const MainService = ({ tab, clickCode }) => {
   //   const { sectorColNames, sectorData } = getServiceData("Sectors");
@@ -69,31 +70,7 @@ const MainService = ({ tab, clickCode }) => {
       break;
   }
 
-  const codeLen = clickCode.length;
-  switch (codeLen) {
-    case 1:
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-    case 5:
-      
-      content = (
-        <ServicePage
-          serviceCode={"NAB0D"}
-          ServiceName={"Interior Designing"}
-          DeptCode={"NA"}
-          DeptName={"Interior Design"}
-          SectCode={"NAB"}
-          SectName={"Design"}
-          DiviCode={"N"}
-          DiviName={"Design & Planning"}
-          imgPath={img1}
-        />
-      );
-      break;
-  }
+  const getInfoFromId = getInfoFromID(clickCode)
 
   return (
     <>

@@ -17,6 +17,7 @@ const Services = () => {
 
   const handleSearchClick = (tab) => {
     setSearchID(tab)
+    console.log(tab)
   };
 
   return (
