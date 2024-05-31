@@ -1,10 +1,10 @@
-import getServiceData from "./getServiceData";
+import getDataByPage from "./getDataByPage";
 
 // Convert the Divisions into the key value pair of {DivisionCode:DivisionName}
 const clusterListFun = (clusterName) => {
   const colmnName = clusterName.substring(0, clusterName.length - 1);
   const dict = {};
-  const list4cluster = getServiceData(clusterName).data;
+  const list4cluster = getDataByPage(clusterName).data;
   list4cluster.forEach((cluster) => {
     // cluster = Object.entries(cluster);
     // console.log(cluster);
@@ -24,7 +24,7 @@ const getprocessedData = (clusterName, listingName) => {
   const colmnName = listingName.substring(0, listingName.length - 1);
   const clusterList = clusterListFun(clusterName).dict;
   const codeLen = clusterListFun(clusterName).codeLen;
-  const list4listing = getServiceData(listingName).data;
+  const list4listing = getDataByPage(listingName).data;
   const finalSendableData = {};
   list4listing.forEach((listing) => {
     const codeLetters = listing[`${colmnName} Code`].substring(0, codeLen);

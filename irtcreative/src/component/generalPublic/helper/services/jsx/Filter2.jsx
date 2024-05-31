@@ -3,11 +3,11 @@
 import React from "react";
 import style from "../css/Filter2.module.css";
 import Tab from "./Tab";
-import getServiceData from "./DataExtrector/getServiceData";
+import getDataByPage from "./DataExtrector/getDataByPage";
 
 const Filter2 = () => {
   const { columnNames: sectorColNames, data: sectorData } =
-    getServiceData("Sectors");
+    getDataByPage("Sectors");
   return (
     <>
       <div className={style.name}>Sectors</div>

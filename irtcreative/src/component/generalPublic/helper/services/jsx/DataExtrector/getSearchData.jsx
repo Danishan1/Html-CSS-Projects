@@ -1,14 +1,14 @@
-import getServiceData from "./getServiceData";
+import getDataByPage from "./getDataByPage";
 
 const getSearchedData = () => {
   const { columnNames: deptColNames, data: deptData } =
-    getServiceData("Departments");
+    getDataByPage("Departments");
   const { columnNames: sectorColNames, data: sectorData } =
-    getServiceData("Sectors");
+    getDataByPage("Sectors");
   const { columnNames: divisionColNames, data: divisionData } =
-    getServiceData("Divisions");
+    getDataByPage("Divisions");
   const { columnNames: serviceColNames, data: serviceData } =
-    getServiceData("Services");
+    getDataByPage("Services");
 
   // Combine all data into a single list
   const searchData = [

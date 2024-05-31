@@ -1,0 +1,2 @@
+
+import getDataByPage from "./getDataByPage";

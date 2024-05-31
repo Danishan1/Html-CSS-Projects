@@ -2,7 +2,7 @@
 
 import Data from "../../../../../../data/IRT Creative Structure";
 
-const getServiceData = (page) => {
+const getDataByPage = (page) => {
   const data = Data[page];
 
   // Check if data exists
@@ -22,4 +22,4 @@ const getServiceData = (page) => {
   };
 };
 
-export default getServiceData;
+export default getDataByPage;
