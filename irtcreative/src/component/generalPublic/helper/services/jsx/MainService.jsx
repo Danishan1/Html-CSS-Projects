@@ -6,21 +6,31 @@ import getInfoFromID from "./DataExtrector/getInfoFromID";
 import setVisibleAreaOfFilter1 from "./setVisibleAreaOfFilter1";
 import setVisibleAreaOfSearch from "./setVisibleAreaOfSearch";
 
-const MainService = ({ tab, clickCode }) => {
+const MainService = ({ tab, clickedSearchCode, clickedMainAreaCode }) => {
   const [content, setContent] = useState(null);
+  const { clickedvalue, setClickedValue } = clickedMainAreaCode;
 
   useEffect(() => {
+    if (tab === "" && clickedSearchCode === "" && clickedvalue === "")
+      setContent(setVisibleAreaOfFilter1("hom"));
     if (tab !== "") {
-      setContent(setVisibleAreaOfFilter1(tab));
+      setContent(setVisibleAreaOfFilter1(tab, setClickedValue));
     }
-  }, [tab]);
+  }, [tab, clickedSearchCode, clickedvalue, setClickedValue]);
 
   useEffect(() => {
-    if (clickCode !== "") {
-      const data = getInfoFromID(clickCode);
-      setContent(setVisibleAreaOfSearch(data))
+    if (clickedSearchCode !== "") {
+      const data = getInfoFromID(clickedSearchCode);
+      setContent(setVisibleAreaOfSearch(data));
     }
-  }, [clickCode]);
+  }, [clickedSearchCode]);
+
+  useEffect(() => {
+    if (clickedvalue !== "") {
+      const data = getInfoFromID(clickedvalue);
+      setContent(setVisibleAreaOfSearch(data));
+    }
+  }, [clickedvalue]);
 
   return (
     <>

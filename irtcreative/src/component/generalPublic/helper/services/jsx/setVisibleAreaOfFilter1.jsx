@@ -2,7 +2,7 @@ import OnLoadScreen from "./onLoadScreen";
 import MainShowContainer from "./MainShowContainer";
 import getprocessedData from "./DataExtrector/getprocessedData";
 
-const setVisibleAreaOfFilter1 = (tab) => {
+const setVisibleAreaOfFilter1 = (tab, setClickedValue) => {
   let content,
     data = [];
   switch (tab) {
@@ -15,6 +15,7 @@ const setVisibleAreaOfFilter1 = (tab) => {
         <MainShowContainer
           data={data}
           title="All of our services are organized according to sectors"
+          setClickedValue={setClickedValue}
         />
       );
       break;
@@ -24,12 +25,19 @@ const setVisibleAreaOfFilter1 = (tab) => {
         <MainShowContainer
           data={data}
           title="All of our Departments are organized according to Divisions"
+          setClickedValue={setClickedValue}
         />
       );
       break;
     case "div":
       data = getprocessedData("Divisions", "Divisions");
-      content = <MainShowContainer data={data} title="All of our Divisions" />;
+      content = (
+        <MainShowContainer
+          data={data}
+          title="All of our Divisions"
+          setClickedValue={setClickedValue}
+        />
+      );
       break;
     case "sec":
       data = getprocessedData("Departments", "Sectors");
@@ -37,6 +45,7 @@ const setVisibleAreaOfFilter1 = (tab) => {
         <MainShowContainer
           data={data}
           title="All of our Sectors are organized according to Departments"
+          setClickedValue={setClickedValue}
         />
       );
       break;

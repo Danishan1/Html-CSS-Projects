@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "../css/Services.module.css";
 // import getServiceData from "../helper/services/jsx/getServiceData";
 import Filter1 from "../helper/services/jsx/Filter1";
@@ -10,6 +10,7 @@ const Services = () => {
 
   const [filterData, setFilterData] = useState("");
   const [searchID, setSearchID] = useState("");
+  const [clickedvalue, setClickedValue] = useState("");
 
   const handleTabClick = (tabName) => {
     setFilterData(tabName.substring(0, 3).toLowerCase());
@@ -21,6 +22,11 @@ const Services = () => {
     setFilterData("");
   };
 
+  useEffect(() => {
+    if (clickedvalue !== "") {
+      setFilterData("");
+    }
+  }, [clickedvalue]);
 
   return (
     <>
@@ -39,7 +45,11 @@ const Services = () => {
         <div className={style.midSide}>
           <div className={style.filter3}></div>
           <div className={style.mainService}>
-            <MainService tab={filterData} clickCode={searchID} />
+            <MainService
+              tab={filterData}
+              clickedSearchCode={searchID}
+              clickedMainAreaCode={{ clickedvalue, setClickedValue }}
+            />
           </div>
         </div>
       </div>
