@@ -39,7 +39,7 @@ const Services = () => {
             />
           </div>
           <div className={style.filter2}>
-            <Filter2 />
+            <Filter2 onTabClick={setClickedValue}/>
           </div>
         </div>
         <div className={style.midSide}>
