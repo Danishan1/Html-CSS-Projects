@@ -27,7 +27,7 @@ const getInfoFromID = (id) => {
   if (idLen >= 1)
     data = [...data, getMatchedDataFromPage("Divisions", id.substring(0, 1))];
 
-  console.log(data);
+  return data;
 };
 
 export default getInfoFromID;
