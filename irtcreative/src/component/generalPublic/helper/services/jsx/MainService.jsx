@@ -4,11 +4,10 @@ import React, { useEffect, useState } from "react";
 import style from "../css/MainService.module.css";
 import getInfoFromID from "./DataExtrector/getInfoFromID";
 import setVisibleAreaOfFilter1 from "./setVisibleAreaOfFilter1";
+import setVisibleAreaOfSearch from "./setVisibleAreaOfSearch";
 
 const MainService = ({ tab, clickCode }) => {
   const [content, setContent] = useState(null);
-  const [getInfoFromId, setGetInfoFromId] = useState(null);
-  // let content, getInfoFromId;
 
   useEffect(() => {
     if (tab !== "") {
@@ -19,13 +18,9 @@ const MainService = ({ tab, clickCode }) => {
   useEffect(() => {
     if (clickCode !== "") {
       const data = getInfoFromID(clickCode);
-      setGetInfoFromId(data);
+      setContent(setVisibleAreaOfSearch(data))
     }
   }, [clickCode]);
-
-  useEffect(() => {
-    console.log(getInfoFromId);
-  }, [getInfoFromId]);
 
   return (
     <>
