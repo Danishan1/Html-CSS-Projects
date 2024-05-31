@@ -1,32 +1,27 @@
 import getDataByPage from "./getDataByPage";
 
+const getMatchedDataFromPage = (page, id) => {
+  const { columnNames: colNames, data: pageData } = getDataByPage(page);
+  const dataOfID = pageData.filter((row) => row[colNames[1]] === id);
+
+  let ans = {};
+  if (dataOfID)
+    ans = { code: dataOfID[colNames[1]], name: dataOfID[colNames[2]] };
+
+  return ans;
+};
+
 const getInfoFromID = (id) => {
   const idLen = id.length;
-  const { columnNames: deptColNames, data: deptData } =
-    getDataByPage("Departments");
-  const { columnNames: sectorColNames, data: sectorData } =
-    getDataByPage("Sectors");
-  const { columnNames: divisionColNames, data: divisionData } =
-    getDataByPage("Divisions");
-  const { columnNames: serviceColNames, data: serviceData } =
-    getDataByPage("Services");
 
-    
-  switch (idLen) {
-    case 1:
-      const data = divisionData.filter(
-        (row) => row[divisionColNames[1]] === id
-      );
-      console.log(idLen);
-      console.log(data);
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-    case 5:
-      break;
-  }
+  let data = [{}];
+
+  if (idLen === 5) data = [...data, getMatchedDataFromPage("Services", id)];
+  if (idLen >= 3) data = [...data, getMatchedDataFromPage("Sectors", id)];
+  if (idLen >= 2) data = [...data, getMatchedDataFromPage("Departments", id)];
+  if (idLen >= 1) data = [...data, getMatchedDataFromPage("Divisions", id)];
+
+  console.log(data)
 };
 
 export default getInfoFromID;
