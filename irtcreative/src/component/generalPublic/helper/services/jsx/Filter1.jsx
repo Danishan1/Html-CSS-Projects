@@ -6,7 +6,7 @@ import Tab from "./Tab";
 import SearchBox from "./Search";
 import getSearchedData from "./DataExtrector/getSearchData";
 
-const Filter1 = ({ onTabClick }) => {
+const Filter1 = ({ onTabClick, onSearchClick }) => {
   const [winWidth, setWinWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -30,16 +30,14 @@ const Filter1 = ({ onTabClick }) => {
     "Units",
   ];
 
-  const searchTabs = (tab) => {
-    console.log(tab);
-  };
+  
 
   return (
     <>
       <div className={style.filterContainer}>
         <div className={style.name}>Filter</div>
         <div className={style.searchBox}>
-          <SearchBox suggestions={data4Search} tab={searchTabs} />
+          <SearchBox suggestions={data4Search} tab={onSearchClick} />
         </div>
         {winWidth < 690 && <div className={style.filterBtn}>Filter</div>}
         <div className={style.filter1}>

@@ -9,9 +9,14 @@ const Services = () => {
   // const { columnNames, data } = getServiceData("Divisions");
 
   const [filterData, setFilterData] = useState("");
+  const [searchID, setSearchID] = useState("");
 
   const handleTabClick = (tabName) => {
     setFilterData(tabName.substring(0, 3).toLowerCase());
+  };
+
+  const handleSearchClick = (tab) => {
+    setSearchID(tab)
   };
 
   return (
@@ -19,7 +24,10 @@ const Services = () => {
       <div className={style.services}>
         <div className={style.leftSide}>
           <div className={style.filter1}>
-            <Filter1 onTabClick={handleTabClick} />
+            <Filter1
+              onTabClick={handleTabClick}
+              onSearchClick={handleSearchClick}
+            />
           </div>
           <div className={style.filter2}>
             <Filter2 />
@@ -28,7 +36,7 @@ const Services = () => {
         <div className={style.midSide}>
           <div className={style.filter3}></div>
           <div className={style.mainService}>
-            <MainService tab={filterData} />
+            <MainService tab={filterData} clickCode={searchID}/>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ const SearchBox = ({ suggestions, tab }) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState([{}]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  // const [isDropDownClicked, setDropDownClicked] = useState(false);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -30,14 +31,14 @@ const SearchBox = ({ suggestions, tab }) => {
 
   const handleInputBlur = () => {
     setInputValue("");
-    setShowSuggestions(false);
+    // if (!isDropDownClicked) setShowSuggestions(false);
   };
 
   const handleSuggestionClick = (suggestion, tab) => {
-    setInputValue(suggestion.name);
+    // setInputValue(suggestion.name);
     tab(suggestion.code);
-    console.log("suggestion");
     setShowSuggestions(false);
+    // setDropDownClicked(true);
   };
 
   return (
@@ -57,7 +58,6 @@ const SearchBox = ({ suggestions, tab }) => {
               <li
                 key={index}
                 onClick={() => {
-                  console.log("suggestion");
                   handleSuggestionClick(suggestion, tab);
                 }}
                 className={style.suggestionItem}

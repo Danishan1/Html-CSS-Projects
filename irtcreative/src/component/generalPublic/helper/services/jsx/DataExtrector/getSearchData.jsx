@@ -17,7 +17,7 @@ const getSearchedData = () => {
       name: item[deptColNames[2]],
     })),
     ...sectorData.map((item) => ({
-      code: item[sectorColNames[2]],
+      code: item[sectorColNames[1]],
       name: item[sectorColNames[2]],
     })),
     ...divisionData.map((item) => ({
