@@ -13,11 +13,14 @@ const Services = () => {
 
   const handleTabClick = (tabName) => {
     setFilterData(tabName.substring(0, 3).toLowerCase());
+    setSearchID("");
   };
 
   const handleSearchClick = (tab) => {
-    setSearchID(tab)
+    setSearchID(tab);
+    setFilterData("");
   };
+
 
   return (
     <>
@@ -36,7 +39,7 @@ const Services = () => {
         <div className={style.midSide}>
           <div className={style.filter3}></div>
           <div className={style.mainService}>
-            <MainService tab={filterData} clickCode={searchID}/>
+            <MainService tab={filterData} clickCode={searchID} />
           </div>
         </div>
       </div>
