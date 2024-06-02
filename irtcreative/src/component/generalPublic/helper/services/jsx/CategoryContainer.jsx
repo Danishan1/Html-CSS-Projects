@@ -2,7 +2,7 @@
 
 import React from "react";
 import style from "../css/CategoryContainer.module.css";
-import NameCode from "./NameCode";
+import Name from "./Name";
 
 const CategoryContainer = ({ title, list, setClickedValue }) => {
   return (
@@ -11,7 +11,7 @@ const CategoryContainer = ({ title, list, setClickedValue }) => {
         <p className={style.headName}>{title}</p>
         <div className={style.p1}>
           {list.map((value) => (
-            <NameCode
+            <Name
               key={value.code}
               code={value.code}
               name={value.name}

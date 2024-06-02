@@ -1,0 +1,12 @@
+.name {
+  text-align: left;
+  padding: 1px 10px 2px 10px;
+}
+
+.name .name:hover,
+.name .code:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: var(--boldL1);
+  color: var(--colorBlue);
+}

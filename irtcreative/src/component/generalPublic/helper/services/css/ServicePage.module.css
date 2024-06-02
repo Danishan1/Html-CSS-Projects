@@ -7,23 +7,32 @@
   background-size: cover;
 }
 
-.infoBox {
-  display: flex;
+.serviceBox {
   height: 89.5vh;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 100%;
-}
-.infoBox p {
-  font-size: calc(1.5 * var(--size));
-  font-weight: var(--boldL3);
-  text-shadow: 0px 0px 10px rgb(241, 241, 241);
 }
 
+.infoBox {
+  max-width: 500px;
+  border-radius: 7px ;
+  /* border-radius: 0 5px 5px 0 ; */
+  background-color: #ffffffa4;
+  padding-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 .tutorial {
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   width: 190px;
   height: 40px;
   background-color: var(--colorCyan);
@@ -42,13 +51,7 @@
 
 @media (max-width: 750px) {
   .servicePage,
-  .infoBox {
+  .serviceBox {
     height: 88.5vh;
-  }
-}
-@media (max-width: 690px) {
-  .infoBox p {
-    font-size: calc(1.3 * var(--size));
-    font-weight: var(--boldL2);
   }
 }
