@@ -1,5 +1,18 @@
 import React from "react";
 import ServicePage from "./ServicePage";
+import getImageByID from "./DataExtrector/getImageByID.jsx";
+
+const resolveImage = (imageId) => {
+  let DIR = null;
+  if (imageId.length === 1) DIR = "Division";
+  else if (imageId.length === 2) DIR = "Department";
+  else if (imageId.length === 3) DIR = "Sector";
+  else if (imageId.length === 5) {
+    DIR = "Sector";
+    return getImageByID(imageId.substring(0, 3), DIR);
+  }
+  return getImageByID(imageId, DIR);
+};
 
 const resolveData = (data) => {
   const idLen = data.code.length;
@@ -14,6 +27,7 @@ const resolveData = (data) => {
 };
 
 const setVisibleAreaOfSearch = (data) => {
+  console.log(data);
   let resolvedData = {
     "Division Code": "",
     "Division Name": "",
@@ -40,7 +54,7 @@ const setVisibleAreaOfSearch = (data) => {
       SectName={resolvedData["Sector Name"]}
       DiviCode={resolvedData["Division Code"]}
       DiviName={resolvedData["Division Name"]}
-      imgPath={resolvedData["Image Path"] || ""}
+      imgPath={resolveImage(data[0].code)}
     />
   );
 

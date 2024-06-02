@@ -1,10 +1,22 @@
+// src/utils/getImagePath.js
 
-const getImagePath = async (imageID, directory = null) => {
+// Create a context for all images in the directory and its subdirectories
+const imagesContext = require.context(
+  "../../../../../../images",
+  true,
+  /\.(jpg|jpeg|png)$/
+);
+
+const getImagePath = (imageID, directory = null) => {
   try {
-    const image = directory
-      ? await import(`../images/${directory}/${imageID}.jpg`)
-      : await import(`../images/${imageID}.jpg`);
-    return image.default;
+    const path = directory
+      ? `./${directory}/${imageID}.jpg`
+      : `./${imageID}.jpg`;
+
+    // Use the context to load the image
+    const image = imagesContext(path);
+    console.log(image)
+    return image;
   } catch (error) {
     console.error("Image not found:", error);
     return null;
