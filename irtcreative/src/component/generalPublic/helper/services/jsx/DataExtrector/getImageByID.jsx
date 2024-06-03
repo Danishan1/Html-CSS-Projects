@@ -15,7 +15,6 @@ const getImagePath = (imageID, directory = null) => {
 
     // Use the context to load the image
     const image = imagesContext(path);
-    console.log(image)
     return image;
   } catch (error) {
     console.error("Image not found:", error);

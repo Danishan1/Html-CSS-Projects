@@ -27,10 +27,14 @@ const MainService = ({ tab, clickedSearchCode, clickedMainAreaCode }) => {
 
   useEffect(() => {
     if (clickedvalue !== "") {
-      const data = getInfoFromID(clickedvalue);
-      setContent(setVisibleAreaOfSearch(data));
+      if (clickedvalue.length === 5) {
+        const data = getInfoFromID(clickedvalue);
+        setContent(setVisibleAreaOfSearch(data));
+      } else {
+        setContent(setVisibleAreaOfFilter1(clickedvalue, setClickedValue));
+      }
     }
-  }, [clickedvalue]);
+  }, [clickedvalue, setClickedValue]);
 
   return (
     <>
