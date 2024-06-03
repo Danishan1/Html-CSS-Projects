@@ -1,6 +1,6 @@
 .name {
+  padding: 1px 0 2px 0;
   text-align: left;
-  padding: 1px 10px 2px 10px;
 }
 
 .name .name:hover,

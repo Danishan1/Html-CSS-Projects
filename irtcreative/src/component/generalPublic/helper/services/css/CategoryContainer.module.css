@@ -15,10 +15,6 @@
   color: var(--colorCyan);
 }
 
-.categoryContainer .headName:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 .categoryContainer:hover .headName {
   color: var(--colorBlue);
@@ -26,5 +22,6 @@
 
 .categoryContainer .p1 {
   text-align: justify;
+  padding: 10px;
   font-weight: var(--boldL1);
 }
