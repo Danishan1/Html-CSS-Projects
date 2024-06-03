@@ -2,6 +2,7 @@ import OnLoadScreen from "./onLoadScreen";
 import MainShowContainer from "./MainShowContainer";
 import getprocessedData from "./DataExtrector/getprocessedData";
 import getDataOfOneSegement from "./DataExtrector/getDataOfOneSegement";
+import ShowSegement from "./showSegement";
 
 const setVisibleAreaOfFilter1 = (tab, setClickedValue) => {
   let content,
@@ -54,30 +55,32 @@ const setVisibleAreaOfFilter1 = (tab, setClickedValue) => {
       content = <OnLoadScreen />;
       break;
     default:
-      // console.log(tab);
-      getDataOfOneSegement(tab);
-      data = getprocessedData("Divisions", "Departments");
+      data = getDataOfOneSegement(tab);
+
       if (tab.length === 1) {
         content = (
-          <MainShowContainer
+          <ShowSegement
+            id={tab}
             data={data}
-            title="List of Departments under Division"
+            title="List of Departments under "
             setClickedValue={setClickedValue}
           />
         );
       } else if (tab.length === 2) {
         content = (
-          <MainShowContainer
+          <ShowSegement
+            id={tab}
             data={data}
-            title="List of Sectors under Department"
+            title="List of Sectors under "
             setClickedValue={setClickedValue}
           />
         );
       } else if (tab.length === 3) {
         content = (
-          <MainShowContainer
+          <ShowSegement
+            id={tab}
             data={data}
-            title="List of Services Under Sector"
+            title="List of Services under "
             setClickedValue={setClickedValue}
           />
         );

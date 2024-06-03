@@ -27,7 +27,6 @@ const resolveData = (data) => {
 };
 
 const setVisibleAreaOfSearch = (data) => {
-  console.log(data);
   let resolvedData = {
     "Division Code": "",
     "Division Name": "",

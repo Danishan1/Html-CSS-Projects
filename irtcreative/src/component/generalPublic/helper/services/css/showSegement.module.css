@@ -1,0 +1,13 @@
+.showContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.showSegement .p1 {
+  padding: 10px 20px;
+  font-size: calc(1.5 * var(--size));
+  font-weight: var(--boldL3);
+  color: var(--colorCyan);
+}

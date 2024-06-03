@@ -7,7 +7,6 @@ const clusterListFun = (clusterName) => {
   const list4cluster = getDataByPage(clusterName).data;
   list4cluster.forEach((cluster) => {
     // cluster = Object.entries(cluster);
-    // console.log(cluster);
     dict[cluster[`${colmnName} Code`]] = {
       name: cluster[colmnName],
       code: cluster[`${colmnName} Code`],
