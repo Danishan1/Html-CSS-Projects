@@ -1,5 +1,5 @@
 import express from "express";
-import { createUsersTable } from "./queries/createUsersTable.js";
+import { executeTables } from "./queries/executeTables.js";
 
 const app = express();
 
@@ -7,7 +7,8 @@ app.get("/", (req, res) => {
   res.json({ Name: "Danishan" });
 });
 
-createUsersTable()
+
+executeTables();
 
 
 app.listen(3001, () => {

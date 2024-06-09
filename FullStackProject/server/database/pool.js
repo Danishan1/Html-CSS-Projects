@@ -11,7 +11,10 @@ const pool = mysql.createPool({
 pool.on("connection", (con) => {
   console.log("New connection added to the pool:", con.threadId);
 });
+
 pool.on("release", (con) => {
   console.log("Connection released to the pool:", con.threadId);
 });
+
+
 export default pool.promise();

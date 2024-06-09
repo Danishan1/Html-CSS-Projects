@@ -1,9 +1,9 @@
 CREATE TABLE
-    IF NOT EXISTS Call (
+    IF NOT EXISTS CallUp (
         callId VARCHAR(20) PRIMARY KEY,
         contentId VARCHAR(20) NOT NULL,
         type VARCHAR(50),
-        duration INTERVAL,
+        duration VARCHAR(20),
         status VARCHAR(50),
         createdBy VARCHAR(50),
         updatedBy VARCHAR(50),

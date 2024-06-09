@@ -1,31 +1,23 @@
-import fs from 'fs';
-import path from 'path';
-import pool from '../database/pool.js';
-import tableDirName from '../tableCreation/getFolderPath.js';
+import tablePaths from "../tableCreation/sequenceOfExecution.js";
+import pool from "../database/pool.js";
+import fs from "fs"
 
-// Function to create the users table
 export const executeTables = async () => {
+    let conn;
     try {
-        const connection = await pool.getConnection();
-        console.log('Connected to the database.');
+        conn = await pool.getConnection()
 
-        const sqlFiles = fs.readdirSync(tableDirName);
-
-        for (const sqlFile of sqlFiles) {
-            if (path.extname(sqlFile) === ".sql") {
-                const filePath = path.join(tableDirName, sqlFile)
-                const sql = fs.readFileSync(filePath, "utf-8")
-                await connection.query(sql);
-                console.log(`Excecuted ${sqlFile}`)
-            }
+        for (const filePath of tablePaths) {
+            const sql = fs.readFileSync(filePath, "utf-8");
+            await conn.query(sql);
+            console.log("Excecuted Successfully:", filePath)
         }
-
+        console.log("All Tables Created Successfully")
     } catch (err) {
-        console.error('Error executing SQL files:', err);
+        console.log("Error on Executing tables \n\n", err)
+
     } finally {
-        pool.end();
-        console.log('Disconnected from the database.');
+        if (conn) conn.release();
     }
 };
 
-executeTables()

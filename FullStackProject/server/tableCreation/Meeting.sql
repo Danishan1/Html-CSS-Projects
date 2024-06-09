@@ -7,7 +7,7 @@ CREATE TABLE
         description TEXT,
         date DATE,
         time TIME,
-        duration INTERVAL,
+        duration VARCHAR(20),
         location VARCHAR(255),
         videoCallLink VARCHAR(255),
         createdBy VARCHAR(50),
