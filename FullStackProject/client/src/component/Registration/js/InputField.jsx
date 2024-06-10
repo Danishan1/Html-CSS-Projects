@@ -3,7 +3,7 @@ import style from "../css/inputField.module.css";
 
 const InputField = ({ label, type, name, value, onChange, required }) => {
   return (
-    <div className="form-group">
+    <div className={style.inputField}>
       <input
         type={type}
         placeholder={label}
@@ -12,8 +12,9 @@ const InputField = ({ label, type, name, value, onChange, required }) => {
         value={value}
         onChange={onChange}
         required={required}
-        className="form-control"
+        title=""
       />
+      <span className={style.tooltip}>{label}</span>
     </div>
   );
 };
