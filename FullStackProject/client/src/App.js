@@ -1,8 +1,8 @@
 import './App.css';
 import InputField from './component/Registration/js/InputField';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import FileUpload from './component/Registration/js/ImageUpload';
-import Alert from './component/Registration/js/Alert';
+import AlertContainer from './component/Registration/js/AlertContainer';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,13 @@ function App() {
     createdBy: '',
     updatedBy: '',
   });
+  const alertRef = useRef(null);
 
+  const showAlert = (message, type) => {
+    if (alertRef.current) {
+      alertRef.current.addAlert(message, type);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,13 +42,8 @@ function App() {
   //   console.log(formData);
   // };
 
-  console.log(formData)
 
-  const [showAlert, setShowAlert] = useState(true);
-
-  const handleDismiss = () => {
-    setShowAlert(false);
-  };
+  const [alertContainer, setAlertContainer] = useState([]);
 
   return (
     <div className="App">
@@ -61,14 +62,17 @@ function App() {
         onChange={handleFileChange}
         fileType={1}
       />
-      {showAlert &&
-        <div style={{width:"300px",  margin: "10px"}}>
+      <AlertContainer ref={alertRef} setAlertContainer={setAlertContainer} alertContainer={alertContainer} />
 
-          <Alert message={"This is Testing"} type={"info"} onDismiss={handleDismiss} />
-        </div>
-      }
-
-
+      <button onClick={() => showAlert("This is a success alert!", "success")}>
+        Show Success Alert
+      </button>
+      <button onClick={() => showAlert("This is an error alert!", "error")}>
+        Show Error Alert
+      </button>
+      <button onClick={() => showAlert("This is an info alert!", "info")}>
+        Show Info Alert
+      </button>
     </div>
   );
 }
