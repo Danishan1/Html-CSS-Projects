@@ -1,6 +1,7 @@
 import './App.css';
 import InputField from './component/Registration/js/InputField';
 import React, { useState } from 'react';
+import FileUpload from './component/Registration/js/FileUpload';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -8,7 +9,7 @@ function App() {
     name: '',
     mobile: '',
     email: '',
-    profilePicPath: '',
+    profilePic: '',
     status: '',
     designation: '',
     orgId: '',
@@ -16,21 +17,25 @@ function App() {
     updatedBy: '',
   });
 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleFileChange = (e) => {
-  //   const { name, files } = e.target;
-  //   setFormData({ ...formData, [name]: files[0] });
-  // };
+  const handleFileChange = (file) => {
+    setFormData({ ...formData, profilePic: file });
+
+  }
+
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   // Submit form logic
   //   console.log(formData);
   // };
+
+  console.log(formData)
 
   return (
     <div className="App">
@@ -42,6 +47,13 @@ function App() {
         onChange={handleChange}
         required={true}
       />
+      <br></br>
+      <FileUpload
+        label={"Profile Pic"}
+        name={"Profile Pic"}
+        onChange={handleFileChange}
+      />
+
 
     </div>
   );
