@@ -1,7 +1,8 @@
 import './App.css';
 import InputField from './component/Registration/js/InputField';
 import React, { useState } from 'react';
-import FileUpload from './component/Registration/js/FileUpload';
+import FileUpload from './component/Registration/js/ImageUpload';
+import Alert from './component/Registration/js/Alert';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -37,6 +38,12 @@ function App() {
 
   console.log(formData)
 
+  const [showAlert, setShowAlert] = useState(true);
+
+  const handleDismiss = () => {
+    setShowAlert(false);
+  };
+
   return (
     <div className="App">
       <InputField
@@ -52,7 +59,14 @@ function App() {
         label={"Profile Pic"}
         name={"Profile Pic"}
         onChange={handleFileChange}
+        fileType={1}
       />
+      {showAlert &&
+        <div style={{width:"300px",  margin: "10px"}}>
+
+          <Alert message={"This is Testing"} type={"info"} onDismiss={handleDismiss} />
+        </div>
+      }
 
 
     </div>
