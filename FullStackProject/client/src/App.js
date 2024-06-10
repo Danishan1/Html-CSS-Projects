@@ -3,6 +3,7 @@ import InputField from './component/Registration/js/InputField';
 import React, { useState, useRef } from 'react';
 import FileUpload from './component/Registration/js/ImageUpload';
 import AlertContainer from './component/Registration/js/AlertContainer';
+import PasswordField from './component/Registration/js/PasswordField';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ function App() {
     orgId: '',
     createdBy: '',
     updatedBy: '',
+    password: ''
   });
   const alertRef = useRef(null);
 
@@ -73,6 +75,14 @@ function App() {
       <button onClick={() => showAlert("This is an info alert!", "info")}>
         Show Info Alert
       </button>
+
+      <PasswordField
+        label={'Password'}
+        name={'password'}
+        value={formData.password}
+        onChange={handleChange}
+
+      />
     </div>
   );
 }
