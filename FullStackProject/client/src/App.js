@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import FileUpload from './component/Registration/js/ImageUpload';
 import AlertContainer from './component/Registration/js/AlertContainer';
 import PasswordField from './component/Registration/js/PasswordField';
+import OtpField from './component/Registration/js/OtpField';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -81,8 +82,9 @@ function App() {
         name={'password'}
         value={formData.password}
         onChange={handleChange}
-
       />
+
+      <OtpField onChange={(value) => {console.log(value)}}/>
     </div>
   );
 }
