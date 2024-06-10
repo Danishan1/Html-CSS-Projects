@@ -66,7 +66,7 @@ const FileUpload = ({ label, name, onChange }) => {
           className={style.formControl}
           title=""
         />
-        <span className={style.label}>{label}</span>
+        <span className={style.label}>{`Upload  ${label}`}</span>
       </div>}
       {file && (
         <div className={style.infor}>
