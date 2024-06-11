@@ -36,8 +36,9 @@ const OtpField = ({ length = 6, onChange }) => {
   };
 
   React.useEffect(() => {
-    onChange(otp.join(""));
-  }, [otp, onChange]);
+    const myOtp = otp.join("");
+    if (myOtp.length === length) onChange(myOtp);
+  }, [otp, onChange, length]);
 
   return (
     <div className={style.otpInputContainer}>

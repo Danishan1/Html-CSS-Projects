@@ -3,14 +3,15 @@ import AlertContainer from "./AlertContainer";
 import { v4 as uuidv4 } from "uuid";
 import style from "../css/RegisterUserForm.module.css";
 import { FormSection1 } from "./FormSection1";
+import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
 
 const UserForm = ({ orgId, createdBy }) => {
   const [formData, setFormData] = useState({
     userId: uuidv4().slice(0, 6).toUpperCase(),
-    name: "",
-    mobile: "",
-    email: "",
+    name: "Danishan",
+    mobile: "9540514188",
+    email: "danishan089@gmail.com",
     profilePic: "",
     status: "active",
     designation: "",
@@ -42,6 +43,12 @@ const UserForm = ({ orgId, createdBy }) => {
           {formFillStep === 0 ? (
             <FormSection1
               setFormData={setFormData}
+              formData={formData}
+              showAlert={showAlert}
+              setFormFillStep={setFormFillStep}
+            />
+          ) : formFillStep === 1 ? (
+            <FormSection2
               formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}

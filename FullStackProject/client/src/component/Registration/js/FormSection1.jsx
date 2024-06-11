@@ -32,7 +32,7 @@ export const FormSection1 = ({
 
     if (!isValid) return;
 
-    showAlert("User ID generated successfully!", "success");
+    showAlert("Great, Let's verify your details...", "success");
     setFormFillStep(1);
   };
 
@@ -70,7 +70,7 @@ export const FormSection1 = ({
         onChange={handleChange}
       />
       <div className={style.btnRapper}>
-        <Button text={"Generate User ID"} onClick={move2Section2} />
+        <Button text={"Verify Details"} onClick={move2Section2} />
       </div>
     </div>
   );
