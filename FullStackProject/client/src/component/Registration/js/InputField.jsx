@@ -1,7 +1,14 @@
 import React from "react";
 import style from "../css/inputField.module.css";
 
-const InputField = ({ label, type, name, value, onChange, required }) => {
+const InputField = ({
+  label,
+  type,
+  name,
+  value,
+  onChange,
+  required = false,
+}) => {
   return (
     <div className={style.inputField}>
       <input
@@ -14,6 +21,7 @@ const InputField = ({ label, type, name, value, onChange, required }) => {
         required={required}
         title=""
       />
+      {required ? <p className={style.required}>*</p> : <></>}
       <span className={style.tooltip}>{label}</span>
     </div>
   );

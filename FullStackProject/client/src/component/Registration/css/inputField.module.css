@@ -1,5 +1,15 @@
 .inputField {
     position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--colorCyan);
+}
+
+.required {
+    padding-top: 5px;
+    margin-right: 5px;
+    color: var(--colorRed);
+    font-weight: var(--boldL4);
 }
 
 .inputField input {
@@ -7,7 +17,6 @@
     width: 100%;
     height: 100%;
     padding: 3px 10px;
-    border-bottom: 2px solid var(--colorCyan);
 }
 
 .inputField input::placeholder {
@@ -19,7 +28,6 @@
     border: none;
     outline: none;
     color: var(--colorCyan);
-    border-bottom: 2px solid var(--colorCyan);
     font-weight: var(--boldL2);
 }
 
@@ -32,14 +40,17 @@
     border-radius: 4px;
     visibility: hidden;
     color: var(--colorGray4);
+    background-color: var(--colorWhite);
     opacity: 0;
     transition: opacity 0.7s;
+    z-index: 10;
 }
 
 .inputField input:hover+.tooltip {
     visibility: visible;
     opacity: 1;
 }
+
 .inputField input:focus+.tooltip {
     visibility: hidden;
     opacity: 0;
@@ -51,8 +62,7 @@
     top: 0%;
     left: 20%;
     margin-top: -15px;
-    border-width: 7px; 
+    border-width: 7px;
     border-style: solid;
     border-color: transparent transparent var(--colorGray3) transparent;
-  }
-  
+}

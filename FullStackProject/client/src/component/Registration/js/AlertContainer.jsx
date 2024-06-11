@@ -51,5 +51,12 @@ export default forwardRef(AlertContainer);
  * 
  * showAlert("This is an error alert!", "error")
  * 
+ * <AlertContainer
+        ref={alertRef}
+        setAlertContainer={setAlertContainer}
+        alertContainer={alertContainer}
+      />
+
+    const [alertContainer, setAlertContainer] = useState([]);
  * 
  */

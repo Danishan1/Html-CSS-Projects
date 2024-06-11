@@ -43,6 +43,9 @@
     border: 1px solid red;
 } */
 
+.infor {
+    padding: 10px;
+}
 .infor p {
     display: inline;
 }
