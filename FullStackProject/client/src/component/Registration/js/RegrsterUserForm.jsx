@@ -54,7 +54,7 @@ const UserForm = ({ orgId, createdBy }) => {
               setFormFillStep={setFormFillStep}
             />
           ) : (
-            <FormSection3 showAlert={showAlert} formData={formData} />
+            <FormSection3 showAlert={showAlert} />
           )}
           <div className={style.progress}>
             {formFillStep === 0 ? (

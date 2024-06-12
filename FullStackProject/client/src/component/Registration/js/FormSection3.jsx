@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import PasswordField from "./PasswordField";
+import React, { useEffect, useState } from "react";
+// import PasswordField from "./PasswordField";
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { validatePassword } from "../helper/Validation";
+import generatePasscode from "../helper/generatePasscode.js";
+import generateUserId from "../helper/generateID.js";
 
-export const FormSection3 = ({ formData, showAlert }) => {
-  const [password, setPassword] = useState("");
+export const FormSection3 = ({ showAlert }) => {
+  // const [password, setPassword] = useState("");
 
   const handleSubmit = (e, password) => {
     let isValid = true;
@@ -18,13 +20,17 @@ export const FormSection3 = ({ formData, showAlert }) => {
       isValid = false;
       if (!isValid) return;
     } else {
-      showAlert(
-        "Login Successfully",
-        "success"
-      );
+      showAlert("Login Successfully", "success");
     }
   };
-  const passCode = "D@n23456";
+
+  const [passCode, setPassCode] = useState();
+  const [userId, setUserId] = useState();
+
+  useEffect(() => {
+    setPassCode(generatePasscode());
+    setUserId(generateUserId());
+  }, []);
 
   return (
     <div className={style.formSection}>
@@ -36,7 +42,7 @@ export const FormSection3 = ({ formData, showAlert }) => {
       </p>
       <p className={style.userId}>
         <span className="colorCyan boldL2">User ID: </span>
-        {formData.userId}
+        {userId}
       </p>
 
       <p className={style.userId}>
