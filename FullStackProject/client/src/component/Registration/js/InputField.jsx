@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../css/inputField.module.css";
+import style from "../css/InputField.module.css";
 
 const InputField = ({
   label,

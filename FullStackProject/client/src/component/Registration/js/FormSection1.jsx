@@ -39,6 +39,9 @@ export const FormSection1 = ({
 
   return (
     <div className={style.formSection}>
+      <p className="colorCyan boldL2" style={{ textAlign: "center" }}>
+        Welcome to Registration Page
+      </p>
       <InputField
         label="Name"
         type="text"
