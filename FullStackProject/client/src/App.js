@@ -4,8 +4,8 @@ import './App.css';
 
 const App = () => {
 
-  const orgId = 'ORG12345'; // Example orgId
-  const createdBy = 'adminUser'; // Example createdBy
+  const orgId = 'AAAAAA'; // Example orgId
+  const createdBy = 'AAAAAA'; // Example createdBy
 
   return (
     <div className="App">

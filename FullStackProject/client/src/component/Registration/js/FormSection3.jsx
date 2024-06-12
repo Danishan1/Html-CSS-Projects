@@ -20,28 +20,28 @@ export const FormSection3 = ({ formData, showAlert }) => {
       if (!isValid) return;
     }
   };
+  const passCode = 123456;
 
   return (
     <div className={style.formSection}>
       <p className={style.userIdNote}>
         <span className="colorRed boldL2">Note: </span>Keep your{" "}
-        <span className="boldL2">User ID </span>
+        <span className="boldL2">User ID & Passcode </span>
         in a secure place, as it is required for login and cannot be
-        regenerated.{" "}
+        regenerated.
       </p>
       <p className={style.userId}>
         <span className="colorCyan boldL2">User ID: </span>
         {formData.userId}
       </p>
-      <PasswordField
-        name="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required={true}
-      />
+
+      <p className={style.userId}>
+        <span className="colorCyan boldL2">Passcode: </span>
+        {passCode}
+      </p>
 
       <div className={style.btnRapper}>
-        <Button text={"Register"} onClick={(e) => handleSubmit(e, password)} />
+        <Button text={"Login"} onClick={(e) => handleSubmit(e, password)} />
       </div>
     </div>
   );

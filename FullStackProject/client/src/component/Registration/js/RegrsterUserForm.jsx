@@ -14,7 +14,7 @@ const UserForm = ({ orgId, createdBy }) => {
     email: "danishan089@gmail.com",
     profilePic: "",
     status: "active",
-    designation: "",
+    designation: "User",
     orgId: orgId,
     createdBy: createdBy,
     updatedBy: createdBy,
@@ -56,6 +56,23 @@ const UserForm = ({ orgId, createdBy }) => {
           ) : (
             <FormSection3 showAlert={showAlert} formData={formData} />
           )}
+          <div className={style.progress}>
+            {formFillStep === 0 ? (
+              <samp className={`${style.currentSec}`}></samp>
+            ) : (
+              <samp className={`${style.circle}`}></samp>
+            )}
+            {formFillStep === 1 ? (
+              <samp className={`${style.currentSec}`}></samp>
+            ) : (
+              <samp className={`${style.circle}`}></samp>
+            )}
+            {formFillStep === 2 ? (
+              <samp className={`${style.currentSec}`}></samp>
+            ) : (
+              <samp className={`${style.circle}`}></samp>
+            )}
+          </div>
         </form>
       </div>
     </div>

@@ -43,6 +43,32 @@
     justify-content: center;
 }
 
+
+.progress {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+
+}
+
+.circle {
+    background-color: var(--colorCyan);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+}
+
+.currentSec {
+    background-color: var(--colorBlue);
+    height: 5px;
+    width: 30px;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+}
+
 @media (max-width : 500px) {
     .formSection {
         min-width: 350px;
