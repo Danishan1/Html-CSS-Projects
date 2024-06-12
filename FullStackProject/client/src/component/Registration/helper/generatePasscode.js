@@ -28,7 +28,6 @@ const generatePasscode = () => {
     passcode = passcode.split('').sort(() => Math.random() - 0.5).join('');
     passcode = passcode.split('').sort(() => Math.random() - 0.5).join('');
     passcode = passcode.split('').sort(() => Math.random() - 0.5).join('');
-    console.log(passcode)
 
     return passcode;
 };

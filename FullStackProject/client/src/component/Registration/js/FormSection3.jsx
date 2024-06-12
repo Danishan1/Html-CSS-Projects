@@ -2,26 +2,15 @@ import React, { useEffect, useState } from "react";
 // import PasswordField from "./PasswordField";
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
-import { validatePassword } from "../helper/Validation";
 import generatePasscode from "../helper/generatePasscode.js";
 import generateUserId from "../helper/generateID.js";
 
 export const FormSection3 = ({ showAlert }) => {
   // const [password, setPassword] = useState("");
 
-  const handleSubmit = (e, password) => {
-    let isValid = true;
-    if (!validatePassword(password)) {
-      showAlert(
-        "Password must have uppercase, lowercase, special character, and number, with minimum length of 6.",
-        "error"
-      );
-
-      isValid = false;
-      if (!isValid) return;
-    } else {
-      showAlert("Login Successfully", "success");
-    }
+  const handleSubmit = (userID, passCode) => {
+    // It happens that  Due to Error or any failure, unable to login right away, then redirect to login page
+    showAlert(`Login Successfully, ${userID}`, "success");
   };
 
   const [passCode, setPassCode] = useState();
@@ -51,7 +40,7 @@ export const FormSection3 = ({ showAlert }) => {
       </p>
 
       <div className={style.btnRapper}>
-        <Button text={"Login"} onClick={(e) => handleSubmit(e, passCode)} />
+        <Button text={"Login"} onClick={() => handleSubmit(userId, passCode)} />
       </div>
     </div>
   );

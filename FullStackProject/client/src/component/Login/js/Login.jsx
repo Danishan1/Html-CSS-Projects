@@ -8,6 +8,35 @@ import { Button } from "../../Registration/js/Button";
 const UserForm = ({ setFormVisibility }) => {
   const [alertContainer, setAlertContainer] = useState([]);
 
+  const getUserID = (userID) => {
+    return "123456";
+  };
+  const getPasscodeName = (userID) => {
+    return ["654321", "Danishan"];
+  };
+
+  const verifyDetails = (userId, passcode) => {
+    const USERID = getUserID(userId);
+    let UserName = "";
+    if (USERID !== userID) {
+      showAlert(
+        "Invalid User ID. Please check your User ID again or register.",
+        "error"
+      );
+      return false;
+    } else if (USERID === userID) {
+      const [PASSCODE, NAME] = getPasscodeName(userID);
+      UserName = NAME;
+      if (PASSCODE !== passcode) {
+        showAlert("Wrong Pass Code", "error");
+        return false;
+      } else {
+        showAlert(`Welcome, ${UserName}`, "success");
+        return true;
+      }
+    }
+  };
+
   const alertRef = useRef(null);
   const showAlert = (message, type) => {
     if (alertRef.current) {
@@ -22,7 +51,9 @@ const UserForm = ({ setFormVisibility }) => {
     setUserId(value);
   };
 
-  const handleLogin = () => {};
+  const handleLogin = () => {
+    verifyDetails(userID, password);
+  };
   const handleRegister = () => {
     setFormVisibility("register");
   };
@@ -56,7 +87,7 @@ const UserForm = ({ setFormVisibility }) => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div className={style.btnRapper}>
-              <Button text={"Login"} onClick={(e) => handleLogin(e)} />
+              <Button text={"Login"} onClick={handleLogin} />
               <Button text={"Register"} onClick={() => handleRegister()} />
             </div>
           </div>
