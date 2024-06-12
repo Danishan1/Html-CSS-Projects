@@ -98,7 +98,7 @@ export const FormSection2 = ({ formData, showAlert, setFormFillStep }) => {
         )}
       </div>
       <div className={style.btnRapper}>
-        <Button text={"Generate User ID & Passcode"} onClick={move2Section3} />
+        <Button text={"Generate ID & Passcode"} onClick={move2Section3} />
       </div>
     </div>
   );

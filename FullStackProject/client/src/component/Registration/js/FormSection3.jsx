@@ -4,7 +4,6 @@ import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { validatePassword } from "../helper/Validation";
 
-
 export const FormSection3 = ({ formData, showAlert }) => {
   const [password, setPassword] = useState("");
 
@@ -18,9 +17,14 @@ export const FormSection3 = ({ formData, showAlert }) => {
 
       isValid = false;
       if (!isValid) return;
+    } else {
+      showAlert(
+        "Login Successfully",
+        "success"
+      );
     }
   };
-  const passCode = 123456;
+  const passCode = "D@n23456";
 
   return (
     <div className={style.formSection}>
@@ -41,7 +45,7 @@ export const FormSection3 = ({ formData, showAlert }) => {
       </p>
 
       <div className={style.btnRapper}>
-        <Button text={"Login"} onClick={(e) => handleSubmit(e, password)} />
+        <Button text={"Login"} onClick={(e) => handleSubmit(e, passCode)} />
       </div>
     </div>
   );
