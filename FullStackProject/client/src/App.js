@@ -1,5 +1,6 @@
 import React, { } from 'react';
-import HandleLoginRegister from './component/Main/HandleLoginRegister';
+// import HandleLoginRegister from './component/Main/HandleLoginRegister';
+import ChatBox from './component/Chat/js/ChatBox';
 import './App.css';
 
 const App = () => {
@@ -8,7 +9,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <HandleLoginRegister />
+      {/* <HandleLoginRegister /> */}
+      <ChatBox></ChatBox>
 
 
     </div>
