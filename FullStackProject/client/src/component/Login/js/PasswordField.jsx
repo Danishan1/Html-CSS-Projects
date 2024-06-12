@@ -3,35 +3,9 @@ import style from "../css/PasswordField.module.css";
 
 const PasswordField = ({ name, value, onChange, placeholder = "Password" }) => {
   const [showPassword, setShowPassword] = useState(false);
-  const [passwordStrength, setPasswordStrength] = useState("");
 
   const handlePasswordChange = (e) => {
-    const { value } = e.target;
     onChange(e);
-    validatePasswordStrength(value);
-  };
-
-  const validatePasswordStrength = (password) => {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    const isValidLength = password.length >= 6;
-
-    if (!isValidLength) {
-      setPasswordStrength("Short");
-    } else if (
-      !hasUpperCase ||
-      !hasLowerCase ||
-      !hasNumber ||
-      !hasSpecialChar
-    ) {
-      setPasswordStrength("Weak");
-    } else if (password.length >= 6 && password.length < 10) {
-      setPasswordStrength("Medium");
-    } else if (password.length >= 10) {
-      setPasswordStrength("Strong");
-    }
   };
 
   const showPasswordIcon = (
@@ -82,13 +56,6 @@ const PasswordField = ({ name, value, onChange, placeholder = "Password" }) => {
         />
         {showPassword ? hidePasswordIcon : showPasswordIcon}
       </div>
-      {passwordStrength && (
-        <p className={`${style.strength} ${style[passwordStrength]}`}>
-          {passwordStrength === "Weak"
-            ? "It Must have Uppercase, Lowercase, Numbers & Special Characters"
-            : passwordStrength}
-        </p>
-      )}
     </div>
   );
 };

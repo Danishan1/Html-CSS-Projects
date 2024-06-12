@@ -6,7 +6,7 @@ import { FormSection1 } from "./FormSection1";
 import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
 
-const UserForm = ({ orgId, createdBy }) => {
+const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
   const [formData, setFormData] = useState({
     userId: uuidv4().slice(0, 6).toUpperCase(),
     name: "Danishan",
@@ -46,6 +46,7 @@ const UserForm = ({ orgId, createdBy }) => {
               formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
+              setFormVisiblity={setFormVisiblity}
             />
           ) : formFillStep === 1 ? (
             <FormSection2

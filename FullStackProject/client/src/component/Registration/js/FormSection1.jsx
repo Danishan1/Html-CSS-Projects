@@ -9,6 +9,7 @@ export const FormSection1 = ({
   formData,
   showAlert,
   setFormFillStep,
+  setFormVisiblity,
 }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -71,6 +72,7 @@ export const FormSection1 = ({
       />
       <div className={style.btnRapper}>
         <Button text={"Verify Details"} onClick={move2Section2} />
+        <Button text={"Login"} onClick={() => setFormVisiblity("login")} />
       </div>
     </div>
   );
