@@ -2,46 +2,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-
+  padding: 0 10px;
+  border-top: 2px solid var(--colorGray3);
 }
 
-.add{
-    
-    width: 30px; 
+.add path {
+  fill: var(--colorBlue);
 }
+
 .add svg {
-    height: 1.5em;
-    width: 1.5em;
+  font-size: calc(var(--size)* 1.5);
 }
 
-.inputField{
+.inputField {
   width: calc(100% - 70px);
-  height: 40px;
+  height: 30px;
   background-color: inherit;
-  border: 1px solid var(--l-gray-3);
-  color: var(--l-text);
-  border-radius: 5px;
-  padding: 10px 5px;
+  padding: 5px;
   resize: none;
   overflow-y: auto;
-}
-
-.inputField:focus{
-  outline: none;
-  border: 1px solid var(--l-sky-blue);
-}
-
-.sendButton{
-  width: 30px; 
-  background-color: inherit;
   border: none;
-  
-}
-.sendButton svg{
-  width: 2.5em; 
-  height: 2.5em;
-
+  outline: none;
+  padding-top: 17px;
 }
 
+
+.sendButton {
+  font-size: calc(var(--size)* 2);
+}
+
+.sendButton path {
+  fill: var(--colorBlue);
+}

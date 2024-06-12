@@ -122,15 +122,7 @@ export default function ChatBox() {
     <div className={style.chatBox}>
       <div className={style.header}>Man</div>
       <div className={style.chatArea}>
-        {/* {chats.map((chat, index) => (
-
-          <Chat
-            key={index}
-            currentChat={chat}
-            previousChat={index > 0 ? chats[index - 1] : null}
-          />
-        ))} */}
-
+        
         {chats.map((chat, index) => (
           <React.Fragment key={index}>
             {index === 0 ||
