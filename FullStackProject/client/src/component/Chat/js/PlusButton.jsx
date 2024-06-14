@@ -39,7 +39,7 @@ const PlusButton = () => {
       <IconSetter
         icon={directShare}
         name={"Direct Share"}
-        clickHandle={() => console.log("Document")}
+        clickHandle={() => console.log("Direct Share")}
       />
       <IconSetter
         icon={calendar}
@@ -58,7 +58,7 @@ const PlusButton = () => {
       />
       <IconSetter
         icon={payment}
-        name={"payment"}
+        name={"Payment"}
         clickHandle={() => console.log("Payment")}
       />
     </div>
