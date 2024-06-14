@@ -45,12 +45,12 @@
 
 .showPlus {
   position: absolute;
-  /* border: 1px solid red; */
+  padding: 30px 10px;
   bottom: 60px;
   left: 0;
   width: 100%;
   max-height: 300px;
-  min-height: 150px;
+  min-height: 200px;
   overflow-y: auto;
   background-color: var(--colorWhite);
   border-top: 2px solid var(--colorGray3);

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import style from "../css/ChatInput.module.css"; // Adjust the path to your CSS file
 import { handleKeyDown } from "../helper/handleKeys";
 import { adjustTextareaHeight } from "../helper/handleTextAreaHeight";
+import PlusButton from "./PlusButton";
 
 const ChatInput = ({ onSendMessage }) => {
   const [message, setMessage] = useState("");
@@ -17,10 +18,7 @@ const ChatInput = ({ onSendMessage }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        addRef.current &&
-        !addRef.current.contains(event.target) 
-      ) {
+      if (addRef.current && !addRef.current.contains(event.target)) {
         setShowPlus(false);
       }
     };
@@ -48,8 +46,10 @@ const ChatInput = ({ onSendMessage }) => {
 
   return (
     <div className={style.chatInputContainer}>
-      <div className={showPlusClass}>Para</div>
-      <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)} >
+      <div className={showPlusClass}>
+        <PlusButton />
+      </div>
+      <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
