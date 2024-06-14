@@ -83,6 +83,7 @@
 
 .share:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 @media (max-width:420px) {

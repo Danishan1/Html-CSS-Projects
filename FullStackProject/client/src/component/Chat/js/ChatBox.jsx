@@ -4,6 +4,7 @@ import Chat from "./MsgBox";
 import CenteredDateDisplay from "./CenteredDateDisplay";
 import ChatInput from "./ChatInput";
 import ContactChat from "./ContactChat";
+import { ForwardedBox } from "./ForwardedBox";
 
 export default function ChatBox() {
   const [chats, setChats] = useState([
@@ -149,6 +150,9 @@ export default function ChatBox() {
         ))}
       </div>
       <div className={style.msgBox}>
+        <div>
+          <ForwardedBox type={"Pending - Forwarded Box"} />
+        </div>
         <ChatInput onSendMessage={() => console.log("Send")} />
       </div>
     </div>
