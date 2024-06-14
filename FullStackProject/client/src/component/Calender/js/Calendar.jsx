@@ -18,12 +18,16 @@ export const Calendar = ({ handleData }) => {
   return (
     <div className={styles.calendarBox}>
       <div className={styles.calendarHeader}>
-        <div
-          className={styles.iconBtn}
-          onClick={() => handlePrevMonthRestrict(currentDate, setCurrentDate)}
-        >
-          {left}
-        </div>
+        {currentDate.getMonth() != new Date().getMonth() ? (
+          <div
+            className={styles.iconBtn}
+            onClick={() => handlePrevMonthRestrict(currentDate, setCurrentDate)}
+          >
+            {left}
+          </div>
+        ) : (
+          <div></div>
+        )}
 
         <h2>{`${currentDate.toLocaleString("default", {
           month: "long",
@@ -39,13 +43,13 @@ export const Calendar = ({ handleData }) => {
 
       <div className={styles.calendarBody}>
         <div className={styles.calendarDays}>
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
+          <div>S</div>
+          <div>M</div>
+          <div>T</div>
+          <div>W</div>
+          <div>T</div>
+          <div>F</div>
+          <div>S</div>
         </div>
         <div className={styles.calendarDates}>
           {renderCalendar(currentDate, handleDateClick)}

@@ -14,7 +14,10 @@ const App = () => {
       {/* <HandleLoginRegister /> */}
       {/* <ChatBox ></ChatBox> */}
       {/* <GroupChat /> */}
-      <Calendar />
+      {/* <div style={{ width: "250px", height: "250px" }}>
+
+      </div> */}
+        <Calendar />
 
 
     </div>
