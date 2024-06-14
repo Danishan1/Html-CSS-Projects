@@ -8,8 +8,9 @@
 
 
 .svgIcon {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-size: calc(var(--size) * 2);
+    cursor: pointer;
 }
 
 .iconSetter {

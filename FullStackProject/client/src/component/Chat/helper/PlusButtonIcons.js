@@ -36,3 +36,25 @@ export const media = <svg className={style.svgIcon} xmlns="http://www.w3.org/200
 export const directShare = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
     <path className={style.icon} fill="currentColor" d="M11.5 15.577v-8.65l-2.33 2.33l-.708-.718L12 5l3.539 3.539l-.708.719L12.5 6.927v8.65zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
 </svg>
+
+export const circleThin = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+    <path fill="currentColor" d="M128 28a100 100 0 1 0 100 100A100.11 100.11 0 0 0 128 28m0 192a92 92 0 1 1 92-92a92.1 92.1 0 0 1-92 92" />
+</svg>
+
+export const circleThik = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16" />
+</svg>
+
+export const cirlceFilled = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+    <path fill="currentColor" d="M18 11a7 7 0 1 1-7 7a7 7 0 0 1 7-7" class="clr-i-outline clr-i-outline-path-1" />
+    <path fill="currentColor" d="M18 34a16 16 0 1 1 16-16a16 16 0 0 1-16 16m0-30a14 14 0 1 0 14 14A14 14 0 0 0 18 4" class="clr-i-outline clr-i-outline-path-2" />
+    <path fill="none" d="M0 0h36v36H0z" />
+</svg>
+
+export const left = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="0.44em" height="1em" viewBox="0 0 7 16">
+    <path className={style.icon} fill="currentColor" d="M5.5 13a.47.47 0 0 1-.35-.15l-4.5-4.5c-.2-.2-.2-.51 0-.71l4.5-4.49c.2-.2.51-.2.71 0s.2.51 0 .71L1.71 8l4.15 4.15c.2.2.2.51 0 .71c-.1.1-.23.15-.35.15Z" />
+</svg>
+
+export const right = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="0.44em" height="1em" viewBox="0 0 7 16">
+    <path className={style.icon} fill="currentColor" d="M1.5 13a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71L5.3 7.99L1.15 3.85c-.2-.2-.2-.51 0-.71s.51-.2.71 0l4.49 4.51c.2.2.2.51 0 .71l-4.5 4.49c-.1.1-.23.15-.35.15" />
+</svg>
