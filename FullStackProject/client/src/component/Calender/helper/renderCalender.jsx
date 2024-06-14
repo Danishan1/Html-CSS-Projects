@@ -1,4 +1,4 @@
-import styles from "../css/CalendarBox.module.css";
+import styles from "../css/CalendarBoxSmall.module.css";
 export const renderCalendar = (date, handleDateClick) => {
   const calendarDates = [];
   const month = date.getMonth();

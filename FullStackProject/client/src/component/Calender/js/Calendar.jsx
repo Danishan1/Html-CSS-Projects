@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../css/CalendarBox.module.css";
-import { left, right } from "../helper/Icons";
+import styles from "../css/CalendarBoxSmall.module.css";
+import { leftS, rightS } from "../helper/Icons";
 import { renderCalendar } from "../helper/renderCalender";
 import {
   handleNextMonth,
@@ -18,26 +18,28 @@ export const Calendar = ({ handleData }) => {
   return (
     <div className={styles.calendarBox}>
       <div className={styles.calendarHeader}>
-        {currentDate.getMonth() != new Date().getMonth() ? (
+        {currentDate.getMonth() !== new Date().getMonth() ? (
           <div
             className={styles.iconBtn}
             onClick={() => handlePrevMonthRestrict(currentDate, setCurrentDate)}
           >
-            {left}
+            {leftS}
           </div>
         ) : (
           <div></div>
         )}
 
-        <h2>{`${currentDate.toLocaleString("default", {
-          month: "long",
-        })} ${currentDate.getFullYear()}`}</h2>
+        <h2>{`${currentDate
+          .toLocaleString("default", {
+            month: "long",
+          })
+          .substring(0, 3)} ${currentDate.getFullYear()}`}</h2>
 
         <div
           className={styles.iconBtn}
           onClick={() => handleNextMonth(currentDate, setCurrentDate)}
         >
-          {right}
+          {rightS}
         </div>
       </div>
 
