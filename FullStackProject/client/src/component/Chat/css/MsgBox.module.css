@@ -15,7 +15,8 @@
 }
 
 .content {
-  width: 85%;
+  max-width: 600px;
+  min-width: 350px;
   border: 1px solid var(--colorCyan);
   border-radius: 15px;
   padding-top: 10px;
@@ -29,6 +30,7 @@
 
 .chatBox.sent {
   justify-content: right;
+  padding-left: 20px;
 }
 
 .chatBox.received .content {
@@ -38,6 +40,8 @@
 
 .chatBox.received {
   justify-content: left;
+  padding-right: 20px;
+
 }
 
 .senderInfo {
@@ -79,4 +83,11 @@
 
 .share:hover {
   opacity: 1;
+}
+
+@media (max-width:420px) {
+
+  .content {
+    min-width: 200px;
+  }
 }
