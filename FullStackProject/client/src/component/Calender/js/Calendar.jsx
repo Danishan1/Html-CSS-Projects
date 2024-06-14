@@ -7,14 +7,10 @@ import {
   handlePrevMonthRestrict,
 } from "../helper/handleMonths";
 
-export const Calendar = ({ handleData }) => {
+export const Calendar = ({ handleData, handleDateClick }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  const handleDateClick = (date) => {
-    console.log("Date clicked:", date);
-    // Add your custom logic here
-  };
-
+  
   return (
     <div className={styles.calendarBox}>
       <div className={styles.calendarHeader}>
