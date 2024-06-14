@@ -6,15 +6,6 @@
     stroke: var(--colorCyan);
 }
 
-.stroke:hover {
-    stroke: var(--colorBlue);
-    cursor: pointer;
-}
-
-.icon:hover {
-    fill: var(--colorBlue);
-    cursor: pointer;
-}
 
 .svgIcon {
     font-size: 2rem;

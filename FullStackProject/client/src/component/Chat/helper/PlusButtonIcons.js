@@ -1,7 +1,7 @@
 import style from "./css/plusButtonIcons.module.css"
 
 export const meeting = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-    <path className={style.stroke} fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M22 4.6v12.8a.6.6 0 0 1-.6.6H2.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6h18.8a.6.6 0 0 1 .6.6M8.5 21.5L12 18l3.5 3.5M12 2v2m-3 8v2m3-4v4m3-6v6" />
+    <path className={style.stroke} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M22 4.6v12.8a.6.6 0 0 1-.6.6H2.6a.6.6 0 0 1-.6-.6V4.6a.6.6 0 0 1 .6-.6h18.8a.6.6 0 0 1 .6.6M8.5 21.5L12 18l3.5 3.5M12 2v2m-3 8v2m3-4v4m3-6v6" />
 </svg>
 
 export const fileUpload = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">

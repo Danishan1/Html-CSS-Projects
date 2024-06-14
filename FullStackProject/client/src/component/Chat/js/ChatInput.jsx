@@ -9,6 +9,7 @@ const ChatInput = ({ onSendMessage }) => {
   const [showPlus, setShowPlus] = useState(false);
   const textareaRef = useRef(null);
   const addRef = useRef(null);
+  const showPlusRef = useRef(null);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -18,7 +19,12 @@ const ChatInput = ({ onSendMessage }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (addRef.current && !addRef.current.contains(event.target)) {
+      if (
+        addRef.current &&
+        !addRef.current.contains(event.target) &&
+        showPlusRef.current &&
+        !showPlusRef.current.contains(event.target)
+      ) {
         setShowPlus(false);
       }
     };
@@ -46,7 +52,7 @@ const ChatInput = ({ onSendMessage }) => {
 
   return (
     <div className={style.chatInputContainer}>
-      <div className={showPlusClass}>
+      <div className={showPlusClass} ref={showPlusRef}>
         <PlusButton />
       </div>
       <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)}>
