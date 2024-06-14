@@ -10,6 +10,7 @@ import {
   reminder,
   payment,
   media,
+  directShare,
 } from "../helper/PlusButtonIcons";
 
 const PlusButton = () => {
@@ -33,6 +34,11 @@ const PlusButton = () => {
       <IconSetter
         icon={fileUpload}
         name={"Document"}
+        clickHandle={() => console.log("Document")}
+      />
+      <IconSetter
+        icon={directShare}
+        name={"Direct Share"}
         clickHandle={() => console.log("Document")}
       />
       <IconSetter
