@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import style from "../css/ChatBox.module.css";
-import Chat from "./MsgBox";
+import Chat from "./GroupMsgBox";
 import CenteredDateDisplay from "./CenteredDateDisplay";
 import ChatInput from "./ChatInput";
 import ContactChat from "./ContactChat";
 
-export default function ChatBox() {
+export default function GroupChat() {
   const [chats, setChats] = useState([
     {
       sender: { name: "Danishan", dp: "../../img/defaultDp.jpg" },
@@ -120,7 +120,7 @@ export default function ChatBox() {
 
   return (
     <div className={style.chatBox}>
-      <div className={style.header}>Personal Chat</div>
+      <div className={style.header}>Group Chat</div>
       <div className={style.chatArea}>
         {chats.map((chat, index) => (
           <React.Fragment key={index}>

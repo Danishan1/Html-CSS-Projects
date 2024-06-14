@@ -12,7 +12,7 @@ import {
   media,
 } from "../helper/PlusButtonIcons";
 
-const PlusButton = ({}) => {
+const PlusButton = () => {
   return (
     <div className={style.plusButton}>
       <IconSetter

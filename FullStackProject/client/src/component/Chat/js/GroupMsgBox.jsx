@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import style from "../css/MsgBox.module.css";
+import defaultDp from "./defaultDp.jpg";
 
 const Chat = ({ currentChat, previousChat }) => {
   const isSameSender =
@@ -16,19 +17,29 @@ const Chat = ({ currentChat, previousChat }) => {
   const chatBoxClasses = `${chatBoxIsSent} ${chatBoxSendSender}`;
 
   return (
-    <div className={style.chats}>
-      <div className={chatBoxClasses}>
-        <div className={style.content}>
-          <MessageText message={currentChat.message} />
-          <IdDateTime idDateTime={currentChat.idDateTime} />
-        </div>
-        <ShareIcon />
+    <div className={chatBoxClasses}>
+      <div className={style.content}>
+        {!isSameSender && <SenderInfo sender={currentChat.sender} />}
+        <MessageText message={currentChat.message} />
+        <IdDateTime idDateTime={currentChat.idDateTime} />
       </div>
+      <ShareIcon />
     </div>
   );
 };
 
 // Helper Components ##################################################################
+
+const SenderInfo = ({ sender }) => (
+  <div className={style.senderInfo}>
+    <div className={style.dp}>
+      <a href="www.google.com">
+        <img src={defaultDp} height={40} alt="Profile" />
+      </a>
+    </div>
+    <div className={style.name}>{sender.name}</div>
+  </div>
+);
 
 const MessageText = ({ message }) => (
   <div className={style.msgText}>{message}</div>
@@ -69,6 +80,10 @@ Chat.propTypes = {
     isSent: PropTypes.bool.isRequired,
   }).isRequired,
   previousChat: PropTypes.object,
+};
+
+SenderInfo.propTypes = {
+  sender: PropTypes.object.isRequired,
 };
 
 MessageText.propTypes = {
