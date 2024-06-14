@@ -1,0 +1,5 @@
+.meetingBox{
+    border: 1px solid red;
+    min-height: 250px;
+    max-height: 400px;
+}
