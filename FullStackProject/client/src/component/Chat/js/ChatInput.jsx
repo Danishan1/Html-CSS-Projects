@@ -1,27 +1,35 @@
 import React, { useState, useRef, useEffect } from "react";
 import style from "../css/ChatInput.module.css"; // Adjust the path to your CSS file
+import { handleKeyDown } from "../helper/handleKeys";
+import { adjustTextareaHeight } from "../helper/handleTextAreaHeight";
 
 const ChatInput = ({ onSendMessage }) => {
   const [message, setMessage] = useState("");
+  const [showPlus, setShowPlus] = useState(false);
   const textareaRef = useRef(null);
+  const addRef = useRef(null);
 
   useEffect(() => {
     if (textareaRef.current) {
-      adjustTextareaHeight();
+      adjustTextareaHeight(textareaRef);
     }
   }, [message]);
 
-  const adjustTextareaHeight = () => {
-    const textarea = textareaRef.current;
-    textarea.style.height = "auto"; // Reset height to auto to calculate the scroll height correctly
-    if (textarea.scrollHeight > 400) {
-      textarea.style.height = "400px";
-      textarea.style.overflowY = "scroll";
-    } else {
-      textarea.style.height = `${textarea.scrollHeight}px`;
-      textarea.style.overflowY = "hidden";
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        addRef.current &&
+        !addRef.current.contains(event.target) 
+      ) {
+        setShowPlus(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     setMessage(e.target.value);
@@ -34,27 +42,22 @@ const ChatInput = ({ onSendMessage }) => {
     }
   };
 
-  const handleKeyDown = (event) => {
-    // Check if Shift + Enter is pressed
-    if (event.key === "Enter" && event.shiftKey) {
-      setMessage((prevMessage) => prevMessage + "\n");
-      event.preventDefault(); // Prevent default Enter behavior (newline)
-    }
-  };
+  const showPlusClass = showPlus
+    ? `${style.showPlus} ${style.show}`
+    : style.showPlus;
 
   return (
     <div className={style.chatInputContainer}>
-      <div className={style.add}>
-        <a href="www.google.com">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-          >
-            <path fill="black" d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4z" />
-          </svg>
-        </a>
+      <div className={showPlusClass}>Para</div>
+      <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)} >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <path fill="black" d="M13 4v7h7v2h-7v7h-2v-7H4v-2h7V4z" />
+        </svg>
       </div>
 
       <textarea
@@ -63,7 +66,7 @@ const ChatInput = ({ onSendMessage }) => {
         ref={textareaRef}
         value={message}
         onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
+        onKeyDown={(e) => handleKeyDown(e, setMessage, handleSendMessage)}
         className={style.inputField}
         style={{ resize: "none", overflow: "hidden" }}
       />
