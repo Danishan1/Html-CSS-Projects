@@ -6,6 +6,10 @@ import InputField from "../../Registration/js/InputField";
 import CustomDropdown from "../../Registration/helper/CustomDropdown";
 import { Button } from "../../Registration/js/Button";
 import AlertContainer from "../../Registration/js/AlertContainer";
+import {
+  calculateDuration,
+  compareTimes,
+} from "../../Registration/helper/WorkingWithTime";
 
 export const MeetingBox = ({ setMeetingData }) => {
   const [meetingDate, setMeetingDate] = useState(new Date());
@@ -34,25 +38,71 @@ export const MeetingBox = ({ setMeetingData }) => {
     }
   };
 
-  const handleShcedule = () => {
-    if (title === "" && purpose === "" && location === "")
-      showAlert("Title, Purpose, Location must not Empty", "error");
-    else {
-      if (title === "") showAlert("Title must not Empty", "error");
-      if (purpose === "") showAlert("Purpose must not Empty", "error");
-      if (location === "") showAlert("Location must not Empty", "error");
+  const handleSchedule = () => {
+    let hasError = false;
+
+    if (title === "" && purpose === "" && location === "") {
+      showAlert("Title, Purpose, Location must not be empty.", "error");
+      hasError = true;
+    } else {
+      if (title === "") {
+        showAlert("Title must not be empty.", "error");
+        hasError = true;
+      }
+      if (purpose === "") {
+        showAlert("Purpose must not be empty.", "error");
+        hasError = true;
+      }
+      if (location === "") {
+        showAlert("Location must not be empty.", "error");
+        hasError = true;
+      }
     }
-    setMeetingData({
-      meetingDate: meetingDate,
-      startTime: startTime,
-      endTime: endTime,
-      title: title,
-      purpose: purpose,
-      recurrence: recurrence,
-      notification: notification,
-      participants: participants,
-      location: location,
-    });
+
+    if (startTime === "") {
+      showAlert("Start time must not be empty.", "error");
+      hasError = true;
+    }
+
+    if (endTime === "") {
+      showAlert("End time must not be empty.", "error");
+      hasError = true;
+    }
+
+    if (
+      startTime !== "" &&
+      endTime !== "" &&
+      !compareTimes(startTime, endTime)
+    ) {
+      showAlert("End time must be after start time.", "error");
+      hasError = true;
+    }
+
+    const duration = calculateDuration(startTime, endTime);
+
+    if (duration.hours === 0 && duration.minutes < 15) {
+      showAlert("Meeting should be at least 15 minutes long.", "error");
+      hasError = true;
+    }
+
+    if ((duration.hours === 5 && duration.minutes > 0) || duration.hours > 5) {
+      showAlert("Meeting should be at most 5 hours long.", "error");
+      hasError = true;
+    }
+
+    if (!hasError) {
+      setMeetingData({
+        meetingDate: meetingDate,
+        startTime: startTime,
+        endTime: endTime,
+        title: title,
+        purpose: purpose,
+        recurrence: recurrence,
+        notification: notification,
+        participants: participants,
+        location: location,
+      });
+    }
   };
 
   return (
@@ -130,7 +180,7 @@ export const MeetingBox = ({ setMeetingData }) => {
           <div className={styles.btnContainer}>
             <Button
               text={"Schedule"}
-              onClick={handleShcedule}
+              onClick={handleSchedule}
               style={{ width: "150px" }}
             />
           </div>
