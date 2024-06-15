@@ -3,9 +3,9 @@ import styles from "../css/InputTime.module.css";
 import CustomDropdown from "../helper/CustomDropdown";
 
 const TimeInput = ({ label, onTimeChange }) => {
-  const [hours, setHours] = useState("12");
-  const [minutes, setMinutes] = useState("00");
-  const [period, setPeriod] = useState("AM");
+  const [hours, setHours] = useState("--");
+  const [minutes, setMinutes] = useState("--");
+  const [period, setPeriod] = useState("--");
 
   const handleHoursChange = (value) => {
     setHours(value);
@@ -23,8 +23,10 @@ const TimeInput = ({ label, onTimeChange }) => {
   };
 
   const notifyTimeChange = (hours, minutes, period) => {
-    const formattedTime = `${hours}:${minutes} ${period}`;
-    onTimeChange(formattedTime);
+    if (hours !== "--" && minutes !== "--" && period !== "--") {
+      const formattedTime = `${hours}:${minutes} ${period}`;
+      onTimeChange(formattedTime);
+    }
   };
 
   const hoursOptions = [...Array(12).keys()].map((h) =>

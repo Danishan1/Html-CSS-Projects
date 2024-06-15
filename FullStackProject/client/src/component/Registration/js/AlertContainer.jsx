@@ -4,9 +4,14 @@ import style from "../css/Alert.module.css";
 
 const AlertContainer = ({ alertContainer, setAlertContainer }, ref) => {
   const addAlert = (message, type) => {
+    const uniqueId = Date.now() + Math.random().toString(36).substring(2, 9);
     setAlertContainer((prevAlerts) => [
       ...prevAlerts,
-      { id: Date.now(), message, type },
+      {
+        id: uniqueId,
+        message,
+        type,
+      },
     ]);
   };
 
@@ -39,19 +44,19 @@ export default forwardRef(AlertContainer);
 
 /**
  * 
- * Use it 
- * 
- * const alertRef = useRef(null);
- * 
- * const showAlert = (message, type) => {
- *   if (alertRef.current) {
- *     alertRef.current.addAlert(message, type);
- *   }
- * };
- * 
- * showAlert("This is an error alert!", "error")
- * 
- * <AlertContainer
+   Use it 
+   
+   const alertRef = useRef(null);
+   
+   const showAlert = (message, type) => {
+     if (alertRef.current) {
+       alertRef.current.addAlert(message, type);
+     }
+   };
+   
+   showAlert("This is an error alert!", "error")
+   
+   <AlertContainer
         ref={alertRef}
         setAlertContainer={setAlertContainer}
         alertContainer={alertContainer}

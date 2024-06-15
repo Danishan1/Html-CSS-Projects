@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../css/MeetingBox.module.css";
 import { Calendar } from "../../Calender/js/Calendar";
 import InputTime from "../../Registration/js/InputTime";
@@ -17,7 +17,8 @@ export const MeetingBox = ({ setMeetingData }) => {
   const [notification, setNotification] = useState("30 minutes before");
   const [participants, setParticipants] = useState("");
   const [location, setLocation] = useState("");
-  // const [alertContainer, setAlertContainer] = useState([]);
+  const [alertContainer, setAlertContainer] = useState([]);
+  const alertRef = useRef(null);
 
   const recurrenceOptions = ["None", "Daily", "Weekly", "Monthly"];
   const notificationOptions = [
@@ -27,28 +28,37 @@ export const MeetingBox = ({ setMeetingData }) => {
     "1 hour before",
   ];
 
+  const showAlert = (message, type) => {
+    if (alertRef.current) {
+      alertRef.current.addAlert(message, type);
+    }
+  };
+
+
   const handleShcedule = () => {
-    if (title === "")
-      setMeetingData({
-        meetingDate: meetingDate,
-        startTime: startTime,
-        endTime: endTime,
-        title: title,
-        purpose: purpose,
-        recurrence: recurrence,
-        notification: notification,
-        participants: participants,
-        location: location,
-      });
+    if (title === "") showAlert("Title must not Empty", "error");
+    if (purpose === "") showAlert("Purpose must not Empty", "error");
+    if (location === "") showAlert("Location must not Empty", "error");
+    setMeetingData({
+      meetingDate: meetingDate,
+      startTime: startTime,
+      endTime: endTime,
+      title: title,
+      purpose: purpose,
+      recurrence: recurrence,
+      notification: notification,
+      participants: participants,
+      location: location,
+    });
   };
 
   return (
     <div className={styles.meetingBox}>
-      {/* <AlertContainer
+      <AlertContainer
         ref={alertRef}
         setAlertContainer={setAlertContainer}
         alertContainer={alertContainer}
-      /> */}
+      />
       <div className={styles.meeting}>
         <div className={styles.titleCalenderTime}>
           <div className={styles.title}>
