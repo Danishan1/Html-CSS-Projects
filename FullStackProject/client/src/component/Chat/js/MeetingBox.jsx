@@ -91,17 +91,17 @@ export const MeetingBox = ({ setMeetingData }) => {
     }
 
     if (!hasError) {
-      showAlert("Great, Let's Review before Schedule!", "info");
+      showAlert("Great, Let's review before schedule!", "info");
       setMeetingData({
-        meetingDate: meetingDate,
-        startTime: startTime,
-        endTime: endTime,
-        title: title,
-        purpose: purpose,
-        recurrence: recurrence,
-        notification: notification,
-        participants: participants,
-        location: location,
+        meetingDate,
+        startTime,
+        endTime,
+        title,
+        purpose,
+        recurrence,
+        notification,
+        participants,
+        location,
       });
     }
   };
