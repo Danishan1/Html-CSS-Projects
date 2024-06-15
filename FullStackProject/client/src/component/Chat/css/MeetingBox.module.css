@@ -3,12 +3,23 @@
     min-height: 300px;
     max-height: 400px;
     padding: 20px;
+    overflow: auto;
 }
 
-.box1 {
-    width: 200px;
+.calenderTime {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
+    border: 1px solid red;
+    width: 400px;
 }
-.box2 {
+
+.calender {
     height: 200px;
+    width: 200px;
+}
+
+.time {
+
 }

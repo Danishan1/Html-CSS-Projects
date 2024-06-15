@@ -28,3 +28,18 @@ const InputField = ({
 };
 
 export default InputField;
+
+/*
+
+<InputField
+        label="Email"
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required={true}
+      />
+
+
+
+*/
