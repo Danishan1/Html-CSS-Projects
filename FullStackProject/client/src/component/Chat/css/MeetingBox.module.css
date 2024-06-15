@@ -5,6 +5,7 @@
     overflow: auto;
     display: flex;
     justify-content: center;
+    border-top: 2px solid var(--colorGray3);
 }
 
 .meeting {

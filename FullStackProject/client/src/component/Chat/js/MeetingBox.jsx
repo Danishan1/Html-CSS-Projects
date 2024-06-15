@@ -5,13 +5,9 @@ import InputTime from "../../Registration/js/InputTime";
 import InputField from "../../Registration/js/InputField";
 import CustomDropdown from "../../Registration/helper/CustomDropdown";
 import { Button } from "../../Registration/js/Button";
+import AlertContainer from "../../Registration/js/AlertContainer";
 
-export const MeetingBox = ({ handleData }) => {
-  const handleDateClick = (date) => {
-    console.log("Date clicked:", date);
-    // Add your custom logic here
-  };
-
+export const MeetingBox = ({ setMeetingData }) => {
   const [meetingDate, setMeetingDate] = useState(new Date());
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
@@ -21,6 +17,7 @@ export const MeetingBox = ({ handleData }) => {
   const [notification, setNotification] = useState("30 minutes before");
   const [participants, setParticipants] = useState("");
   const [location, setLocation] = useState("");
+  // const [alertContainer, setAlertContainer] = useState([]);
 
   const recurrenceOptions = ["None", "Daily", "Weekly", "Monthly"];
   const notificationOptions = [
@@ -30,10 +27,28 @@ export const MeetingBox = ({ handleData }) => {
     "1 hour before",
   ];
 
-  const handleShcedule = () => {};
+  const handleShcedule = () => {
+    if (title === "")
+      setMeetingData({
+        meetingDate: meetingDate,
+        startTime: startTime,
+        endTime: endTime,
+        title: title,
+        purpose: purpose,
+        recurrence: recurrence,
+        notification: notification,
+        participants: participants,
+        location: location,
+      });
+  };
 
   return (
     <div className={styles.meetingBox}>
+      {/* <AlertContainer
+        ref={alertRef}
+        setAlertContainer={setAlertContainer}
+        alertContainer={alertContainer}
+      /> */}
       <div className={styles.meeting}>
         <div className={styles.titleCalenderTime}>
           <div className={styles.title}>
@@ -96,7 +111,9 @@ export const MeetingBox = ({ handleData }) => {
               />
             </div>
           </div>
-          <div className={styles.Participate}>Add Participant</div>
+          <div onClick={setParticipants} className={styles.Participate}>
+            Add Participant
+          </div>
           <div className={styles.btnContainer}>
             <Button
               text={"Schedule"}
