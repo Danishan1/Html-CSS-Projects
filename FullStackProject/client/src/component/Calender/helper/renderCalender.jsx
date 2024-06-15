@@ -17,6 +17,12 @@ export const RenderCalendar = ({ date, handleDateClick }) => {
     );
   }
 
+  const formateDate = (date) =>
+    `${date.getDate().toString().padStart(2, "0")}-${date
+      .getMonth()
+      .toString()
+      .padStart(2, "0")}-${date.getFullYear()}`;
+
   for (let i = 1; i <= lastDate; i++) {
     const cellDate = new Date(year, month, i);
     const isCurrentDate = cellDate.toDateString() === today.toDateString();
@@ -35,7 +41,7 @@ export const RenderCalendar = ({ date, handleDateClick }) => {
         onClick={
           isAfterCurrentDate || isCurrentDate
             ? () => {
-                handleDateClick(cellDate);
+                handleDateClick(formateDate(cellDate));
                 setClicked(cellDate);
               }
             : undefined

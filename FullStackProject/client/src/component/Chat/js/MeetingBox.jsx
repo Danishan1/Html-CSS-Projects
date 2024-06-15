@@ -91,6 +91,7 @@ export const MeetingBox = ({ setMeetingData }) => {
     }
 
     if (!hasError) {
+      showAlert("Great, Let's Review before Schedule!", "info");
       setMeetingData({
         meetingDate: meetingDate,
         startTime: startTime,
