@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../css/CustomDropdown.module.css";
 
-const CustomDropdown = ({ options, value, onChange }) => {
+const CustomDropdown = ({ options, value, onChange, specialStyle = {} }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAbove, setIsAbove] = useState(false);
   const dropdownRef = useRef(null);
@@ -37,7 +37,7 @@ const CustomDropdown = ({ options, value, onChange }) => {
   };
 
   return (
-    <div className={styles.dropdown} ref={dropdownRef}>
+    <div className={styles.dropdown} ref={dropdownRef} style={specialStyle}>
       <div className={styles.dropdownSelected} onClick={toggleDropdown}>
         {value}
       </div>
