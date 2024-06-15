@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../css/CalendarBoxSmall.module.css";
 import { leftS, rightS } from "../helper/Icons";
-import { renderCalendar } from "../helper/renderCalender";
+import RenderCalendar from "../helper/RenderCalender";
 import {
   handleNextMonth,
   handlePrevMonthRestrict,
@@ -10,7 +10,6 @@ import {
 export const Calendar = ({ handleData, handleDateClick }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  
   return (
     <div className={styles.calendarBox}>
       <div className={styles.calendarHeader}>
@@ -50,7 +49,10 @@ export const Calendar = ({ handleData, handleDateClick }) => {
           <div>S</div>
         </div>
         <div className={styles.calendarDates}>
-          {renderCalendar(currentDate, handleDateClick)}
+          <RenderCalendar
+            date={currentDate}
+            handleDateClick={handleDateClick}
+          />
         </div>
       </div>
     </div>

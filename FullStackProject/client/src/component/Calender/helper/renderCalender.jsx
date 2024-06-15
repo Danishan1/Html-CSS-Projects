@@ -1,5 +1,8 @@
+import { useState } from "react";
 import styles from "../css/CalendarBoxSmall.module.css";
-export const renderCalendar = (date, handleDateClick) => {
+export const RenderCalendar = ({ date, handleDateClick }) => {
+  const [clicked, setClicked] = useState(new Date());
+
   const calendarDates = [];
   const month = date.getMonth();
   const year = date.getFullYear();
@@ -19,18 +22,22 @@ export const renderCalendar = (date, handleDateClick) => {
     const isCurrentDate = cellDate.toDateString() === today.toDateString();
     const isBeforeCurrentDate = cellDate < today;
     const isAfterCurrentDate = cellDate > today;
+    const isClicked = cellDate.toDateString() === clicked.toDateString();
 
     calendarDates.push(
       <div
         key={i}
         className={`${styles.contentBox} ${
-          isCurrentDate ? styles.currentDate : ""
-        } ${isBeforeCurrentDate ? styles.beforeCurDate : ""} ${
-          isAfterCurrentDate ? styles.afterCurDate : ""
-        }`}
+          isClicked ? styles.currentDate : ""
+        } ${
+          isBeforeCurrentDate && !isCurrentDate ? styles.beforeCurDate : ""
+        } ${isAfterCurrentDate || isCurrentDate ? styles.afterCurDate : ""}`}
         onClick={
           isAfterCurrentDate || isCurrentDate
-            ? () => handleDateClick(cellDate)
+            ? () => {
+                handleDateClick(cellDate);
+                setClicked(cellDate);
+              }
             : undefined
         }
       >
@@ -39,5 +46,7 @@ export const renderCalendar = (date, handleDateClick) => {
     );
   }
 
-  return calendarDates;
+  return <>{calendarDates}</>;
 };
+
+export default RenderCalendar;

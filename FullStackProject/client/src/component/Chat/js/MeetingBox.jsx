@@ -34,11 +34,14 @@ export const MeetingBox = ({ setMeetingData }) => {
     }
   };
 
-
   const handleShcedule = () => {
-    if (title === "") showAlert("Title must not Empty", "error");
-    if (purpose === "") showAlert("Purpose must not Empty", "error");
-    if (location === "") showAlert("Location must not Empty", "error");
+    if (title === "" && purpose === "" && location === "")
+      showAlert("Title, Purpose, Location must not Empty", "error");
+    else {
+      if (title === "") showAlert("Title must not Empty", "error");
+      if (purpose === "") showAlert("Purpose must not Empty", "error");
+      if (location === "") showAlert("Location must not Empty", "error");
+    }
     setMeetingData({
       meetingDate: meetingDate,
       startTime: startTime,
