@@ -29,8 +29,9 @@
     align-items: center;
 }
 
+/* 
 .setIcon p:hover {
     cursor: pointer;
     text-decoration: underline;
     color: var(--colorBlue);
-}
+} */
