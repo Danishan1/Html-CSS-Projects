@@ -1,0 +1,57 @@
+.chatApp {
+    display: flex;
+}
+
+.sectionA {
+    width: 5vw;
+}
+
+.sectionB {
+    width: 55vw;
+}
+
+.sectionC {
+    width: 40vw;
+}
+
+@media (width < 1200px) {
+
+    .sectionB {
+        width: 45vw;
+    }
+
+    .sectionC {
+        width: 50vw;
+    }
+}
+
+@media (width < 800px) {
+
+    .sectionA {
+        display: none;
+    }
+
+    .sectionB {
+        width: 10vw;
+    }
+
+    .sectionC {
+        width: 90vw;
+    }
+}
+
+@media (width < 600px) {
+
+    .sectionA {
+        display: none;
+    }
+
+    .sectionB {
+        display: none;
+        width: 10vw;
+    }
+
+    .sectionC {
+        width: 100vw;
+    }
+}
