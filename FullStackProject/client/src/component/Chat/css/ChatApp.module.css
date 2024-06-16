@@ -3,14 +3,17 @@
 }
 
 .sectionA {
+    border: 1px solid #685b36;
     width: 5vw;
 }
 
 .sectionB {
+    border: 1px solid #363968;
     width: 55vw;
 }
 
 .sectionC {
+    border: 1px solid #36684c;
     width: 40vw;
 }
 

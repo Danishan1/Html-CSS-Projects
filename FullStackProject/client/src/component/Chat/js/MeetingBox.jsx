@@ -114,7 +114,7 @@ export const MeetingBox = ({ setMeetingData }) => {
         alertContainer={alertContainer}
       />
       <div className={styles.meeting}>
-        <div className={styles.titleCalenderTime}>
+        <div className={styles.container}>
           <div className={styles.title}>
             <InputField
               label="Title"
@@ -136,17 +136,15 @@ export const MeetingBox = ({ setMeetingData }) => {
           </div>
         </div>
 
-        <div className={styles.titleCalenderTime}>
-          <div className={styles.title}>
-            <InputField
-              label="Purpose"
-              type="text"
-              name="purpose"
-              value={purpose}
-              onChange={(e) => setPurpose(e.target.value)}
-              required={true}
-            />
-          </div>
+        <div className={styles.container}>
+          <InputField
+            label="Purpose"
+            type="text"
+            name="purpose"
+            value={purpose}
+            onChange={(e) => setPurpose(e.target.value)}
+            required={true}
+          />
 
           <InputField
             label="Location"
