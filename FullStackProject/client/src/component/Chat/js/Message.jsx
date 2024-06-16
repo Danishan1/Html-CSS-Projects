@@ -10,9 +10,14 @@ const Message = ({ msgData, typeOfMsg }) => {
     case "text":
       content = handleText(msgData);
       break;
+    case "meet":
+      content = msgData.map((item, index) => {
+      });
 
     default:
-    content = "Haven't got type of Messaage, kindly contact to the organisation."
+      content = handleText(
+        "Haven't got type of Messaage, kindly contact to the organisation."
+      );
   }
 
   return <>{content}</>;
