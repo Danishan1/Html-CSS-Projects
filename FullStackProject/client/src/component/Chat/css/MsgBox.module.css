@@ -58,11 +58,7 @@
   align-items: center;
 }
 
-.msgText {
-  display: flex;
-  justify-content: left;
-  padding: 5px 20px;
-}
+
 
 .idDateTime {
   display: flex;

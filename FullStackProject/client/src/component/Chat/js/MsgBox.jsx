@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import style from "../css/MsgBox.module.css";
+import Message from "./Message";
 
 const Chat = ({ currentChat, previousChat }) => {
   const isSameSender =
@@ -19,7 +20,7 @@ const Chat = ({ currentChat, previousChat }) => {
     <div className={style.chats}>
       <div className={chatBoxClasses}>
         <div className={style.content}>
-          <MessageText message={currentChat.message} />
+          <Message Data={currentChat.message} typeOfMsg={"text"}/>
           <IdDateTime idDateTime={currentChat.idDateTime} />
         </div>
         <ShareIcon />
@@ -30,9 +31,6 @@ const Chat = ({ currentChat, previousChat }) => {
 
 // Helper Components ##################################################################
 
-const MessageText = ({ message }) => (
-  <div className={style.msgText}>{message}</div>
-);
 
 const IdDateTime = ({ idDateTime }) => (
   <div className={style.idDateTime}>
@@ -71,9 +69,6 @@ Chat.propTypes = {
   previousChat: PropTypes.object,
 };
 
-MessageText.propTypes = {
-  message: PropTypes.string.isRequired,
-};
 
 IdDateTime.propTypes = {
   idDateTime: PropTypes.object.isRequired,
