@@ -20,7 +20,7 @@ const Chat = ({ currentChat, previousChat }) => {
     <div className={style.chats}>
       <div className={chatBoxClasses}>
         <div className={style.content}>
-          <Message Data={currentChat.message} typeOfMsg={"text"}/>
+          <Message msgData={currentChat.msgData} typeOfMsg={"text"}/>
           <IdDateTime idDateTime={currentChat.idDateTime} />
         </div>
         <ShareIcon />

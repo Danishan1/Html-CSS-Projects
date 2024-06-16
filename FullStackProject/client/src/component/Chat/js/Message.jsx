@@ -3,12 +3,16 @@ import ChatText from "./ChatText";
 
 const handleText = (Data) => <ChatText message={Data} />;
 
-const Message = ({ Data, typeOfMsg }) => {
+const Message = ({ msgData, typeOfMsg }) => {
   let content = "Default Text";
 
   switch (typeOfMsg) {
     case "text":
-      content = handleText(Data);
+      content = handleText(msgData);
+      break;
+
+    default:
+    content = "Haven't got type of Messaage, kindly contact to the organisation."
   }
 
   return <>{content}</>;
