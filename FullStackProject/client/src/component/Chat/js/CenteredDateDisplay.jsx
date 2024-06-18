@@ -55,10 +55,17 @@ const CenteredDateDisplay = ({ newDate }) => {
         display : "flex",
         justifyContent : "center",
         fontSize: "0.9em",
-        margin: "5px 0"
+        margin: "15px 0", 
       }}
     >
-      <p>{displayDate}</p>
+      <p
+      style={{
+        backgroundColor: "var(--colorGray1)", 
+        padding: "5px 15px", 
+        borderRadius: "8px",
+        fontWeight: "var(--boldL2)",
+      }}
+      >{displayDate}</p>
     </div>
   ) : null;
 };
