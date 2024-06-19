@@ -7,8 +7,10 @@ import { ForwardedBox } from "./ForwardedBox";
 import ChatsData from "../helper/ChatsData";
 
 export default function ChatBox() {
+  // Used to store the chats
   const [chats, setChats] = useState(ChatsData);
 
+  // for setting the latest date
   const [latestDate, setLatestDate] = useState(null);
 
   useEffect(() => {
