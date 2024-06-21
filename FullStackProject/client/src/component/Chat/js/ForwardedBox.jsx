@@ -9,8 +9,8 @@ export const ForwardedBox = ({ type }) => {
 
   return (
     <div className={style.forwardedBox}>
-      <MeetingBox setMeetingData={setMeetingData} />
-        {/* <FileUpload /> */}
+      {/* <MeetingBox setMeetingData={setMeetingData} /> */}
+        <FileUpload />
     
     </div>
   );

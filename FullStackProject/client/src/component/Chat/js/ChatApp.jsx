@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../css/ChatApp.module.css";
 import ChatBox from "./ChatBox";
+import ChatBoxDrop from "./ChatBoxDrop";
 
 const ChatApp = () => {
   return (
@@ -8,7 +9,7 @@ const ChatApp = () => {
       <div className={styles.sectionA}></div>
       <div className={styles.sectionB}></div>
       <div className={styles.sectionC}>
-        <ChatBox />
+        <ChatBoxDrop />
       </div>
     </div>
   );
