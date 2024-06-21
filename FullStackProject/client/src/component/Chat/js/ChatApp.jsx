@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../css/ChatApp.module.css";
-import ChatBox from "./ChatBox";
+// import ChatBox from "./ChatBox";
 import ChatBoxDrop from "./ChatBoxDrop";
 
 const ChatApp = () => {
