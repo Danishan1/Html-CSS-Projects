@@ -19,18 +19,18 @@ export const handleDragOver = (e) => {
   e.stopPropagation();
 };
 
-export const handleDrop = (e, setIsDragging, setFile) => {
+export const handleDrop = (e, setIsDragging, setFiles) => {
   e.preventDefault();
   e.stopPropagation();
   setIsDragging(false);
+
   if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-    const droppedFile = e.dataTransfer.files[0];
-    setFile(droppedFile);
-    console.log("File dropped:", droppedFile);
+    const droppedFiles = Array.from(e.dataTransfer.files);
+    setFiles(droppedFiles);
+    console.log("Files dropped:", droppedFiles);
     e.dataTransfer.clearData();
   }
 };
-
 
 export const handleDragEnterWrapper = (e, setIsDragging, dragCounter) => {
   e.preventDefault();
