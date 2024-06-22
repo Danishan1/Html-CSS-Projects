@@ -21,11 +21,14 @@ import {
 
 const PlusButton = () => {
   const fileInputRef = useRef(null);
-  const [fileType, setFileType] = useState("*/*");
 
   const onfileClick = (type) => {
-    setFileType(getFileType(type));
-    handleFileClick(fileInputRef);
+    const newFileType = getFileType(type);
+    console.log(newFileType);
+    if (fileInputRef.current) {
+      fileInputRef.current.accept = newFileType;
+      handleFileClick(fileInputRef);
+    }
   };
 
   return (
@@ -37,7 +40,6 @@ const PlusButton = () => {
         style={{ display: "none" }}
         onChange={handleFileChange}
         multiple
-        accept={fileType}
       />
 
       {/* Different Options */}
