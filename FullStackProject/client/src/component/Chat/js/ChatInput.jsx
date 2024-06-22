@@ -67,7 +67,7 @@ const ChatInput = ({ onSendMessage }) => {
       </div>
 
       <textarea
-        placeholder="Type your message..."
+        placeholder="Type your message"
         id="adjustableInput"
         ref={textareaRef}
         value={message}

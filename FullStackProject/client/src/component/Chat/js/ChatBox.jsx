@@ -48,7 +48,7 @@ export default function ChatBox() {
           <ForwardedBox type={"Pending - Forwarded Box"} />
         </div>
         <div className={style.chatInput}>
-          <ChatInput onSendmsgData={() => console.log("Send")} />
+          <ChatInput onSendMessage={() => console.log("Send")} />
         </div>
       </div>
     </div>
