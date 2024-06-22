@@ -19,8 +19,19 @@ import {
   getFileType,
 } from "../helper/plusButton/media";
 
+import AlertContainer from "../../Registration/js/AlertContainer";
+
 const PlusButton = () => {
   const fileInputRef = useRef(null);
+  const alertRef = useRef(null);
+
+  const [alertContainer, setAlertContainer] = useState([]);
+
+  const showAlert = (message, type) => {
+    if (alertRef.current) {
+      alertRef.current.addAlert(message, type);
+    }
+  };
 
   const onfileClick = (type) => {
     const newFileType = getFileType(type);
@@ -38,8 +49,13 @@ const PlusButton = () => {
         type="file"
         ref={fileInputRef}
         style={{ display: "none" }}
-        onChange={handleFileChange}
+        onChange={(e) => handleFileChange(e, showAlert)}
         multiple
+      />
+      <AlertContainer
+        ref={alertRef}
+        setAlertContainer={setAlertContainer}
+        alertContainer={alertContainer}
       />
 
       {/* Different Options */}
