@@ -1,5 +1,3 @@
-
-
 export const handleFileClick = (fileInputRef) => {
     fileInputRef.current.click();
 }

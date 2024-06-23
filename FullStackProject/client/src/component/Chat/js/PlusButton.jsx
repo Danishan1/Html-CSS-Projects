@@ -5,7 +5,6 @@ import {
   meeting,
   note,
   fileUpload,
-  calendar,
   schedule,
   reminder,
   payment,
@@ -21,20 +20,24 @@ import {
 
 import AlertContainer from "../../Registration/js/AlertContainer";
 
-const PlusButton = () => {
+const PlusButton = ({setPlusClickContent}) => {
   const fileInputRef = useRef(null);
   const alertRef = useRef(null);
 
   const [alertContainer, setAlertContainer] = useState([]);
   const [uploadedFile, setUploadedFile] = useState();
 
+
+  const handlePlusClick = () => {
+
+    setPlusClickContent()
+  }
+
   const showAlert = (message, type) => {
     if (alertRef.current) {
       alertRef.current.addAlert(message, type);
     }
   };
-
-  console.log(uploadedFile);
 
   const onfileClick = (type) => {
     const newFileType = getFileType(type);
@@ -70,7 +73,7 @@ const PlusButton = () => {
       <IconSetter
         icon={note}
         name={"Notes"}
-        clickHandle={() => console.log("Notes")}
+        clickHandle={() => showAlert("Adding 'notes' feature will be avaibale soon", "info")}
       />
       <IconSetter
         icon={media}
@@ -88,24 +91,19 @@ const PlusButton = () => {
         clickHandle={() => onfileClick("all")}
       />
       <IconSetter
-        icon={calendar}
-        name={"Calendar"}
-        clickHandle={() => console.log("Calendar")}
-      />
-      <IconSetter
         icon={schedule}
         name={"Schedule"}
-        clickHandle={() => console.log("Schedule")}
+        clickHandle={() => showAlert("Schedule message feature will be avaibale soon", "info")}
       />
       <IconSetter
         icon={reminder}
         name={"Reminder"}
-        clickHandle={() => console.log("Reminder")}
+        clickHandle={() => showAlert("Adding 'Remainder' feature will be avaibale soon", "info")}
       />
       <IconSetter
         icon={payment}
         name={"Payment"}
-        clickHandle={() => console.log("Payment")}
+        clickHandle={() => showAlert("'Payment' feature will be avaibale soon", "info")}
       />
     </div>
   );
