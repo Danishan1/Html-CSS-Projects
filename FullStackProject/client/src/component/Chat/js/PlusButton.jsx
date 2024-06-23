@@ -26,12 +26,15 @@ const PlusButton = () => {
   const alertRef = useRef(null);
 
   const [alertContainer, setAlertContainer] = useState([]);
+  const [uploadedFile, setUploadedFile] = useState();
 
   const showAlert = (message, type) => {
     if (alertRef.current) {
       alertRef.current.addAlert(message, type);
     }
   };
+
+  console.log(uploadedFile);
 
   const onfileClick = (type) => {
     const newFileType = getFileType(type);
@@ -49,7 +52,7 @@ const PlusButton = () => {
         type="file"
         ref={fileInputRef}
         style={{ display: "none" }}
-        onChange={(e) => handleFileChange(e, showAlert)}
+        onChange={(e) => setUploadedFile(handleFileChange(e, showAlert))}
         multiple
       />
       <AlertContainer
