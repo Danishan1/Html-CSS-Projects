@@ -19,19 +19,19 @@ import {
 } from "../helper/plusButton/media";
 
 import AlertContainer from "../../Registration/js/AlertContainer";
+import { handleIconClick } from "../helper/plusButton/handleIconClick";
 
-const PlusButton = ({setPlusClickContent}) => {
+const PlusButton = ({ setPlusClickContent }) => {
   const fileInputRef = useRef(null);
   const alertRef = useRef(null);
 
   const [alertContainer, setAlertContainer] = useState([]);
   const [uploadedFile, setUploadedFile] = useState();
-
+  const [clickedIcon, setClickedIcon] = useState("");
 
   const handlePlusClick = () => {
-
-    setPlusClickContent()
-  }
+    setPlusClickContent();
+  };
 
   const showAlert = (message, type) => {
     if (alertRef.current) {
@@ -68,42 +68,63 @@ const PlusButton = ({setPlusClickContent}) => {
       <IconSetter
         icon={meeting}
         name={"Meeting"}
-        clickHandle={() => console.log("Meeting")}
+        clickHandle={() => setClickedIcon("meeting")}
       />
       <IconSetter
         icon={note}
         name={"Notes"}
-        clickHandle={() => showAlert("Adding 'notes' feature will be avaibale soon", "info")}
+        clickHandle={() => {
+          setClickedIcon("notes");
+          showAlert("Adding 'notes' feature will be avaibale soon", "info");
+        }}
       />
       <IconSetter
         icon={media}
         name={"Media"}
-        clickHandle={() => onfileClick("media")}
+        clickHandle={() => {
+          setClickedIcon("media");
+          onfileClick("media");
+        }}
       />
       <IconSetter
         icon={fileUpload}
         name={"Document"}
-        clickHandle={() => onfileClick("doc")}
+        clickHandle={() => {
+          setClickedIcon("document");
+          onfileClick("doc");
+        }}
       />
       <IconSetter
         icon={directShare}
         name={"Direct Share"}
-        clickHandle={() => onfileClick("all")}
+        clickHandle={() => {
+          setClickedIcon("directShare");
+          onfileClick("all");
+        }}
       />
       <IconSetter
         icon={schedule}
         name={"Schedule"}
-        clickHandle={() => showAlert("Schedule message feature will be avaibale soon", "info")}
+        clickHandle={() => {
+          setClickedIcon("schedule");
+          showAlert("Schedule message feature will be avaibale soon", "info");
+        }}
       />
       <IconSetter
         icon={reminder}
         name={"Reminder"}
-        clickHandle={() => showAlert("Adding 'Remainder' feature will be avaibale soon", "info")}
+        clickHandle={() => {
+          setClickedIcon("reminder");
+          showAlert("Adding 'Remainder' feature will be avaibale soon", "info");
+        }}
       />
       <IconSetter
         icon={payment}
         name={"Payment"}
-        clickHandle={() => showAlert("'Payment' feature will be avaibale soon", "info")}
+        clickHandle={() => {
+          setClickedIcon("payment");
+          showAlert("'Payment' feature will be avaibale soon", "info");
+        }}
       />
     </div>
   );
