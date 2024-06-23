@@ -27,7 +27,6 @@ const PlusButton = ({ setPlusClickContent }) => {
 
   const [alertContainer, setAlertContainer] = useState([]);
   const [uploadedFile, setUploadedFile] = useState();
-  const [clickedIcon, setClickedIcon] = useState("");
 
   const handlePlusClick = () => {
     setPlusClickContent();
@@ -68,13 +67,13 @@ const PlusButton = ({ setPlusClickContent }) => {
       <IconSetter
         icon={meeting}
         name={"Meeting"}
-        clickHandle={() => setClickedIcon("meeting")}
+        clickHandle={() => handleIconClick("meeting")}
       />
       <IconSetter
         icon={note}
         name={"Notes"}
         clickHandle={() => {
-          setClickedIcon("notes");
+          handleIconClick("notes");
           showAlert("Adding 'notes' feature will be avaibale soon", "info");
         }}
       />
@@ -82,7 +81,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={media}
         name={"Media"}
         clickHandle={() => {
-          setClickedIcon("media");
+          handleIconClick("media");
           onfileClick("media");
         }}
       />
@@ -90,7 +89,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={fileUpload}
         name={"Document"}
         clickHandle={() => {
-          setClickedIcon("document");
+          handleIconClick("document");
           onfileClick("doc");
         }}
       />
@@ -98,7 +97,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={directShare}
         name={"Direct Share"}
         clickHandle={() => {
-          setClickedIcon("directShare");
+          handleIconClick("directShare");
           onfileClick("all");
         }}
       />
@@ -106,7 +105,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={schedule}
         name={"Schedule"}
         clickHandle={() => {
-          setClickedIcon("schedule");
+          handleIconClick("schedule");
           showAlert("Schedule message feature will be avaibale soon", "info");
         }}
       />
@@ -114,7 +113,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={reminder}
         name={"Reminder"}
         clickHandle={() => {
-          setClickedIcon("reminder");
+          handleIconClick("reminder");
           showAlert("Adding 'Remainder' feature will be avaibale soon", "info");
         }}
       />
@@ -122,7 +121,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={payment}
         name={"Payment"}
         clickHandle={() => {
-          setClickedIcon("payment");
+          handleIconClick("payment");
           showAlert("'Payment' feature will be avaibale soon", "info");
         }}
       />
