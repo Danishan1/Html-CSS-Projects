@@ -27,6 +27,7 @@ const ChatInput = ({ onSendMessage }) => {
         !showPlusRef.current.contains(event.target)
       ) {
         setShowPlus(false);
+        setPlusClickContent(null);
       }
     };
 

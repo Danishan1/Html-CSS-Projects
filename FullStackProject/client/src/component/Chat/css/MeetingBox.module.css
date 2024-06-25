@@ -1,11 +1,13 @@
 .meetingBox {
-    min-height: 300px;
-    max-height: 460px;
+    /* min-height: 300px; */
+    /* max-height: 460px; */
     padding: 20px;
     overflow: auto;
     display: flex;
     justify-content: center;
-    border-top: 2px solid var(--colorGray3);
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .meeting {
