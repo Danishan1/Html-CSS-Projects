@@ -4,17 +4,17 @@
 
 .sectionA {
     border: 1px solid #685b36;
-    width: 5vw;
+    width:4vw;
 }
 
 .sectionB {
     border: 1px solid #363968;
-    width: 55vw;
+    width: 41vw;
 }
 
 .sectionC {
+    width: 55vw;
     /* border: 1px solid #36684c; */
-    width: 40vw;
 }
 
 @media (width < 1200px) {
