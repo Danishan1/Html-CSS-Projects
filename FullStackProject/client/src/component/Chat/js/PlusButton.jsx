@@ -67,7 +67,7 @@ const PlusButton = ({ setPlusClickContent }) => {
       <IconSetter
         icon={meeting}
         name={"Meeting"}
-        clickHandle={() => handleIconClick("meeting")}
+        clickHandle={() => setPlusClickContent(handleIconClick("meeting"))}
       />
       <IconSetter
         icon={note}

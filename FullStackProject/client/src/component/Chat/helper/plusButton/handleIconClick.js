@@ -1,6 +1,10 @@
+import { MeetingBox } from "../../js/MeetingBox";
+
 export const handleIconClick = (clickOn) => {
+    let screen;
     switch (clickOn) {
         case "meeting":
+            screen = <MeetingBox />
             console.log("meeting")
             break
         case "notes":
@@ -28,5 +32,6 @@ export const handleIconClick = (clickOn) => {
             console.log("default")
             break
     }
+    return screen;
 
 }
