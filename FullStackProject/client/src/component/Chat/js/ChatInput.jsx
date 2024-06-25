@@ -7,7 +7,7 @@ import PlusButton from "./PlusButton";
 const ChatInput = ({ onSendMessage }) => {
   const [message, setMessage] = useState("");
   const [showPlus, setShowPlus] = useState(false);
-  const [plusClickContent, setPlusClickContent] = useState();
+  const [plusClickContent, setPlusClickContent] = useState(null);
   const textareaRef = useRef(null);
   const addRef = useRef(null);
   const showPlusRef = useRef(null);
@@ -54,7 +54,11 @@ const ChatInput = ({ onSendMessage }) => {
   return (
     <div className={style.chatInputContainer}>
       <div className={showPlusClass} ref={showPlusRef}>
-        <PlusButton setPlusClickContent={setPlusClickContent}/>
+        {plusClickContent === null ? (
+          <PlusButton setPlusClickContent={setPlusClickContent} />
+        ) : (
+          plusClickContent
+        )}
       </div>
       <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)}>
         <svg
