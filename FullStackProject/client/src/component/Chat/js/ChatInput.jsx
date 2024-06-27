@@ -61,7 +61,14 @@ const ChatInput = ({ onSendMessage }) => {
           plusClickContent
         )}
       </div>
-      <div className={style.add} ref={addRef} onClick={() => setShowPlus(true)}>
+      <div
+        className={style.add}
+        ref={addRef}
+        onClick={() => {
+          setShowPlus(true);
+          setPlusClickContent(null);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
