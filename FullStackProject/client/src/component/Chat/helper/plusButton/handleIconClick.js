@@ -1,6 +1,7 @@
 import { MeetingBox } from "../../js/MeetingBox";
+import FileBox from "../../js/FileBox";
 
-export const handleIconClick = (clickOn) => {
+export const handleIconClick = (clickOn, clickedContent = null) => {
     let screen;
     switch (clickOn) {
         case "meeting":
@@ -11,13 +12,13 @@ export const handleIconClick = (clickOn) => {
             console.log("note")
             break
         case "media":
-            console.log("media")
+            screen = <FileBox content={clickedContent} />
             break
         case "document":
-            console.log("doc")
+            screen = <FileBox content={clickedContent} />
             break
         case "directShare":
-            console.log("direct")
+            screen = <FileBox content={clickedContent} />
             break
         case "schedule":
             console.log("sche")

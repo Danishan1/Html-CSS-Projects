@@ -81,7 +81,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={media}
         name={"Media"}
         clickHandle={() => {
-          handleIconClick("media");
+          setPlusClickContent(handleIconClick("media"));
           onfileClick("media");
         }}
       />
@@ -89,7 +89,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={fileUpload}
         name={"Document"}
         clickHandle={() => {
-          handleIconClick("document");
+          setPlusClickContent(handleIconClick("document"));
           onfileClick("doc");
         }}
       />
@@ -97,7 +97,7 @@ const PlusButton = ({ setPlusClickContent }) => {
         icon={directShare}
         name={"Direct Share"}
         clickHandle={() => {
-          handleIconClick("directShare");
+          setPlusClickContent(handleIconClick("directShare"));
           onfileClick("all");
         }}
       />
