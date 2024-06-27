@@ -1,0 +1,11 @@
+.commingSoon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: calc(var(--size) * 1.1);
+  font-weight: var(--boldL2);
+  color: var(--colorCyan);
+}
