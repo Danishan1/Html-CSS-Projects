@@ -12,13 +12,13 @@ export const handleIconClick = (clickOn, clickedContent = null) => {
             console.log("note")
             break
         case "media":
-            screen = <FileBox content={clickedContent} />
+            screen = <FileBox content={clickedContent} type="media" />
             break
         case "document":
-            screen = <FileBox content={clickedContent} />
+            screen = <FileBox content={clickedContent} type="document" />
             break
         case "directShare":
-            screen = <FileBox content={clickedContent} />
+            screen = <FileBox content={clickedContent} type="directShare" />
             break
         case "schedule":
             console.log("sche")
