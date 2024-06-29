@@ -28,6 +28,7 @@ const PlusButton = ({ setPlusClickContent }) => {
   const [alertContainer, setAlertContainer] = useState([]);
   const [uploadedFile, setUploadedFile] = useState([]);
 
+  // Handle Plus Icon
   const handlePlusClick = () => {
     setPlusClickContent();
   };
