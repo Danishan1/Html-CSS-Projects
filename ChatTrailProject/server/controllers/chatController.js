@@ -1,24 +1,24 @@
-const db = require('../config/db');
+import db from '../config/db.js';
 
-// Create a new message
-exports.createMessage = async (req, res) => {
-    const { userId, message } = req.body;
+export const getChats = async (req, res) => {
+    const userId = req.session.userId;
+    const sql = 'SELECT * FROM chats WHERE user_id = ?';
     try {
-        const result = await db.query('INSERT INTO messages (user_id, message) VALUES (?, ?)', [userId, message]);
-        res.status(201).json({ message: 'Message created successfully', messageId: result.insertId });
+        const [results] = await db.query(sql, [userId]);
+        res.json(results);
     } catch (err) {
-        console.error('Error creating message:', err);
-        res.status(500).json({ error: 'Failed to create message' });
+        res.status(500).send('Server error');
     }
 };
 
-// Get all messages
-exports.getAllMessages = async (req, res) => {
+export const createChat = async (req, res) => {
+    const userId = req.session.userId;
+    const { message, receiverId } = req.body;
+    const sql = 'INSERT INTO messages (sender_id, receiver_id, message) VALUES (?, ?, ?)';
     try {
-        const [rows] = await db.query('SELECT * FROM messages');
-        res.json(rows);
+        await db.query(sql, [userId, receiverId, message]);
+        res.status(201).send('Message sent');
     } catch (err) {
-        console.error('Error fetching messages:', err);
-        res.status(500).json({ error: 'Failed to fetch messages' });
+        res.status(500).send('Server error');
     }
 };

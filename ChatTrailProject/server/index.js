@@ -1,21 +1,23 @@
-const express = require('express');
-const db = require('./config/db');
-const chatRoutes = require('./routes/chatRoutes');
+import express from 'express';
+import http from 'http';
+import sessionMiddleware from './config/session.js'; // Adjust the path as per your project structure
+import authRouter from './routes/authRoutes.js';
+import chatRouter from './routes/chatRoutes.js';
+import socketHandler from './sockets/chatSocket.js';
+import {errorHandler} from './utils/errorHandler.js'; // Import your error handler
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const server = http.createServer(app);
 
-// Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(sessionMiddleware);
+app.use('/auth', authRouter);
+app.use('/chat', chatRouter);
+app.use(errorHandler); // Use error handler middleware
 
-// Routes
-app.use('/api', chatRoutes);
-app.use('/', (req, res) => {
-    res.send("Hello")
-});
+socketHandler(server, sessionMiddleware);
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });

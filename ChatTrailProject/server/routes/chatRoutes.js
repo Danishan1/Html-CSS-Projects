@@ -1,14 +1,12 @@
-const express = require('express');
+import express from 'express';
+import { getChats, createChat } from '../controllers/chatController.js';
+import { authMiddleware } from '../middleware/authMiddleware.js';
+
 const router = express.Router();
-const chatController = require('../controllers/chatController');
 
-// POST /api/messages
-router.post('/messages', chatController.createMessage);
+router.use(authMiddleware);
 
-// GET /api/messages
-router.get('/messages', chatController.getAllMessages);
-router.get('/run', (req, res) => {
-    res.send("Good")
-});
+router.get('/', getChats);
+router.post('/', createChat);
 
-module.exports = router;
+export default router;
