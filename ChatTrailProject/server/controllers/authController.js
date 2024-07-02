@@ -6,7 +6,7 @@ export const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const sql = 'INSERT INTO users (username, password) VALUES (?, ?)';
     try {
-        await db.query(sql, [username, hashedPassword]);
+        db.query(sql, [username, hashedPassword]);
         res.status(201).send('User registered');
     } catch (err) {
         res.status(500).send('Server error');
@@ -17,7 +17,7 @@ export const login = async (req, res) => {
     const { username, password } = req.body;
     const sql = 'SELECT * FROM users WHERE username = ?';
     try {
-        const [results] = await db.query(sql, [username]);
+        const [results] = db.query(sql, [username]);
         if (results.length === 0) return res.status(400).send('User not found');
         const user = results[0];
         const isMatch = await bcrypt.compare(password, user.password);

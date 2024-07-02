@@ -1,19 +1,30 @@
 import express from 'express';
+import cors from 'cors';
 import http from 'http';
-import sessionMiddleware from './config/session.js'; // Adjust the path as per your project structure
+import sessionConfig from './config/session.js';
 import authRouter from './routes/authRoutes.js';
 import chatRouter from './routes/chatRoutes.js';
+import generalRouter from './routes/generalRoutes.js';
 import socketHandler from './sockets/chatSocket.js';
-import {errorHandler} from './utils/errorHandler.js'; // Import your error handler
+import { errorHandler } from './utils/errorHandler.js';
 
 const app = express();
 const server = http.createServer(app);
+const sessionMiddleware = sessionConfig();
 
+app.use(cors());
 app.use(express.json());
-app.use(sessionMiddleware);
+app.use(sessionConfig());
+
 app.use('/auth', authRouter);
 app.use('/chat', chatRouter);
-app.use(errorHandler); // Use error handler middleware
+app.use('/general', generalRouter);
+
+app.get('/', (req, res) => {
+  res.send("Danisaan");
+});
+
+app.use(errorHandler);
 
 socketHandler(server, sessionMiddleware);
 
