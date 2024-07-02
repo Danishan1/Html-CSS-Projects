@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = async (username, password) => {
-    const response = await axios.post("https://localhost:3000/auth/login", {
+    const response = await axios.post("auth/login", {
       username,
       password,
     });
@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await axios.post("https://localhost:3000/auth/logout");
+    await axios.post("auth/logout");
     setUser(null);
   };
 

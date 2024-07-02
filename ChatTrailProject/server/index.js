@@ -5,7 +5,7 @@ import sessionConfig from './config/session.js';
 import authRouter from './routes/authRoutes.js';
 import chatRouter from './routes/chatRoutes.js';
 import generalRouter from './routes/generalRoutes.js';
-import socketHandler from './sockets/chatSocket.js';
+// import socketHandler from './sockets/chatSocket.js';
 import { errorHandler } from './utils/errorHandler.js';
 
 const app = express();
@@ -14,19 +14,15 @@ const sessionMiddleware = sessionConfig();
 
 app.use(cors());
 app.use(express.json());
-app.use(sessionConfig());
+app.use(sessionMiddleware);
 
 app.use('/auth', authRouter);
 app.use('/chat', chatRouter);
 app.use('/general', generalRouter);
 
-app.get('/', (req, res) => {
-  res.send("Danisaan");
-});
-
 app.use(errorHandler);
 
-socketHandler(server, sessionMiddleware);
+// socketHandler(server, sessionMiddleware);
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {

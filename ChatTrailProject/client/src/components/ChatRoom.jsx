@@ -6,7 +6,7 @@ const ChatRoom = () => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const { user } = useContext(AuthContext);
-  const socket = io("http://localhost:3000");
+  const socket = io("http://localhost:5000");
 
   useEffect(() => {
     socket.emit("join", user.id);
@@ -18,7 +18,7 @@ const ChatRoom = () => {
     return () => {
       socket.disconnect();
     };
-  }, [user.id]);
+  }, [user.id, socket]);
 
   const sendMessage = () => {
     socket.emit("sendMessage", { chatId: user.id, message });
