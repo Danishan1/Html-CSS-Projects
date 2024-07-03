@@ -1,6 +1,7 @@
 import dotev from "dotenv";
-
 dotev.config();
+
+console.log(MYSQL_DATABASE)
 
 const configDB = {
   host: process.env.MYSQL_HOST,

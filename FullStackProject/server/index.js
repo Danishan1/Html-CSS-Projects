@@ -1,6 +1,8 @@
 import express from "express";
-import { executeTables } from "./queries/executeTables.js";
+import dotenv from "dotenv";
+// import { executeTables } from "./queries/executeTables.js";
 
+dotenv.config() // for loading .env variables properly
 const app = express();
 
 app.get("/", (req, res) => {
@@ -8,9 +10,9 @@ app.get("/", (req, res) => {
 });
 
 
-executeTables();
+// executeTables();
 
-
-app.listen(3001, () => {
-  console.log("Server is  running on Port 3001");
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+  console.log(`Server is  running on Port ${PORT}`);
 });
