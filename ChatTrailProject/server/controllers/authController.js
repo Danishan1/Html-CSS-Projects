@@ -13,24 +13,6 @@ export const register = async (req, res) => {
     }
 };
 
-// export const login = async (req, res) => {
-//     const { username, password } = req.body;
-//     const sql = 'SELECT * FROM users WHERE username = ?';
-//     try {
-//         console.log(username, password)
-//         const results = [db.query(sql, [username])];
-//         console.log(results[0])
-
-//         if (results.length === 0) return res.status(400).send('User not found');
-//         const user = results[0];
-//         const isMatch = await bcrypt.compare(password, user.password);
-//         if (!isMatch) return res.status(400).send('Invalid credentials');
-//         req.session.userId = user.id;
-//         res.send('Logged in');
-//     } catch (err) {
-//         res.status(500).send('Danishan Server error');
-//     }
-// };
 
 export const login = async (req, res) => {
     const { username, password } = req.body;
