@@ -23,6 +23,7 @@ export const login = async (req, res) => {
             if (err) {
                 console.error(err);
                 return res.status(500).send('Server : Query error');
+                
             }
 
             if (results.length === 0) {
