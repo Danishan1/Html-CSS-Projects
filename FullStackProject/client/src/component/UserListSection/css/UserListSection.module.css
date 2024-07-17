@@ -1,0 +1,47 @@
+.userListSection {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.searchBox,
+.topInfoBar {
+    width: 100%;
+    border: 1px solid green;
+    height: 40px;
+}
+
+.topInfoBar{
+    overflow-x: auto;
+}
+
+.bottomList {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.sideInfoBar {
+    width: 40px;
+    height: calc(100vh - 82px);
+    border: 1px solid green;
+    overflow-y: auto;
+}
+
+.userList {
+    width: calc(100% - 40px);
+    height: calc(100vh - 82px);
+    border: 1px solid #ff0c0c;
+    overflow-y: auto;
+}
+
+.newChatBtn{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    width: 100px;
+}

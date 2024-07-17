@@ -2,7 +2,7 @@ import React, { } from 'react';
 // import HandleLoginRegister from './component/Main/HandleLoginRegister';
 // import GroupChat from './component/Chat/js/GroupChat';
 import './App.css';
-import ChatApp from './component/Chat/js/ChatApp';
+import ChatApp from './component/Main/ChatApp';
 // import { Calendar } from './component/Calender/js/Calendar';
 
 const App = () => {
