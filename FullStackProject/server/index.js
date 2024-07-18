@@ -1,18 +1,25 @@
-import express from "express";
-import dotenv from "dotenv";
-// import { executeTables } from "./queries/executeTables.js";
+import express from 'express';
+import cors from 'cors';
+import http from 'http';
+import sessionConfig from './config/session.js';
+import mainRoute from "./routes/index.js"
+// import socketHandler from './sockets/chatSocket.js';
+import { errorHandler } from './utils/errorHandler.js';
 
-dotenv.config() // for loading .env variables properly
 const app = express();
+const server = http.createServer(app);
+const sessionMiddleware = sessionConfig();
 
-app.get("/", (req, res) => {
-  res.json({ Name: "Danishan" });
-});
+app.use(cors());
+app.use(express.json());
+app.use(sessionMiddleware);
 
+app.use("/api", mainRoute);
+app.use(errorHandler);
 
-// executeTables();
+// socketHandler(server, sessionMiddleware);
 
-const PORT = process.env.PORT || 3001
-app.listen(PORT, () => {
-  console.log(`Server is  running on Port ${PORT}`);
+const port = process.env.PORT || 3001;
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
