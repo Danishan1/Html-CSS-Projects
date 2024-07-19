@@ -19,7 +19,7 @@ app.use(errorHandler);
 
 // socketHandler(server, sessionMiddleware);
 
-const port = process.env.PORT || 3001;
+const port = process.env.SERVER_PORT || 5001;
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
