@@ -1,49 +1,11 @@
 import bcrypt from 'bcryptjs';
-import db from '../config/db.js';
-
-export const register = async (req, res) => {
-    const { username, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const sql = 'INSERT INTO users (username, password) VALUES (?, ?)';
-    try {
-        db.query(sql, [username, hashedPassword]);
-        res.status(201).send('User registered');
-    } catch (err) {
-        res.status(500).send('Danishan Server error');
-    }
-};
+// import db from '../config/db.js';
+import { v4 as uuidv4 } from 'uuid';
+import nodemailer from 'nodemailer';
+import pool from '../config/db.js';
 
 
-export const login = async (req, res) => {
-    const { username, password } = req.body;
-    const sql = 'SELECT * FROM users WHERE username = ?';
 
-    try {
-        db.query(sql, [username], async (err, results) => {
-            if (err) {
-                console.error(err);
-                return res.status(500).send('Server : Query error');
-                
-            }
-
-            if (results.length === 0) {
-                return res.status(400).send('User not found');
-            }
-
-            const user = results[0];
-            const isMatch = await bcrypt.compare(password, user.password);
-
-            if (!isMatch) {
-                return res.status(400).send('Invalid credentials');
-            }
-            req.session.userId = user.id;
-            res.send('Logged in');
-        });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Server : Server error');
-    }
-};
 
 
 export const logout = (req, res) => {
@@ -56,4 +18,123 @@ export const logout = (req, res) => {
 export const profile = (req, res) => {
     if (!req.session.userId) return res.status(401).send('Unauthorized');
     res.send(`User ID: ${req.session.userId}`);
+};
+
+
+
+
+// Utility function to send emails
+const sendEmail = async (email, subject, text) => {
+    const transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD
+        }
+    });
+
+    const mailOptions = {
+        from: process.env.EMAIL,
+        to: email,
+        subject: subject,
+        text: text
+    };
+
+    await transporter.sendMail(mailOptions);
+};
+
+// Register new user
+export const registerUser = async (req, res) => {
+    const { name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
+    const userId = uuidv4().slice(0, 6).toUpperCase();
+    const password = uuidv4(); // Generate a random password (or use req.body.password for custom passwords)
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    try {
+        // pool.
+        const [rows] = await pool.query(
+            'INSERT INTO User (userId, name, mobile, email, profilePicPath, status, designation, orgId, createdBy, updatedBy, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            [userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]
+        );
+        console.log(rows)
+        await sendEmail(email, 'Welcome to Chat App', `Your login details:\nUser ID: ${userId}\nPassword: ${password}`);
+
+        res.status(201).json({ message: 'User registered successfully', userId, password });
+    } catch (error) {
+        res.status(500).json({
+            message: 'Error registering user', error, data:
+            {
+                name, mobile, email, profilePic, status, designation, orgId, createdBy
+            },
+
+        });
+    }
+};
+
+// Login user
+export const loginUser = async (req, res) => {
+    const { userID, password } = req.body;
+
+    try {
+        const [rows] = await pool.query('SELECT * FROM User WHERE userId = ?', [userID]);
+        const user = rows[0];
+
+        if (!user || !(await bcrypt.compare(password, user.password))) {
+            return res.status(401).json({ message: 'Invalid credentials' });
+        }
+
+        req.session.userId = user.userId;
+        req.session.isLoggedIn = true;
+
+        res.status(200).json({ message: 'Login successful' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error logging in', error });
+    }
+};
+
+// Forgot password
+export const forgotPassword = async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        const [rows] = await pool.query('SELECT * FROM User WHERE email = ?', [email]);
+        const user = rows[0];
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const resetToken = uuidv4();
+        const resetTokenExpiry = Date.now() + 3600000; // 1 hour
+
+        await pool.query('UPDATE User SET resetToken = ?, resetTokenExpiry = ? WHERE email = ?', [resetToken, resetTokenExpiry, email]);
+
+        await sendEmail(email, 'Password Reset', `Your password reset token: ${resetToken}`);
+
+        res.status(200).json({ message: 'Password reset token sent' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error sending reset token', error });
+    }
+};
+
+// Reset password
+export const resetPassword = async (req, res) => {
+    const { resetToken, newPassword } = req.body;
+
+    try {
+        const [rows] = await pool.query('SELECT * FROM User WHERE resetToken = ? AND resetTokenExpiry > ?', [resetToken, Date.now()]);
+        const user = rows[0];
+
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid or expired token' });
+        }
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        await pool.query('UPDATE User SET password = ?, resetToken = NULL, resetTokenExpiry = NULL WHERE userId = ?', [hashedPassword, user.userId]);
+
+        res.status(200).json({ message: 'Password reset successful' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error resetting password', error });
+    }
 };
