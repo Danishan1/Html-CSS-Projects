@@ -4,25 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 import nodemailer from 'nodemailer';
 import pool from '../config/db.js';
 
-
-
-
-
-export const logout = (req, res) => {
-    req.session.destroy(err => {
-        if (err) return res.status(500).send('Server error');
-        res.send('Logged out');
-    });
-};
-
-export const profile = (req, res) => {
-    if (!req.session.userId) return res.status(401).send('Unauthorized');
-    res.send(`User ID: ${req.session.userId}`);
-};
-
-
-
-
 // Utility function to send emails
 const sendEmail = async (email, subject, text) => {
     const transporter = nodemailer.createTransport({
@@ -43,11 +24,12 @@ const sendEmail = async (email, subject, text) => {
     await transporter.sendMail(mailOptions);
 };
 
+
 // Register new user
 export const registerUser = async (req, res) => {
     const { name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
     const userId = uuidv4().slice(0, 6).toUpperCase();
-    const password = uuidv4(); // Generate a random password (or use req.body.password for custom passwords)
+    const password = "123456"; 
     const hashedPassword = await bcrypt.hash(password, 10);
 
     try {
@@ -56,17 +38,12 @@ export const registerUser = async (req, res) => {
             'INSERT INTO User (userId, name, mobile, email, profilePicPath, status, designation, orgId, createdBy, updatedBy, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]
         );
-        console.log(rows)
-        await sendEmail(email, 'Welcome to Chat App', `Your login details:\nUser ID: ${userId}\nPassword: ${password}`);
+        // await sendEmail(email, 'Welcome to Chat App', `Your login details:\nUser ID: ${userId}\nPassword: ${password}`);
 
         res.status(201).json({ message: 'User registered successfully', userId, password });
     } catch (error) {
         res.status(500).json({
-            message: 'Error registering user', error, data:
-            {
-                name, mobile, email, profilePic, status, designation, orgId, createdBy
-            },
-
+            message: 'Error registering user', error
         });
     }
 };
@@ -137,4 +114,17 @@ export const resetPassword = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Error resetting password', error });
     }
+};
+
+
+export const logout = (req, res) => {
+    req.session.destroy(err => {
+        if (err) return res.status(500).send('Server error');
+        res.send('Logged out');
+    });
+};
+
+export const profile = (req, res) => {
+    if (!req.session.userId) return res.status(401).send('Unauthorized');
+    res.send(`User ID: ${req.session.userId}`);
 };

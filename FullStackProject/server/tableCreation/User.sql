@@ -14,5 +14,6 @@ CREATE TABLE
         updatedBy VARCHAR(50),
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        password VARCHAR(100),
         FOREIGN KEY (orgId) REFERENCES Organization (orgId)
     );
