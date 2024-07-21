@@ -1,28 +1,6 @@
 import bcrypt from 'bcryptjs';
-// import db from '../config/db.js';
+import pool from '../../config/db.js';
 import { v4 as uuidv4 } from 'uuid';
-import nodemailer from 'nodemailer';
-import pool from '../config/db.js';
-
-// Utility function to send emails
-const sendEmail = async (email, subject, text) => {
-    const transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: process.env.EMAIL,
-            pass: process.env.EMAIL_PASSWORD
-        }
-    });
-
-    const mailOptions = {
-        from: process.env.EMAIL,
-        to: email,
-        subject: subject,
-        text: text
-    };
-
-    await transporter.sendMail(mailOptions);
-};
 
 
 // Register new user
