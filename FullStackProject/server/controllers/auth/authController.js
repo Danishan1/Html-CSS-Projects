@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 // Register new user
 export const registerUser = async (req, res) => {
     const { name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
-    const userId = uuidv4().slice(0, 6).toUpperCase();
+    const userId = gener;
     const password = "123456"; 
     const hashedPassword = await bcrypt.hash(password, 10);
 
