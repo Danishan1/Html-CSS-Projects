@@ -1,8 +1,8 @@
 import React, { } from 'react';
-// import HandleLoginRegister from './component/Main/HandleLoginRegister';
+import HandleLoginRegister from './component/Main/HandleLoginRegister';
 // import GroupChat from './component/Chat/js/GroupChat';
 import './App.css';
-import ChatApp from './component/Main/ChatApp';
+// import ChatApp from './component/Main/ChatApp';
 // import { Calendar } from './component/Calender/js/Calendar';
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <HandleLoginRegister /> */}
-      <ChatApp />
+      <HandleLoginRegister />
+      {/* <ChatApp /> */}
       {/* <GroupChat /> */}
       {/* <div style={{ width: "200px", height: "200px" }}>
         <Calendar />

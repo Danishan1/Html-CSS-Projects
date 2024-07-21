@@ -13,10 +13,6 @@ export const registerUser = async (req, res) => {
     const password = generatePasscode();
     const hashedPassword = await generateHashPassword(password);
 
-    console.log(userId)
-    console.log(password)
-    console.log(hashedPassword)
-
     try {
         // pool.
         const [rows] = await pool.query(
