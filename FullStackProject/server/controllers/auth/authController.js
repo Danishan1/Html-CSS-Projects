@@ -1,14 +1,21 @@
 import bcrypt from 'bcryptjs';
 import pool from '../../config/db.js';
 import { v4 as uuidv4 } from 'uuid';
+import generateUserId from './generateID.js';
+import generatePasscode from './generatePasscode.js';
+import { generateHashPassword } from './generate.js';
 
 
 // Register new user
 export const registerUser = async (req, res) => {
-    const { name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
-    const userId = gener;
-    const password = "123456"; 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const {name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
+    const userId = generateUserId();
+    const password = generatePasscode();
+    const hashedPassword = await generateHashPassword(password);
+
+    console.log(userId)
+    console.log(password)
+    console.log(hashedPassword)
 
     try {
         // pool.

@@ -2,7 +2,7 @@ const generatePasscode = (digit = 6) => {
     let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
     let numbers = '0123456789';
-    let specialChars = '!@#$%&?';
+    let specialChars = '!@#$%&/';
 
     // Shuffle the Sequence to ensure randomness
     upperCase = upperCase.split('').sort(() => Math.random() - 0.5).join('');

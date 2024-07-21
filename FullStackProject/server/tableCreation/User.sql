@@ -2,7 +2,7 @@ CREATE TABLE
     IF NOT EXISTS User (
         userId VARCHAR(20) PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        mobile VARCHAR(20),
+        mobile VARCHAR(20) NOT NULL UNIQUE,
         email VARCHAR(255) NOT NULL UNIQUE,
         profilePicPath VARCHAR(255),
         status VARCHAR(50),
