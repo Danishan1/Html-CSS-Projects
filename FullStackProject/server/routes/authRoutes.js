@@ -5,10 +5,10 @@ import { verifyOTP, generateOTP } from '../controllers/auth/verifyUser.js';
 const router = express.Router();
 
 router.post('/register', registerUser);
-router.post('/verifyOTP', verifyOTP);
-router.post('/generateOTP', generateOTP);
 router.post('/login', loginUser);
 router.post('/logout', logout);
+router.post('/verifyOTP', verifyOTP);
+router.post('/generateOTP', generateOTP);
 router.get('/profile', profile);
 
 export default router;

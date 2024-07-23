@@ -1,6 +1,7 @@
 // API Routes
 import pool from "../../config/db.js";
 import { generateNumericOTP } from "./generateOTP.js";
+import { sendEmailOTP } from "./sendEmailOTP.js";
 
 export const verifyOTP = async (req, res) => {
     const { type, otp } = req.body;
@@ -40,7 +41,7 @@ export const verifyOTP = async (req, res) => {
 };
 
 export const generateOTP = async (req, res) => {
-    const { type, purpose } = req.body;
+    const { type, purpose, userName, verificationID } = req.body;
 
     if (!['mobile', 'email', 'call'].includes(type)) {
         return res.status(400).json({ message: 'Invalid type' });
@@ -50,16 +51,27 @@ export const generateOTP = async (req, res) => {
     }
     const otp = generateNumericOTP();
 
+    const connection = await pool.getConnection();
     try {
+        await connection.beginTransaction();
+
         const expiresInMinutes = 10;
         const expiresAt = new Date(Date.now() + expiresInMinutes * 60 * 1000);
         const query = 'INSERT INTO verification (type, otp, purpose, expires_at) VALUES (?, ?, ?, ?)';
-        const [row] = await pool.query(query, [type, otp, purpose, expiresAt]);
+        const [result] = await connection.query(query, [type, otp, purpose, expiresAt]);
 
-        res.status(201).json({ message: 'OTP generated successfully', otp });
+        // Email sending
+        const emailResult = await sendEmailOTP(userName, otp, purpose, type, verificationID);
+        if (!emailResult.isEmailSent) {
+            throw new Error('Failed to send email');
+        }
+
+        await connection.commit();
+        res.status(201).json({ message: 'OTP generated successfully', ...emailResult });
     } catch (error) {
-        res.status(500).json({
-            message: 'Error in OTP generation', error
-        });
+        await connection.rollback();
+        res.status(500).json({ message: 'Error in OTP generation', error: error.message });
+    } finally {
+        connection.release();
     }
 };
