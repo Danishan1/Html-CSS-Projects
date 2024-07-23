@@ -33,7 +33,7 @@ export const getOTP = async (req, res) => {
 
         if (checkResult.length > 0) {
             const field = type === 'email' ? 'email' : 'mobile';
-            return res.status(400).json({ message: `${field.charAt(0).toUpperCase() + field.slice(1)} is already registered!` });
+            return res.json({ code: "INFO01", message: `${field.charAt(0).toUpperCase() + field.slice(1)} is already registered!` });
         }
 
         // Generate OTP
@@ -48,6 +48,7 @@ export const getOTP = async (req, res) => {
         if (type === 'email') {
             sendResult = await sendEmailOTP(userName, otp, purpose, type, verificationID);
         } else if (type === 'mobile') {
+            sendResult = await sendEmailOTP(userName, otp, purpose, type, verificationID);
             // sendResult = await sendSMSOTP(verificationID, otp);  // Assuming sendSMSOTP is implemented similarly
         }
 
@@ -56,10 +57,11 @@ export const getOTP = async (req, res) => {
         }
 
         await connection.commit();
-        res.status(201).json({ message: 'OTP generated successfully', ...sendResult });
+        if (!isValid) return;
+        res.status(201).json({ code: 'SUCC', message: 'OTP generated successfully', ...sendResult });
     } catch (error) {
         await connection.rollback();
-        res.status(500).json({ message: 'Error in OTP generation', error: error.message });
+        res.status(500).json({ code: 'ERR01', message: 'Error in OTP generation', error: error.message });
     } finally {
         connection.release();
     }
