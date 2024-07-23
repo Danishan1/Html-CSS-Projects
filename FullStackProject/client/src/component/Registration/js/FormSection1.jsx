@@ -3,6 +3,8 @@ import InputField from "./InputField";
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { validateEmail, validateMobile } from "../helper/Validation";
+import axios from "axios";
+// import
 
 export const FormSection1 = ({
   setFormData,
@@ -16,6 +18,22 @@ export const FormSection1 = ({
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleGetOTP = async (type, purpose, userName, verificationID) => {
+    try {
+      const response = await axios.post("/api/auth/getOTP", {
+        type,
+        purpose,
+        userName,
+        verificationID,
+      });
+
+      return response;
+    } catch (error) {
+      console.error("Error fetching OTP:", error);
+      return null;
+    }
+  };
+
   const move2Section2 = async (e) => {
     e.preventDefault();
     let isValid = true;
@@ -27,11 +45,22 @@ export const FormSection1 = ({
 
     if (!validateMobile(formData.mobile)) {
       showAlert("Invalid mobile number. Must be 10 digits.", "error");
-
       isValid = false;
     }
 
     if (!isValid) return;
+    const responseMail = handleGetOTP(
+      "email",
+      "verification",
+      formData.name,
+      formData.email
+    );
+    const responseMobile = handleGetOTP(
+      "mobile",
+      "verification",
+      formData.name,
+      formData.mobile
+    );
 
     showAlert("Great, Let's verify your details...", "success");
     setFormFillStep(1);
