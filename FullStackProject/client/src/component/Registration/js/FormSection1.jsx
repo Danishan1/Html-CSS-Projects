@@ -4,7 +4,6 @@ import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { validateEmail, validateMobile } from "../helper/Validation";
 import axios from "axios";
-// import
 
 export const FormSection1 = ({
   setFormData,
@@ -71,7 +70,7 @@ export const FormSection1 = ({
       "mobile",
       "verification",
       formData.name,
-      formData.mobile,
+      formData.email,
       isValid
     );
 

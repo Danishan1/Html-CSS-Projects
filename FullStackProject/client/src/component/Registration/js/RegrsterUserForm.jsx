@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import AlertContainer from "./AlertContainer";
-import { v4 as uuidv4 } from "uuid";
 import style from "../css/RegisterUserForm.module.css";
 import { FormSection1 } from "./FormSection1";
 import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
+import Login from "../../Login/js/Login";
 
 const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
   const [formData, setFormData] = useState({
-    userId: uuidv4().slice(0, 6).toUpperCase(),
+    userId: "",
     name: "Danishan",
     mobile: "9540514188",
     email: "danishan089@gmail.com",
@@ -29,7 +29,7 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
     }
   };
 
-  const [formFillStep, setFormFillStep] = useState(0);
+  const [formFillStep, setFormFillStep] = useState(3);
 
   return (
     <div className={style.formRapper}>
@@ -51,11 +51,18 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
           ) : formFillStep === 1 ? (
             <FormSection2
               formData={formData}
+              setFormData={setFormData}
+              showAlert={showAlert}
+              setFormFillStep={setFormFillStep}
+            />
+          ) : formFillStep === 2 ? (
+            <FormSection3
+              formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
             />
           ) : (
-            <FormSection3 showAlert={showAlert} />
+            <Login />
           )}
           <div className={style.progress}>
             {formFillStep === 0 ? (

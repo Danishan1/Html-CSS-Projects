@@ -9,11 +9,10 @@ import { sendEmail } from "./sendEmail.js";
  * @returns {Object} - Object containing the result of the email sending operation
  */
 export const sendEmailOTP = async (userName, otp, purpose, type, email) => {
-    if (type !== 'email') {
-        return { isEmailSent: false, message: 'Invalid type' };
-    }
+    // if (type !== 'email') 
+    //     return { isEmailSent: false, message: 'Invalid type' };
 
-    const text = `Congratulations! ${userName}\n OTP is ${otp}`;
+    const text = `Congratulations! ${userName}\n OTP is ${otp} for ${type} ${purpose}`;
     const subject = `itsRIGHTtime: OTP for ${purpose}`;
 
     try {

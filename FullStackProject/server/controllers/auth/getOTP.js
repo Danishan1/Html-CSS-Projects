@@ -36,12 +36,16 @@ export const getOTP = async (req, res) => {
             return res.json({ code: "INFO01", message: `${field.charAt(0).toUpperCase() + field.slice(1)} is already registered!` });
         }
 
+        // Delete OTP from database if they previously Exist with that verification ID
+        const deleteQuery = 'DELETE FROM verification WHERE verifi_ID = ? AND type = ?';
+        await pool.query(deleteQuery, [verificationID, type]);
+
         // Generate OTP
         const otp = generateNumericOTP();
         const expiresInMinutes = 10;
         const expiresAt = new Date(Date.now() + expiresInMinutes * 60 * 1000);
-        const query = 'INSERT INTO verification (type, otp, purpose, expires_at) VALUES (?, ?, ?, ?)';
-        await connection.query(query, [type, otp, purpose, expiresAt]);
+        const query = 'INSERT INTO verification (type, otp, purpose, expires_at, verifi_ID) VALUES (?, ?, ?, ?, ?)';
+        await connection.query(query, [type, otp, purpose, expiresAt, verificationID]);
 
         // Send OTP
         let sendResult;
@@ -52,13 +56,12 @@ export const getOTP = async (req, res) => {
             // sendResult = await sendSMSOTP(verificationID, otp);  // Assuming sendSMSOTP is implemented similarly
         }
 
-        if (!sendResult.isSent) {
+        if (!sendResult.isEmailSent) {
             throw new Error('Failed to send OTP');
         }
 
         await connection.commit();
-        if (!isValid) return;
-        res.status(201).json({ code: 'SUCC', message: 'OTP generated successfully', ...sendResult });
+        res.status(200).json({ code: 'SUCC', message: 'OTP generated successfully', ...sendResult });
     } catch (error) {
         await connection.rollback();
         res.status(500).json({ code: 'ERR01', message: 'Error in OTP generation', error: error.message });

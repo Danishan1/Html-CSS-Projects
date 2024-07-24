@@ -8,23 +8,24 @@ import { generateHashPassword } from './generate.js';
 
 // Register new user
 export const registerUser = async (req, res) => {
-    const {name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
+    const { name, mobile, email, profilePic, status, designation, orgId, createdBy } = req.body;
     const userId = generateUserId();
     const password = generatePasscode();
     const hashedPassword = await generateHashPassword(password);
 
     try {
         // pool.
+        console.log([userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]);
         const [rows] = await pool.query(
             'INSERT INTO User (userId, name, mobile, email, profilePicPath, status, designation, orgId, createdBy, updatedBy, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]
         );
         // await sendEmail(email, 'Welcome to Chat App', `Your login details:\nUser ID: ${userId}\nPassword: ${password}`);
 
-        res.status(201).json({ message: 'User registered successfully', userId, password });
+        res.status(201).json({ code: 'SUCC', message: 'User registered successfully', userId, password });
     } catch (error) {
         res.status(500).json({
-            message: 'Error registering user', error
+            code: "ERROR", message: 'Error registering user', error
         });
     }
 };
