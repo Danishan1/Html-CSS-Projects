@@ -4,7 +4,6 @@ import style from "../css/RegisterUserForm.module.css";
 import { FormSection1 } from "./FormSection1";
 import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
-import Login from "../../Login/js/Login";
 
 const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
   const [formData, setFormData] = useState({
@@ -55,14 +54,13 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
             />
-          ) : formFillStep === 2 ? (
+          ) :  (
             <FormSection3
               formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
+              setFormVisiblity={setFormVisiblity}
             />
-          ) : (
-            <Login />
           )}
           <div className={style.progress}>
             {formFillStep === 0 ? (

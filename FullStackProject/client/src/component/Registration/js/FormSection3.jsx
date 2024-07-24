@@ -2,12 +2,11 @@ import React from "react";
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 
-export const FormSection3 = ({ formData, showAlert, setFormFillStep }) => {
+export const FormSection3 = ({ formData, showAlert, setFormVisiblity }) => {
   const handleSubmit = (userId) => {
     showAlert(`Login Successfully, ${userId}`, "success");
-    setFormFillStep(3);
+    setFormVisiblity('login');
   };
-
  
   return (
     <div className={style.formSection}>
