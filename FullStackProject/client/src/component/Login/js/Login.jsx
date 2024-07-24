@@ -4,36 +4,28 @@ import style from "../css/Login.module.css";
 import PasswordField from "./PasswordField";
 import InputField from "../../Registration/js/InputField";
 import { Button } from "../../Registration/js/Button";
+import axios from "axios";
 
-const UserForm = ({ setFormVisibility }) => {
+const LoginForm = ({ setFormVisibility }) => {
   const [alertContainer, setAlertContainer] = useState([]);
 
-  const getUserID = (userID) => {
-    return "123456";
-  };
-  const getPasscodeName = (userID) => {
-    return ["654321", "Danishan"];
-  };
-
-  const verifyDetails = (userId, passcode) => {
-    const USERID = getUserID(userId);
-    let UserName = "";
-    if (USERID !== userID) {
-      showAlert(
-        "Invalid User ID. Please check your User ID again or register.",
-        "error"
+  const verifyDetails = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        { userID, password }
       );
-      return false;
-    } else if (USERID === userID) {
-      const [PASSCODE, NAME] = getPasscodeName(userID);
-      UserName = NAME;
-      if (PASSCODE !== passcode) {
-        showAlert("Wrong Pass Code", "error");
+      if (response.data.code === "INVALID") {
+        showAlert(
+          "Invalid credentials. Please check your User ID & password again or register.",
+          "error"
+        );
         return false;
-      } else {
-        showAlert(`Welcome, ${UserName}`, "success");
-        return true;
       }
+      return true;
+    } catch (error) {
+      console.log(error);
+      return false;
     }
   };
 
@@ -46,13 +38,13 @@ const UserForm = ({ setFormVisibility }) => {
 
   const [userID, setUserId] = useState("");
   const [password, setPassword] = useState("");
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setUserId(value);
-  };
 
-  const handleLogin = () => {
-    verifyDetails(userID, password);
+  const handleLogin = async () => {
+    const isLogin = await verifyDetails();
+
+    if (isLogin) {
+      setFormVisibility("chat");
+    }
   };
   const handleRegister = () => {
     setFormVisibility("register");
@@ -77,7 +69,7 @@ const UserForm = ({ setFormVisibility }) => {
               type="text"
               name="userID"
               value={userID}
-              onChange={handleChange}
+              onChange={(e) => setUserId(e.target.value)}
               required={true}
             />
             <PasswordField
@@ -97,4 +89,4 @@ const UserForm = ({ setFormVisibility }) => {
   );
 };
 
-export default UserForm;
+export default LoginForm;

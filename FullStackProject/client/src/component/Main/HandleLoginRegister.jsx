@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RegisterForm from "../Registration/js/RegrsterUserForm";
 import Login from "../Login/js/Login";
+import ChatApp from "./ChatApp";
 
 const HandleLoginRegister = () => {
   const orgId = "ORG_ID"; // Example orgId
@@ -15,8 +16,10 @@ const HandleLoginRegister = () => {
           createdBy={createdBy}
           setFormVisiblity={setFormVisibility}
         />
-      ) : (
+      ) : formVisiblity === "login" ? (
         <Login setFormVisibility={setFormVisibility} />
+      ) : (
+        <ChatApp />
       )}
     </div>
   );

@@ -45,7 +45,6 @@ export const FormSection2 = ({
 
   const register = async () => {
     try {
-      console.log(formData);
       const response = await axios.post(
         "http://localhost:5000/api/auth/register",
         {

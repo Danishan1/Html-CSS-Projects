@@ -17,13 +17,7 @@ export const FormSection1 = ({
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleGetOTP = async (
-    type,
-    purpose,
-    userName,
-    verificationID,
-    isValid
-  ) => {
+  const handleGetOTP = async (type, purpose, userName, verificationID) => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/getOTP",
@@ -37,11 +31,12 @@ export const FormSection1 = ({
 
       if (response.data.code === "INFO01" || response.data.code === "ERR01") {
         showAlert(response.data.message, "error");
-        isValid = false;
+        return false;
       }
+      return true;
     } catch (error) {
       console.log(error);
-      isValid = false;
+      return false;
     }
   };
 
@@ -59,19 +54,21 @@ export const FormSection1 = ({
       isValid = false;
     }
 
-    await handleGetOTP(
+    // OTP for Email Verification
+    isValid = await handleGetOTP(
       "email",
       "verification",
       formData.name,
-      formData.email,
-      isValid
+      formData.email
     );
-    await handleGetOTP(
+    if (!isValid) return;
+
+    // OTP For Mobile verification
+    isValid = await handleGetOTP(
       "mobile",
       "verification",
       formData.name,
-      formData.email,
-      isValid
+      formData.email
     );
 
     if (!isValid) return;

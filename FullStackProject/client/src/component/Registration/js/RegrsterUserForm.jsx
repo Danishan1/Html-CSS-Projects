@@ -8,9 +8,9 @@ import { FormSection3 } from "./FormSection3";
 const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
   const [formData, setFormData] = useState({
     userId: "",
-    name: "Danishan",
-    mobile: "9540514188",
-    email: "danishan089@gmail.com",
+    name: "",
+    mobile: "",
+    email: "",
     profilePic: "",
     status: "active",
     designation: "User",

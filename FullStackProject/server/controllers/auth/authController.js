@@ -39,7 +39,7 @@ export const loginUser = async (req, res) => {
         const user = rows[0];
 
         if (!user || !(await bcrypt.compare(password, user.password))) {
-            return res.status(401).json({ message: 'Invalid credentials' });
+            return res.status(201).json({ code:'INVALID', message: 'Invalid credentials' });
         }
 
         req.session.userId = user.userId;
