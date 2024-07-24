@@ -28,7 +28,7 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
     }
   };
 
-  const [formFillStep, setFormFillStep] = useState(3);
+  const [formFillStep, setFormFillStep] = useState(0);
 
   return (
     <div className={style.formRapper}>
