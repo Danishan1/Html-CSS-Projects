@@ -17,7 +17,7 @@ const LoginForm = ({ setFormVisibility }) => {
       );
       if (response.data.code === "INVALID") {
         showAlert(
-          "Invalid credentials. Please check your User ID & password again or register.",
+          "Invalid credentials. Please check your User ID & Password again or Register.",
           "error"
         );
         return false;
