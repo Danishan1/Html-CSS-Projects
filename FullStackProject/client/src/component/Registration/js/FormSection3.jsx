@@ -1,13 +1,17 @@
 import React from "react";
+
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
+import { useNavigate } from "react-router-dom";
 
-export const FormSection3 = ({ formData, showAlert, setFormVisiblity }) => {
-  const handleSubmit = (userId) => {
-    showAlert(`Login Successfully, ${userId}`, "success");
-    setFormVisiblity('login');
+export const FormSection3 = ({ formData, showAlert }) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (name) => {
+    showAlert(`Register Successfully, ${name}. Kindly Login now`, "success");
+    navigate("/login");
   };
- 
+
   return (
     <div className={style.formSection}>
       <p className={style.userIdNote}>
@@ -27,7 +31,10 @@ export const FormSection3 = ({ formData, showAlert, setFormVisiblity }) => {
       </p>
 
       <div className={style.btnRapper}>
-        <Button text={"Login"} onClick={() => handleSubmit(formData.userId)} />
+        <Button
+          text={"Let's Login"}
+          onClick={() => handleSubmit(formData.name)}
+        />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import AlertContainer from "../../Registration/js/AlertContainer";
 import style from "../css/Login.module.css";
 import PasswordField from "./PasswordField";
@@ -6,14 +7,16 @@ import InputField from "../../Registration/js/InputField";
 import { Button } from "../../Registration/js/Button";
 import axios from "axios";
 
-const LoginForm = ({ setFormVisibility }) => {
+const LoginForm = () => {
   const [alertContainer, setAlertContainer] = useState([]);
+  const navigate = useNavigate();
 
   const verifyDetails = async () => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/login",
-        { userID, password }
+        { userID, password },
+        { withCredentials: true }
       );
       if (response.data.code === "INVALID") {
         showAlert(
@@ -43,14 +46,14 @@ const LoginForm = ({ setFormVisibility }) => {
     const isLogin = await verifyDetails();
 
     if (isLogin) {
-      setFormVisibility("chat");
+      navigate("/discuss"); // Navigate to ChatApp page on successful login
     }
   };
+
   const handleRegister = () => {
-    setFormVisibility("register");
+    navigate("/register"); // Navigate to Register page
   };
 
-  // const [formFillStep, setFormFillStep] = useState(0);
   return (
     <div className={style.formRapper}>
       <div className={style.userForm}>
@@ -80,7 +83,7 @@ const LoginForm = ({ setFormVisibility }) => {
             />
             <div className={style.btnRapper}>
               <Button text={"Login"} onClick={handleLogin} />
-              <Button text={"Register"} onClick={() => handleRegister()} />
+              <Button text={"Register"} onClick={handleRegister} />
             </div>
           </div>
         </form>

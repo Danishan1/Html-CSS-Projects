@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import InputField from "./InputField";
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
@@ -76,6 +77,8 @@ export const FormSection1 = ({
     setFormFillStep(1);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className={style.formSection}>
       <p className="colorCyan boldL2" style={{ textAlign: "center" }}>
@@ -114,7 +117,7 @@ export const FormSection1 = ({
       />
       <div className={style.btnRapper}>
         <Button text={"Verify Details"} onClick={move2Section2} />
-        <Button text={"Login"} onClick={() => setFormVisiblity("login")} />
+        <Button text={"Login"} onClick={() => navigate('/login')} />
       </div>
     </div>
   );

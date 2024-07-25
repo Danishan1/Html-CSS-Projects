@@ -5,7 +5,7 @@ import { FormSection1 } from "./FormSection1";
 import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
 
-const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
+const RegristerForm = ({ orgId, createdBy}) => {
   const [formData, setFormData] = useState({
     userId: "",
     name: "",
@@ -45,7 +45,6 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
               formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
-              setFormVisiblity={setFormVisiblity}
             />
           ) : formFillStep === 1 ? (
             <FormSection2
@@ -59,7 +58,6 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
               formData={formData}
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
-              setFormVisiblity={setFormVisiblity}
             />
           )}
           <div className={style.progress}>
@@ -85,4 +83,4 @@ const UserForm = ({ orgId, createdBy, setFormVisiblity }) => {
   );
 };
 
-export default UserForm;
+export default RegristerForm;

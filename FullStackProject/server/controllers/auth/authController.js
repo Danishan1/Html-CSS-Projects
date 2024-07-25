@@ -39,7 +39,7 @@ export const loginUser = async (req, res) => {
         const user = rows[0];
 
         if (!user || !(await bcrypt.compare(password, user.password))) {
-            return res.status(201).json({ code:'INVALID', message: 'Invalid credentials' });
+            return res.status(201).json({ code: 'INVALID', message: 'Invalid credentials' });
         }
 
         req.session.userId = user.userId;
@@ -109,4 +109,12 @@ export const logout = (req, res) => {
 export const profile = (req, res) => {
     if (!req.session.userId) return res.status(401).send('Unauthorized');
     res.send(`User ID: ${req.session.userId}`);
+};
+
+// Middleware to protect routes
+export const isAuthenticated = (req, res, next) => {
+    if (req.session.userId) {
+        res.status(200).json({ isAuth: true, userId: req.session.userId });
+    } else
+        res.status(401).json({ code: 'UNAUTH', message: 'You are not authenticated' });
 };

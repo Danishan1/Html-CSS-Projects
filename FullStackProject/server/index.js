@@ -10,7 +10,14 @@ const app = express();
 const server = http.createServer(app);
 const sessionMiddleware = sessionConfig();
 
-app.use(cors());
+// // CORS middleware
+// app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // Your React app's address
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use(sessionMiddleware);
 

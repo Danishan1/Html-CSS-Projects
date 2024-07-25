@@ -3,6 +3,7 @@ import { registerUser, loginUser, logout, profile } from '../controllers/auth/au
 import { verifyOTP } from '../controllers/auth/verifyOTP.js';
 import { getOTP } from '../controllers/auth/getOTP.js';
 import { getUserAuth } from '../controllers/auth/getUserAuth.js';
+import { isAuthenticated } from '../controllers/auth/authController.js';
 
 const router = express.Router();
 
@@ -13,6 +14,7 @@ router.post('/verifyOTP', verifyOTP);
 router.post('/getOTP', getOTP);
 
 router.get('/getUserAuth', getUserAuth);
+router.get('/isAuth', isAuthenticated);
 router.get('/profile', profile);
 
 export default router;
