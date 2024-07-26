@@ -4,7 +4,10 @@ import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
 
-export const FormSection3 = ({ formData, showAlert }) => {
+export const FormSection3 = ({
+  formData,
+  showAlert,
+}) => {
   const navigate = useNavigate();
 
   const handleSubmit = (name) => {

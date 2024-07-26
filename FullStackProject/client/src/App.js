@@ -6,7 +6,7 @@ import axios from 'axios';
 import Loading from './component/SpecialPages/js/Loading';
 
 const LoginForm = lazy(() => import('./component/Login/js/Login'))
-const RegristerForm = lazy(() => import('./component/Registration/js/RegrsterUserForm'))
+const RegristerForm = lazy(() => import('./component/Registration/js/RegisterForm'))
 const ChatApp = lazy(() => import('./component/Main/ChatApp'))
 const ErrorPage = lazy(() => import('./component/SpecialPages/js/ErrorPage'))
 
@@ -50,9 +50,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={authenticated ? <Navigate to="/discuss" /> : <Navigate to="/login" />} />
             <Route path="/login" element={authenticated ? <Navigate to="/discuss" /> : <LoginForm />} />
-            <Route path="/register" element={authenticated ? <Navigate to="/discuss" /> : <RegristerForm />} />
+            <Route path="/register/*" element={authenticated ? <Navigate to="/discuss" /> : <RegristerForm />} />
             <Route path="/discuss" element={authenticated ? <ChatApp /> : <Navigate to="/login" />} />
             <Route path="*" element={<ErrorPage />} />
+            <Route path="/errorPage" element={<ErrorPage />} />
           </Routes>
         </Router>
       </Suspense>
