@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import style from "../css/RegisterUserForm.module.css";
+import style from "../css/RegisterForm.module.css";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
 

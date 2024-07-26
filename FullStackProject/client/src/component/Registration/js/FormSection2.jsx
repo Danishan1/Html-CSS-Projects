@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "../css/RegisterUserForm.module.css";
+import style from "../css/RegisterForm.module.css";
 import { Button } from "./Button";
 import OtpField from "./OtpField";
 import axios from "axios";

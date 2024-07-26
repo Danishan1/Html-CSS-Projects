@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "./InputField";
-import style from "../css/RegisterUserForm.module.css";
+import style from "../css/RegisterForm.module.css";
 import Loading from "../../SpecialPages/js/Loading";
 import { Button } from "./Button";
 import { validateEmail, validateMobile } from "../helper/Validation";
