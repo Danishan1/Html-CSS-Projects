@@ -2,7 +2,7 @@ import db from '../config/db.js';
 
 export const getChats = async (req, res) => {
     const userId = req.session.userId;
-    const sql = 'SELECT * FROM chats WHERE user_id = ?';
+    const sql = 'SELECT * FROM chat WHERE userId = ?';
     try {
         const [results] = await db.query(sql, [userId]);
         res.json(results);
