@@ -53,7 +53,6 @@ const App = () => {
             <Route path="/register/*" element={authenticated ? <Navigate to="/discuss" /> : <RegristerForm />} />
             <Route path="/discuss" element={authenticated ? <ChatApp /> : <Navigate to="/login" />} />
             <Route path="*" element={<ErrorPage />} />
-            <Route path="/errorPage" element={<ErrorPage />} />
           </Routes>
         </Router>
       </Suspense>
