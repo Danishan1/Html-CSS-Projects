@@ -7,7 +7,7 @@ import Loading from './component/SpecialPages/js/Loading';
 
 const LoginForm = lazy(() => import('./component/Login/js/Login'))
 const RegristerForm = lazy(() => import('./component/Registration/js/RegisterForm'))
-const ChatApp = lazy(() => import('./component/Main/ChatApp'))
+const ChatApp = lazy(() => import('./component/Chat/js/ChatApp'))
 const ErrorPage = lazy(() => import('./component/SpecialPages/js/ErrorPage'))
 
 

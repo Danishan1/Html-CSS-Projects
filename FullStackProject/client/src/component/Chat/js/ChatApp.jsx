@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./css/ChatApp.module.css";
-// import ChatBox from "./ChatBox";
-import ChatBoxDrop from "../Chat/js/ChatBoxDrop";
-import UserListSection from "../UserListSection/js/UserListSection";
+import styles from "../css/ChatApp.module.css";
+import ChatBoxDrop from "./ChatBoxDrop";
+import UserListSection from "../../UserListSection/js/UserListSection";
 
 const ChatApp = () => {
   return (
