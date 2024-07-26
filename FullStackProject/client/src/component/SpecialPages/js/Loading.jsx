@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import SecondaryLoading from "./SecondaryLoading";
+import styles from "../css/Loading.module.css";
 
 const CubesLoader = lazy(() =>
   import("./LoadingStyle").then((module) => ({ default: module.CubesLoader }))
@@ -18,12 +19,14 @@ const LoadingChat = lazy(() => import("./LoadingChat"));
 /**
  * type can be [CubesLoader || FoldingLoader || BounceLoader || PulseLoader || LoadingChat]
  * @param type Allow to change based on this
+ * @param display Allow to chage type of Screen [top || block]
  * @param windowHeight Loading page Height
  * @param windowWidth Loading page Width
  * @returns jsx
  */
 const Loading = ({
   type = "CubesLoader",
+  display = "top",
   windowHeight = "100vh",
   windowWidth = "100vw",
 }) => {
@@ -63,29 +66,17 @@ const Loading = ({
       LoaderComponent = CubesLoader;
   }
 
+  const loadingStyle =
+    display === "top" ? `${styles.loading} ${styles.top}` : styles.loading;
+
   return (
     <div
-      style={{
-        height: windowHeight,
-        width: windowWidth,
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        gap: "10px",
-        alignItems: "center",
-      }}
+      style={{ height: windowHeight, width: windowWidth }}
+      className={loadingStyle}
     >
       <Suspense fallback={<SecondaryLoading />}>
         <LoaderComponent />
-        <p
-          style={{
-            fontWeight: "var(--boldL3)",
-            color: "var(--colorCyan",
-            width: "80px",
-          }}
-        >
-          {loadingText}
-        </p>
+        <p className={styles.text}>{loadingText}</p>
       </Suspense>
     </div>
   );

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "./InputField";
 import style from "../css/RegisterUserForm.module.css";
+import Loading from "../../SpecialPages/js/Loading";
 import { Button } from "./Button";
 import { validateEmail, validateMobile } from "../helper/Validation";
 import axios from "axios";
@@ -11,8 +12,10 @@ export const FormSection1 = ({
   formData,
   showAlert,
   setFormFillStep,
-  setFormVisiblity,
 }) => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -37,12 +40,14 @@ export const FormSection1 = ({
       return true;
     } catch (error) {
       console.log(error);
+      showAlert("Failed to send OTP. Please try again.", "error");
       return false;
     }
   };
 
   const move2Section2 = async (e) => {
     e.preventDefault();
+
     let isValid = true;
 
     if (!validateEmail(formData.email)) {
@@ -55,6 +60,10 @@ export const FormSection1 = ({
       isValid = false;
     }
 
+    if (!isValid) return;
+
+    setLoading(true);
+
     // OTP for Email Verification
     isValid = await handleGetOTP(
       "email",
@@ -62,9 +71,13 @@ export const FormSection1 = ({
       formData.name,
       formData.email
     );
-    if (!isValid) return;
+    
+    if (!isValid) {
+      setLoading(false);
+      return;
+    }
 
-    // OTP For Mobile verification
+    // OTP for Mobile Verification
     isValid = await handleGetOTP(
       "mobile",
       "verification",
@@ -72,12 +85,18 @@ export const FormSection1 = ({
       formData.email
     );
 
-    if (!isValid) return;
+    if (!isValid) {
+      setLoading(false);
+      return;
+    }
+
+    setLoading(false);
+
     showAlert("Great, Let's verify your details...", "success");
     setFormFillStep(1);
   };
 
-  const navigate = useNavigate();
+  if (loading) return <Loading />;
 
   return (
     <div className={style.formSection}>
@@ -110,14 +129,14 @@ export const FormSection1 = ({
       />
       <InputField
         label="Designation"
-        type="designation"
+        type="text"
         name="designation"
         value={formData.designation}
         onChange={handleChange}
       />
       <div className={style.btnRapper}>
         <Button text={"Verify Details"} onClick={move2Section2} />
-        <Button text={"Login"} onClick={() => navigate('/login')} />
+        <Button text={"Login"} onClick={() => navigate("/login")} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import OtpField from "./OtpField";
 import axios from "axios";
+import Loading from "../../SpecialPages/js/Loading";
 
 export const FormSection2 = ({
   formData,
@@ -14,6 +15,7 @@ export const FormSection2 = ({
   const [emailVerified, setEmailVerified] = useState(false);
   const [mobileErrorShown, setMobileErrorShown] = useState(false);
   const [emailErrorShown, setEmailErrorShown] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [mobileOtp, setMobileOtp] = useState("");
   const [emailOtp, setEmailOtp] = useState("");
 
@@ -58,30 +60,33 @@ export const FormSection2 = ({
           userId: response.data.userId,
           passcode: response.data.password,
         }));
+        showAlert("Registration Successful!", "success");
+        setFormFillStep(2);
       }
     } catch (error) {
       console.log(error);
+      showAlert("Registration Failed!", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
   const move2Section3 = async (e) => {
     e.preventDefault();
     if (mobileVerified && emailVerified) {
-      await register();
-      showAlert("OTP Verified!", "success");
-      setFormFillStep(2);
+      setLoading(true); // Set loading state to true
+      await register(); // Register user
     } else {
       if (!mobileVerified && !emailVerified)
         showAlert("Please verify both Mobile and Email OTPs.", "error");
-      else if (!mobileVerified)
-        showAlert("Please verify Mobile OTPs.", "error");
+      else if (!mobileVerified) showAlert("Please verify Mobile OTP.", "error");
       else showAlert("Please verify Email OTP.", "error");
     }
   };
 
   const handleMobileChange = async (otp) => {
     setMobileOtp(otp);
-    const isVerified = await verifyOTP(mobileOtp, "mobile", formData.email);
+    const isVerified = await verifyOTP(otp, "mobile", formData.email);
     if (isVerified) {
       if (!mobileVerified) {
         showAlert("Mobile OTP verified successfully!", "success");
@@ -97,7 +102,7 @@ export const FormSection2 = ({
 
   const handleEmailChange = async (otp) => {
     setEmailOtp(otp);
-    const isVerified = await verifyOTP(emailOtp, "email", formData.email);
+    const isVerified = await verifyOTP(otp, "email", formData.email);
     if (isVerified) {
       if (!emailVerified) {
         showAlert("Email OTP verified successfully!", "success");
@@ -110,6 +115,8 @@ export const FormSection2 = ({
       setEmailErrorShown(true);
     }
   };
+
+  if (loading) return <Loading />;
 
   return (
     <div className={`${style.formSection} ${style.formSection2}`}>

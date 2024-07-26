@@ -42,6 +42,7 @@ const App = () => {
   }
 
 
+
   return (
     <div className="App">
       <Suspense fallback={<Loading />}>
@@ -55,6 +56,8 @@ const App = () => {
           </Routes>
         </Router>
       </Suspense>
+
+
 
     </div>
   );

@@ -5,7 +5,7 @@ import { FormSection1 } from "./FormSection1";
 import { FormSection2 } from "./FormSection2";
 import { FormSection3 } from "./FormSection3";
 
-const RegristerForm = ({ orgId, createdBy}) => {
+const RegristerForm = ({ orgId = "ORD_ID", createdBy = "Application" }) => {
   const [formData, setFormData] = useState({
     userId: "",
     name: "",
@@ -53,7 +53,7 @@ const RegristerForm = ({ orgId, createdBy}) => {
               showAlert={showAlert}
               setFormFillStep={setFormFillStep}
             />
-          ) :  (
+          ) : (
             <FormSection3
               formData={formData}
               showAlert={showAlert}
