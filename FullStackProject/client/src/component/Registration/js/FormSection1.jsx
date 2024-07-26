@@ -71,7 +71,7 @@ export const FormSection1 = ({
       formData.name,
       formData.email
     );
-    
+
     if (!isValid) {
       setLoading(false);
       return;
@@ -96,7 +96,7 @@ export const FormSection1 = ({
     setFormFillStep(1);
   };
 
-  if (loading) return <Loading />;
+  if (loading) return <Loading position="absolute" />;
 
   return (
     <div className={style.formSection}>

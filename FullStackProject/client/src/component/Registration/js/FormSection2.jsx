@@ -116,7 +116,7 @@ export const FormSection2 = ({
     }
   };
 
-  if (loading) return <Loading />;
+  if (loading) return <Loading position="absolute" />;
 
   return (
     <div className={`${style.formSection} ${style.formSection2}`}>

@@ -27,6 +27,7 @@ const LoadingChat = lazy(() => import("./LoadingChat"));
 const Loading = ({
   type = "CubesLoader",
   display = "top",
+  position = "relative",
   windowHeight = "100vh",
   windowWidth = "100vw",
 }) => {
@@ -69,9 +70,14 @@ const Loading = ({
   const loadingStyle =
     display === "top" ? `${styles.loading} ${styles.top}` : styles.loading;
 
+  const positionStyle =
+    display === "top" && position === "relative"
+      ? { position: "relative" }
+      : { position: "absolute" };
+
   return (
     <div
-      style={{ height: windowHeight, width: windowWidth }}
+      style={{ height: windowHeight, width: windowWidth, ...positionStyle }}
       className={loadingStyle}
     >
       <Suspense fallback={<SecondaryLoading />}>

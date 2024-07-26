@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import style from "../css/RegisterUserForm.module.css";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
 
-export const FormSection3 = ({
-  formData,
-  showAlert,
-}) => {
+export const FormSection3 = ({ formData, showAlert }) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.removeItem("formData");
+    localStorage.removeItem("formFillStep");
+  }, []);
 
   const handleSubmit = (name) => {
     showAlert(`Register Successfully, ${name}. Kindly Login now`, "success");
-    navigate("/login");
+    navigate("/discuss");
   };
 
   return (

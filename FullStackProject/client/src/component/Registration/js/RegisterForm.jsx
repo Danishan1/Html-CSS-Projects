@@ -16,7 +16,7 @@ const FormSection3 = lazy(() =>
   import("./FormSection3").then((module) => ({ default: module.FormSection3 }))
 );
 
-const RegisterForm = ({ orgId = "ORD_ID", createdBy = "Application" }) => {
+const RegisterForm = ({ orgId = "ORG_ID", createdBy = "Application" }) => {
   const [formData, setFormData] = useState(() => {
     const savedFormData = localStorage.getItem("formData");
     return savedFormData
@@ -66,7 +66,6 @@ const RegisterForm = ({ orgId = "ORD_ID", createdBy = "Application" }) => {
             showAlert={showAlert}
             setFormFillStep={setFormFillStep}
           />
-          {/* <Loading windowHeight="100%" windowWidth="100%" /> */}
           <div className={style.progress}>
             {formFillStep === 0 ? (
               <samp className={`${style.currentSec}`}></samp>
