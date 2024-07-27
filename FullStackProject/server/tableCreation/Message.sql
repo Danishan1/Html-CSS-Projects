@@ -1,0 +1,13 @@
+CREATE TABLE
+    IF NOT EXISTS message (
+        messageId INT AUTO_INCREMENT PRIMARY KEY,
+        chatId INT NOT NULL,
+        dateTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        status VARCHAR(50),
+        forwardedChat BOOLEAN DEFAULT FALSE,
+        createdBy VARCHAR(50),
+        updatedBy VARCHAR(50),
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        FOREIGN KEY (chatId) REFERENCES chat (chatId)
+    );

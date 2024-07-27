@@ -1,9 +1,11 @@
 CREATE TABLE
     IF NOT EXISTS chat (
         chatId INT AUTO_INCREMENT PRIMARY KEY,
-        dateTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        members VARCHAR(50),
         status VARCHAR(50),
-        forwardedChat BOOLEAN DEFAULT FALSE,
+        admin VARCHAR(50),
+        chatName VARCHAR(20),
+        chatDescription VARCHAR(50),
         isGroupChat BOOLEAN DEFAULT FALSE,
         createdBy VARCHAR(50),
         updatedBy VARCHAR(50),

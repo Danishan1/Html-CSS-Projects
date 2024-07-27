@@ -1,15 +1,5 @@
-import db from '../config/db.js';
+import db from '../../config/db.js';
 
-export const getChats = async (req, res) => {
-    const userId = req.session.userId;
-    const sql = 'SELECT * FROM chat WHERE userId = ?';
-    try {
-        const [results] = await db.query(sql, [userId]);
-        res.json(results);
-    } catch (err) {
-        res.status(500).send('Server error');
-    }
-};
 
 export const createChat = async (req, res) => {
     const userId = req.session.userId;

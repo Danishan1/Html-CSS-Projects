@@ -5,6 +5,7 @@ import sessionConfig from './config/session.js';
 import mainRoute from "./routes/index.js"
 // import socketHandler from './sockets/chatSocket.js';
 import { errorHandler } from './utils/errorHandler.js';
+import { executeTables } from './queries/executeTables.js';
 
 const app = express();
 const server = http.createServer(app);
@@ -26,6 +27,7 @@ app.use(errorHandler);
 
 // socketHandler(server, sessionMiddleware);
 
+executeTables()
 const port = process.env.SERVER_PORT || 5001;
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
