@@ -13,8 +13,10 @@ CREATE TABLE
         time TIME,
         duration VARCHAR(20),
         location VARCHAR(50), -- Online, In Office, Address
+        addressId INT,
         videoCallLink VARCHAR(255),
         FOREIGN KEY (chatId) REFERENCES chat (chatId),
         FOREIGN KEY (messageId) REFERENCES message (messageId),
+        FOREIGN KEY (addressId) REFERENCES address (addressId),
         UNIQUE (messageId)
     );

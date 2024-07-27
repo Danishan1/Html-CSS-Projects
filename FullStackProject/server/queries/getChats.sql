@@ -54,6 +54,8 @@ FROM
                 '|@@|',
                 duration,
                 '|@@|',
+                addressId,
+                '|@@|',
                 location,
                 '|@@|',
                 videoCallLink

@@ -14,9 +14,11 @@ CREATE TABLE
         orgId VARCHAR(15) NOT NULL,
         registerDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         lastLogin TIMESTAMP,
+        addressId INT,
         createdBy VARCHAR(10),
         updatedBy VARCHAR(10),
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (orgId) REFERENCES organization (orgId)
+        FOREIGN KEY (orgId) REFERENCES organization (orgId),
+        FOREIGN KEY (addressId) REFERENCES address (addressId)
     );

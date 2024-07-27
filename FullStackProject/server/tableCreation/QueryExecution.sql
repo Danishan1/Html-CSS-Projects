@@ -1,6 +1,5 @@
 INSERT INTO
     Address (
-        addressId,
         latitude,
         longitude,
         houseNo,
@@ -14,7 +13,6 @@ INSERT INTO
     )
 VALUES
     (
-        'ADD_ID',
         28.613939,
         77.209023,
         '123',
@@ -35,9 +33,9 @@ INSERT INTO
         email,
         website,
         size,
-        passcode,
+        password,
         addressId,
-        logo,
+        logoPath,
         industry
     )
 VALUES
@@ -49,7 +47,7 @@ VALUES
         'https://www.techsolutions.com',
         100,
         'ABC123',
-        'ADD_ID',
+        1,
         'logo.png',
         'Information Technology'
     );
