@@ -1,14 +1,18 @@
+--
+-- Do not change the Order of atributes as they are used in query logics
+--
+
 CREATE TABLE
     IF NOT EXISTS call_up (
         callId VARCHAR(20) PRIMARY KEY,
         messageId INT NOT NULL,
-        contentId VARCHAR(20) NOT NULL,
-        type VARCHAR(50),
+        chatId INT NOT NULL,
+        callType ENUM ('video', 'audio'),
         duration VARCHAR(20),
-        status VARCHAR(50),
-        createdBy VARCHAR(50),
-        updatedBy VARCHAR(50),
-        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (messageId) REFERENCES message (messageId)
+        callStatus VARCHAR(50), -- recieve or not connect, ect
+        callQuality VARCHAR(50),
+        participants TEXT, -- JSON or comma-separated list of participant IDs
+        FOREIGN KEY (chatId) REFERENCES chat (chatId),
+        FOREIGN KEY (messageId) REFERENCES message (messageId),
+        UNIQUE (messageId)
     );

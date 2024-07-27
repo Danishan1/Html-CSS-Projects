@@ -1,19 +1,22 @@
+--
+-- Do not change the Order of atributes as they are used in query logics
+--
 CREATE TABLE
     IF NOT EXISTS user (
-        userId VARCHAR(20) PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
+        userId VARCHAR(10) PRIMARY KEY,
+        password VARCHAR(225),
+        name VARCHAR(50) NOT NULL,
         mobile VARCHAR(20) NOT NULL UNIQUE,
-        email VARCHAR(255) NOT NULL UNIQUE,
+        email VARCHAR(50) NOT NULL UNIQUE,
         profilePicPath VARCHAR(255),
-        status VARCHAR(50),
-        designation VARCHAR(255),
-        orgId VARCHAR(20) NOT NULL,
+        status VARCHAR(50), -- Active, InActive, last Seen
+        designation VARCHAR(50),
+        orgId VARCHAR(15) NOT NULL,
         registerDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         lastLogin TIMESTAMP,
-        createdBy VARCHAR(50),
-        updatedBy VARCHAR(50),
+        createdBy VARCHAR(10),
+        updatedBy VARCHAR(10),
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        password VARCHAR(100),
         FOREIGN KEY (orgId) REFERENCES organization (orgId)
     );

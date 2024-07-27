@@ -1,20 +1,14 @@
 import db from '../../config/db.js';
+// import { getMessageIdQuery } from '../../queries/getChats.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
 
 export const getChats = async (req, res) => {
-    const { userId } = req.params;
+    const { chatId } = req.params;
 
     const authenticatedUserID = req.session.userId;
-    const sql = `
-        SELECT DISTINCT c.chatId
-        FROM Chat c
-        JOIN chat_participant cp1 ON c.chatId = cp1.chatId
-        JOIN chat_participant cp2 ON c.chatId = cp2.chatId
-        WHERE cp1.userId = ?
-        AND cp2.userId = ?;
-    `;
+    const sql = '';
     try {
-        const [results] = await db.query(sql, [userId, authenticatedUserID]);
+        const [results] = await db.query(sql, [chatId]);
         const statusDetails = getStatusDetails(200);
         res.json({ ...statusDetails, responseCode: '0000C', results });
     } catch (err) {

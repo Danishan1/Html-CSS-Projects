@@ -14,7 +14,8 @@ const tablePaths = [
     `${relativePath}/Media.sql`,
     `${relativePath}/Meeting.sql`,
     `${relativePath}/Payment.sql`,
-    `${relativePath}/Text.sql`
+    `${relativePath}/Text.sql`,
+    `${relativePath}/Verification.sql`
 ]
 
 export default tablePaths
