@@ -1,8 +1,8 @@
 CREATE TABLE
-    IF NOT EXISTS ChatList (
-        listID INT AUTO_INCREMENT PRIMARY KEY,
-        userID VARCHAR(20) NOT NULL,
-        chatID INT NOT NULL,
-        FOREIGN KEY (userID) REFERENCES User (userID),
-        FOREIGN KEY (chatID) REFERENCES Chat (chatID)
+    IF NOT EXISTS chat_list (
+        listId INT AUTO_INCREMENT PRIMARY KEY,
+        userId VARCHAR(20) NOT NULL,
+        chatId INT NOT NULL,
+        FOREIGN KEY (userId) REFERENCES user (userId),
+        FOREIGN KEY (chatId) REFERENCES chat (chatId)
     );

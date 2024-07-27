@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Loaction (
+CREATE TABLE IF NOT EXISTS loaction (
     locationId INT AUTO_INCREMENT PRIMARY KEY,
     chatId INT NOT NULL,
     contentId VARCHAR(50) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS Loaction (
     updatedBy VARCHAR(50),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (chatId) REFERENCES Chat (chatId),
-    FOREIGN KEY (addressId) REFERENCES Chat (addressId),
+    FOREIGN KEY (chatId) REFERENCES chat (chatId),
+    FOREIGN KEY (addressId) REFERENCES chat (addressId),
     UNIQUE (contentId)
 );

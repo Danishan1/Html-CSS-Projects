@@ -1,5 +1,5 @@
 import tablePaths from "../tableCreation/sequenceOfExecution.js";
-import pool from "../database/pool.js";
+import pool from "../config/db.js";
 import fs from "fs"
 
 export const executeTables = async () => {
@@ -7,7 +7,9 @@ export const executeTables = async () => {
     try {
         conn = await pool.getConnection()
 
+
         for (const filePath of tablePaths) {
+
             const sql = fs.readFileSync(filePath, "utf-8");
             await conn.query(sql);
             console.log("Excecuted Successfully:", filePath)

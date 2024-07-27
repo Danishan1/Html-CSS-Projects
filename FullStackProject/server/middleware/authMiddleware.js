@@ -1,4 +1,4 @@
-import { getStatusDetails } from "../utils/getStatusDetails";
+import { getStatusDetails } from "../utils/getStatusDetails.js";
 export const authMiddleware = (req, res, next) => {
 
     if (!req.session.userId) {

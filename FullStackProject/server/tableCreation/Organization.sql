@@ -1,5 +1,5 @@
 CREATE TABLE
-    IF NOT EXISTS Organization (
+    IF NOT EXISTS organization (
         orgId VARCHAR(20) PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         mobile VARCHAR(20),
@@ -15,5 +15,5 @@ CREATE TABLE
         updatedBy VARCHAR(50),
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (addressId) REFERENCES Address (addressId)
+        FOREIGN KEY (addressId) REFERENCES address (addressId)
     );

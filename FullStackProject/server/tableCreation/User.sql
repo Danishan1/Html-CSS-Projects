@@ -1,5 +1,5 @@
 CREATE TABLE
-    IF NOT EXISTS User (
+    IF NOT EXISTS user (
         userId VARCHAR(20) PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         mobile VARCHAR(20) NOT NULL UNIQUE,
@@ -15,5 +15,5 @@ CREATE TABLE
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         password VARCHAR(100),
-        FOREIGN KEY (orgId) REFERENCES Organization (orgId)
+        FOREIGN KEY (orgId) REFERENCES organization (orgId)
     );

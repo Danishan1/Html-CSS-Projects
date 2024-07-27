@@ -1,14 +1,18 @@
-CREATE TABLE IF NOT EXISTS CallUp (
-    callId INT AUTO_INCREMENT PRIMARY KEY,
-    chatId INT NOT NULL,
-    contentId VARCHAR(50) NOT NULL,
-    type VARCHAR(50),
-    duration VARCHAR(20),
-    status VARCHAR(50),
-    createdBy VARCHAR(50),
-    updatedBy VARCHAR(50),
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (chatId) REFERENCES Chat (chatId),
-    UNIQUE (contentId)
-);
+CREATE TABLE
+    IF NOT EXISTS address (
+        addressId VARCHAR(20) PRIMARY KEY,
+        latitude DECIMAL(9, 6),
+        longitude DECIMAL(9, 6),
+        houseNo VARCHAR(50),
+        streetNo VARCHAR(50),
+        block VARCHAR(50),
+        city VARCHAR(100),
+        district VARCHAR(100),
+        state VARCHAR(100),
+        country VARCHAR(100),
+        pincode VARCHAR(20),
+        createdBy VARCHAR(50),
+        updatedBy VARCHAR(50),
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    );
