@@ -3,7 +3,7 @@ import styles from "../css/ErrorPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { getStatusDetails } from "../../utils/getStatusDetails";
 
-const ErrorPage = ({ statusCode = "404" }) => {
+const ErrorPage = ({ statusCode = "404", responseCode = null }) => {
   let statusDetail = getStatusDetails(statusCode);
 
   console.log(statusDetail);
@@ -52,6 +52,13 @@ const ErrorPage = ({ statusCode = "404" }) => {
           <p className={styles.description}>
             <span className="boldL2">Detail:</span> {statusDetail.statusDetail}
           </p>
+          {responseCode !== null ? (
+            <p className={styles.description}>
+              <span className="boldL2">Response Code:</span> {responseCode}
+            </p>
+          ) : (
+            <></>
+          )}
           <p className={styles.instruction}>
             You may return to{" "}
             <span className={styles.link} onClick={handleClick}>

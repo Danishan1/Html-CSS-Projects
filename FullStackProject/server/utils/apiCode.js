@@ -1,157 +1,157 @@
 export const data = {
     "200": {
-        "StatusCode": "200",
-        "StatusError": "OK",
-        "StatusDetails": "Standard successful response."
+        "statusCode": "200",
+        "statusError": "OK",
+        "statusDetails": "Standard successful response."
     },
     "201": {
-        "StatusCode": "201",
-        "StatusError": "Created",
-        "StatusDetails": "Resource successfully created."
+        "statusCode": "201",
+        "statusError": "Created",
+        "statusDetails": "Resource successfully created."
     },
     "202": {
-        "StatusCode": "202",
-        "StatusError": "Accepted",
-        "StatusDetails": "Request accepted but not yet processed."
+        "statusCode": "202",
+        "statusError": "Accepted",
+        "statusDetails": "Request accepted but not yet processed."
     },
     "203": {
-        "StatusCode": "203",
-        "StatusError": "No Content",
-        "StatusDetails": "Successful request but no content to return."
+        "statusCode": "203",
+        "statusError": "No Content",
+        "statusDetails": "Successful request but no content to return."
     },
     "400": {
-        "StatusCode": "400",
-        "StatusError": "Bad Request",
-        "StatusDetails": "Invalid request format or parameters."
+        "statusCode": "400",
+        "statusError": "Bad Request",
+        "statusDetails": "Invalid request format or parameters."
     },
     "401": {
-        "StatusCode": "401",
-        "StatusError": "Unauthorized",
-        "StatusDetails": "Authentication required or failed."
+        "statusCode": "401",
+        "statusError": "Unauthorized",
+        "statusDetails": "Authentication required or failed."
     },
     "403": {
-        "StatusCode": "403",
-        "StatusError": "Forbidden",
-        "StatusDetails": "Authenticated but access denied."
+        "statusCode": "403",
+        "statusError": "Forbidden",
+        "statusDetails": "Authenticated but access denied."
     },
     "404": {
-        "StatusCode": "404",
-        "StatusError": "Not Found",
-        "StatusDetails": "Requested resource not found."
+        "statusCode": "404",
+        "statusError": "Not Found",
+        "statusDetails": "Requested resource not found."
     },
     "405": {
-        "StatusCode": "405",
-        "StatusError": "Method Not Allowed",
-        "StatusDetails": "HTTP method not allowed for the resource."
+        "statusCode": "405",
+        "statusError": "Method Not Allowed",
+        "statusDetails": "HTTP method not allowed for the resource."
     },
     "406": {
-        "StatusCode": "406",
-        "StatusError": "Not Acceptable",
-        "StatusDetails": "Requested format not supported."
+        "statusCode": "406",
+        "statusError": "Not Acceptable",
+        "statusDetails": "Requested format not supported."
     },
     "408": {
-        "StatusCode": "408",
-        "StatusError": "Request Timeout",
-        "StatusDetails": "Server timed out waiting for the request."
+        "statusCode": "408",
+        "statusError": "Request Timeout",
+        "statusDetails": "Server timed out waiting for the request."
     },
     "409": {
-        "StatusCode": "409",
-        "StatusError": "Conflict",
-        "StatusDetails": "Request conflict with the current state of the resource."
+        "statusCode": "409",
+        "statusError": "Conflict",
+        "statusDetails": "Request conflict with the current state of the resource."
     },
     "410": {
-        "StatusCode": "410",
-        "StatusError": "Gone",
-        "StatusDetails": "Resource is no longer available."
+        "statusCode": "410",
+        "statusError": "Gone",
+        "statusDetails": "Resource is no longer available."
     },
     "411": {
-        "StatusCode": "411",
-        "StatusError": "Length Required",
-        "StatusDetails": "Content-Length header required."
+        "statusCode": "411",
+        "statusError": "Length Required",
+        "statusDetails": "Content-Length header required."
     },
     "413": {
-        "StatusCode": "413",
-        "StatusError": "Payload Too Large",
-        "StatusDetails": "Request entity too large."
+        "statusCode": "413",
+        "statusError": "Payload Too Large",
+        "statusDetails": "Request entity too large."
     },
     "414": {
-        "StatusCode": "414",
-        "StatusError": "URI Too Long",
-        "StatusDetails": "URI too long."
+        "statusCode": "414",
+        "statusError": "URI Too Long",
+        "statusDetails": "URI too long."
     },
     "415": {
-        "StatusCode": "415",
-        "StatusError": "Unsupported Media Type",
-        "StatusDetails": "Media type not supported."
+        "statusCode": "415",
+        "statusError": "Unsupported Media Type",
+        "statusDetails": "Media type not supported."
     },
     "422": {
-        "StatusCode": "422",
-        "StatusError": "Unprocessable Entity",
-        "StatusDetails": "Semantic errors in the request."
+        "statusCode": "422",
+        "statusError": "Unprocessable Entity",
+        "statusDetails": "Semantic errors in the request."
     },
     "429": {
-        "StatusCode": "429",
-        "StatusError": "Too Many Requests",
-        "StatusDetails": "Too many requests in a given time."
+        "statusCode": "429",
+        "statusError": "Too Many Requests",
+        "statusDetails": "Too many requests in a given time."
     },
     "500": {
-        "StatusCode": "500",
-        "StatusError": "Internal Server Error",
-        "StatusDetails": "Generic server error."
+        "statusCode": "500",
+        "statusError": "Internal Server Error",
+        "statusDetails": "Generic server error."
     },
     "501": {
-        "StatusCode": "501",
-        "StatusError": "Not Implemented",
-        "StatusDetails": "Server does not recognize the method."
+        "statusCode": "501",
+        "statusError": "Not Implemented",
+        "statusDetails": "Server does not recognize the method."
     },
     "502": {
-        "StatusCode": "502",
-        "StatusError": "Bad Gateway",
-        "StatusDetails": "Invalid response from an upstream server."
+        "statusCode": "502",
+        "statusError": "Bad Gateway",
+        "statusDetails": "Invalid response from an upstream server."
     },
     "503": {
-        "StatusCode": "503",
-        "StatusError": "Service Unavailable",
-        "StatusDetails": "Server is down or overloaded."
+        "statusCode": "503",
+        "statusError": "Service Unavailable",
+        "statusDetails": "Server is down or overloaded."
     },
     "504": {
-        "StatusCode": "504",
-        "StatusError": "Gateway Timeout",
-        "StatusDetails": "Upstream server timeout."
+        "statusCode": "504",
+        "statusError": "Gateway Timeout",
+        "statusDetails": "Upstream server timeout."
     },
     "505": {
-        "StatusCode": "505",
-        "StatusError": "HTTP Version Not Supported",
-        "StatusDetails": "HTTP version not supported."
+        "statusCode": "505",
+        "statusError": "HTTP Version Not Supported",
+        "statusDetails": "HTTP version not supported."
     },
     "301": {
-        "StatusCode": "301",
-        "StatusError": "Moved Permanently",
-        "StatusDetails": "Resource moved permanently."
+        "statusCode": "301",
+        "statusError": "Moved Permanently",
+        "statusDetails": "Resource moved permanently."
     },
     "302": {
-        "StatusCode": "302",
-        "StatusError": "Found",
-        "StatusDetails": "Resource temporarily moved."
+        "statusCode": "302",
+        "statusError": "Found",
+        "statusDetails": "Resource temporarily moved."
     },
     "303": {
-        "StatusCode": "303",
-        "StatusError": "See Other",
-        "StatusDetails": "Redirect to a different resource."
+        "statusCode": "303",
+        "statusError": "See Other",
+        "statusDetails": "Redirect to a different resource."
     },
     "304": {
-        "StatusCode": "304",
-        "StatusError": "Not Modified",
-        "StatusDetails": "Resource not modified since the last request."
+        "statusCode": "304",
+        "statusError": "Not Modified",
+        "statusDetails": "Resource not modified since the last request."
     },
     "307": {
-        "StatusCode": "307",
-        "StatusError": "Temporary Redirect",
-        "StatusDetails": "Temporary redirect, same method."
+        "statusCode": "307",
+        "statusError": "Temporary Redirect",
+        "statusDetails": "Temporary redirect, same method."
     },
     "308": {
-        "StatusCode": "308",
-        "StatusError": "Permanent Redirect",
-        "StatusDetails": "Permanent redirect, same method."
+        "statusCode": "308",
+        "statusError": "Permanent Redirect",
+        "statusDetails": "Permanent redirect, same method."
     }
 }
