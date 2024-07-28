@@ -1,3 +1,14 @@
+
+/**
+ *  - SQL query to retrieve all messages for a specific chat. 
+ *  - The query dynamically fetches messages based on the provided chatId.
+ *  - it has a column messageType, messageContent is Specific to each messageType 
+ *  - MessageContent Seperator '|@@|'
+ * 
+ * 
+ * @returns SQL Query
+ */
+
 export const getChatQuery = () => `WITH
     text_messages AS (
         SELECT
