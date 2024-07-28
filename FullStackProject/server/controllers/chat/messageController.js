@@ -2,116 +2,16 @@
 
 import db from '../../config/db.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
+import { handleText } from './handleText.js'
+import { handleMedia } from './handleMedia.js';
+import { handleMeeting } from './handleMeeting.js';
+import { handlePayment } from './handlePayment.js';
+import { handleCallUp } from './handleCallUp.js';
+import { handleLocation } from './handleLocation.js';
+import { handleFile } from './handleFile.js';
+import { data } from '../../utils/apiCode.js';
 
-// Helper function to add a message
-const addMessage1 = async (messageQuery, params, res) => {
-    try {
-        await db.query(messageQuery, params);
-        const statusDetails = getStatusDetails(200);
-        res.json({ ...statusDetails, responseCode: '0000C', message: 'Message added successfully' });
-    } catch (err) {
-        const statusDetails = getStatusDetails(500);
-        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
-    }
-};
-
-const insertMessage = async (chatId, userId, status, forwardedChat, createdBy, updatedBy) => {
-    const sql = `
-        INSERT INTO message (chatId, userId, status, forwardedChat, createdBy, updatedBy)
-        VALUES (?, ?, ?, ?, ?, ?)
-    `;
-    const [result] = await db.query(sql, [chatId, userId, status, forwardedChat, createdBy, updatedBy]);
-    return result.insertId;
-};
-
-export const addTextMessage = async (req, res) => {
-    const { chatId, userId, status, forwardedChat, createdBy, updatedBy, textContent } = req.body;
-
-    try {
-        // Insert the message and get its ID
-        const messageId = await insertMessage(chatId, userId, status, forwardedChat, createdBy, updatedBy);
-
-        // Insert the text message
-        const sql = `
-            INSERT INTO text (messageId, textContent)
-            VALUES (?, ?)
-        `;
-        await db.query(sql, [messageId, textContent]);
-
-        const statusDetails = getStatusDetails(200);
-        res.json({ ...statusDetails, responseCode: '0000C', message: 'Text message added successfully' });
-    } catch (err) {
-        const statusDetails = getStatusDetails(500);
-        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
-    }
-};
-
-// Add Media Message
-export const addMediaMessage = async (req, res) => {
-    const { messageId, chatId, userId, mediaName, mediaPath, mediaSize, mediaType } = req.body;
-    const messageQuery = `
-    INSERT INTO Media (messageId, chatId, userId, mediaName, mediaPath, mediaSize, mediaType)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, mediaName, mediaPath, mediaSize, mediaType], res);
-};
-
-// Add Meeting Message
-export const addMeetingMessage = async (req, res) => {
-    const { messageId, chatId, userId, title, purpose, description, date, time, duration, location, videoCallLink } = req.body;
-    const messageQuery = `
-    INSERT INTO Meeting (messageId, chatId, userId, title, purpose, description, date, time, duration, location, videoCallLink)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, title, purpose, description, date, time, duration, location, videoCallLink], res);
-};
-
-// Add Payment Message
-export const addPaymentMessage = async (req, res) => {
-    const { messageId, chatId, userId, amount, dueDate, refNo, bankName, payFrom, payTo, payStatus } = req.body;
-    const messageQuery = `
-    INSERT INTO Payment (messageId, chatId, userId, amount, dueDate, refNo, bankName, payFrom, payTo, payStatus)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, amount, dueDate, refNo, bankName, payFrom, payTo, payStatus], res);
-};
-
-// Add Call Up Message
-export const addCallUpMessage = async (req, res) => {
-    const { messageId, chatId, userId, type, duration, callStatus } = req.body;
-    const messageQuery = `
-    INSERT INTO CallUp (messageId, chatId, userId, type, duration, callStatus)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, type, duration, callStatus], res);
-};
-
-// Add Location Message
-export const addLocationMessage = async (req, res) => {
-    const { messageId, chatId, userId, address } = req.body;
-    const messageQuery = `
-    INSERT INTO Location (messageId, chatId, userId, address)
-    VALUES (?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, address], res);
-};
-
-// Add File Message
-export const addFileMessage = async (req, res) => {
-    const { messageId, chatId, userId, fileName, filePath, fileSize, fileType } = req.body;
-    const messageQuery = `
-    INSERT INTO File (messageId, chatId, userId, fileName, filePath, fileSize, fileType)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
-  `;
-    await addMessage(messageQuery, [messageId, chatId, userId, fileName, filePath, fileSize, fileType], res);
-};
-
-
-// #########################################################################################################
-
-
-
-export const addMessage = async (req, res) => {
+const addMessage = async (req, res) => {
     const { chatId, userId, status, forwardedChat, msgType, messageData } = req.body;
 
     try {
@@ -127,64 +27,35 @@ export const addMessage = async (req, res) => {
         // Insert into appropriate table based on msgType
         switch (msgType) {
             case 'text':
-                await db.query(
-                    `INSERT INTO text (messageId, chatId, text) VALUES (?, ?, ?)`,
-                    [messageId, chatId, messageData.text]
-                );
+                await handleText(messageId, chatId, messageData)
                 break;
 
             case 'media':
-                const { mediaName, mediaPath, mediaSize, mediaType, duration, bitrate } = messageData;
-
-                await db.query(
-                    `INSERT INTO media (messageId, chatId, mediaName, mediaPath, mediaSize, mediaType, duration, bitrate)
-                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-                    [messageId, chatId, mediaName, mediaPath, mediaSize, mediaType, duration, bitrate]
-                );
+                await handleMedia(messageId, chatId, messageData)
                 break;
 
             case 'meeting':
-                await db.query(
-                    `INSERT INTO meeting (messageId, title, purpose, description, date, time, duration, location, videoCallLink)
-                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-                    [messageId, messageData.title, messageData.purpose, messageData.description, messageData.date, messageData.time, messageData.duration, messageData.location, messageData.videoCallLink]
-                );
+                await handleMeeting(messageId, chatId, messageData)
                 break;
 
             case 'payment':
-                await db.query(
-                    `INSERT INTO payment (messageId, payFrom, payTo, amount, dueDate, payStatus, refNo, bankName)
-                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-                    [messageId, messageData.payFrom, messageData.payTo, messageData.amount, messageData.dueDate, messageData.payStatus, messageData.refNo, messageData.bankName]
-                );
+                await handlePayment(messageId, chatId, messageData)
                 break;
 
             case 'call_up':
-                await db.query(
-                    `INSERT INTO call_up (messageId, type, duration, callStatus)
-                     VALUES (?, ?, ?, ?)`,
-                    [messageId, messageData.type, messageData.duration, messageData.callStatus]
-                );
+                await handleCallUp(messageId, chatId, messageData)
                 break;
 
             case 'location':
-                await db.query(
-                    `INSERT INTO location (messageId, latitude, longitude, address)
-                     VALUES (?, ?, ?, ?)`,
-                    [messageId, messageData.latitude, messageData.longitude, messageData.address]
-                );
+                await handleLocation(messageId, chatId, messageData)
                 break;
 
             case 'file':
-                await db.query(
-                    `INSERT INTO file (messageId, fileName, filePath, fileSize, fileType)
-                     VALUES (?, ?, ?, ?, ?)`,
-                    [messageId, messageData.fileName, messageData.filePath, messageData.fileSize, messageData.fileType]
-                );
+                await handleFile(messageId, chatId, messageData)
                 break;
 
             default:
-                throw new Error('Invalid message type');
+                throw new Error('Invalid message type: it Should be text, media, ect');
         }
 
         const statusDetails = getStatusDetails(201);
@@ -194,3 +65,5 @@ export const addMessage = async (req, res) => {
         res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
     }
 };
+
+export default addMessage;

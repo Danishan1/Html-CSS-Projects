@@ -1,4 +1,4 @@
-export const handleMeting = async (messageId, chatId, data) => {
+export const handleMeeting = async (messageId, chatId, data) => {
     const { title, purpose, description, date, time, duration, location, videoCallLink } = data;
     const addressId = null;
 
