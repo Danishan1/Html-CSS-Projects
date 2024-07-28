@@ -8,6 +8,6 @@ CREATE TABLE
         otp VARCHAR(6) NOT NULL,
         verificationID VARCHAR(50) NOT NULL, -- EmailId, MobileNo, ect
         purpose ENUM ('registration', 'passwordReset', 'verification') NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        expires_at TIMESTAMP NOT NULL
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        expiresAt TIMESTAMP NOT NULL
     );

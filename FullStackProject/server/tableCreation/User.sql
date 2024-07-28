@@ -12,7 +12,6 @@ CREATE TABLE
         status VARCHAR(50), -- Active, InActive, last Seen
         designation VARCHAR(50),
         orgId VARCHAR(15) NOT NULL,
-        registerDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         lastLogin TIMESTAMP,
         addressId INT,
         createdBy VARCHAR(10),
