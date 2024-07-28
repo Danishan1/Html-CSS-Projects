@@ -1,14 +1,16 @@
 import db from '../../config/db.js';
-// import { getMessageIdQuery } from '../../queries/getChats.js';
+import { getChatQuery } from '../../queries/getChatQuery.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
 
 export const getChats = async (req, res) => {
-    const { chatId } = req.params;
+    let { chatId } = req.params;
+    chatId = Number(chatId);
 
     const authenticatedUserID = req.session.userId;
-    const sql = '';
+    const sql = getChatQuery();
     try {
-        const [results] = await db.query(sql, [chatId]);
+        const [results] = await db.query(sql, [chatId, chatId, chatId, chatId, chatId, chatId, chatId]);
+
         const statusDetails = getStatusDetails(200);
         res.json({ ...statusDetails, responseCode: '0000C', results });
     } catch (err) {

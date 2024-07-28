@@ -1,21 +1,15 @@
--- Step 2: Fetch messages from the identified chats
-SELECT
-    m.messageId,
-    m.messageType,
-    m.messageContent,
-    m.timestamp
-FROM
-    (
+export const getChatQuery = () => `WITH
+    text_messages AS (
         SELECT
             messageId,
             'text' AS messageType,
-            text AS messageContent,
-            createdAt AS timestamp
+            text AS messageContent
         FROM
             text
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    media_messages AS (
         SELECT
             messageId,
             'media' AS messageType,
@@ -31,13 +25,13 @@ FROM
                 duration,
                 '|@@|',
                 bitrate
-            ) AS messageContent,
-            createdAt AS timestamp
+            ) AS messageContent
         FROM
             media
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    meeting_messages AS (
         SELECT
             messageId,
             'meeting' AS messageType,
@@ -54,18 +48,18 @@ FROM
                 '|@@|',
                 duration,
                 '|@@|',
-                addressId,
-                '|@@|',
                 location,
                 '|@@|',
+                addressId,
+                '|@@|',
                 videoCallLink
-            ) AS messageContent,
-            createdAt AS timestamp
+            ) AS messageContent
         FROM
             meeting
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    payment_messages AS (
         SELECT
             messageId,
             'payment' AS messageType,
@@ -87,13 +81,13 @@ FROM
                 paymentMethod,
                 '|@@|',
                 currency
-            ) AS messageContent,
-            createdAt AS timestamp
+            ) AS messageContent
         FROM
             payment
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    call_up_messages AS (
         SELECT
             messageId,
             'call_up' AS messageType,
@@ -107,23 +101,23 @@ FROM
                 callQuality,
                 '|@@|',
                 participants
-            ) AS messageContent,
-            createdAt AS timestamp
+            ) AS messageContent
         FROM
-            callUp
+            call_up
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    location_messages AS (
         SELECT
             messageId,
             'location' AS messageType,
-            addressId AS messageContent,
-            createdAt AS timestamp
+            addressId AS messageContent
         FROM
             location
         WHERE
             chatId = ?
-        UNION ALL
+    ),
+    file_messages AS (
         SELECT
             messageId,
             'file' AS messageType,
@@ -135,18 +129,55 @@ FROM
                 fileSize,
                 '|@@|',
                 fileType
-            ) AS messageContent,
-            createdAt AS timestamp
+            ) AS messageContent
         FROM
-            File
-    ) m
+            file
+        WHERE
+            chatId = ?
+    ),
+    all_messages AS (
+        SELECT
+            *
+        FROM
+            text_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            media_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            meeting_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            payment_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            call_up_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            location_messages
+        UNION ALL
+        SELECT
+            *
+        FROM
+            file_messages
+    )
+    -- Main query
+SELECT
+    m.messageType,
+    m.messageContent,
+    message.*
+FROM
+    all_messages m
+    JOIN message ON m.messageId = message.messageId
 ORDER BY
-    m.messageId ASC;
-
-
-
-
--- CASE
---     WHEN m.senderId = ? THEN 'sent'
---     ELSE 'received'
--- END AS messageDirection
+    m.messageId ASC;`
