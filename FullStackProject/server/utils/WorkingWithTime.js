@@ -38,7 +38,7 @@ export const calculateDuration = (startTime, endTime) => {
 
 /**
  * 
- * @param {timeString} take time as string in the Formate : HH:MM AM/PM 
+ * @param {time} take time as string in the Formate : HH:MM AM/PM 
  * @returns time is HH:MM:SS
  */
 export const formatTime2HHMMSS = (timeString) => {

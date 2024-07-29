@@ -13,7 +13,6 @@ export const handlePayment = async (messageId, chatId, data, conn) => {
             [messageId, chatId, payFrom, payTo, amount, dueDate, payStatus, refNo, bankName, paymentMethod, currency]
         );
     } catch (err) {
-        console.log(err)
         throw new CustomError('Error while entering payment into the database', '0001B', err);
 
     }

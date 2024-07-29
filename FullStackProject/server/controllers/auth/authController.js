@@ -14,8 +14,6 @@ export const registerUser = async (req, res) => {
     const hashedPassword = await generateHashPassword(password);
 
     try {
-        // pool.
-        // console.log([userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]);
         const [rows] = await pool.query(
             'INSERT INTO User (userId, name, mobile, email, profilePicPath, status, designation, orgId, createdBy, updatedBy, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [userId, name, mobile, email, profilePic, status, designation, orgId, orgId, orgId, hashedPassword]
