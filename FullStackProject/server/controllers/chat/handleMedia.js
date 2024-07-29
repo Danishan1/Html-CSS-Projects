@@ -1,6 +1,6 @@
 import CustomError from "../../utils/error.js";
 
-export const handleMedia = async (messageId, chatId, data, conn, res) => {
+export const handleMedia = async (messageId, chatId, data, conn) => {
     try {
         
         const { mediaName, mediaPath, mediaSize, mediaType, duration, bitrate } = data;

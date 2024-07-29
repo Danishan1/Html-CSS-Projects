@@ -1,6 +1,6 @@
 import CustomError from "../../utils/error.js";
 
-export const handleFile = async (messageId, chatId, data, conn, res) => {
+export const handleFile = async (messageId, chatId, data, conn) => {
     
     try {
         const { fileName, filePath, fileSize, fileType } = data;

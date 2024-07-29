@@ -8,9 +8,9 @@ CREATE TABLE
         chatId INT NOT NULL,
         mediaName VARCHAR(50) NOT NULL,
         mediaPath VARCHAR(255) NOT NULL, -- Path or URL in cloud storage
-        mediaSize INT, -- Size in bytes
+        mediaSize VARCHAR(20), -- Size in bytes
         mediaType VARCHAR(50), -- MIME type (e.g., audio/mpeg)
-        duration INT, -- Duration in seconds
+        duration VARCHAR(10), -- Duration in seconds
         bitrate INT, -- Bitrate in kbps
         FOREIGN KEY (chatId) REFERENCES chat (chatId),
         FOREIGN KEY (messageId) REFERENCES message (messageId),

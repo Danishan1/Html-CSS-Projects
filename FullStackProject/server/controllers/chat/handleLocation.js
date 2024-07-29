@@ -1,6 +1,6 @@
 import CustomError from "../../utils/error.js";
 
-export const handleLocation = async (messageId, chatId, data, conn, res) => {
+export const handleLocation = async (messageId, chatId, data, conn) => {
     
     try {
         const { addressId } = data;

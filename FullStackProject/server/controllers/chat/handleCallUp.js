@@ -1,6 +1,6 @@
 import CustomError from "../../utils/error.js";
 
-export const handleCallUp = async (messageId, chatId, data, conn, res) => {
+export const handleCallUp = async (messageId, chatId, data, conn) => {
     
     try {
         const { callType, duration, callStatus, callQuality, participants } = data;
