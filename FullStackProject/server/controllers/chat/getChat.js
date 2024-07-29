@@ -1,6 +1,7 @@
 import db from '../../config/db.js';
 import { getChatQuery } from '../../queries/getChatQuery.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
+import { addSenderAttribute } from './addSenderAttribute.js';
 import { splitMessageContent } from './helper/splitMessageContent.js';
 
 const monthYearToTimestamp = (monthYear) => {
@@ -56,6 +57,7 @@ export const getChats = async (req, res) => {
             }
         }
 
+        processedResults = addSenderAttribute(processedResults);
         processedResults = splitMessageContent(processedResults);
 
         const statusDetails = getStatusDetails(200);
