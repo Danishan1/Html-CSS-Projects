@@ -30,45 +30,40 @@ const addMessage = async (req, res) => {
         // Insert into appropriate table based on msgType
         switch (msgType) {
             case 'text':
-                await handleText(messageId, chatId, messageData, conn, res)
+                await handleText(messageId, chatId, messageData, conn);
                 break;
-
             case 'media':
-                await handleMedia(messageId, chatId, messageData, conn, res)
+                await handleMedia(messageId, chatId, messageData, conn);
                 break;
-
             case 'meeting':
-                await handleMeeting(messageId, chatId, messageData, conn, res)
+                await handleMeeting(messageId, chatId, messageData, conn);
                 break;
-
             case 'payment':
-                await handlePayment(messageId, chatId, messageData, conn, res)
+                await handlePayment(messageId, chatId, messageData, conn);
                 break;
-
             case 'call_up':
-                await handleCallUp(messageId, chatId, messageData, conn, res)
+                await handleCallUp(messageId, chatId, messageData, conn);
                 break;
-
             case 'location':
-                await handleLocation(messageId, chatId, messageData, conn, res)
+                await handleLocation(messageId, chatId, messageData, conn);
                 break;
-
             case 'file':
-                await handleFile(messageId, chatId, messageData, conn, res)
+                await handleFile(messageId, chatId, messageData, conn);
                 break;
-
             default:
                 throw new Error('Invalid message type: it Should be text, media, ect');
         }
 
         const statusDetails = getStatusDetails(201);
         if (conn) conn.commit();
-        res.status(201).json({ ...statusDetails, responseCode: '0000D', message: 'Message added successfully' });
-    } catch (err) {
 
+        res.status(201).json({ ...statusDetails, responseCode: '0000D', message: 'Message added successfully' });
+
+    } catch (err) {
         if (conn) conn.rollback();
         const statusDetails = getStatusDetails(500);
-        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000E', err });
+        const response = { ...statusDetails, responseCode: err.responseCode || '0000E', error: err.message || 'Database error while inserting into Message Table', err };
+        res.status(500).json(response);
     } finally {
         if (conn) conn.release()
     }
