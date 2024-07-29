@@ -1,3 +1,5 @@
+import CustomError from "../../utils/error.js";
+
 export const handleMedia = async (messageId, chatId, data, conn, res) => {
     try {
         
@@ -8,7 +10,7 @@ export const handleMedia = async (messageId, chatId, data, conn, res) => {
             [messageId, chatId, mediaName, mediaPath, mediaSize, mediaType, duration, bitrate]
         );
     } catch (err) {
-        res.status(500).json({ responseCode: "0001D", message: "Error While entring media into database", err })
+        throw new CustomError('Error while entering Media into the database', '0001D', err);
 
     }
 }

@@ -35,3 +35,23 @@ export const calculateDuration = (startTime, endTime) => {
 
   return { hours: durationHours, minutes: durationRemainingMinutes };
 };
+
+/**
+ * 
+ * @param {timeString} take time as string in the Formate : HH:MM AM/PM 
+ * @returns time is HH:MM:SS
+ */
+export const formatTime2HHMMSS = (timeString) => {
+  const [time, modifier] = timeString.split(' ');
+  let [hours, minutes] = time.split(':').map(Number);
+
+  if (modifier === 'PM' && hours !== 12) hours += 12;
+  else if (modifier === 'AM' && hours === 12) hours = 0;
+
+  // Format hours and minutes to MySQL TIME format HH:MM:SS
+  const formattedHours = String(hours).padStart(2, '0');
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedTime = `${formattedHours}:${formattedMinutes}:00`;
+
+  return formattedTime;
+};

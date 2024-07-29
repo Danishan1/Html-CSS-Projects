@@ -1,3 +1,5 @@
+import CustomError from "../../utils/error.js";
+
 export const handleLocation = async (messageId, chatId, data, conn, res) => {
     
     try {
@@ -8,7 +10,7 @@ export const handleLocation = async (messageId, chatId, data, conn, res) => {
             [messageId, chatId, addressId]
         );
     } catch (err) {
-        res.status(500).json({ responseCode: "0001E", message: "Error While entring ocation into database", err })
-
+        throw new CustomError('Error while entering location into the database', '0001E', err);
+ 
     }
 }

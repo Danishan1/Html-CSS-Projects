@@ -1,3 +1,5 @@
+import CustomError from "../../utils/error.js";
+
 export const handleCallUp = async (messageId, chatId, data, conn, res) => {
     
     try {
@@ -8,7 +10,7 @@ export const handleCallUp = async (messageId, chatId, data, conn, res) => {
             [messageId, chatId, callType, duration, callStatus, callQuality, participants]
         );
     } catch (err) {
-        res.status(500).json({ responseCode: "00020", message: "Error While entring call_up into database", err })
+        throw new CustomError('Error while entering call_up into the database', '00020', err);
 
     }
 }

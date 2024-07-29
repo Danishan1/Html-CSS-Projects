@@ -1,3 +1,5 @@
+import CustomError from "../../utils/error.js";
+
 export const handleFile = async (messageId, chatId, data, conn, res) => {
     
     try {
@@ -8,7 +10,7 @@ export const handleFile = async (messageId, chatId, data, conn, res) => {
             [messageId, chatId, fileName, filePath, fileSize, fileType]
         );
     } catch (err) {
-        res.status(500).json({ responseCode: "0001F", message: "Error While entring file into database", err })
+        throw new CustomError('Error while entering file into the database', '0001F', err);
 
     }
 }
