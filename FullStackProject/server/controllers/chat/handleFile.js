@@ -5,7 +5,7 @@ export const handleFile = async (messageId, chatId, data, conn) => {
     try {
         const { fileName, filePath, fileSize, fileType } = data;
         await conn.query(
-            `INSERT INTO file (messageId, userId,  fileName, filePath, fileSize, fileType)
+            `INSERT INTO file (messageId, chatId,  fileName, filePath, fileSize, fileType)
          VALUES (?, ?, ?, ?, ?, ?)`,
             [messageId, chatId, fileName, filePath, fileSize, fileType]
         );

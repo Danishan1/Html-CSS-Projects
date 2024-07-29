@@ -8,7 +8,7 @@ CREATE TABLE
         chatId INT NOT NULL,
         fileName VARCHAR(50) NOT NULL,
         filePath VARCHAR(255) NOT NULL, -- Path or URL in cloud storage
-        fileSize INT, -- Size in bytes
+        fileSize VARCHAR(20), -- Size in bytes
         fileType VARCHAR(50), -- MIME type (e.g., pdf/doc)
         FOREIGN KEY (chatId) REFERENCES chat (chatId),
         FOREIGN KEY (messageId) REFERENCES message (messageId),
