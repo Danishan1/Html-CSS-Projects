@@ -9,7 +9,6 @@ import { handlePayment } from './handlePayment.js';
 import { handleCallUp } from './handleCallUp.js';
 import { handleLocation } from './handleLocation.js';
 import { handleFile } from './handleFile.js';
-import { data } from '../../utils/apiCode.js';
 
 const addMessage = async (req, res) => {
     const { chatId, userId, status, forwardedChat, msgType, messageData } = req.body;
@@ -59,10 +58,10 @@ const addMessage = async (req, res) => {
         }
 
         const statusDetails = getStatusDetails(201);
-        res.json({ ...statusDetails, responseCode: '0000A', message: 'Message added successfully' });
+        res.status(201).json({ ...statusDetails, responseCode: '0000D', message: 'Message added successfully' });
     } catch (err) {
         const statusDetails = getStatusDetails(500);
-        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
+        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000E', err });
     }
 };
 
