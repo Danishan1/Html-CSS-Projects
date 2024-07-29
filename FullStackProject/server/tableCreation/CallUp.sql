@@ -4,7 +4,7 @@
 
 CREATE TABLE
     IF NOT EXISTS call_up (
-        callId VARCHAR(20) PRIMARY KEY,
+        callId INT AUTO_INCREMENT PRIMARY KEY,
         messageId INT NOT NULL,
         chatId INT NOT NULL,
         callType ENUM ('video', 'audio'),
