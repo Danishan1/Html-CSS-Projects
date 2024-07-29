@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.use(authMiddleware);
 
-router.get('/getChat', getChats);
+router.post('/getChat', getChats); // http://localhost:5000/api/chats/getChat
 router.post('/addMsg', addMessage); // http://localhost:5000/api/chats/addMsg
 router.post('/createChat', createChat); // http://localhost:5000/api/chats/createChat
 router.post('/createGroupChat', createGroupChat); // http://localhost:5000/api/chats/createGroupChat

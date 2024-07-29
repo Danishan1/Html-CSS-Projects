@@ -11,9 +11,8 @@ const monthYearToTimestamp = (monthYear) => {
 };
 
 export const getChats = async (req, res) => {
-    let { chatId } = req.params;
-    const { startCount = 0, endCount = 50, limiter = 'number' } = req.body; // limiter: time, number,  
-    chatId = Number(chatId);
+    const { startCount = 0, endCount = 50, limiter = 'number', chatId } = req.body; // limiter: time, number,  
+    // chatId = Number(chatId);
     const authenticatedUserID = req.session.userId;
     const sql = getChatQuery();
     let isEnd = false;
