@@ -3,7 +3,8 @@ import CustomError from "../../utils/error.js";
 export const handleLocation = async (messageId, chatId, data, conn) => {
     
     try {
-        const { addressId } = data;
+        let { addressId } = data;
+        addressId = 1;
         await conn.query(
             `INSERT INTO location (messageId, chatId, addressId)
          VALUES (?, ?, ?)`,
