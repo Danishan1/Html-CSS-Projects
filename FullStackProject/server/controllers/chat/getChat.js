@@ -60,7 +60,7 @@ export const getChats = async (req, res) => {
         processedResults = splitMessageContent(processedResults);
 
         const statusDetails = getStatusDetails(200);
-        res.json({ ...statusDetails, responseCode: '0000C', result: { isEnd, processedResults } });
+        res.json({ ...statusDetails, responseCode: '0000C', result: { isEnd, result: processedResults } });
     } catch (err) {
         const statusDetails = getStatusDetails(500);
         res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
