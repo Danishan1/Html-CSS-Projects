@@ -15,10 +15,10 @@ export const registerUser = async (req, res) => {
 
     try {
         // pool.
-        console.log([userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]);
+        // console.log([userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]);
         const [rows] = await pool.query(
             'INSERT INTO User (userId, name, mobile, email, profilePicPath, status, designation, orgId, createdBy, updatedBy, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-            [userId, name, mobile, email, profilePic, status, designation, orgId, createdBy, createdBy, hashedPassword]
+            [userId, name, mobile, email, profilePic, status, designation, orgId, orgId, orgId, hashedPassword]
         );
         // await sendEmail(email, 'Welcome to Chat App', `Your login details:\nUser ID: ${userId}\nPassword: ${password}`);
 
@@ -112,7 +112,7 @@ export const profile = (req, res) => {
 };
 
 // Middleware to protect routes
-export const isAuthenticated = (req, res, next) => {
+export const isAuthenticated = (req, res) => {
     if (req.session.userId) {
         res.status(200).json({ isAuth: true, userId: req.session.userId });
     } else

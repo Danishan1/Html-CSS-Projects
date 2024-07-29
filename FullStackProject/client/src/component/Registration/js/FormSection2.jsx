@@ -27,14 +27,14 @@ export const FormSection2 = ({
     setEmailErrorShown(false);
   }, [emailOtp]);
 
-  const verifyOTP = async (otp, type, verifi_ID) => {
+  const verifyOTP = async (otp, type, verificationId) => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/verifyOTP",
         {
           otp,
           type,
-          verifi_ID,
+          verificationId,
         }
       );
 

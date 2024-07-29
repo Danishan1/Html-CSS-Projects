@@ -21,7 +21,7 @@ export const FormSection1 = ({
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleGetOTP = async (type, purpose, userName, verificationID) => {
+  const handleGetOTP = async (type, purpose, userName, verificationId) => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/getOTP",
@@ -29,7 +29,7 @@ export const FormSection1 = ({
           type,
           purpose,
           userName,
-          verificationID,
+          verificationId,
         }
       );
 
