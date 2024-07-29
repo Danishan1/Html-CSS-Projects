@@ -1,4 +1,4 @@
-export const handleCallUp = async (messageId, chatId, data) => {
+export const handleCallUp = async (messageId, chatId, data, conn, res) => {
     const { callType, duration, callStatus, callQuality, participants } = data;
 
     await db.query(

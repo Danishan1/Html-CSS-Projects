@@ -1,4 +1,4 @@
-export const handlePayment = async (messageId, chatId, data) => {
+export const handlePayment = async (messageId, chatId, data, conn, res) => {
     const { payFrom, payTo, amount, dueDate, payStatus, refNo, bankName, paymentMethod, currency } = data;
 
     await db.query(

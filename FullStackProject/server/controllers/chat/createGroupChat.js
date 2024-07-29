@@ -1,10 +1,10 @@
 import pool from "../../config/db.js";
 
 export const createGroupChat = async (req, res) => {
-    const userId = req.session.userID;
-    const { participantsID, groupName, groupDescription, members } = req.body;
+    const userId = req.session.userId;
+    const { participantsId, groupName, groupDescription, members } = req.body;
 
-    if (!userId || !participantsID || !groupName || !groupDescription || !members) {
+    if (!userId || !participantsId || !groupName || !groupDescription || !members) {
         return res.status(400).json({ responseId: '00011', error: "Missing required fields" });
     }
 
@@ -18,6 +18,17 @@ export const createGroupChat = async (req, res) => {
         connection = await pool.getConnection();
         await connection.beginTransaction();
 
+        query = `SELECT userId FROM user WHERE userId = ?`;
+        let isParticipant = [];
+
+        for (let participantId of participantsId) {
+            const [checkParticipant] = await connection.query(query, [participantId]);
+            if (checkParticipant.length === 0) {
+                isParticipant.push(participantId)
+            }
+        }
+        if (isParticipant.length > 0) return res.status(404).json({ responseId: '00019', message: `Users with : ${isParticipant} not exist` });
+
         query = `INSERT INTO chat (members, admin, chatName, chatDescription, isGroupChat, createdBy, updatedBy)
                    VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
@@ -29,7 +40,7 @@ export const createGroupChat = async (req, res) => {
         await connection.query(query, [userId, chatId]);
 
         // Add participants to the chat_list
-        for (const participantId of participantsID) {
+        for (const participantId of participantsId) {
             await connection.query(query, [participantId, chatId]);
         }
 

@@ -1,4 +1,4 @@
-export const handleFile = async (messageId, chatId, data) => {
+export const handleFile = async (messageId, chatId, data, conn, res) => {
     const { fileName, filePath, fileSize, fileType } = data;
 
     await db.query(

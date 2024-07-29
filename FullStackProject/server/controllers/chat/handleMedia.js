@@ -1,4 +1,4 @@
-export const handleMedia = async (messageId, chatId, data) => {
+export const handleMedia = async (messageId, chatId, data, conn, res) => {
     const { mediaName, mediaPath, mediaSize, mediaType, duration, bitrate } = data;
 
     await db.query(

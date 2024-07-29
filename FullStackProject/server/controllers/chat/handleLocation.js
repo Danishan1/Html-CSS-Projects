@@ -1,4 +1,4 @@
-export const handleLocation = async (messageId, chatId, data) => {
+export const handleLocation = async (messageId, chatId, data, conn, res) => {
     const { addressId } = data;
 
     await db.query(

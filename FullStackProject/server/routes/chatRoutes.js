@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.use(authMiddleware);
 
-router.get('/:chatId', getChats);
-router.post('/:chatId', addMessage);
+router.get('/getChat/:chatId', getChats);
+router.post('/addMsg/:chatId', addMessage);
 router.post('/createChat', createChat);
 router.post('/createGroupChat', createGroupChat);
 router.post('/getChatList', getChatList);

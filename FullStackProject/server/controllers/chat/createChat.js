@@ -1,7 +1,7 @@
 import pool from "../../config/db.js";
 
 export const createChat = async (req, res) => {
-    const userId = req.session.userID;
+    const userId = req.session.userId;
     const participantId = req.body.participantId;
 
     if (!userId || !participantId) {
@@ -18,6 +18,11 @@ export const createChat = async (req, res) => {
     try {
         connection = await pool.getConnection();
         await connection.beginTransaction();
+
+        query = `SELECT userId FROM user WHERE userId = ?`
+        const [checkParticipant] = await connection.query(query, [participantId]);
+
+        if (checkParticipant.length === 0) return res.status(404).json({ responseId: '00018', message: `User with : ${participantId} not exist` });
 
         query = `INSERT INTO chat (members, admin, isGroupChat, createdBy, updatedBy)
                    VALUES (?, ?, ?, ?, ?)`;
