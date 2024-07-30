@@ -11,7 +11,9 @@ import { handleLocation } from './handleLocation.js';
 import { handleFile } from './handleFile.js';
 
 const addMessage = async (req, res) => {
-    const { chatId, userId, status, forwardedChat, msgType, messageData } = req.body;
+    const { chatId, forwardedChat, msgType, messageData } = req.body;
+    const userId = req.session.userId;
+    const status = 'sent';
 
     let conn;
     try {

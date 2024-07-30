@@ -20,7 +20,6 @@ export default function ChatBox({ openChatId }) {
           { chatId: openChatId },
           { withCredentials: true }
         );
-        console.log(response.data.chat.result);
         setIsChatEnd(response.data.chat.isEnd);
         setChats(response.data.chat.result);
       } catch (error) {
@@ -32,6 +31,19 @@ export default function ChatBox({ openChatId }) {
       fetchChat();
     }
   }, [openChatId]);
+
+  const handleSend = async (message) => {
+    await axios.post(
+      "http://localhost:5000/api/chats/addMsg",
+      {
+        chatId: openChatId,
+        forwardedChat: false,
+        msgType: "text",
+        messageData: { text: message },
+      },
+      { withCredentials: true }
+    );
+  };
 
   return (
     <div className={style.chatBox}>
@@ -60,7 +72,7 @@ export default function ChatBox({ openChatId }) {
           <ForwardedBox type={"Pending - Forwarded Box"} />
         </div>
         <div className={style.chatInput}>
-          <ChatInput onSendMessage={() => console.log("Send")} />
+          <ChatInput onSendMessage={(message) => handleSend(message)} />
         </div>
       </div>
     </div>

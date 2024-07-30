@@ -8,7 +8,6 @@ const MsgBox = ({ currentChat, previousChat }) => {
   const isSameSender =
     previousChat && previousChat.userId === currentChat.userId;
 
-  console.log(currentChat);
 
   const chatBoxSendSender = isSameSender
     ? style.continuation

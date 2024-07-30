@@ -65,8 +65,8 @@ const ChatInput = ({ onSendMessage }) => {
         className={style.add}
         ref={addRef}
         onClick={() => {
-          setShowPlus(true);
-          setPlusClickContent(null);
+          // setShowPlus(true);
+          // setPlusClickContent(null);
         }}
       >
         {/* Plus Icon */}
