@@ -30,8 +30,7 @@ const MsgBox = ({ currentChat, previousChat }) => {
           <IdDateTime
             msgId={currentChat.messageId}
             msgTime={convertDate2time(currentChat.createdAt)}
-            // status={currentChat.status}
-            status={'read'}
+            status={currentChat.status}
           />
         </div>
         <ShareIcon />
