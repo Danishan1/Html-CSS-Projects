@@ -58,7 +58,7 @@
     text-align: right;
 }
 
-.userBox .recieptRead svg path {
+.recieptRead svg path {
     color: var(--colorBlue);
 }
 

@@ -47,8 +47,6 @@ const ChatApp = () => {
     return <ErrorPage statusCode="500" responseCode={error} />;
   }
 
-  console.log(openChatId);
-
   return (
     <div className={styles.chatApp}>
       <div className={styles.sectionA}></div>

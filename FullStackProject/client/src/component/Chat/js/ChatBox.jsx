@@ -4,12 +4,13 @@ import MsgBox from "./MsgBox";
 import CenteredDateDisplay from "./CenteredDateDisplay";
 import ChatInput from "./ChatInput";
 import { ForwardedBox } from "./ForwardedBox";
-import ChatsData from "../helper/ChatsData";
 import axios from "axios";
+import { formatDate } from "../helper/plusButton/formateDate";
 
 export default function ChatBox({ openChatId }) {
   // Used to store the chats
-  const [chats, setChats] = useState(ChatsData);
+  const [chats, setChats] = useState([]);
+  const [isChatEnd, setIsChatEnd] = useState("");
 
   useEffect(() => {
     const fetchChat = async () => {
@@ -19,7 +20,9 @@ export default function ChatBox({ openChatId }) {
           { chatId: openChatId },
           { withCredentials: true }
         );
-        console.log(response.data.result);
+        console.log(response.data.chat.result);
+        setIsChatEnd(response.data.chat.isEnd);
+        setChats(response.data.chat.result);
       } catch (error) {
         console.error("Error fetching chat:", error);
       }
@@ -29,17 +32,6 @@ export default function ChatBox({ openChatId }) {
       fetchChat();
     }
   }, [openChatId]);
-  // for setting the latest date
-  const [latestDate, setLatestDate] = useState(null);
-
-  useEffect(() => {
-    if (chats.length > 0) {
-      const latestChatDate = chats[chats.length - 1].idDateTime.date;
-      if (latestDate !== latestChatDate) {
-        setLatestDate(latestChatDate);
-      }
-    }
-  }, [chats, latestDate]);
 
   return (
     <div className={style.chatBox}>
@@ -48,8 +40,9 @@ export default function ChatBox({ openChatId }) {
         {chats.map((chat, index) => (
           <React.Fragment key={index}>
             {index === 0 ||
-            chat.idDateTime.date !== chats[index - 1].idDateTime.date ? (
-              <CenteredDateDisplay newDate={chat.idDateTime.date} />
+            formatDate(chat.createdAt) !==
+              formatDate(chats[index - 1].createdAt) ? (
+              <CenteredDateDisplay newDate={chat.createdAt} />
             ) : (
               <></>
             )}

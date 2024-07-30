@@ -1,15 +1,19 @@
 import React from "react";
 import style from "../css/MsgBox.module.css";
 import Message from "./Message";
+import { convertDate2time } from "../../UserListSection/helper/convertDate2time";
+import { reciptSetter } from "../../UserListSection/js/reciptSetter";
 
 const MsgBox = ({ currentChat, previousChat }) => {
   const isSameSender =
-    previousChat && previousChat.sender.name === currentChat.sender.name;
+    previousChat && previousChat.userId === currentChat.userId;
+
+  console.log(currentChat);
 
   const chatBoxSendSender = isSameSender
     ? style.continuation
     : style.newMessage;
-  const chatBoxIsSent = currentChat.isSent
+  const chatBoxIsSent = currentChat.isSender
     ? `${style.chatBox} ${style.sent}`
     : `${style.chatBox} ${style.received}`;
 
@@ -19,8 +23,16 @@ const MsgBox = ({ currentChat, previousChat }) => {
     <div className={style.chats}>
       <div className={chatBoxClasses}>
         <div className={style.content}>
-          <Message msgData={currentChat.msgData} typeOfMsg={currentChat.type} />
-          <IdDateTime idDateTime={currentChat.idDateTime} />
+          <Message
+            msgData={currentChat.messageContent}
+            typeOfMsg={currentChat.messageType}
+          />
+          <IdDateTime
+            msgId={currentChat.messageId}
+            msgTime={convertDate2time(currentChat.createdAt)}
+            // status={currentChat.status}
+            status={'read'}
+          />
         </div>
         <ShareIcon />
       </div>
@@ -30,10 +42,13 @@ const MsgBox = ({ currentChat, previousChat }) => {
 
 // Helper Components ##################################################################
 
-const IdDateTime = ({ idDateTime }) => (
+const IdDateTime = ({ msgId, msgTime, status }) => (
   <div className={style.idDateTime}>
-    <p className={style.id}>{idDateTime.id}</p>
-    <p className={style.time}>{idDateTime.time}</p>
+    <p className={style.id}>~{msgId}</p>
+    <div className={style.info}>
+      <p className={style.time}>{msgTime}</p>
+      <div>{reciptSetter(status)}</div>
+    </div>
   </div>
 );
 

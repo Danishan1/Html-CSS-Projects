@@ -1,10 +1,9 @@
 import React from "react";
 import style from "../css/UserBox.module.css";
-import { circleThik } from "../../Chat/helper/PlusButtonIcons";
-import { cirlceFilled } from "../../Chat/helper/PlusButtonIcons";
-import { time } from "../../Chat/helper/PlusButtonIcons";
+
 import dp from "../../images/defaultDp.jpg";
 import { convertDate2time } from "../helper/convertDate2time";
+import { reciptSetter } from "./reciptSetter";
 
 const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
   // API Call with userID to get the Data
@@ -27,15 +26,6 @@ const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
     message = type;
   }
 
-  const reciptSetter = () => {
-    if (status === "unsend")
-      return <div className={style.timeStatus}>{time}</div>;
-    else if (status === "sent") return circleThik;
-    else if (status === "recieve") return cirlceFilled;
-    else if (status === "read")
-      return <div className={style.recieptRead}>{cirlceFilled}</div>;
-  };
-
   const userBoxCss =
     isOpen === true ? `${style.userBox} ${style.isOpen}` : `${style.userBox}`;
 
@@ -50,7 +40,7 @@ const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
           <div className={style.msg}>{message}</div>
           <div className={style.infoTime}>
             <div className={style.time}>{lastMsgTime}</div>
-            <div className={style.info}>{reciptSetter()}</div>
+            <div className={style.info}>{reciptSetter(status)}</div>
           </div>
         </div>
       </div>

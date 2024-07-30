@@ -1,23 +1,31 @@
 import React from "react";
-import ChatText from "./ChatText";
-
-const handleText = (Data) => <ChatText message={Data} />;
+import ChatText from "../helper/message/ChatText";
 
 const Message = ({ msgData, typeOfMsg }) => {
-  let content = "Default Text";
+  let content = <p>Default Text</p>;
 
   switch (typeOfMsg) {
     case "text":
-      content = handleText(msgData);
+      content = <ChatText msgData={msgData} />;
       break;
-    case "meet":
-      content = msgData.map((item, index) => {
-      });
+    case "meeting":
+      // content = msgData.map((item, index) => {});
+      break;
+    case "location":
+      break;
+    case "payment":
+      break;
+    case "call_up":
+      break;
+    case "media":
+      break;
+    case "file":
+      break;
 
     default:
-      content = handleText(
-        "Haven't got type of Messaage, kindly contact to the organisation."
-      );
+    // content = handleText(
+    //   "Haven't got type of Messaage, kindly contact to the organisation."
+    // );
   }
 
   return <>{content}</>;

@@ -186,9 +186,11 @@ export const getChatQuery = () => `WITH
 SELECT
     m.messageType,
     m.messageContent,
-    message.*
+    message.*,
+    user.name
 FROM
     all_messages m
     JOIN message ON m.messageId = message.messageId
+    JOIN user ON message.userId = user.userId
 ORDER BY
     m.messageId ASC;`
