@@ -37,21 +37,28 @@ export const getChatList = async (req, res) => {
 
         const [chatDetailsResults] = await conn.query(chatDetailsQuery, [chatIds]);
 
+        console.log(chatDetailsResults);
+
         // Fetching actual message text if type is 'text'
         for (let chat of chatDetailsResults) {
             if (chat.type === 'text') {
                 const textQuery = `SELECT text FROM text WHERE messageId = ?`;
                 const [textResults] = await conn.query(textQuery, [chat.messageId]);
                 if (textResults.length > 0) {
-                    chat.msgType = 'text';
                     chat.message = textResults[0].text;
                 } else {
                     chat.message = '';
                 }
             } else {
                 chat.message = "";
-                chat.msgType = chat.type;
             }
+
+            if (chat.messageId !== null) {
+                const query = `SELECT status FROM message WHERE messageId = ?`
+                const [results] = await conn.query(query, [chat.messageId]);
+                chat.status = results[0].status;
+            }
+
         }
 
         conn.commit();

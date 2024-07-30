@@ -19,15 +19,17 @@ export const createChat = async (req, res) => {
         connection = await pool.getConnection();
         await connection.beginTransaction();
 
-        query = `SELECT userId FROM user WHERE userId = ?`
+        query = `SELECT userId, name FROM user WHERE userId = ?`
         const [checkParticipant] = await connection.query(query, [participantId]);
 
         if (checkParticipant.length === 0) return res.status(404).json({ responseId: '00018', message: `User with : ${participantId} not exist` });
+        const chatName = checkParticipant[0].name;
+        const description = "This is private chat but still leagally bounded."
 
-        query = `INSERT INTO chat (members, admin, isGroupChat, createdBy, updatedBy)
-                   VALUES (?, ?, ?, ?, ?)`;
+        query = `INSERT INTO chat (members, admin, chatName, chatDescription, isGroupChat, createdBy, updatedBy)
+                   VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
-        const [results] = await connection.query(query, [members, userId, isGroupChat, createdBy, createdBy]);
+        const [results] = await connection.query(query, [members, userId, chatName, description, isGroupChat, createdBy, createdBy]);
         const chatId = results.insertId;
 
         query = `INSERT INTO chat_list (userId, chatId) VALUES (?, ?)`;

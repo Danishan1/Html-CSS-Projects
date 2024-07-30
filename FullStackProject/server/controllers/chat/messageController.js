@@ -26,6 +26,12 @@ const addMessage = async (req, res) => {
         );
 
         const messageId = messageResult.insertId;
+        await conn.query(
+            `INSERT INTO message_meta (messageId, type, priority)
+             VALUES (?, ?, ?)`,
+            [messageId, msgType, 'normal']
+        );
+
 
         // Insert into appropriate table based on msgType
         switch (msgType) {

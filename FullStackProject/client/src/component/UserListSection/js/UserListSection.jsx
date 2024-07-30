@@ -4,9 +4,10 @@ import UserBox from "./UserBox";
 import { Button } from "../../Registration/js/Button";
 import SearchBox from "./SearchBox";
 
-const UserListSection = () => {
+const UserListSection = ({ chatList }) => {
   const [userChatOpenId, setUserChatOpenId] = useState("");
-  const userChats = ["A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08"];
+
+  console.log(chatList);
 
   return (
     <div className={style.userListSection}>
@@ -17,13 +18,14 @@ const UserListSection = () => {
       <div className={style.bottomList}>
         <div className={style.sideInfoBar}></div>
         <div className={style.userList}>
-          {userChats.map((userId) => (
+          {chatList.map((chat) => (
             <UserBox
-              userID={userId}
+              key={chat.chatId}
+              details={chat}
               setUserChatOpenId={
-                userChatOpenId === userId ? () => {} : setUserChatOpenId
+                userChatOpenId === chat ? () => {} : setUserChatOpenId
               }
-              isOpen={userChatOpenId === userId ? true : false}
+              isOpen={userChatOpenId === chat ? true : false}
             />
           ))}
         </div>

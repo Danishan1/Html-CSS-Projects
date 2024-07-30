@@ -48,7 +48,6 @@ const PlusButton = ({ setPlusClickContent }) => {
     }
   };
 
-  console.log(uploadedFile);
 
   return (
     <div className={style.plusButton}>

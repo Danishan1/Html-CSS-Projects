@@ -46,9 +46,13 @@ export const circleThik = <svg xmlns="http://www.w3.org/2000/svg" width="1em" he
 </svg>
 
 export const cirlceFilled = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
-    <path fill="currentColor" d="M18 11a7 7 0 1 1-7 7a7 7 0 0 1 7-7" class="clr-i-outline clr-i-outline-path-1" />
-    <path fill="currentColor" d="M18 34a16 16 0 1 1 16-16a16 16 0 0 1-16 16m0-30a14 14 0 1 0 14 14A14 14 0 0 0 18 4" class="clr-i-outline clr-i-outline-path-2" />
+    <path fill="currentColor" d="M18 11a7 7 0 1 1-7 7a7 7 0 0 1 7-7" className="clr-i-outline clr-i-outline-path-1" />
+    <path fill="currentColor" d="M18 34a16 16 0 1 1 16-16a16 16 0 0 1-16 16m0-30a14 14 0 1 0 14 14A14 14 0 0 0 18 4" className="clr-i-outline clr-i-outline-path-2" />
     <path fill="none" d="M0 0h36v36H0z" />
+</svg>
+
+export const time = <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
 </svg>
 
 export const left = <svg className={style.svgIcon} xmlns="http://www.w3.org/2000/svg" width="0.44em" height="1em" viewBox="0 0 7 16">

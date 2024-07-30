@@ -61,3 +61,13 @@
 .userBox .recieptRead svg path {
     color: var(--colorBlue);
 }
+
+.timeStatus svg path {
+    color: var(--colorRed);
+    font-size: 2rem;
+}
+
+.timeStatus svg  {
+    color: var(--colorRed);
+    font-size: calc(var(--size)*1.1);
+}
