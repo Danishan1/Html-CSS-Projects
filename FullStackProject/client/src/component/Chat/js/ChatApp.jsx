@@ -10,6 +10,7 @@ const ChatApp = () => {
   const [chatList, setChatList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [openChatId, setOpenChatId] = useState(null);
 
   useEffect(() => {
     const getUserChatList = async () => {
@@ -46,14 +47,16 @@ const ChatApp = () => {
     return <ErrorPage statusCode="500" responseCode={error} />;
   }
 
+  console.log(openChatId);
+
   return (
     <div className={styles.chatApp}>
       <div className={styles.sectionA}></div>
       <div className={styles.sectionB}>
-        <UserListSection chatList={chatList} />
+        <UserListSection chatList={chatList} setOpenChatId={setOpenChatId} />
       </div>
       <div className={styles.sectionC}>
-        <ChatBoxDrop />
+        <ChatBoxDrop openChatId={openChatId} />
       </div>
     </div>
   );

@@ -14,11 +14,18 @@ const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
     chatName,
     lastMsgTime,
     message,
-    status = "unsend",
+    status = "none",
+    type,
     profilPath,
   } = details;
 
+  // Formating things to appear better
   if (lastMsgTime) lastMsgTime = convertDate2time(lastMsgTime);
+  if (type === "text")
+    message = message.length > 25 ? `${message.slice(0, 25)}...` : message;
+  else {
+    message = type;
+  }
 
   const reciptSetter = () => {
     if (status === "unsend")

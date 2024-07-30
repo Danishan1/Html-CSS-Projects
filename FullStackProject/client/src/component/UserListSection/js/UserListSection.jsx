@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../css/UserListSection.module.css";
 import UserBox from "./UserBox";
 import { Button } from "../../Registration/js/Button";
 import SearchBox from "./SearchBox";
 
-const UserListSection = ({ chatList }) => {
+const UserListSection = ({ chatList, setOpenChatId }) => {
   const [userChatOpenId, setUserChatOpenId] = useState("");
+
+  useEffect(() => {
+    setOpenChatId(userChatOpenId);
+  }, [userChatOpenId]);
 
   console.log(chatList);
 
@@ -23,9 +27,9 @@ const UserListSection = ({ chatList }) => {
               key={chat.chatId}
               details={chat}
               setUserChatOpenId={
-                userChatOpenId === chat ? () => {} : setUserChatOpenId
+                userChatOpenId === chat.chatId ? () => {} : setUserChatOpenId
               }
-              isOpen={userChatOpenId === chat ? true : false}
+              isOpen={userChatOpenId === chat.chatId ? true : false}
             />
           ))}
         </div>

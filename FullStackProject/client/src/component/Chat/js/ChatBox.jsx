@@ -5,11 +5,30 @@ import CenteredDateDisplay from "./CenteredDateDisplay";
 import ChatInput from "./ChatInput";
 import { ForwardedBox } from "./ForwardedBox";
 import ChatsData from "../helper/ChatsData";
+import axios from "axios";
 
-export default function ChatBox() {
+export default function ChatBox({ openChatId }) {
   // Used to store the chats
   const [chats, setChats] = useState(ChatsData);
 
+  useEffect(() => {
+    const fetchChat = async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/api/chats/getChat",
+          { chatId: openChatId },
+          { withCredentials: true }
+        );
+        console.log(response.data.result);
+      } catch (error) {
+        console.error("Error fetching chat:", error);
+      }
+    };
+
+    if (openChatId) {
+      fetchChat();
+    }
+  }, [openChatId]);
   // for setting the latest date
   const [latestDate, setLatestDate] = useState(null);
 

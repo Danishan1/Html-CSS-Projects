@@ -37,7 +37,6 @@ export const getChatList = async (req, res) => {
 
         const [chatDetailsResults] = await conn.query(chatDetailsQuery, [chatIds]);
 
-        console.log(chatDetailsResults);
 
         // Fetching actual message text if type is 'text'
         for (let chat of chatDetailsResults) {
