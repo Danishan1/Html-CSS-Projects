@@ -129,7 +129,7 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         }
 
         result = await axios.post(
-          "http://localhost:5000/api/chats/createChat",
+          "http://localhost:5000/api/chats/createGroupChat",
           {
             participantsId: userIds,
             groupName: groupName,
@@ -138,6 +138,8 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
           },
           { withCredentials: true }
         );
+
+        console.log(result);
 
         if (result.data.responseId === "0000F") {
           setWhichListSection("list");
@@ -237,10 +239,8 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         {chatName === "group" && (
           <div className={styles.addedList}>
             {userIds.map((id, index) => (
-              <div className={styles.listItem}>
-                <p key={index} className={styles.userId}>
-                  {id}
-                </p>
+              <div key={index} className={styles.listItem}>
+                <p className={styles.userId}>{id}</p>
                 <div className={styles.close} onClick={() => handleRemove(id)}>
                   {closeIcon}
                 </div>

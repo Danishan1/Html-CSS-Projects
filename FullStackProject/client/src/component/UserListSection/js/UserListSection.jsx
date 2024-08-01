@@ -51,8 +51,6 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
     return content;
   };
 
-  console.log(whichListSection);
-  console.log(userChatOpenId);
 
   return (
     <div className={style.userListSection}>
