@@ -96,7 +96,28 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         ///////////////////////////  Handle Group Chat //////////////////////////////////////////////////////////////////
         //
 
-        
+        result = await axios.post(
+          "http://localhost:5000/api/chats/createChat",
+          { participantId: uppercasedUserId },
+          { withCredentials: true }
+        );
+
+        if (result.data.responseId === "00013") {
+          console.log("Chat Created", result.data.chatId);
+          setWhichListSection("list");
+          setUserChatOpenId(result.data.chatId);
+        } else if (result.data.responseId === "00012")
+          console.log(result.data.message);
+        else if (result.data.responseId === "00018") {
+          setIsError(true);
+          setError("OOPs! User ID do not exist. Enter valid user ID");
+          return;
+        } else if (result.data.responseId === "00014") {
+          console.log(result.data.error);
+          setIsError(true);
+          setError(`Server Error! Response code : ${result.data.responseId}`);
+          return;
+        }
 
         console.log("Creating group chat with userIds:", userIds);
       }

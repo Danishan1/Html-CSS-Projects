@@ -5,7 +5,7 @@ export const createGroupChat = async (req, res) => {
     const { participantsId, groupName, groupDescription, members } = req.body;
 
     if (!userId || !participantsId || !groupName || !groupDescription || !members) {
-        return res.status(400).json({ responseId: '00011', error: "Missing required fields" });
+        return res.status(200).json({ responseId: '00011', error: "Missing required fields" });
     }
 
     const isGroupChat = true;
@@ -27,7 +27,7 @@ export const createGroupChat = async (req, res) => {
                 isParticipant.push(participantId)
             }
         }
-        if (isParticipant.length > 0) return res.status(404).json({ responseId: '00019', message: `Users with : ${isParticipant} not exist` });
+        if (isParticipant.length > 0) return res.status(200).json({ responseId: '00019', message: `Some Users do not not exist`, participantsId });
 
         query = `INSERT INTO chat (members, admin, chatName, chatDescription, isGroupChat, createdBy, updatedBy)
                    VALUES (?, ?, ?, ?, ?, ?, ?)`;
