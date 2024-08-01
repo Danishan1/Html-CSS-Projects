@@ -7,6 +7,7 @@ import { ForwardedBox } from "./ForwardedBox";
 import axios from "axios";
 import Loading from "../../SpecialPages/js/Loading";
 import { formatDate } from "../helper/plusButton/formateDate";
+import { NoChatPage } from "./NoChatPage";
 
 export default function ChatBox({ openChatId }) {
   // Used to store the chats
@@ -66,7 +67,29 @@ export default function ChatBox({ openChatId }) {
     );
   };
 
-  if (loading) {
+  const chatMap = () => {
+    return chats.map((chat, index) => (
+      <React.Fragment key={index}>
+        {index === 0 ||
+        formatDate(chat.createdAt) !==
+          formatDate(chats[index - 1].createdAt) ? (
+          <CenteredDateDisplay newDate={chat.createdAt} />
+        ) : (
+          <></>
+        )}
+
+        <MsgBox
+          key={index}
+          currentChat={chat}
+          previousChat={index > 0 ? chats[index - 1] : null}
+        />
+      </React.Fragment>
+    ));
+  };
+
+  if (openChatId === null || openChatId === "") {
+    return <NoChatPage height="100vh" />;
+  } else if (loading) {
     return <Loading windowHeight="100vh" windowWidth="100%" />;
   }
 
@@ -74,23 +97,7 @@ export default function ChatBox({ openChatId }) {
     <div className={style.chatBox}>
       <div className={style.header}>Personal Chat</div>
       <div className={style.chatArea} ref={chatAreaRef}>
-        {chats.map((chat, index) => (
-          <React.Fragment key={index}>
-            {index === 0 ||
-            formatDate(chat.createdAt) !==
-              formatDate(chats[index - 1].createdAt) ? (
-              <CenteredDateDisplay newDate={chat.createdAt} />
-            ) : (
-              <></>
-            )}
-
-            <MsgBox
-              key={index}
-              currentChat={chat}
-              previousChat={index > 0 ? chats[index - 1] : null}
-            />
-          </React.Fragment>
-        ))}
+        {chats.length > 0 ? chatMap() : <NoChatPage height="100%" />}
         <div ref={bottomRef}></div>
       </div>
       <div className={style.msgBox}>
