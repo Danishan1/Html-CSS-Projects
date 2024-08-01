@@ -34,7 +34,15 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
 
     switch (whichListSection) {
       case "newChat":
-        content = <NewChat />;
+        content = (
+          <NewChat
+            setWhichListSection={setWhichListSection}
+            setUserChatOpenId={setUserChatOpenId}
+          />
+        );
+        break;
+      case "list":
+        content = chatListMap();
         break;
       default:
         content = chatListMap();
@@ -42,6 +50,9 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
 
     return content;
   };
+
+  console.log(whichListSection);
+  console.log(userChatOpenId);
 
   return (
     <div className={style.userListSection}>
@@ -58,7 +69,7 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
           text={whichListSection === "newChat" ? "Back" : "New"}
           onClick={() => {
             whichListSection === "newChat"
-              ? setWhichListSection("back")
+              ? setWhichListSection("list")
               : setWhichListSection("newChat");
           }}
         />

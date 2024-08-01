@@ -5,7 +5,7 @@ export const createChat = async (req, res) => {
     const participantId = req.body.participantId;
 
     if (!userId || !participantId) {
-        return res.status(400).json({ responseCode: '00012', error: "Missing required fields" });
+        return res.status(200).json({ responseCode: '00012', message: "Missing required fields" });
     }
 
     const members = 2; // Since it's a one-on-one chat
@@ -22,7 +22,7 @@ export const createChat = async (req, res) => {
         query = `SELECT userId, name FROM user WHERE userId = ?`
         const [checkParticipant] = await connection.query(query, [participantId]);
 
-        if (checkParticipant.length === 0) return res.status(404).json({ responseId: '00018', message: `User with : ${participantId} not exist` });
+        if (checkParticipant.length === 0) return res.status(200).json({ responseId: '00018', message: `User Id do not exist`, userId: participantId });
         const chatName = checkParticipant[0].name;
         const description = "This is private chat but still leagally bounded."
 

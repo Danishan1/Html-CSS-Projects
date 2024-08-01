@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../css/NewChat.module.css";
 import InputField from "../../Registration/js/InputField";
+import axios from "axios";
 
 const closeIcon = (
   <svg
@@ -20,8 +21,7 @@ const closeIcon = (
   </svg>
 );
 
-export const NewChat = () => {
-  
+export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
   const [chatName, setChatName] = useState("private");
   const [userId, setUserId] = useState("");
   const [userIds, setUserIds] = useState([]);
@@ -38,7 +38,7 @@ export const NewChat = () => {
       setUserId("");
     } else {
       setIsError(true);
-      setError("Invalid userId.");
+      setError("OOPs!!! Incorrect User ID");
       return;
     }
   };
@@ -47,21 +47,61 @@ export const NewChat = () => {
     setUserIds((prevUserIds) => prevUserIds.filter((userId) => userId !== id));
   };
 
-  const handleCreateChat = () => {
-    if (chatName === "private") {
-      const trimmedUserId = userId.trim();
-      const isValidUserId = /^[a-zA-Z0-9]{6}$/.test(trimmedUserId);
+  const handleCreateChat = async () => {
+    let result;
+    try {
+      //
+      ///////////////////////////  Handle Private Chat //////////////////////////////////////////////////////////////////
+      //
 
-      if (isValidUserId) {
-        // const uppercasedUserId = trimmedUserId.toUpperCase();
-        // Call API or handle private chat creation logic here
-      } else {
-        setIsError(true);
-        setError("Invalid userId.");
-        return;
+      if (chatName === "private") {
+        const trimmedUserId = userId.trim();
+        const isValidUserId = /^[a-zA-Z0-9]{6}$/.test(trimmedUserId);
+
+        if (isValidUserId) {
+          const uppercasedUserId = trimmedUserId.toUpperCase();
+          // Call API or handle private chat creation logic here
+
+          result = await axios.post(
+            "http://localhost:5000/api/chats/createChat",
+            { participantId: uppercasedUserId },
+            { withCredentials: true }
+          );
+
+          if (result.data.responseId === "00013") {
+            console.log("Chat Created", result.data.chatId);
+            setWhichListSection("list");
+            setUserChatOpenId(result.data.chatId);
+          } else if (result.data.responseId === "00012")
+            console.log(result.data.message);
+          else if (result.data.responseId === "00018") {
+            setIsError(true);
+            setError("OOPs! User ID do not exist. Enter valid user ID");
+            return;
+          } else if (result.data.responseId === "00014") {
+            console.log(result.data.error);
+            setIsError(true);
+            setError(`Server Error! Response code : ${result.data.responseId}`);
+            return;
+          }
+        } else {
+          setIsError(true);
+          setError("OOPs! Incorrect User ID");
+          return;
+        }
+        //
+        //
+      } else if (chatName === "group") {
+        //
+        ///////////////////////////  Handle Group Chat //////////////////////////////////////////////////////////////////
+        //
+
+        
+
+        console.log("Creating group chat with userIds:", userIds);
       }
-    } else if (chatName === "group") {
-      console.log("Creating group chat with userIds:", userIds);
+    } catch (err) {
+      console.log(err.resonse);
     }
 
     // Clear inputs if needed
@@ -103,7 +143,7 @@ export const NewChat = () => {
               name="userId"
               value={userId}
               onChange={(e) => setUserId(e.target.value)}
-              required={false}
+              required={true}
             />
           </div>
 
