@@ -2,6 +2,7 @@ import db from '../../config/db.js';
 import { getChatQuery } from '../../queries/getChatQuery.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
 import { addSenderAttribute } from './helper/addSenderAttribute.js';
+import { getChatDetails } from './helper/getChatDetails.js';
 import { splitMessageContent } from './helper/splitMessageContent.js';
 
 const monthYearToTimestamp = (monthYear) => {
@@ -59,7 +60,9 @@ export const getChats = async (req, res) => {
         processedResults = addSenderAttribute(processedResults, authenticatedUserID);
         processedResults = splitMessageContent(processedResults);
 
-        res.json({ responseCode: '0000C', chat: { isEnd, result: processedResults } });
+        const chatDetails = await getChatDetails(chatId, db)
+
+        res.json({ responseCode: '0000C', chat: { isEnd, chatDetails, result: processedResults } });
     } catch (err) {
         const statusDetails = getStatusDetails(500);
         res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
