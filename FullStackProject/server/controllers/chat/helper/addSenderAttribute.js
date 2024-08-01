@@ -1,6 +1,6 @@
 export const addSenderAttribute = (result, authUser) => {
     return result.map(row => {
-        row.isSender = row.userID === authUser;
+        row.isSender = row.userId === authUser;
         return row;
     });
 };
