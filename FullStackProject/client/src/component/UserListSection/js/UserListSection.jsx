@@ -55,9 +55,11 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
       </div>
       <div className={style.newChatBtn}>
         <Button
-          text={"New"}
+          text={whichListSection === "newChat" ? "Back" : "New"}
           onClick={() => {
-            setWhichListSection("newChat"); // Ensure case matches
+            whichListSection === "newChat"
+              ? setWhichListSection("back")
+              : setWhichListSection("newChat");
           }}
         />
       </div>

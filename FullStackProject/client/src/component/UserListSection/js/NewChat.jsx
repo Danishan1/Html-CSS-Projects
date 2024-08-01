@@ -21,6 +21,7 @@ const closeIcon = (
 );
 
 export const NewChat = () => {
+  
   const [chatName, setChatName] = useState("private");
   const [userId, setUserId] = useState("");
   const [userIds, setUserIds] = useState([]);
@@ -56,9 +57,7 @@ export const NewChat = () => {
         // Call API or handle private chat creation logic here
       } else {
         setIsError(true);
-        setError(
-          "Invalid userId."
-        );
+        setError("Invalid userId.");
         return;
       }
     } else if (chatName === "group") {
@@ -104,7 +103,7 @@ export const NewChat = () => {
               name="userId"
               value={userId}
               onChange={(e) => setUserId(e.target.value)}
-              required={true}
+              required={false}
             />
           </div>
 
