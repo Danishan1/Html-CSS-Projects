@@ -34,6 +34,14 @@ const getRandomPhrase = () => {
   return phrases[randomIndex];
 };
 
+/**
+ * Default Values :
+ * -  text = "random",
+ * -  height = "100%",
+ * -  width = "100%",
+ *
+ *
+ */
 export const NoChatPage = ({
   text = "random",
   height = "100%",
