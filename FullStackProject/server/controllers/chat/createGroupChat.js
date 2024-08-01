@@ -37,7 +37,7 @@ export const createGroupChat = async (req, res) => {
 
         query = `INSERT INTO chat_list (userId, chatId) VALUES (?, ?)`;
 
-        await connection.query(query, [userId, chatId]);
+        await connection.query(query, [userId, chatId]); // The one who is creating the group
 
         // Add participants to the chat_list
         for (const participantId of participantsId) {

@@ -27,15 +27,41 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
   const [userIds, setUserIds] = useState([]);
   const [error, setError] = useState("");
   const [isError, setIsError] = useState(false);
+  const [userName, setUserName] = useState();
+  const [groupName, setGroupName] = useState("");
+  const [groupDesc, setGroupDesc] = useState("");
 
-  const handleAddUser = () => {
+  const handleAddUser = async () => {
     const trimmedUserId = userId.trim();
     const isValidUserId = /^[a-zA-Z0-9]{6}$/.test(trimmedUserId);
 
     if (isValidUserId) {
       const uppercasedUserId = trimmedUserId.toUpperCase();
-      setUserIds((prev) => [...prev, uppercasedUserId]);
-      setUserId("");
+
+      try {
+        const result = await axios.post(
+          "http://localhost:5000/api/users/verifyUser",
+          { userId: uppercasedUserId },
+          { withCredentials: true }
+        );
+
+        console.log(result.data.responseId);
+
+        if (result.data.responseId === "00021") {
+          setUserIds((prev) => [...prev, uppercasedUserId]);
+          setUserName((prev) => ({
+            ...prev,
+            [result.data.userId]: result.data.name,
+          }));
+          setUserId("");
+        } else if (result.data.responseId === "00022") {
+          setIsError(true);
+          setError("OOPs! User ID do not exist. Enter valid user ID");
+          return;
+        }
+      } catch (err) {
+        console.log(err);
+      }
     } else {
       setIsError(true);
       setError("OOPs!!! Incorrect User ID");
@@ -69,10 +95,10 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
           );
 
           if (result.data.responseId === "00013") {
-            console.log("Chat Created", result.data.chatId);
             setWhichListSection("list");
             setUserChatOpenId(result.data.chatId);
           } else if (result.data.responseId === "00012")
+            // Error Msg : Incorrect parametres
             console.log(result.data.message);
           else if (result.data.responseId === "00018") {
             setIsError(true);
@@ -96,33 +122,42 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         ///////////////////////////  Handle Group Chat //////////////////////////////////////////////////////////////////
         //
 
+        if (userIds.length == 0 || groupName === "" || groupDesc === "") {
+          setIsError(true);
+          setError("Enter Details Properly");
+          return;
+        }
+
         result = await axios.post(
           "http://localhost:5000/api/chats/createChat",
-          { participantId: uppercasedUserId },
+          {
+            participantsId: userIds,
+            groupName: groupName,
+            groupDescription: groupDesc,
+            members: userIds.length,
+          },
           { withCredentials: true }
         );
 
-        if (result.data.responseId === "00013") {
-          console.log("Chat Created", result.data.chatId);
+        if (result.data.responseId === "0000F") {
           setWhichListSection("list");
           setUserChatOpenId(result.data.chatId);
-        } else if (result.data.responseId === "00012")
+        } else if (result.data.responseId === "00011")
+          // Error Msg : Incorrect parametres
           console.log(result.data.message);
-        else if (result.data.responseId === "00018") {
+        else if (result.data.responseId === "00019") {
           setIsError(true);
-          setError("OOPs! User ID do not exist. Enter valid user ID");
+          setError(`OOPs! User ID do not exist. ${result.data.participantsId}`);
           return;
-        } else if (result.data.responseId === "00014") {
+        } else if (result.data.responseId === "00010") {
           console.log(result.data.error);
           setIsError(true);
           setError(`Server Error! Response code : ${result.data.responseId}`);
           return;
         }
-
-        console.log("Creating group chat with userIds:", userIds);
       }
     } catch (err) {
-      console.log(err.resonse);
+      console.log(err);
     }
 
     // Clear inputs if needed
@@ -176,8 +211,28 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
             <></>
           )}
         </div>
-
         {isError && <p className={styles.error}>{error}</p>}
+
+        {chatName === "group" && (
+          <div className={styles.groupNameDesc}>
+            <InputField
+              label="Group Name"
+              type="text"
+              name="groupName"
+              value={groupName}
+              onChange={(e) => setGroupName(e.target.value)}
+              required={true}
+            />
+            <InputField
+              label="Group Description"
+              type="text"
+              name="groupDesc"
+              value={groupDesc}
+              onChange={(e) => setGroupDesc(e.target.value)}
+              required={true}
+            />
+          </div>
+        )}
 
         {chatName === "group" && (
           <div className={styles.addedList}>

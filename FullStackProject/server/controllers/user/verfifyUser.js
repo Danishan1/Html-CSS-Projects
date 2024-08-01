@@ -7,10 +7,10 @@ export const verifyUser = async (req, res) => {
 
         const [result] = await pool.query(query, [userId])
 
-        if (result.length > 0) res.json({ responseCode: "00021", userId: result[0].userId, name: result[0].name, message: "Success" })
-        else res.json({ responseCode: "00022", message: "User Do not exist." })
+        if (result.length > 0) res.json({ responseId: "00021", userId: result[0].userId, name: result[0].name, message: "Success" })
+        else res.json({ responseId: "00022", message: "User Do not exist." })
     } catch (err) {
-        res.status(500).json({ responseCode: "00023", message: "Server error", err })
+        res.status(500).json({ responseId: "00023", message: "Server error", err })
 
     }
 }

@@ -107,3 +107,10 @@
     color: var(--colorRedHover);
     font-weight: var(--boldL2)
 }
+
+.groupNameDesc{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
