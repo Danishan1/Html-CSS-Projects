@@ -1,4 +1,5 @@
 import pool from "../../config/db.js";
+import { verifyingChatExist } from "./helper/verifyingChatExist.js";
 
 export const createChat = async (req, res) => {
     const userId = req.session.userId;
@@ -19,6 +20,7 @@ export const createChat = async (req, res) => {
         connection = await pool.getConnection();
         await connection.beginTransaction();
 
+        //  Checking User Id is valid or not
         query = `SELECT userId, name FROM user WHERE userId = ?`
         const [checkParticipant] = await connection.query(query, [participantId]);
 
@@ -26,10 +28,16 @@ export const createChat = async (req, res) => {
         const chatName = checkParticipant[0].name;
         const description = "This is private chat but still leagally bounded."
 
+        const isChatExist = await verifyingChatExist(connection, userId, participantId)
+
+        if (isChatExist.isChatPresent) {
+            return res.status(200).json({ chatId: isChatExist.chatId, responseId: '00024' });
+        }
+
         query = `INSERT INTO chat (members, admin, chatName, chatDescription, isGroupChat, createdBy, updatedBy)
                    VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
-        const [results] = await connection.query(query, [members, userId, chatName, description, isGroupChat, createdBy, createdBy]);
+        [results] = await connection.query(query, [members, userId, chatName, description, isGroupChat, createdBy, createdBy]);
         const chatId = results.insertId;
 
         query = `INSERT INTO chat_list (userId, chatId) VALUES (?, ?)`;

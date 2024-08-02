@@ -2,12 +2,13 @@ import pool from "../../config/db.js";
 
 export const createGroupChat = async (req, res) => {
     const userId = req.session.userId;
-    const { participantsId, groupName, groupDescription, members } = req.body;
+    let { participantsId, groupName, groupDescription, members } = req.body;
 
     if (!userId || !participantsId || !groupName || !groupDescription || !members) {
         return res.status(200).json({ responseId: '00011', error: "Missing required fields" });
     }
 
+    participantsId = Array.from(new Set(participantsId));
     const isGroupChat = true;
     const createdBy = userId;
 

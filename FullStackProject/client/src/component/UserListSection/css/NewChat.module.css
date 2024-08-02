@@ -73,15 +73,42 @@
     background-color: var(--colorGray2);
     border-radius: 7px;
     font-weight: var(--boldL1);
-    padding: 4px 5px;
-    width: 100%;
+    padding: 4px 15px;
+    max-width: 150px;
 }
+
+.id {
+    display: flex;
+}
+
+.userName {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorGray2);
+    border-radius: 7px;
+    font-weight: var(--boldL1);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+}
+
+.userId:hover .id {
+    display: none;
+}
+
+.userId:hover .userName {
+    display: flex;
+}
+
 
 .close {
     display: none;
     position: absolute;
-    right: -5px;
-    top: -5px;
+    right: 5px;
+    top: -7px;
 }
 
 .listItem:hover .close {
@@ -108,7 +135,7 @@
     font-weight: var(--boldL2)
 }
 
-.groupNameDesc{
+.groupNameDesc {
     padding-top: 20px;
     display: flex;
     flex-direction: column;

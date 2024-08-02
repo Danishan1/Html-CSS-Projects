@@ -37,6 +37,12 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
 
     if (isValidUserId) {
       const uppercasedUserId = trimmedUserId.toUpperCase();
+      if (userIds.includes(uppercasedUserId)) {
+        setIsError(true);
+        setError("Hey! You already added this user.");
+        setUserId("");
+        return;
+      }
 
       try {
         const result = await axios.post(
@@ -94,7 +100,10 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
             { withCredentials: true }
           );
 
-          if (result.data.responseId === "00013") {
+          if (
+            result.data.responseId === "00013" ||
+            result.data.responseId === "00024"
+          ) {
             setWhichListSection("list");
             setUserChatOpenId(result.data.chatId);
           } else if (result.data.responseId === "00012")
@@ -122,7 +131,7 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         ///////////////////////////  Handle Group Chat //////////////////////////////////////////////////////////////////
         //
 
-        if (userIds.length == 0 || groupName === "" || groupDesc === "") {
+        if (userIds.length === 0 || groupName === "" || groupDesc === "") {
           setIsError(true);
           setError("Enter Details Properly");
           return;
@@ -240,7 +249,10 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
           <div className={styles.addedList}>
             {userIds.map((id, index) => (
               <div key={index} className={styles.listItem}>
-                <p className={styles.userId}>{id}</p>
+                <p className={styles.userId}>
+                  <span className={styles.id}>{id}</span>
+                  <span className={styles.userName}>{userName[id]}</span>
+                </p>
                 <div className={styles.close} onClick={() => handleRemove(id)}>
                   {closeIcon}
                 </div>
