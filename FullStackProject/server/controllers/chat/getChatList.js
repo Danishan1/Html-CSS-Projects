@@ -20,7 +20,7 @@ export const getChatList = async (req, res) => {
 
         // Query-2: Finding the details of last message of each chat
         const chatDetailsQuery = `
-            SELECT c.chatId, c.chatName, m.messageId, m.createdAt as lastMsgTime, mm.type
+            SELECT c.chatId, c.chatName, m.messageId,  COALESCE(m.createdAt, c.createdAt) AS lastMsgTime, mm.type
             FROM chat c
             LEFT JOIN (
                 SELECT chatId, messageId, createdAt
@@ -32,7 +32,9 @@ export const getChatList = async (req, res) => {
                 )
             ) m ON c.chatId = m.chatId
             LEFT JOIN message_meta mm ON m.messageId = mm.messageId
-            WHERE c.chatId IN (?);
+            WHERE c.chatId IN (?)
+            ORDER BY lastMsgTime DESC;
+            ;
         `;
 
         const [chatDetailsResults] = await conn.query(chatDetailsQuery, [chatIds]);
