@@ -17,6 +17,12 @@ const PulseLoader = lazy(() =>
 const LoadingChat = lazy(() => import("./LoadingChat"));
 
 /**
+ * Default Values: 
+ *  - type = "CubesLoader"
+ *  - display = "top"
+ *  - position = "relative"
+ *  - windowHeight = "100vh"
+ *  - windowWidth = "100vw"
  * type can be [CubesLoader || FoldingLoader || BounceLoader || PulseLoader || LoadingChat]
  * @param type Allow to change based on this
  * @param display Allow to chage type of Screen [top || block]

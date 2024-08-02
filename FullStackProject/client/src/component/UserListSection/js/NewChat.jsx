@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../css/NewChat.module.css";
 import InputField from "../../Registration/js/InputField";
 import axios from "axios";
+import Loading from "../../SpecialPages/js/Loading";
 
 const closeIcon = (
   <svg
@@ -27,6 +28,7 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
   const [userIds, setUserIds] = useState([]);
   const [error, setError] = useState("");
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [userName, setUserName] = useState();
   const [groupName, setGroupName] = useState("");
   const [groupDesc, setGroupDesc] = useState("");
@@ -45,6 +47,7 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
       }
 
       try {
+        setIsLoading(true);
         const result = await axios.post(
           "http://localhost:5000/api/users/verifyUser",
           { userId: uppercasedUserId },
@@ -67,6 +70,8 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
         }
       } catch (err) {
         console.log(err);
+      } finally {
+        setIsLoading(false);
       }
     } else {
       setIsError(true);
@@ -82,6 +87,7 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
   const handleCreateChat = async () => {
     let result;
     try {
+      setIsLoading(true);
       //
       ///////////////////////////  Handle Private Chat //////////////////////////////////////////////////////////////////
       //
@@ -169,12 +175,16 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
       }
     } catch (err) {
       console.log(err);
+    } finally {
+      setIsLoading(false);
     }
 
     // Clear inputs if needed
     setUserId("");
     setUserIds([]);
   };
+
+  if (isLoading) return <Loading windowHeight="100%" windowWidth="100%" />;
 
   return (
     <div className={styles.newChat}>
