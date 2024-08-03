@@ -10,15 +10,21 @@
 
 .userBox:hover,
 .isOpen {
-    background-color: var(--colorGray2);
+    background-color: var(--colorGray1);
     cursor: pointer;
 }
 
-.isOpen:hover{
+.mobile:hover,
+.mobile.isOpen {
+    background-color: var(--colorGray3);
+    cursor: pointer;
+}
+
+.isOpen:hover {
     cursor: default;
 }
 
-.userBox .userDP img {
+.userDP img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -67,7 +73,20 @@
     font-size: 2rem;
 }
 
-.timeStatus svg  {
+.timeStatus svg {
     color: var(--colorRed);
     font-size: calc(var(--size)*1.1);
+}
+
+
+
+.mobile .userDP img {
+    width: 40px;
+    height: 40px;
+}
+
+.mobile {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "../css/UserBox.module.css";
 
 import dp from "../../images/defaultDp.jpg";
@@ -7,6 +7,19 @@ import { reciptSetter } from "./reciptSetter";
 
 const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
   // API Call with userID to get the Data
+
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 890);
+
+  const handleResize = () => {
+    setIsMobileView(window.innerWidth < 890 && window.innerWidth > 600);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   let {
     chatId,
@@ -28,6 +41,22 @@ const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
 
   const userBoxCss =
     isOpen === true ? `${style.userBox} ${style.isOpen}` : `${style.userBox}`;
+
+  const userMobileBoxCss = `${style.mobile} ${
+    isOpen === true ? style.isOpen : ""
+  }`;
+
+  if (isMobileView)
+    return (
+      <div
+        className={userMobileBoxCss}
+        onClick={() => setUserChatOpenId(chatId)}
+      >
+        <div className={style.userDP}>
+          <img src={dp} alt="DP" width={"50px"} />
+        </div>
+      </div>
+    );
 
   return (
     <div className={userBoxCss} onClick={() => setUserChatOpenId(chatId)}>
