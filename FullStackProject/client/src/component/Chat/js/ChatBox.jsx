@@ -8,8 +8,9 @@ import axios from "axios";
 import Loading from "../../SpecialPages/js/Loading";
 import { formatDate } from "../helper/plusButton/formateDate";
 import { NoChatPage } from "./NoChatPage";
+import { left } from "../helper/PlusButtonIcons";
 
-export default function ChatBox({ openChatId }) {
+export default function ChatBox({ openChatId, setOpenChatId }) {
   // Used to store the chats
   const [chats, setChats] = useState([]);
   const [isChatEnd, setIsChatEnd] = useState("");
@@ -27,6 +28,8 @@ export default function ChatBox({ openChatId }) {
           { chatId: openChatId },
           { withCredentials: true }
         );
+
+        console.log(response);
 
         setIsChatEnd(response.data.chat.isEnd);
         setChats(response.data.chat.result);
@@ -95,7 +98,15 @@ export default function ChatBox({ openChatId }) {
 
   return (
     <div className={style.chatBox}>
-      <div className={style.header}>Personal Chat</div>
+      <div className={style.header}>
+        <div
+          className={style.backToListBtn}
+          onClick={() => setOpenChatId("list")}
+        >
+          {left}
+        </div>
+        Personal Chat
+      </div>
       <div className={style.chatArea} ref={chatAreaRef}>
         {chats.length > 0 ? chatMap() : <NoChatPage height="100%" />}
         <div ref={bottomRef}></div>

@@ -3,6 +3,7 @@
 .fileUpload {
     /* border: 2px dashed var(--colorCyan); */
     border-radius: 5px;
+    width: 100%;
 
 }
 

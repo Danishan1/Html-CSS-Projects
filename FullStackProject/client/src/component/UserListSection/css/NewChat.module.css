@@ -75,6 +75,7 @@
     font-weight: var(--boldL1);
     padding: 4px 15px;
     max-width: 150px;
+    position: relative;
 }
 
 .id {
@@ -107,8 +108,8 @@
 .close {
     display: none;
     position: absolute;
-    right: 5px;
-    top: -7px;
+    right: -6px;
+    top: -6px;
 }
 
 .listItem:hover .close {

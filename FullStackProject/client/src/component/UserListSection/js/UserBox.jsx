@@ -8,10 +8,12 @@ import { reciptSetter } from "./reciptSetter";
 const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
   // API Call with userID to get the Data
 
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 890);
+  const [isTabletView, setIsTabletView] = useState(
+    window.innerWidth < 890 && window.innerWidth > 600
+  );
 
   const handleResize = () => {
-    setIsMobileView(window.innerWidth < 890 && window.innerWidth > 600);
+    setIsTabletView(window.innerWidth < 890 && window.innerWidth > 600);
   };
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const UserBox = ({ details, setUserChatOpenId, isOpen }) => {
     isOpen === true ? style.isOpen : ""
   }`;
 
-  if (isMobileView)
+  if (isTabletView)
     return (
       <div
         className={userMobileBoxCss}

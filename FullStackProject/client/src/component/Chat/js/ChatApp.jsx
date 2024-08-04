@@ -47,14 +47,26 @@ const ChatApp = () => {
     return <ErrorPage statusCode="500" responseCode={error} />;
   }
 
+  const openListCss =
+    openChatId === null || openChatId === "" || openChatId === "list"
+      ? styles.openSection
+      : styles.closeSection;
+
+  const openChatCss =
+    openChatId !== null && openChatId !== "" && openChatId !== "list"
+      ? styles.openSection
+      : styles.closeSection;
+
+  console.log(openChatId, openChatCss, openListCss);
+
   return (
     <div className={styles.chatApp}>
       <div className={styles.sectionA}></div>
-      <div className={styles.sectionB}>
+      <div className={`${styles.sectionB} ${openListCss}`}>
         <UserListSection chatList={chatList} setOpenChatId={setOpenChatId} />
       </div>
-      <div className={styles.sectionC}>
-        <ChatBoxDrop openChatId={openChatId} />
+      <div className={`${styles.sectionC} ${openChatCss}`}>
+        <ChatBoxDrop openChatId={openChatId} setOpenChatId={setOpenChatId} />
       </div>
     </div>
   );

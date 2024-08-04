@@ -259,12 +259,15 @@ export const NewChat = ({ setWhichListSection, setUserChatOpenId }) => {
           <div className={styles.addedList}>
             {userIds.map((id, index) => (
               <div key={index} className={styles.listItem}>
-                <p className={styles.userId}>
+                <div className={styles.userId}>
                   <span className={styles.id}>{id}</span>
                   <span className={styles.userName}>{userName[id]}</span>
-                </p>
-                <div className={styles.close} onClick={() => handleRemove(id)}>
-                  {closeIcon}
+                  <div
+                    className={styles.close}
+                    onClick={() => handleRemove(id)}
+                  >
+                    {closeIcon}
+                  </div>
                 </div>
               </div>
             ))}

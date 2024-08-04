@@ -8,7 +8,7 @@ import {
   handleDragOver,
 } from "../helper/chatDrag";
 
-const ChatBoxDrop = ({ openChatId }) => {
+const ChatBoxDrop = ({ openChatId, setOpenChatId }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState(null);
   const dragCounter = React.useRef(0);
@@ -21,7 +21,7 @@ const ChatBoxDrop = ({ openChatId }) => {
       onDragOver={handleDragOver}
       onDrop={(e) => handleDropWrapper(e, setIsDragging, setFile, dragCounter)}
     >
-      <ChatBox openChatId={openChatId} />
+      <ChatBox openChatId={openChatId} setOpenChatId={setOpenChatId} />
     </div>
   );
 };

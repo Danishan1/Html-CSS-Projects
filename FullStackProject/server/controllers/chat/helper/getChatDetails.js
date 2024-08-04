@@ -5,7 +5,7 @@ const query = `SELECT
 FROM 
     chat AS c
 JOIN 
-    chat_participant AS cp ON c.chatId = cp.chatId
+    chat_list AS cp ON c.chatId = cp.chatId
 JOIN 
     user AS u ON cp.userId = u.userId
 WHERE 
