@@ -50,24 +50,21 @@
 
 
 @media (width < 890px) and (width > 600px) {
+
     .sideInfoBar {
         display: none;
     }
-
-    .userList {
-        width: 100%;
-    }
-}
-
-
-@media (width < 890px) and (width > 600px) {
+    
     .bottomList {
         height: calc(100vh - 40px);
     }
-
+    
     .userList {
-        height: calc(100%);
-        border: 1px solid rebeccapurple;
+        width: 100%;
+        /* height: calc(100%); */
+        height: calc(100vh - 40px);
+        position: relative;
+        top: 40px;
     }
 
 
