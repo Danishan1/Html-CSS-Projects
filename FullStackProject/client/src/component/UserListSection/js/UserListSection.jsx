@@ -51,9 +51,11 @@ const UserListSection = ({ chatList, setOpenChatId }) => {
     return content;
   };
 
+  const listRemoveBorder =
+    whichListSection === "newChat" ? style.listRemoveBorder : "";
 
   return (
-    <div className={style.userListSection}>
+    <div className={`${style.userListSection} ${listRemoveBorder}`}>
       <div className={style.searchBox}>
         <SearchBox />
       </div>

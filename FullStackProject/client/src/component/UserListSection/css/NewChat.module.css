@@ -142,3 +142,15 @@
     flex-direction: column;
     gap: 20px;
 }
+
+
+@media (width < 890px) and (width > 600px) {
+    .newChat {
+        position: absolute;
+        width: 500px;
+        background-color: var(--colorWhite);
+        border-top: 2px solid var(--colorGray3);
+        border-right: 2px solid var(--colorGray3);
+        border-top-right-radius: 25px;
+    }
+}

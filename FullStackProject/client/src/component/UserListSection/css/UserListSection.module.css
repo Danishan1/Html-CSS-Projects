@@ -54,17 +54,23 @@
     .sideInfoBar {
         display: none;
     }
-    
+
     .bottomList {
         height: calc(100vh - 40px);
     }
-    
+
     .userList {
         width: 100%;
         /* height: calc(100%); */
         height: calc(100vh - 40px);
         position: relative;
         top: 40px;
+        overflow: visible;
+    }
+
+    .listRemoveBorder {
+        border-right: none;
+
     }
 
 

@@ -57,8 +57,6 @@ const ChatApp = () => {
       ? styles.openSection
       : styles.closeSection;
 
-  console.log(openChatId, openChatCss, openListCss);
-
   return (
     <div className={styles.chatApp}>
       <div className={styles.sectionA}></div>
