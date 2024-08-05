@@ -44,7 +44,8 @@ const Search = ({ suggestions, tab }) => {
       <input
         type="text"
         value={inputValue}
-        onChange={handleInputChange}
+        // onChange={handleInputChange}
+        onChange={() => {}}
         onBlur={handleInputBlur}
         placeholder="Search..."
         className={style.input}
