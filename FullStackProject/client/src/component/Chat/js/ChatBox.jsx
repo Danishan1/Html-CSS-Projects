@@ -13,6 +13,7 @@ import { left } from "../helper/PlusButtonIcons";
 export default function ChatBox({ openChatId, setOpenChatId }) {
   // Used to store the chats
   const [chats, setChats] = useState([]);
+  const [chatInfo, setChatInfo] = useState([]);
   const [isChatEnd, setIsChatEnd] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -33,6 +34,7 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
 
         setIsChatEnd(response.data.chat.isEnd);
         setChats(response.data.chat.result);
+        setChatInfo(response.data.chat.chatDetails);
         setLoading(false); // Set loading to false after fetching chats
       } catch (error) {
         console.error("Error fetching chat:", error);
@@ -105,7 +107,9 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
         >
           {left}
         </div>
-        Personal Chat
+        <div className={style.chatName}>
+          {chatInfo.length > 0 ? chatInfo[0].chatName : "Chat"}
+        </div>
       </div>
       <div className={style.chatArea} ref={chatAreaRef}>
         {chats.length > 0 ? chatMap() : <NoChatPage height="100%" />}

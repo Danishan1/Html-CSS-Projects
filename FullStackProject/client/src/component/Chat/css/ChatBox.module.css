@@ -37,6 +37,16 @@
 
 }
 
+.chatName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--size) * 1.3);
+    font-weight: var(--boldL3);
+    padding-left: 20px;
+
+}
+
 @media (width < 600px) {
     .backToListBtn {
         display: flex;
