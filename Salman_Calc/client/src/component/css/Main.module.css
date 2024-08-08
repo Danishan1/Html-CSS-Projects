@@ -1,0 +1,15 @@
+.main {
+    border: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    border: 1px solid gray;
+    height: 500px;
+    width: 400px;
+    border-radius: 25px;
+}
