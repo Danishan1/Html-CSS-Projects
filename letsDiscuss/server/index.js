@@ -5,7 +5,7 @@ import sessionConfig from './config/session.js';
 import mainRoute from "./routes/index.js";
 import { errorHandler } from './utils/errorHandler.js';
 import { Server as SocketServer } from 'socket.io';
-import { socketHandler } from './sockets/socketHandler.js';
+import { socketHandler } from './sockets/index.js';
 
 const app = express();
 const server = http.createServer(app);
@@ -37,13 +37,7 @@ io.use((socket, next) => {
 
 // Handle socket connections
 io.on('connection', (socket) => {
-  console.log('A user connected', socket.id);
-
   socketHandler(io, socket);
-
-  socket.on('disconnect', () => {
-    console.log('User disconnected', socket.id);
-  });
 });
 
 const port = process.env.SERVER_PORT || 5001;
