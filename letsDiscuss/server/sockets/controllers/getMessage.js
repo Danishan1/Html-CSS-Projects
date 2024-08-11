@@ -38,8 +38,20 @@ export const getMessage = async (data) => {
                 throw new Error('Invalid message type: it should be text, media, etc.');
         }
 
-        let sql = `${getQuery()} AND messageId = ?;`;
-
+        let sql = `
+            WITH last_message AS (
+                ${getQuery()} AND messageId = ?
+            )
+            SELECT
+                m.messageType,
+                m.messageContent,
+                message.*,
+                user.name
+            FROM
+                last_message m
+                JOIN message ON m.messageId = message.messageId
+                JOIN user ON message.userId = user.userId;
+        `;
 
         const [results] = await db.query(sql, [chatId, messageId]);
 
@@ -50,9 +62,9 @@ export const getMessage = async (data) => {
 
         const chatDetails = await getChatDetails(chatId, db)
 
-        return ({ responseCode: '0000C', chat: { isEnd, chatDetails, result: processedResults } });
+        return ({ responseCode: '00025', chat: { chatDetails, result: processedResults } });
     } catch (err) {
         const statusDetails = getStatusDetails(500);
-        return ({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
+        return ({ ...statusDetails, message: 'Database error', responseCode: '00026', err });
     }
 }

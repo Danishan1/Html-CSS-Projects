@@ -12,26 +12,16 @@ import { left } from "../helper/PlusButtonIcons";
 import { useSocket } from "../../context/socketContext";
 
 export default function ChatBox({ openChatId, setOpenChatId }) {
-  // Used to store the chats
   const [chats, setChats] = useState([]);
   const [chatInfo, setChatInfo] = useState([]);
   const [isChatEnd, setIsChatEnd] = useState("");
   const [loading, setLoading] = useState(true);
   const socket = useSocket();
 
-  useEffect(() => {
-    if (!socket) return;
-
-    socket.emit("message", "From ChatBox.jsx");
-    socket.on("message", (msg) => {
-      console.log("Message Recived from : ", msg);
-    });
-  }, [socket]);
-
-  // Reference for the chat area and bottom div
   const chatAreaRef = useRef(null);
   const bottomRef = useRef(null);
 
+  // Fetch initial chat data when chatId changes
   useEffect(() => {
     const fetchChat = async () => {
       try {
@@ -41,15 +31,13 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
           { withCredentials: true }
         );
 
-        console.log(response);
-
         setIsChatEnd(response.data.chat.isEnd);
         setChats(response.data.chat.result);
         setChatInfo(response.data.chat.chatDetails);
-        setLoading(false); // Set loading to false after fetching chats
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching chat:", error);
-        setLoading(false); // Set loading to false even if there's an error
+        setLoading(false);
       }
     };
 
@@ -58,30 +46,56 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
     }
   }, [openChatId]);
 
+  // Scroll to bottom whenever chats change
   useEffect(() => {
-    // Scroll to the bottom of the chat area whenever chats state changes
     const scrollToBottom = () => {
       if (bottomRef.current) {
         bottomRef.current.scrollIntoView({ behavior: "smooth" });
       }
     };
 
-    // Adding a slight delay to ensure all elements are rendered before scrolling
     setTimeout(scrollToBottom, 100);
   }, [chats]);
 
+  // Handle sending a message
   const handleSend = async (message) => {
-    await axios.post(
-      "http://localhost:5000/api/chats/addMsg",
-      {
-        chatId: openChatId,
-        forwardedChat: false,
-        msgType: "text",
-        messageData: { text: message },
-      },
-      { withCredentials: true }
-    );
+    const messageData = {
+      chatId: openChatId,
+      forwardedChat: false,
+      msgType: "text",
+      messageData: { text: message },
+    };
+
+    // Send message to the server
+    socket.emit("sendMessage", messageData);
+
+    socket.on("sendMessage", (response) => {
+      // console.log("sendMessage", response);
+    });
+
+    // Optionally, update UI immediately (optimistic update)
+    // setChats((prevChats) => [
+    //   ...prevChats,
+    //   { ...messageData, createdAt: new Date().toISOString() },
+    // ]);
   };
+
+  // Listen for new messages
+  useEffect(() => {
+    if (!socket) return;
+
+    socket.on("newMessage", (newMessage) => {
+      if (newMessage.chat.chatDetails[0].chatId === openChatId) {
+        const result = newMessage.chat.result;
+        if (result.length > 0) setChats((prevChats) => [...prevChats, result[0]]);
+      }
+    });
+
+    // Cleanup on unmount
+    return () => {
+      socket.off("newMessage");
+    };
+  }, [socket, openChatId]);
 
   const chatMap = () => {
     return chats.map((chat, index) => (
@@ -90,9 +104,7 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
         formatDate(chat.createdAt) !==
           formatDate(chats[index - 1].createdAt) ? (
           <CenteredDateDisplay newDate={chat.createdAt} />
-        ) : (
-          <></>
-        )}
+        ) : null}
 
         <MsgBox
           key={index}

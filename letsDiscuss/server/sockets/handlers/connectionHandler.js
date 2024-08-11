@@ -12,7 +12,7 @@ export const handleConnect = async (io, socket) => {
         const [userChats] = await pool.query(query, [userId]);
         let listChatIds = [];
         userChats.forEach((userChat) => { socket.join(userChat.chatId); listChatIds.push(userChat.chatId); })
-        console.log(`User ${userId} joined chats: ${listChatIds.join(', ')}`);
+        // console.log(`User ${userId} joined chats: ${listChatIds.join(', ')}`);
 
     } catch (err) {
         console.log(err);

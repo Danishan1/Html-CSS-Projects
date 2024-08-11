@@ -65,16 +65,19 @@ export const messageSocket = async (io, socket, data) => {
 
         const statusDetails = getStatusDetails(201);
         if (conn) conn.commit();
+        if (conn) conn.release();
+
         // Notify all users in the chat room
-        const newMessage = getMessage({ chatId, messageId, userId, msgType });
+        const newMessage = await getMessage({ chatId, messageId, userId, msgType });
+
         io.to(chatId).emit('newMessage', newMessage);
 
-        socket.emit('sendMessage', { ...statusDetails, responseCode: '0000D', message: 'Message added successfully' });
+        socket.emit('sendMessage', { ...statusDetails, responseCode: '00027', message: 'Message added successfully' });
 
     } catch (err) {
         if (conn) conn.rollback();
         const statusDetails = getStatusDetails(500);
-        const response = { ...statusDetails, responseCode: err.responseCode || '0000E', error: err.message || 'Database error while inserting into Message Table', err };
+        const response = { ...statusDetails, responseCode: err.responseCode || '00028', error: err.message || 'Database error while inserting into Message Table', err };
         socket.emit('sendMessage', response);
     } finally {
         if (conn) conn.release()

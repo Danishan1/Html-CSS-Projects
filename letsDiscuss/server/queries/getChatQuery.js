@@ -23,7 +23,7 @@ export const getChatQuery = () => `WITH
     meeting_messages AS (${getMeetingMsgQuery()}),
     payment_messages AS (${getPaymentMsgQuery()}),
     call_up_messages AS (${getCallupMsgQuery()}),
-    location_messages AS (${getLocationMsgQuery()})),
+    location_messages AS (${getLocationMsgQuery()}),
     file_messages AS (${getFileMsgQuery()}),
     all_messages AS (
         SELECT * FROM text_messages UNION ALL
