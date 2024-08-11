@@ -1,5 +1,6 @@
 --
 -- Do not change the Order of atributes as they are used in query logics
+-- This table mannages participants information
 --
 CREATE TABLE
     IF NOT EXISTS chat_participant (

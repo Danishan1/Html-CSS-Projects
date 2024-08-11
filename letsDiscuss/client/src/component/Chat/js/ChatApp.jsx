@@ -1,14 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/ChatApp.module.css";
 import ChatBoxDrop from "./ChatBoxDrop";
 import UserListSection from "../../UserListSection/js/UserListSection";
 import axios from "axios";
 import Loading from "../../SpecialPages/js/Loading";
 import ErrorPage from "../../SpecialPages/js/ErrorPage";
-import io from "socket.io-client";
 import { SocketProvider } from "../../context/socketContext";
 
-// const mySocket = io("http://localhost:5000/");
 const ChatApp = () => {
   const [chatList, setChatList] = useState([]);
   const [loading, setLoading] = useState(true);

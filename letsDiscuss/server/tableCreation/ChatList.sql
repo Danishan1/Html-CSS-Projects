@@ -1,5 +1,6 @@
 --
 -- Do not change the Order of atributes as they are used in query logics
+-- This table mannages chatList for quicker Access the list of users
 --
 CREATE TABLE
     IF NOT EXISTS chat_list (

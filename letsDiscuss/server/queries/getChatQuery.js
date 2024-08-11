@@ -9,178 +9,30 @@
  * @returns SQL Query
  */
 
+import { getCallupMsgQuery } from "./getCallupMsgQuery.js"
+import { getFileMsgQuery } from "./getFileMsgQuery.js"
+import { getLocationMsgQuery } from "./getLocationMsgQuery.js"
+import { getMediaMsgQuery } from "./getMediaMsgQuery.js"
+import { getMeetingMsgQuery } from "./getMeetingMsgQuery.js"
+import { getPaymentMsgQuery } from "./getPaymentMsgQuery.js"
+import { getTextMsgQuery } from "./getTextMsgQuery.js"
+
 export const getChatQuery = () => `WITH
-    text_messages AS (
-        SELECT
-            messageId,
-            'text' AS messageType,
-            text AS messageContent
-        FROM
-            text
-        WHERE
-            chatId = ?
-    ),
-    media_messages AS (
-        SELECT
-            messageId,
-            'media' AS messageType,
-            CONCAT (
-                mediaName,
-                '|@@|',
-                mediaPath,
-                '|@@|',
-                mediaSize,
-                '|@@|',
-                mediaType,
-                '|@@|',
-                duration,
-                '|@@|',
-                bitrate
-            ) AS messageContent
-        FROM
-            media
-        WHERE
-            chatId = ?
-    ),
-    meeting_messages AS (
-        SELECT
-            messageId,
-            'meeting' AS messageType,
-            CONCAT (
-                title,
-                '|@@|',
-                purpose,
-                '|@@|',
-                description,
-                '|@@|',
-                date,
-                '|@@|',
-                time,
-                '|@@|',
-                duration,
-                '|@@|',
-                location,
-                '|@@|',
-                addressId,
-                '|@@|',
-                videoCallLink
-            ) AS messageContent
-        FROM
-            meeting
-        WHERE
-            chatId = ?
-    ),
-    payment_messages AS (
-        SELECT
-            messageId,
-            'payment' AS messageType,
-            CONCAT (
-                payFrom,
-                '|@@|',
-                payTo,
-                '|@@|',
-                amount,
-                '|@@|',
-                dueDate,
-                '|@@|',
-                payStatus,
-                '|@@|',
-                refNo,
-                '|@@|',
-                bankName,
-                '|@@|',
-                paymentMethod,
-                '|@@|',
-                currency
-            ) AS messageContent
-        FROM
-            payment
-        WHERE
-            chatId = ?
-    ),
-    call_up_messages AS (
-        SELECT
-            messageId,
-            'call_up' AS messageType,
-            CONCAT (
-                callType,
-                '|@@|',
-                duration,
-                '|@@|',
-                callStatus,
-                '|@@|',
-                callQuality,
-                '|@@|',
-                participants
-            ) AS messageContent
-        FROM
-            call_up
-        WHERE
-            chatId = ?
-    ),
-    location_messages AS (
-        SELECT
-            messageId,
-            'location' AS messageType,
-            addressId AS messageContent
-        FROM
-            location
-        WHERE
-            chatId = ?
-    ),
-    file_messages AS (
-        SELECT
-            messageId,
-            'file' AS messageType,
-            CONCAT (
-                fileName,
-                '|@@|',
-                filePath,
-                '|@@|',
-                fileSize,
-                '|@@|',
-                fileType
-            ) AS messageContent
-        FROM
-            file
-        WHERE
-            chatId = ?
-    ),
+    text_messages AS (${getTextMsgQuery()}),
+    media_messages AS (${getMediaMsgQuery()}),
+    meeting_messages AS (${getMeetingMsgQuery()}),
+    payment_messages AS (${getPaymentMsgQuery()}),
+    call_up_messages AS (${getCallupMsgQuery()}),
+    location_messages AS (${getLocationMsgQuery()})),
+    file_messages AS (${getFileMsgQuery()}),
     all_messages AS (
-        SELECT
-            *
-        FROM
-            text_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            media_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            meeting_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            payment_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            call_up_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            location_messages
-        UNION ALL
-        SELECT
-            *
-        FROM
-            file_messages
+        SELECT * FROM text_messages UNION ALL
+        SELECT * FROM media_messages UNION ALL
+        SELECT * FROM meeting_messages UNION ALL
+        SELECT * FROM payment_messages UNION ALL
+        SELECT * FROM call_up_messages UNION ALL
+        SELECT * FROM location_messages UNION ALL
+        SELECT * FROM file_messages
     )
     -- Main query
 SELECT
