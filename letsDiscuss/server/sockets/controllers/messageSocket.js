@@ -8,13 +8,9 @@ import { handlePayment } from '../../controllers/chat/handlePayment.js';
 import { handleCallUp } from '../../controllers/chat/handleCallUp.js';
 import { handleLocation } from '../../controllers/chat/handleLocation.js';
 import { handleFile } from '../../controllers/chat/handleFile.js';
+import { getMessage } from './getMessage.js';
 
 export const messageSocket = async (io, socket, data) => {
-    console.log('Message received:', msg);
-    console.log('Socket ID:', socket.id);
-    console.log('User ID:', socket.request.session.userId);
-    console.log('Session ID:', socket.request.session.id);
-    io.emit('message', "socketHandler"); // Broadcast the message to all connected clients
 
     const { chatId, forwardedChat, msgType, messageData } = data;
     const userId = socket.request.session.userId;
@@ -70,7 +66,8 @@ export const messageSocket = async (io, socket, data) => {
         const statusDetails = getStatusDetails(201);
         if (conn) conn.commit();
         // Notify all users in the chat room
-        io.to(chatId).emit('newMessage', { chatId, userId, msgType, messageData });
+        const newMessage = getMessage({ chatId, messageId, userId, msgType });
+        io.to(chatId).emit('newMessage', newMessage);
 
         socket.emit('sendMessage', { ...statusDetails, responseCode: '0000D', message: 'Message added successfully' });
 

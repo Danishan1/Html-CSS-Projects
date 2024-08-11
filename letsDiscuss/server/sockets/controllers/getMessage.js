@@ -1,74 +1,58 @@
-export const getMessage = (io, socket, messageId) => {
-
-}
-
 import db from '../../config/db.js';
-import { getChatQuery } from '../../queries/getChatQuery.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
-import { addSenderAttribute } from './helper/addSenderAttribute.js';
-import { getChatDetails } from './helper/getChatDetails.js';
-import { splitMessageContent } from './helper/splitMessageContent.js';
+import { addSenderAttribute } from '../../controllers/chat/helper/addSenderAttribute.js';
+import { getChatDetails } from '../../controllers/chat/helper/getChatDetails.js';
+import { splitMessageContent } from '../../controllers/chat/helper/splitMessageContent.js';
 
-const monthYearToTimestamp = (monthYear) => {
-    const [month, year] = monthYear.split(', ');
-    const date = new Date(`${month} 1, ${year}`);
-    return date.getTime();
-};
 
-export const getChats = async (req, res) => {
-    const { startCount = 0, endCount = 50, limiter = 'number', chatId } = req.body; // limiter: time, number,  
-    // chatId = Number(chatId);
-    const authenticatedUserID = socket.request.session.userId;
-    const sql = getChatQuery();
-    let isEnd = false;
+export const getMessage = async (data) => {
+
+    const { userId, chatId, messageId, msgType } = data;
+    let getQuery;
 
     try {
-        const [results] = await db.query(sql, [chatId, chatId, chatId, chatId, chatId, chatId, chatId]);
-        // result is Array of Dictornary : 
-        // {messageType, messageContent, messageId, chatId, userId, status, forwardedChat, createdBy, updatedBy, createdAt, updatedAt}
+        // Dynamic import based on msgType
+        switch (msgType) {
+            case 'text':
+                getQuery = (await import('../../queries/getTextMsgQuery.js')).getTextMsgQuery;
+                break;
+            case 'media':
+                getQuery = (await import('../../queries/getMediaMsgQuery.js')).getMediaMsgQuery;
+                break;
+            case 'meeting':
+                getQuery = (await import('../../queries/getMeetingMsgQuery.js')).getMeetingMsgQuery;
+                break;
+            case 'payment':
+                getQuery = (await import('../../queries/getPaymentMsgQuery.js')).getPaymentMsgQuery;
+                break;
+            case 'call_up':
+                getQuery = (await import('../../queries/getCallupMsgQuery.js')).getCallupMsgQuery;
+                break;
+            case 'location':
+                getQuery = (await import('../../queries/getLocationMsgQuery.js')).getLocationMsgQuery;
+                break;
+            case 'file':
+                getQuery = (await import('../../queries/getFileMsgQuery.js')).getFileMsgQuery;
+                break;
+            default:
+                throw new Error('Invalid message type: it should be text, media, etc.');
+        }
 
-        const msgLength = results.length;
+        let sql = `${getQuery()} AND messageId = ?;`;
+
+
+        const [results] = await db.query(sql, [chatId, messageId]);
 
         let processedResults = results;
 
-        if (limiter === 'time') {
-            const startTimestamp = monthYearToTimestamp(startCount);
-            const endTimestamp = monthYearToTimestamp(endCount) + (30 * 24 * 60 * 60 * 1000) - 1; // Add 30 days to end timestamp
-
-            if (results.length === 0) {
-                processedResults = [];
-                isEnd = true;
-            } else {
-                processedResults = results.filter(message => {
-                    const messageTimestamp = new Date(message.createdAt).getTime();
-                    return messageTimestamp >= startTimestamp && messageTimestamp <= endTimestamp;
-                });
-                isEnd = processedResults.length === 0;
-            }
-        } else {
-            // number
-            if (msgLength > startCount) {
-                if (msgLength <= endCount) {
-                    processedResults = results.slice(startCount);
-                    isEnd = true;
-                } else {
-                    processedResults = results.slice(startCount, endCount + 1);
-                    isEnd = false;
-                }
-            } else {
-                processedResults = [];
-                isEnd = true;
-            }
-        }
-
-        processedResults = addSenderAttribute(processedResults, authenticatedUserID);
+        processedResults = addSenderAttribute(processedResults, userId);
         processedResults = splitMessageContent(processedResults);
 
         const chatDetails = await getChatDetails(chatId, db)
 
-        res.json({ responseCode: '0000C', chat: { isEnd, chatDetails, result: processedResults } });
+        return ({ responseCode: '0000C', chat: { isEnd, chatDetails, result: processedResults } });
     } catch (err) {
         const statusDetails = getStatusDetails(500);
-        res.status(Number(statusDetails.statusCode)).json({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
+        return ({ ...statusDetails, message: 'Database error', responseCode: '0000B', err });
     }
 }
