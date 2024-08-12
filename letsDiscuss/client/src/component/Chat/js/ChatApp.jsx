@@ -5,13 +5,14 @@ import UserListSection from "../../UserListSection/js/UserListSection";
 import axios from "axios";
 import Loading from "../../SpecialPages/js/Loading";
 import ErrorPage from "../../SpecialPages/js/ErrorPage";
-import { SocketProvider } from "../../context/socketContext";
+import { useSocket } from "../../context/socketContext";
 
 const ChatApp = () => {
   const [chatList, setChatList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [openChatId, setOpenChatId] = useState(null);
+  const socket = useSocket();
 
   useEffect(() => {
     const getUserChatList = async () => {
@@ -40,6 +41,41 @@ const ChatApp = () => {
     getUserChatList();
   }, []);
 
+  useEffect(() => {
+    if (!socket) return;
+
+    socket.on("updateChatList", (newMessage) => {
+      setChatList((prevChats) => {
+        // Check if the chat is already in the list
+        const existingChatIndex = prevChats.findIndex(
+          (chat) => chat.chatId === newMessage.chatId
+        );
+
+        let updatedChats;
+
+        if (existingChatIndex > -1) {
+          // Update the existing chat
+          updatedChats = prevChats.map((chat, index) =>
+            index === existingChatIndex ? newMessage : chat
+          );
+        } else {
+          // Add the new chat to the list
+          updatedChats = [...prevChats, newMessage];
+        }
+
+        // Sort chats by latest message time
+        return updatedChats.sort(
+          (a, b) => new Date(b.lastMsgTime) - new Date(a.lastMsgTime)
+        );
+      });
+    });
+
+    // Cleanup on unmount
+    return () => {
+      socket.off("updateChatList");
+    };
+  }, [socket]);
+
   if (loading) {
     return <Loading />;
   }
@@ -59,17 +95,15 @@ const ChatApp = () => {
       : styles.closeSection;
 
   return (
-    <SocketProvider>
-      <div className={styles.chatApp}>
-        <div className={styles.sectionA}></div>
-        <div className={`${styles.sectionB} ${openListCss}`}>
-          <UserListSection chatList={chatList} setOpenChatId={setOpenChatId} />
-        </div>
-        <div className={`${styles.sectionC} ${openChatCss}`}>
-          <ChatBoxDrop openChatId={openChatId} setOpenChatId={setOpenChatId} />
-        </div>
+    <div className={styles.chatApp}>
+      <div className={styles.sectionA}></div>
+      <div className={`${styles.sectionB} ${openListCss}`}>
+        <UserListSection chatList={chatList} setOpenChatId={setOpenChatId} />
       </div>
-    </SocketProvider>
+      <div className={`${styles.sectionC} ${openChatCss}`}>
+        <ChatBoxDrop openChatId={openChatId} setOpenChatId={setOpenChatId} />
+      </div>
+    </div>
   );
 };
 

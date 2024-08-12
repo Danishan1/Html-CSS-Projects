@@ -4,6 +4,7 @@ import { lazy, useEffect, Suspense, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Loading from './component/SpecialPages/js/Loading';
+import { SocketProvider } from './component/context/socketContext';
 
 const LoginForm = lazy(() => import('./component/Login/js/Login'))
 const RegristerForm = lazy(() => import('./component/Registration/js/RegisterForm'))
@@ -43,18 +44,19 @@ const App = () => {
   }
 
 
-
   return (
     <div className="App">
       <Suspense fallback={<Loading />}>
         <Router>
-          <Routes>
-            <Route path="/" element={authenticated ? <Navigate to="/discuss" /> : <Navigate to="/login" />} />
-            <Route path="/login" element={authenticated ? <Navigate to="/discuss" /> : <LoginForm />} />
-            <Route path="/register/*" element={authenticated ? <Navigate to="/discuss" /> : <RegristerForm />} />
-            <Route path="/discuss" element={authenticated ? <ChatApp /> : <Navigate to="/login" />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
+          <SocketProvider>
+            <Routes>
+              <Route path="/" element={authenticated ? <Navigate to="/discuss" /> : <Navigate to="/login" />} />
+              <Route path="/login" element={authenticated ? <Navigate to="/discuss" /> : <LoginForm />} />
+              <Route path="/register/*" element={authenticated ? <Navigate to="/discuss" /> : <RegristerForm />} />
+              <Route path="/discuss" element={authenticated ? <ChatApp /> : <Navigate to="/login" />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </SocketProvider>
         </Router>
       </Suspense>
 

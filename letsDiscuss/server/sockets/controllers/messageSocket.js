@@ -9,6 +9,7 @@ import { handleCallUp } from '../../controllers/chat/handleCallUp.js';
 import { handleLocation } from '../../controllers/chat/handleLocation.js';
 import { handleFile } from '../../controllers/chat/handleFile.js';
 import { getMessage } from './getMessage.js';
+import { updateChatList } from './updateChatList.js';
 
 export const messageSocket = async (io, socket, data) => {
 
@@ -69,8 +70,10 @@ export const messageSocket = async (io, socket, data) => {
 
         // Notify all users in the chat room
         const newMessage = await getMessage({ chatId, messageId, userId, msgType });
+        const lastMsgData = updateChatList(newMessage);
 
         io.to(chatId).emit('newMessage', newMessage);
+        io.to(chatId).emit('updateChatList', lastMsgData);
 
         socket.emit('sendMessage', { ...statusDetails, responseCode: '00027', message: 'Message added successfully' });
 
