@@ -4,6 +4,8 @@ import AlertContainer from "./AlertContainer";
 import style from "../css/RegisterForm.module.css";
 import ErrorPage from "../../SpecialPages/js/ErrorPage";
 import Loading from "../../SpecialPages/js/Loading";
+import { setFavicon } from "../../utils/setFavicon";
+import { setDocumentTitle } from "../../utils/setDocumentTitle";
 
 const FormSection1 = lazy(() =>
   import("./FormSection1").then((module) => ({ default: module.FormSection1 }))
@@ -16,6 +18,9 @@ const FormSection3 = lazy(() =>
 );
 
 const RegisterForm = ({ orgId = "ORG_ID", createdBy = "000000" }) => {
+  setFavicon("itsRIGHTtime");
+  setDocumentTitle("Register | itsRIGHTtime");
+
   // State for storing form data, initialized from localStorage if available.
   const [formData, setFormData] = useState(() => {
     const savedFormData = localStorage.getItem("formData");

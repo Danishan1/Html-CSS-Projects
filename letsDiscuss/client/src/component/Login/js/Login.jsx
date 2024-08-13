@@ -6,10 +6,15 @@ import PasswordField from "./PasswordField";
 import InputField from "../../Registration/js/InputField";
 import { Button } from "../../Registration/js/Button";
 import axios from "axios";
+import { setFavicon } from "../../utils/setFavicon";
+import { setDocumentTitle } from "../../utils/setDocumentTitle";
 
 const LoginForm = () => {
   const [alertContainer, setAlertContainer] = useState([]);
   const navigate = useNavigate();
+  
+  setFavicon('itsRIGHTtime')
+  setDocumentTitle("Login | itsRIGHTtime")
 
   const verifyDetails = async () => {
     try {

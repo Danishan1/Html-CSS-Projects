@@ -6,8 +6,13 @@ import axios from "axios";
 import Loading from "../../SpecialPages/js/Loading";
 import ErrorPage from "../../SpecialPages/js/ErrorPage";
 import { useSocket } from "../../context/socketContext";
+import { setDocumentTitle } from "../../utils/setDocumentTitle";
+import { setFavicon } from "../../utils/setFavicon";
 
 const ChatApp = () => {
+  setDocumentTitle("letsDiscuss");
+  setFavicon("letsDiscuss");
+
   const [chatList, setChatList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
