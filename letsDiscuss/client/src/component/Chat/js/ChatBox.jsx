@@ -87,7 +87,8 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
     socket.on("newMessage", (newMessage) => {
       if (newMessage.chat.chatDetails[0].chatId === openChatId) {
         const result = newMessage.chat.result;
-        if (result.length > 0) setChats((prevChats) => [...prevChats, result[0]]);
+        if (result.length > 0)
+          setChats((prevChats) => [...prevChats, result[0]]);
       }
     });
 

@@ -4,7 +4,7 @@ import pool from "../../config/db.js";
 export const handleConnect = async (io, socket) => {
     const session = socket.request.session;
     const userId = session.userId;
-    console.log('A User Connected', socket.id);
+    console.log(`A User Connected (User ID: ${userId}, Session Id: ${session.id}, Socket ID: ${socket.id})`);
 
 
     const query = `SELECT DISTINCT chatId FROM chat_list WHERE userId = ?`

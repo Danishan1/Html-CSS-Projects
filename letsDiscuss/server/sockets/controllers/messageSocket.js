@@ -72,7 +72,15 @@ export const messageSocket = async (io, socket, data) => {
         const newMessage = await getMessage({ chatId, messageId, userId, msgType });
         const lastMsgData = updateChatList(newMessage);
 
-        io.to(chatId).emit('newMessage', newMessage);
+        // Emit the message to the sender with isSender set to true
+        newMessage.chat.result[0].isSender = true;
+        socket.emit('newMessage', newMessage);
+
+        // Emit the message to others in the chat room with isSender set to false
+        newMessage.chat.result[0].isSender = false;
+        socket.broadcast.to(chatId).emit('newMessage', newMessage);
+
+        // Update chat List
         io.to(chatId).emit('updateChatList', lastMsgData);
 
         socket.emit('sendMessage', { ...statusDetails, responseCode: '00027', message: 'Message added successfully' });

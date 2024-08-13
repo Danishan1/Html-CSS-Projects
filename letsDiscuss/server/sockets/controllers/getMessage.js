@@ -1,6 +1,5 @@
 import db from '../../config/db.js';
 import { getStatusDetails } from '../../utils/getStatusDetails.js';
-import { addSenderAttribute } from '../../controllers/chat/helper/addSenderAttribute.js';
 import { getChatDetails } from '../../controllers/chat/helper/getChatDetails.js';
 import { splitMessageContent } from '../../controllers/chat/helper/splitMessageContent.js';
 
@@ -57,7 +56,6 @@ export const getMessage = async (data) => {
 
         let processedResults = results;
 
-        processedResults = addSenderAttribute(processedResults, userId);
         processedResults = splitMessageContent(processedResults);
 
         const chatDetails = await getChatDetails(chatId, db)
