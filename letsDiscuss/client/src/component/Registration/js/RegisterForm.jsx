@@ -1,6 +1,5 @@
 import React, { useState, useRef, lazy, Suspense, useEffect } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-
 import AlertContainer from "./AlertContainer";
 import style from "../css/RegisterForm.module.css";
 import ErrorPage from "../../SpecialPages/js/ErrorPage";
@@ -16,7 +15,8 @@ const FormSection3 = lazy(() =>
   import("./FormSection3").then((module) => ({ default: module.FormSection3 }))
 );
 
-const RegisterForm = ({ orgId = "ORG_ID", createdBy = "Application" }) => {
+const RegisterForm = ({ orgId = "ORG_ID", createdBy = "000000" }) => {
+  // State for storing form data, initialized from localStorage if available.
   const [formData, setFormData] = useState(() => {
     const savedFormData = localStorage.getItem("formData");
     return savedFormData
@@ -28,34 +28,42 @@ const RegisterForm = ({ orgId = "ORG_ID", createdBy = "Application" }) => {
           email: "",
           profilePic: "",
           status: "active",
-          designation: "User",
+          designation: orgId === "ORG_ID" ? "User" : "",
           orgId: orgId,
           createdBy: createdBy,
           updatedBy: createdBy,
         };
   });
 
+  // State for managing alert messages
   const [alertContainer, setAlertContainer] = useState([]);
+
+  // State for tracking which step of the form is currently active, also persisted in localStorage.
   const [formFillStep, setFormFillStep] = useState(() => {
     const savedStep = localStorage.getItem("formFillStep");
     return savedStep ? parseInt(savedStep, 10) : 0;
   });
 
   const alertRef = useRef(null);
+
+  // Function to display alerts in the AlertContainer.
   const showAlert = (message, type) => {
     if (alertRef.current) {
       alertRef.current.addAlert(message, type);
     }
   };
 
+  // Persist form data in localStorage whenever it changes.
   useEffect(() => {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
 
+  // Persist the current form step in localStorage whenever it changes.
   useEffect(() => {
     localStorage.setItem("formFillStep", formFillStep.toString());
   }, [formFillStep]);
 
+  // Helper function to render the current form section based on the active step.
   const nextStep = (Element) => {
     return (
       <div className={style.formRapper}>
@@ -67,6 +75,7 @@ const RegisterForm = ({ orgId = "ORG_ID", createdBy = "Application" }) => {
             setFormFillStep={setFormFillStep}
           />
           <div className={style.progress}>
+            {/* Conditional rendering of the progress indicators based on the current form step */}
             {formFillStep === 0 ? (
               <samp className={`${style.currentSec}`}></samp>
             ) : (
@@ -88,6 +97,7 @@ const RegisterForm = ({ orgId = "ORG_ID", createdBy = "Application" }) => {
     );
   };
 
+  // Wrapper function to navigate to the next form step or redirect based on the current step.
   const wrapperNextStep = (id, element) => {
     return formFillStep === id ? (
       nextStep(element)
