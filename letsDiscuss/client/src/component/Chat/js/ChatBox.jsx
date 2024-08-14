@@ -16,6 +16,8 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
   const [chatInfo, setChatInfo] = useState([]);
   const [isChatEnd, setIsChatEnd] = useState("");
   const [loading, setLoading] = useState(true);
+  const [unreadCount, setUnreadCount] = useState(0); // Track unread messages
+  const [lastReadIndex, setLastReadIndex] = useState(null); // Track the last read message index
   const socket = useSocket();
 
   const chatAreaRef = useRef(null);
@@ -34,6 +36,12 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
         setIsChatEnd(response.data.chat.isEnd);
         setChats(response.data.chat.result);
         setChatInfo(response.data.chat.chatDetails);
+
+        // Assuming you have some way to know which messages are unread
+        const unreadMessages = response.data.chat.result.filter(chat => !chat.isRead);
+        setUnreadCount(unreadMessages.length);
+        setLastReadIndex(response.data.chat.result.length - unreadMessages.length);
+
         setLoading(false);
       } catch (error) {
         console.error("Error fetching chat:", error);
@@ -46,16 +54,21 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
     }
   }, [openChatId]);
 
-  // Scroll to bottom whenever chats change
+  // Scroll to the last read message whenever chats change
   useEffect(() => {
-    const scrollToBottom = () => {
-      if (bottomRef.current) {
-        bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    const scrollToLastRead = () => {
+      if (chatAreaRef.current) {
+        const readPosition = chatAreaRef.current.children[lastReadIndex];
+        if (readPosition) {
+          readPosition.scrollIntoView({ behavior: "smooth" });
+        } else if (bottomRef.current) {
+          bottomRef.current.scrollIntoView({ behavior: "smooth" });
+        }
       }
     };
 
-    setTimeout(scrollToBottom, 100);
-  }, [chats]);
+    setTimeout(scrollToLastRead, 100);
+  }, [chats, lastReadIndex]);
 
   // Handle sending a message
   const handleSend = async (message) => {
@@ -87,8 +100,15 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
     socket.on("newMessage", (newMessage) => {
       if (newMessage.chat.chatDetails[0].chatId === openChatId) {
         const result = newMessage.chat.result;
-        if (result.length > 0)
+        if (result.length > 0) {
           setChats((prevChats) => [...prevChats, result[0]]);
+
+          // If the user hasn't scrolled, consider it unread
+          if (chatAreaRef.current.scrollTop < chatAreaRef.current.scrollHeight - chatAreaRef.current.clientHeight) {
+            setUnreadCount((prevUnreadCount) => prevUnreadCount + 1);
+            console.log(`Chat ID ${openChatId} has ${unreadCount + 1} unread messages.`);
+          }
+        }
       }
     });
 
@@ -96,7 +116,15 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
     return () => {
       socket.off("newMessage");
     };
-  }, [socket, openChatId]);
+  }, [socket, openChatId, unreadCount]);
+
+  // Handle user scrolling to mark messages as read
+  const handleScroll = () => {
+    if (chatAreaRef.current.scrollTop + chatAreaRef.current.clientHeight >= chatAreaRef.current.scrollHeight) {
+      setUnreadCount(0); // Reset unread count when user scrolls to bottom
+      setLastReadIndex(chats.length); // Mark all as read
+    }
+  };
 
   const chatMap = () => {
     return chats.map((chat, index) => (
@@ -135,7 +163,7 @@ export default function ChatBox({ openChatId, setOpenChatId }) {
           {chatInfo.length > 0 ? chatInfo[0].chatName : "Chat"}
         </div>
       </div>
-      <div className={style.chatArea} ref={chatAreaRef}>
+      <div className={style.chatArea} ref={chatAreaRef} onScroll={handleScroll}>
         {chats.length > 0 ? chatMap() : <NoChatPage height="100%" />}
         <div ref={bottomRef}></div>
       </div>
