@@ -68,6 +68,7 @@ export const ShowDeckCards = () => {
   const deck = [clubs, diamonds, hearts, spades]; // 4 separate suit arrays
 
   const [selectedCard, setSelectedCard] = useState(null);
+  const [showCard, setShowCard] = useState(false);
 
   const handleCardClick = (code) => {
     if (!selectedCard) {
@@ -77,13 +78,26 @@ export const ShowDeckCards = () => {
 
   return (
     <div className={styles.showDeckCards}>
-      <div className={styles.header}></div>
+      <div className={styles.header}>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            setShowCard((pre) => !pre);
+          }}
+        >
+          {showCard ? "Show Cards" : "Hide Cards"}
+        </button>
+      </div>
       <div className={styles.body}>
         {deck.map((suit, suitIndex) => (
           <div key={suitIndex} className={styles.suitColumn}>
             {suit.map((code) => (
               <div key={code} className={styles.cardWrapper}>
-                <Card code={code} setResult={() => handleCardClick(code)} />
+                <Card
+                  code={code}
+                  setResult={() => handleCardClick(code)}
+                  isShow={showCard}
+                />
               </div>
             ))}
           </div>

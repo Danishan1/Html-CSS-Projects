@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../css/Card.module.css";
 import gameImage from "../../assets/images/game.png";
 import {
@@ -8,7 +8,7 @@ import {
   spadeIcon,
 } from "../../assets/js/icons";
 
-const Card = ({ code = "HJ", setResult }) => {
+const Card = ({ code = "HJ", setResult, isShow }) => {
   const suitName = code[0];
   const cardName = code.slice(1);
 
@@ -36,6 +36,7 @@ const Card = ({ code = "HJ", setResult }) => {
       suitName === "H" || suitName === "D"
         ? "var(--colorRed)"
         : "var(--colorGray6)",
+    "--isFront": isShow ? "0deg" : "180deg",
   };
 
   return (
