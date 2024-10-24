@@ -1,9 +1,10 @@
 import './App.css';
+import Card from './components/jsx/Card';
 
 function App() {
   return (
     <div className="App">
-      Game
+      <Card />
     </div>
   );
 }
