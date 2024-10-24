@@ -89,19 +89,26 @@ export const ShowDeckCards = () => {
         </button>
       </div>
       <div className={styles.body}>
-        {deck.map((suit, suitIndex) => (
-          <div key={suitIndex} className={styles.suitColumn}>
-            {suit.map((code) => (
-              <div key={code} className={styles.cardWrapper}>
-                <Card
-                  code={code}
-                  setResult={() => handleCardClick(code)}
-                  isShow={showCard}
-                />
-              </div>
-            ))}
+        {!selectedCard &&
+          deck.map((suit, suitIndex) => (
+            <div key={suitIndex} className={styles.suitColumn}>
+              {suit.map((code) => (
+                <div key={code} className={styles.cardWrapper}>
+                  <Card
+                    code={code}
+                    setResult={() => handleCardClick(code)}
+                    isShow={showCard}
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        {selectedCard && (
+          <div className={styles.singleCard}>
+            <p>Okay!! Your selected card is</p>
+            <Card code={selectedCard} setResult={() => {}} isShow={true} />
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

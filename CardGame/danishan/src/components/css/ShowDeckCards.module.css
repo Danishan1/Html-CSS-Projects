@@ -44,3 +44,17 @@
     opacity: 0.8;
     cursor: pointer;
 }
+
+.singleCard {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleCard p {
+    font-weight: var(--boldL2)
+}
