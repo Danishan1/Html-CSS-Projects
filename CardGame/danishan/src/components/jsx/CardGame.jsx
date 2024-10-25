@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../css/CardGame.module.css";
-import ShowDeckCards from "./ShowDeckCards";
+import CardSelection from "./CardSelection";
+import BidStake from "./BidStake";
 
 export const CardGame = ({ setBid }) => {
   // Separate the deck into different suits
@@ -65,11 +66,10 @@ export const CardGame = ({ setBid }) => {
     "SK",
   ];
 
-  const deck = [clubs, diamonds, hearts, spades]; // 4 separate suit arrays
+  const deck = [clubs, diamonds, hearts, spades]; 
   const [timer, setTimer] = useState(10);
   const [selectedCard, setSelectedCard] = useState(null);
   const [showCard, setShowCard] = useState(false);
-  const [changeWindow, setChangeWindow] = useState(0);
 
   useEffect(() => {
     let countdown;
@@ -78,7 +78,7 @@ export const CardGame = ({ setBid }) => {
         setTimer((prev) => {
           if (prev === 1) {
             clearInterval(countdown);
-            setSelectedCard(null); // Reset card selection on timeout
+            setSelectedCard(null); 
             return 10;
           }
           return prev - 1;
@@ -86,7 +86,12 @@ export const CardGame = ({ setBid }) => {
       }, 1000);
     }
     return () => clearInterval(countdown);
-  }, [changeWindow]);
+  }, [selectedCard]);
+
+  const resetSelection = () => {
+    setSelectedCard(null);
+    setTimer(10);
+  };
 
   return (
     <div className={styles.cardGame}>
@@ -102,14 +107,21 @@ export const CardGame = ({ setBid }) => {
         </div>
       </div>
       <div className={styles.body}>
-        <ShowDeckCards
-          deck={deck}
-          setBid={setBid}
-          timer={timer}
-          setSelectedCard={setSelectedCard}
-          setTimer={setTimer}
-          isShow={showCard}
-        />
+        {!selectedCard ? (
+          <CardSelection
+            deck={deck}
+            onCardClick={setSelectedCard}
+            isShow={showCard}
+          />
+        ) : (
+          <BidStake
+            selectedCard={selectedCard}
+            timer={timer}
+            setBid={setBid}
+            resetSelection={resetSelection}
+            setTimer={setTimer}
+          />
+        )}
       </div>
     </div>
   );

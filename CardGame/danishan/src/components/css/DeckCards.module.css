@@ -1,4 +1,3 @@
-
 .showDeckCards {
     display: flex;
     gap: 10px;
@@ -35,13 +34,14 @@
 }
 
 .singleCard {
-    height: 100%;
+    height: calc(100vh - 50px);
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
 
 .text {
