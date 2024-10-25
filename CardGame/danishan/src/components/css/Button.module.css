@@ -1,0 +1,14 @@
+.btn {
+    background-color: var(--colorCyan);
+    border: none;
+    outline: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: var(--colorWhite);
+    font-weight: var(--boldL2);
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

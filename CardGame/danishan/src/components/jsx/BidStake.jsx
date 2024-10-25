@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../css/DeckCards.module.css";
 import Card from "./Card";
+import { Button } from "./Button";
 
 export const BidStake = ({
   selectedCard,
@@ -61,9 +62,7 @@ export const BidStake = ({
           min="1"
           max="100"
         />
-        <button className={styles.btn} onClick={confirmBid}>
-          Confirm Bid
-        </button>
+        <Button text={"Confirm Bid"} onlick={confirmBid} />
       </div>
       {error && <p className={styles.error}>{error}</p>}
     </div>

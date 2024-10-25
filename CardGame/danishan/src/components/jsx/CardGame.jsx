@@ -3,6 +3,7 @@ import styles from "../css/CardGame.module.css";
 import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
 import { deckSuits } from "../helper/cards";
+import { Button } from "./Button";
 
 export const CardGame = ({ setBid }) => {
   const [timer, setTimer] = useState(10);
@@ -39,21 +40,25 @@ export const CardGame = ({ setBid }) => {
     setSelectedCard(null);
     setScreenStage(0);
     setTimer(10);
+    setShowCard(false);
   };
 
   return (
     <div className={styles.cardGame}>
       <div className={styles.header}>
-        {screenStage === 0 && (
-          <button
-            className={styles.btn}
-            onClick={() => setShowCard((prev) => !prev)}
-          >
-            {screenStage === 0 ? "Show Cards" : "Hide Cards"}
-          </button>
-        )}
-        <div className={styles.timer}>
-          Timer <div className={styles.timeLeft}>{timer}s</div>
+        <div className={styles.leftHeader}>
+          <Button text={"Admin"} onlick={() => {}} />
+        </div>
+        <div className={styles.rightHeader}>
+          {screenStage === 0 && (
+            <Button
+              text={screenStage === 0 ? "Show Cards" : "Hide Cards"}
+              onlick={() => setShowCard((prev) => !prev)}
+            />
+          )}
+          <div className={styles.timer}>
+            Timer <div className={styles.timeLeft}>{timer}s</div>
+          </div>
         </div>
       </div>
       <div className={styles.body}>
