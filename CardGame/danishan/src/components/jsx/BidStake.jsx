@@ -38,7 +38,7 @@ export const BidStake = ({
 
   useEffect(() => {
     if (timer === 0) setBid(1);
-  }, [timer]);
+  }, [timer, setBid]);
 
   if (selectedCard === null)
     return (
@@ -74,7 +74,7 @@ export const BidStake = ({
           min="1"
           max="100"
         />
-        <Button text={"Confirm Bid"} onlick={confirmBid} />
+        <Button text={"Confirm Bid"} onClick={confirmBid} />
       </div>
       {error && <p className={styles.error}>{error}</p>}
     </div>

@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../css/CardGame.module.css";
 import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
-import { deckSuits, deck } from "../helper/cards";
-import { Button } from "./Button";
+import { deckSuits } from "../helper/cards";
 import { Admin } from "./Admin";
 import { playerCode } from "../helper/players";
+import { Header } from "./Header";
+import {
+  handleCardClick,
+  resetSelection,
+  handleBidding,
+} from "../helper/GameLogic";
 
 export const CardGame = () => {
   const [timer, setTimer] = useState(10);
@@ -17,102 +22,37 @@ export const CardGame = () => {
   const [activePlayer, setActivePlayer] = useState(null);
   const [playerOutput, setPlayerOutput] = useState(null);
 
-  useEffect(() => {
-    const countdown = setInterval(() => {
-      setTimer((prev) => {
-        if (prev === 1) {
-          clearInterval(countdown);
-          if (screenStage === 0) {
-            setScreenStage(1);
-          } else {
-            resetSelection();
-          }
-          return 10;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(countdown);
-  }, [screenStage, selectedCard]);
-
-  const handleCardClick = (card) => {
-    setSelectedCard(card);
-    setScreenStage(1);
-    setTimer(10);
-  };
-
-  const resetSelection = () => {
-    setSelectedCard(null);
-    setScreenStage(0);
-    setTimer(10);
-    setShowCard(false);
-  };
-
-  const handleBidding = (bidAmount) => {
-    setPlayerOutput((prev) => {
-      return {
-        ...prev,
-        [`Player-${activePlayer}`]: { card: selectedCard, bid: bidAmount },
-      };
-    });
+  const onTimeout = () => {
+    if (screenStage === 0) setScreenStage(1);
+    else resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard);
   };
 
   return (
     <div className={styles.cardGame}>
-      <div className={styles.header}>
-        <div className={styles.leftHeader}>
-          <Button
-            text={"Admin"}
-            onlick={() => {
-              setProfile((prev) => (prev === "admin" ? "player" : "admin"));
-            }}
-          />
-          <Button
-            text={"Players"}
-            onlick={() => {
-              setPlayerDropdown((prev) => !prev);
-            }}
-          />
-          {playerDropdown && (
-            <div className={styles.playerDropdown}>
-              {playerCode.map((player) => (
-                <div
-                  key={player}
-                  className={styles.player}
-                  onClick={() => {
-                    setActivePlayer(player);
-                    setPlayerDropdown(false);
-                    setProfile("player");
-                  }}
-                >
-                  {player}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-        {profile !== "admin" && (
-          <div className={styles.rightHeader}>
-            {profile !== "admin" && screenStage === 0 && (
-              <Button
-                text={screenStage === 0 ? "Show Cards" : "Hide Cards"}
-                onlick={() => setShowCard((prev) => !prev)}
-              />
-            )}
-            <div className={styles.timer}>
-              Timer <div className={styles.timeLeft}>{timer}s</div>
-            </div>
-          </div>
-        )}
-      </div>
+      <Header
+        profile={profile}
+        setProfile={setProfile}
+        playerDropdown={playerDropdown}
+        setPlayerDropdown={setPlayerDropdown}
+        playerCode={playerCode}
+        setActivePlayer={setActivePlayer}
+        timer={timer}
+        setTimer={setTimer}
+        onTimeout={onTimeout}
+        screenStage={screenStage}
+        showCard={showCard}
+        setShowCard={setShowCard}
+      />
+
       <div className={styles.body}>
         {profile === "admin" ? (
           <Admin playerOutput={playerOutput} />
         ) : screenStage === 0 ? (
           <CardSelection
             deck={deckSuits}
-            onCardClick={handleCardClick}
+            onCardClick={(card) =>
+              handleCardClick(card, setSelectedCard, setScreenStage, setTimer)
+            }
             isShow={showCard}
             activePlayer={activePlayer}
           />
@@ -122,10 +62,22 @@ export const CardGame = () => {
             selectedCard={selectedCard}
             timer={timer}
             setTimer={setTimer}
-            setBid={(bidAmount) => {
-              handleBidding(bidAmount);
-            }}
-            resetSelection={resetSelection}
+            setBid={(bidAmount) =>
+              handleBidding(
+                bidAmount,
+                setPlayerOutput,
+                activePlayer,
+                selectedCard
+              )
+            }
+            resetSelection={() =>
+              resetSelection(
+                setSelectedCard,
+                setScreenStage,
+                setTimer,
+                setShowCard
+              )
+            }
           />
         )}
       </div>
