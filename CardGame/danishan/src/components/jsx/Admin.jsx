@@ -1,8 +1,7 @@
 import styles from "../css/Admin.module.css";
 import { PlayerSelectionCard } from "./PlayerSelectionCard";
 
-export const Admin = () => {
-
+export const Admin = ({ playerOutput }) => {
   return (
     <div className={styles.admin}>
       <PlayerSelectionCard

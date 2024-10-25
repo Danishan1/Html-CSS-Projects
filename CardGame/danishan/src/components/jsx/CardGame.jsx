@@ -19,18 +19,18 @@ export const CardGame = () => {
 
   useEffect(() => {
     const countdown = setInterval(() => {
-      // setTimer((prev) => {
-      //   if (prev === 1) {
-      //     clearInterval(countdown);
-      //     if (screenStage === 0) {
-      //       setScreenStage(1);
-      //     } else {
-      //       resetSelection();
-      //     }
-      //     return 10;
-      //   }
-      //   return prev - 1;
-      // });
+      setTimer((prev) => {
+        if (prev === 1) {
+          clearInterval(countdown);
+          if (screenStage === 0) {
+            setScreenStage(1);
+          } else {
+            resetSelection();
+          }
+          return 10;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(countdown);
@@ -83,6 +83,7 @@ export const CardGame = () => {
                   onClick={() => {
                     setActivePlayer(player);
                     setPlayerDropdown(false);
+                    setProfile("player");
                   }}
                 >
                   {player}
@@ -107,7 +108,7 @@ export const CardGame = () => {
       </div>
       <div className={styles.body}>
         {profile === "admin" ? (
-          <Admin />
+          <Admin playerOutput={playerOutput} />
         ) : screenStage === 0 ? (
           <CardSelection
             deck={deckSuits}
