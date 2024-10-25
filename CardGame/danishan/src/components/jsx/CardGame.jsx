@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "../css/CardGame.module.css";
 import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
-import { deckSuits } from "../helper/cards";
+import { deckSuits, deck } from "../helper/cards";
 import { Button } from "./Button";
 import { Admin } from "./Admin";
+import { playerCode } from "../helper/players";
 
 export const CardGame = ({ setBid }) => {
   const [timer, setTimer] = useState(10);
@@ -12,6 +13,7 @@ export const CardGame = ({ setBid }) => {
   const [screenStage, setScreenStage] = useState(0);
   const [showCard, setShowCard] = useState(false);
   const [profile, setProfile] = useState("player");
+  const [playerDropdown, setPlayerDropdown] = useState(false);
 
   useEffect(() => {
     const countdown = setInterval(() => {
@@ -55,6 +57,21 @@ export const CardGame = ({ setBid }) => {
               setProfile((prev) => (prev === "admin" ? "player" : "admin"));
             }}
           />
+          <Button
+            text={"Players"}
+            onlick={() => {
+              setPlayerDropdown((prev) => !prev);
+            }}
+          />
+          {playerDropdown && (
+            <div className={styles.playerDropdown}>
+              {playerCode.map((player) => (
+                <div key={player} className={styles.player}>
+                  {player}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         {profile !== "admin" && (
           <div className={styles.rightHeader}>
