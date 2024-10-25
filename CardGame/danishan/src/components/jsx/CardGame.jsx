@@ -65,52 +65,64 @@ export const CardGame = ({ setBid }) => {
     "SQ",
     "SK",
   ];
+  const deck = [clubs, diamonds, hearts, spades];
 
-  const deck = [clubs, diamonds, hearts, spades]; 
   const [timer, setTimer] = useState(10);
   const [selectedCard, setSelectedCard] = useState(null);
+  const [screenStage, setScreenStage] = useState(0);
   const [showCard, setShowCard] = useState(false);
 
   useEffect(() => {
-    let countdown;
-    if (selectedCard) {
-      countdown = setInterval(() => {
-        setTimer((prev) => {
-          if (prev === 1) {
-            clearInterval(countdown);
-            setSelectedCard(null); 
-            return 10;
+    const countdown = setInterval(() => {
+      setTimer((prev) => {
+        if (prev === 1) {
+          clearInterval(countdown);
+          if (screenStage === 0) {
+            setScreenStage(1);
+          } else {
+            resetSelection();
           }
-          return prev - 1;
-        });
-      }, 1000);
-    }
+          return 10;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
     return () => clearInterval(countdown);
-  }, [selectedCard]);
+  }, [screenStage, selectedCard]);
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+    setScreenStage(1);
+    setTimer(10);
+  };
 
   const resetSelection = () => {
     setSelectedCard(null);
+    setScreenStage(0);
     setTimer(10);
   };
 
   return (
     <div className={styles.cardGame}>
       <div className={styles.header}>
-        <button
-          className={styles.btn}
-          onClick={() => setShowCard((prev) => !prev)}
-        >
-          {showCard ? "Hide Cards" : "Show Cards"}
-        </button>
+        {screenStage === 0 && (
+          <button
+            className={styles.btn}
+            onClick={() => setShowCard((prev) => !prev)}
+          >
+            {screenStage === 0 ? "Show Cards" : "Hide Cards"}
+          </button>
+        )}
         <div className={styles.timer}>
           Timer <div className={styles.timeLeft}>{timer}s</div>
         </div>
       </div>
       <div className={styles.body}>
-        {!selectedCard ? (
+        {screenStage === 0 ? (
           <CardSelection
             deck={deck}
-            onCardClick={setSelectedCard}
+            onCardClick={handleCardClick}
             isShow={showCard}
           />
         ) : (
@@ -119,7 +131,6 @@ export const CardGame = ({ setBid }) => {
             timer={timer}
             setBid={setBid}
             resetSelection={resetSelection}
-            setTimer={setTimer}
           />
         )}
       </div>

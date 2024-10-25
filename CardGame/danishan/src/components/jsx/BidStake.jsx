@@ -26,13 +26,23 @@ export const BidStake = ({
   const confirmBid = () => {
     if (stake >= 1 && stake <= 100) {
       setBid(stake);
-      resetSelection(); 
+      resetSelection();
       setTimer(10);
       setError("");
     } else {
       setError("Invalid bid amount.");
     }
   };
+
+  if (selectedCard === null)
+    return (
+      <div className={styles.singleCard}>
+        <p className={styles.text}>
+          Bad Luck!!! You have not selected any card therefore you are out of
+          the game.
+        </p>
+      </div>
+    );
 
   return (
     <div className={styles.singleCard}>
