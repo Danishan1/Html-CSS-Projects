@@ -55,6 +55,26 @@
     align-items: center;
 }
 
-.singleCard p {
+.text {
     font-weight: var(--boldL2)
+}
+
+.stakeInput {
+    /* width: 50px; */
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid var(--colorGray4);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error {
+    font-size: calc(var(--size) * 0.8);
+    color: var(--colorRed);
+    font-weight: var(--bold);
+}
+
+.inputBid{
+    display: flex;
+    gap: 20px;
 }

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../css/ShowDeckCards.module.css";
 import Card from "./Card";
 
-export const ShowDeckCards = () => {
+export const ShowDeckCards = ({ setBid }) => {
   // Separate the deck into different suits
   const clubs = [
     "CA",
@@ -64,15 +64,59 @@ export const ShowDeckCards = () => {
     "SQ",
     "SK",
   ];
-
   const deck = [clubs, diamonds, hearts, spades]; // 4 separate suit arrays
 
   const [selectedCard, setSelectedCard] = useState(null);
   const [showCard, setShowCard] = useState(false);
+  const [stake, setStake] = useState("1");
+  const [error, setError] = useState("");
+  const [timer, setTimer] = useState(10);
+
+  useEffect(() => {
+    let countdown;
+    if (selectedCard) {
+      countdown = setInterval(() => {
+        setTimer((prev) => {
+          if (prev === 1) {
+            clearInterval(countdown);
+            setSelectedCard(null);
+            setError("Time expired. Please select a card again.");
+            return 10;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(countdown);
+  }, [selectedCard]);
 
   const handleCardClick = (code) => {
     if (!selectedCard) {
-      setSelectedCard(code); // Lock the selected card
+      setSelectedCard(code);
+      setTimer(10);
+      setError("");
+    }
+  };
+
+  const handleStakeChange = (e) => {
+    const value = e.target.value;
+    if (!isNaN(value) && value >= 1 && value <= 100) {
+      setStake(value);
+      setError("");
+    } else {
+      setStake("1");
+      setError("Please enter a number between 1 and 100.");
+    }
+  };
+
+  const confirmBid = () => {
+    if (stake >= 1 && stake <= 100) {
+      setBid(stake);
+      setSelectedCard(null);
+      setError("");
+      setTimer(10);
+    } else {
+      setError("Invalid bid amount.");
     }
   };
 
@@ -85,7 +129,7 @@ export const ShowDeckCards = () => {
             setShowCard((pre) => !pre);
           }}
         >
-          {showCard ? "Show Cards" : "Hide Cards"}
+          {showCard ? "Hide Cards" : "Show Cards"}
         </button>
       </div>
       <div className={styles.body}>
@@ -105,8 +149,27 @@ export const ShowDeckCards = () => {
           ))}
         {selectedCard && (
           <div className={styles.singleCard}>
-            <p>Okay!! Your selected card is</p>
             <Card code={selectedCard} setResult={() => {}} isShow={true} />
+            <p className={styles.text}>
+              You have successfully selected a card. Stake on it between 1 to
+              100
+            </p>
+            <div className={styles.timer}>Time remaining: {timer} seconds</div>
+            <div className={styles.inputBid}>
+              <input
+                type="number"
+                value={stake}
+                onChange={handleStakeChange}
+                className={styles.stakeInput}
+                placeholder="Bid"
+                min="1"
+                max="100"
+              />
+              <button className={styles.btn} onClick={confirmBid}>
+                Confirm Bid
+              </button>
+            </div>
+            {error && <p className={styles.error}>{error}</p>}
           </div>
         )}
       </div>
