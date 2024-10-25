@@ -1,10 +1,11 @@
 import './App.css';
-import { ShowDeckCards } from './components/jsx/ShowDeckCards';
+import CardGame from './components/jsx/CardGame';
 
 function App() {
   return (
     <div className="App">
-      <ShowDeckCards />  </div>
+      <CardGame />
+    </div>
   );
 }
 

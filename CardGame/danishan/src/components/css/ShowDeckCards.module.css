@@ -1,16 +1,5 @@
-.showDeckCards .header {
-    display: flex;
-    gap: 10px;
-    width: 100vw;
-    height: 50px;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--colorGray2);
-    padding: 0 20px;
-    gap: 10px;
-}
 
-.showDeckCards .body {
+.showDeckCards {
     display: flex;
     gap: 10px;
     width: 100vw;
@@ -60,7 +49,6 @@
 }
 
 .stakeInput {
-    /* width: 50px; */
     padding: 5px 10px;
     outline: none;
     border: 1px solid var(--colorGray4);
@@ -74,7 +62,7 @@
     font-weight: var(--bold);
 }
 
-.inputBid{
+.inputBid {
     display: flex;
     gap: 20px;
 }

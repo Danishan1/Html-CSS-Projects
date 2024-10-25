@@ -1,0 +1,39 @@
+.cardGame .header {
+    display: flex;
+    gap: 10px;
+    width: 100vw;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--colorGray2);
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--colorCyan);
+    border: none;
+    outline: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: var(--colorWhite);
+    font-weight: var(--boldL2);
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    gap: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--colorGray3);
+}
+
+.timeLeft {
+    color: var(--colorCyan);
+    font-weight: var(--boldL2)
+}

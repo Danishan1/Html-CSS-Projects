@@ -1,97 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../css/ShowDeckCards.module.css";
 import Card from "./Card";
 
-export const ShowDeckCards = ({ setBid }) => {
-  // Separate the deck into different suits
-  const clubs = [
-    "CA",
-    "C2",
-    "C3",
-    "C4",
-    "C5",
-    "C6",
-    "C7",
-    "C8",
-    "C9",
-    "C10",
-    "CJ",
-    "CQ",
-    "CK",
-  ];
-  const hearts = [
-    "HA",
-    "H2",
-    "H3",
-    "H4",
-    "H5",
-    "H6",
-    "H7",
-    "H8",
-    "H9",
-    "H10",
-    "HJ",
-    "HQ",
-    "HK",
-  ];
-  const diamonds = [
-    "DA",
-    "D2",
-    "D3",
-    "D4",
-    "D5",
-    "D6",
-    "D7",
-    "D8",
-    "D9",
-    "D10",
-    "DJ",
-    "DQ",
-    "DK",
-  ];
-  const spades = [
-    "SA",
-    "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S6",
-    "S7",
-    "S8",
-    "S9",
-    "S10",
-    "SJ",
-    "SQ",
-    "SK",
-  ];
-  const deck = [clubs, diamonds, hearts, spades]; // 4 separate suit arrays
-
-  const [selectedCard, setSelectedCard] = useState(null);
-  const [showCard, setShowCard] = useState(false);
+export const ShowDeckCards = ({
+  deck,
+  setBid,
+  timer,
+  setSelectedCard,
+  setTimer,
+  isShow,
+}) => {
+  const [selectedCardLocal, setSelectedCardLocal] = useState(null); // Local state
   const [stake, setStake] = useState("1");
   const [error, setError] = useState("");
-  const [timer, setTimer] = useState(10);
-
-  useEffect(() => {
-    let countdown;
-    if (selectedCard) {
-      countdown = setInterval(() => {
-        setTimer((prev) => {
-          if (prev === 1) {
-            clearInterval(countdown);
-            setSelectedCard(null);
-            setError("Time expired. Please select a card again.");
-            return 10;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => clearInterval(countdown);
-  }, [selectedCard]);
 
   const handleCardClick = (code) => {
-    if (!selectedCard) {
+    if (!selectedCardLocal) {
+      setSelectedCardLocal(code);
       setSelectedCard(code);
       setTimer(10);
       setError("");
@@ -112,9 +37,10 @@ export const ShowDeckCards = ({ setBid }) => {
   const confirmBid = () => {
     if (stake >= 1 && stake <= 100) {
       setBid(stake);
+      setSelectedCardLocal(null);
       setSelectedCard(null);
-      setError("");
       setTimer(10);
+      setError("");
     } else {
       setError("Invalid bid amount.");
     }
@@ -122,57 +48,44 @@ export const ShowDeckCards = ({ setBid }) => {
 
   return (
     <div className={styles.showDeckCards}>
-      <div className={styles.header}>
-        <button
-          className={styles.btn}
-          onClick={() => {
-            setShowCard((pre) => !pre);
-          }}
-        >
-          {showCard ? "Hide Cards" : "Show Cards"}
-        </button>
-      </div>
-      <div className={styles.body}>
-        {!selectedCard &&
-          deck.map((suit, suitIndex) => (
-            <div key={suitIndex} className={styles.suitColumn}>
-              {suit.map((code) => (
-                <div key={code} className={styles.cardWrapper}>
-                  <Card
-                    code={code}
-                    setResult={() => handleCardClick(code)}
-                    isShow={showCard}
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
-        {selectedCard && (
-          <div className={styles.singleCard}>
-            <Card code={selectedCard} setResult={() => {}} isShow={true} />
-            <p className={styles.text}>
-              You have successfully selected a card. Stake on it between 1 to
-              100
-            </p>
-            <div className={styles.timer}>Time remaining: {timer} seconds</div>
-            <div className={styles.inputBid}>
-              <input
-                type="number"
-                value={stake}
-                onChange={handleStakeChange}
-                className={styles.stakeInput}
-                placeholder="Bid"
-                min="1"
-                max="100"
-              />
-              <button className={styles.btn} onClick={confirmBid}>
-                Confirm Bid
-              </button>
-            </div>
-            {error && <p className={styles.error}>{error}</p>}
+      {!selectedCardLocal &&
+        deck.map((suit, suitIndex) => (
+          <div key={suitIndex} className={styles.suitColumn}>
+            {suit.map((code) => (
+              <div key={code} className={styles.cardWrapper}>
+                <Card
+                  code={code}
+                  setResult={() => handleCardClick(code)}
+                  isShow={isShow}
+                />
+              </div>
+            ))}
           </div>
-        )}
-      </div>
+        ))}
+      {selectedCardLocal && (
+        <div className={styles.singleCard}>
+          <Card code={selectedCardLocal} setResult={() => {}} isShow={true} />
+          <p className={styles.text}>
+            You have successfully selected a card. Stake on it between 1 to 100.
+          </p>
+          <div className={styles.timer}>Time remaining: {timer} seconds</div>
+          <div className={styles.inputBid}>
+            <input
+              type="number"
+              value={stake}
+              onChange={handleStakeChange}
+              className={styles.stakeInput}
+              placeholder="Bid"
+              min="1"
+              max="100"
+            />
+            <button className={styles.btn} onClick={confirmBid}>
+              Confirm Bid
+            </button>
+          </div>
+          {error && <p className={styles.error}>{error}</p>}
+        </div>
+      )}
     </div>
   );
 };
