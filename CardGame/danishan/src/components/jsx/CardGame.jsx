@@ -7,28 +7,30 @@ import { Button } from "./Button";
 import { Admin } from "./Admin";
 import { playerCode } from "../helper/players";
 
-export const CardGame = ({ setBid }) => {
+export const CardGame = () => {
   const [timer, setTimer] = useState(10);
   const [selectedCard, setSelectedCard] = useState(null);
   const [screenStage, setScreenStage] = useState(0);
   const [showCard, setShowCard] = useState(false);
   const [profile, setProfile] = useState("player");
   const [playerDropdown, setPlayerDropdown] = useState(false);
+  const [activePlayer, setActivePlayer] = useState(null);
+  const [playerOutput, setPlayerOutput] = useState(null);
 
   useEffect(() => {
     const countdown = setInterval(() => {
-      setTimer((prev) => {
-        if (prev === 1) {
-          clearInterval(countdown);
-          if (screenStage === 0) {
-            setScreenStage(1);
-          } else {
-            resetSelection();
-          }
-          return 10;
-        }
-        return prev - 1;
-      });
+      // setTimer((prev) => {
+      //   if (prev === 1) {
+      //     clearInterval(countdown);
+      //     if (screenStage === 0) {
+      //       setScreenStage(1);
+      //     } else {
+      //       resetSelection();
+      //     }
+      //     return 10;
+      //   }
+      //   return prev - 1;
+      // });
     }, 1000);
 
     return () => clearInterval(countdown);
@@ -45,6 +47,15 @@ export const CardGame = ({ setBid }) => {
     setScreenStage(0);
     setTimer(10);
     setShowCard(false);
+  };
+
+  const handleBidding = (bidAmount) => {
+    setPlayerOutput((prev) => {
+      return {
+        ...prev,
+        [`Player-${activePlayer}`]: { card: selectedCard, bid: bidAmount },
+      };
+    });
   };
 
   return (
@@ -66,7 +77,14 @@ export const CardGame = ({ setBid }) => {
           {playerDropdown && (
             <div className={styles.playerDropdown}>
               {playerCode.map((player) => (
-                <div key={player} className={styles.player}>
+                <div
+                  key={player}
+                  className={styles.player}
+                  onClick={() => {
+                    setActivePlayer(player);
+                    setPlayerDropdown(false);
+                  }}
+                >
                   {player}
                 </div>
               ))}
@@ -95,12 +113,17 @@ export const CardGame = ({ setBid }) => {
             deck={deckSuits}
             onCardClick={handleCardClick}
             isShow={showCard}
+            activePlayer={activePlayer}
           />
         ) : (
           <BidStake
+            activePlayer={activePlayer}
             selectedCard={selectedCard}
             timer={timer}
-            setBid={setBid}
+            setTimer={setTimer}
+            setBid={(bidAmount) => {
+              handleBidding(bidAmount);
+            }}
             resetSelection={resetSelection}
           />
         )}

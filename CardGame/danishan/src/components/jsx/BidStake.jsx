@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/DeckCards.module.css";
 import Card from "./Card";
 import { Button } from "./Button";
@@ -9,6 +9,7 @@ export const BidStake = ({
   setBid,
   resetSelection,
   setTimer,
+  activePlayer,
 }) => {
   const [stake, setStake] = useState("1");
   const [error, setError] = useState("");
@@ -35,6 +36,10 @@ export const BidStake = ({
     }
   };
 
+  useEffect(() => {
+    if (timer === 0) setBid(1);
+  }, [timer]);
+
   if (selectedCard === null)
     return (
       <div className={styles.singleCard}>
@@ -45,13 +50,20 @@ export const BidStake = ({
       </div>
     );
 
+  if (!activePlayer)
+    return (
+      <div className={styles.singleCard}>
+        <p className={styles.playerText}>Select a Player</p>
+      </div>
+    );
+
   return (
     <div className={styles.singleCard}>
+      <p className={styles.playerText}>Player-{activePlayer}</p>
       <Card code={selectedCard} setResult={() => {}} isShow={true} />
       <p className={styles.text}>
         You have successfully selected a card. Stake on it between 1 to 100.
       </p>
-      <div className={styles.timer}>Time remaining: {timer} seconds</div>
       <div className={styles.inputBid}>
         <input
           type="number"
