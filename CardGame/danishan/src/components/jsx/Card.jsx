@@ -8,7 +8,7 @@ import {
   spadeIcon,
 } from "../../assets/js/icons";
 
-const Card = ({ code = "HJ", setResult, isShow }) => {
+const Card = ({ code, setResult, isShow }) => {
   const suitName = code[0];
   const cardName = code.slice(1);
 

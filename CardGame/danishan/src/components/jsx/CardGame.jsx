@@ -4,12 +4,14 @@ import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
 import { deckSuits } from "../helper/cards";
 import { Button } from "./Button";
+import { Admin } from "./Admin";
 
 export const CardGame = ({ setBid }) => {
   const [timer, setTimer] = useState(10);
   const [selectedCard, setSelectedCard] = useState(null);
   const [screenStage, setScreenStage] = useState(0);
   const [showCard, setShowCard] = useState(false);
+  const [profile, setProfile] = useState("player");
 
   useEffect(() => {
     const countdown = setInterval(() => {
@@ -47,22 +49,31 @@ export const CardGame = ({ setBid }) => {
     <div className={styles.cardGame}>
       <div className={styles.header}>
         <div className={styles.leftHeader}>
-          <Button text={"Admin"} onlick={() => {}} />
+          <Button
+            text={"Admin"}
+            onlick={() => {
+              setProfile((prev) => (prev === "admin" ? "player" : "admin"));
+            }}
+          />
         </div>
-        <div className={styles.rightHeader}>
-          {screenStage === 0 && (
-            <Button
-              text={screenStage === 0 ? "Show Cards" : "Hide Cards"}
-              onlick={() => setShowCard((prev) => !prev)}
-            />
-          )}
-          <div className={styles.timer}>
-            Timer <div className={styles.timeLeft}>{timer}s</div>
+        {profile !== "admin" && (
+          <div className={styles.rightHeader}>
+            {profile !== "admin" && screenStage === 0 && (
+              <Button
+                text={screenStage === 0 ? "Show Cards" : "Hide Cards"}
+                onlick={() => setShowCard((prev) => !prev)}
+              />
+            )}
+            <div className={styles.timer}>
+              Timer <div className={styles.timeLeft}>{timer}s</div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <div className={styles.body}>
-        {screenStage === 0 ? (
+        {profile === "admin" ? (
+          <Admin />
+        ) : screenStage === 0 ? (
           <CardSelection
             deck={deckSuits}
             onCardClick={handleCardClick}
