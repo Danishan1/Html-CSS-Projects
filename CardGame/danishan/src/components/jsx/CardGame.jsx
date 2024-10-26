@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/CardGame.module.css";
 import { PlayGame } from "./PlayGame";
 import { Admin } from "./Admin";
@@ -18,8 +18,28 @@ export const CardGame = () => {
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
-    else resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard, setPlayerOutput);
+    else
+      resetSelection(
+        setSelectedCard,
+        setScreenStage,
+        setTimer,
+        setShowCard,
+        setPlayerOutput
+      );
   };
+
+  useEffect(() => {
+    if (activePlayer)
+      setPlayerOutput((prev) => {
+        return {
+          ...prev,
+          [`Player-${activePlayer}`]: {
+            ...prev?.[`Player-${activePlayer}`],
+            card: selectedCard,
+          },
+        };
+      });
+  }, [activePlayer, selectedCard]);
 
   return (
     <div className={styles.cardGame}>
@@ -52,6 +72,7 @@ export const CardGame = () => {
             setScreenStage={setScreenStage}
             selectedCard={selectedCard}
             setSelectedCard={setSelectedCard}
+            playerOutput={playerOutput}
             setPlayerOutput={setPlayerOutput}
             setShowCard={setShowCard}
             showCard={showCard}

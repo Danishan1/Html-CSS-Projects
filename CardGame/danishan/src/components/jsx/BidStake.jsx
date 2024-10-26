@@ -4,7 +4,7 @@ import Card from "./Card";
 import { Button } from "./Button";
 
 export const BidStake = ({
-  selectedCard,
+  playerOutput,
   timer,
   setBid,
   resetSelection,
@@ -40,7 +40,18 @@ export const BidStake = ({
     if (timer === 0) setBid(1);
   }, [timer, setBid]);
 
-  if (selectedCard === null)
+  // Ensure active player is selected
+  if (!activePlayer)
+    return (
+      <div className={styles.singleCard}>
+        <p className={styles.playerText}>Select a Player</p>
+      </div>
+    );
+
+  // Check if the active player has a card selected
+  const activePlayerOutput = playerOutput[`Player-${activePlayer}`];
+
+  if (!activePlayerOutput || !activePlayerOutput.card) {
     return (
       <div className={styles.singleCard}>
         <p className={styles.text}>
@@ -49,18 +60,15 @@ export const BidStake = ({
         </p>
       </div>
     );
+  }
 
-  if (!activePlayer)
-    return (
-      <div className={styles.singleCard}>
-        <p className={styles.playerText}>Select a Player</p>
-      </div>
-    );
+  // console.log(playerOutput);
+  // console.log(activePlayer, activePlayerOutput.card);
 
   return (
     <div className={styles.singleCard}>
       <p className={styles.playerText}>Player-{activePlayer}</p>
-      <Card code={selectedCard} setResult={() => {}} isShow={true} />
+      <Card code={activePlayerOutput.card} setResult={() => {}} isShow={true} />
       <p className={styles.text}>
         You have successfully selected a card. Stake on it between 1 to 100.
       </p>

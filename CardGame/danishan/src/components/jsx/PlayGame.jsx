@@ -16,6 +16,7 @@ export const PlayGame = ({
   setScreenStage,
   selectedCard,
   setSelectedCard,
+  playerOutput,
   setPlayerOutput,
   setShowCard,
   showCard,
@@ -23,8 +24,8 @@ export const PlayGame = ({
   useEffect(() => {
     if (timer <= 0) {
       if (screenStage === 0) {
-        setScreenStage(1); // Move to BidStake after CardSelection
-        setTimer(10); // Reset timer for BidStake
+        setScreenStage(1); 
+        setTimer(10); 
       } else {
         resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard);
       }
@@ -50,7 +51,7 @@ export const PlayGame = ({
   ) : (
     <BidStake
       activePlayer={activePlayer}
-      selectedCard={selectedCard}
+      playerOutput={playerOutput}
       timer={timer}
       setTimer={setTimer}
       setBid={(bidAmount) =>
