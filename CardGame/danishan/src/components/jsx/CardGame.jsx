@@ -5,6 +5,7 @@ import { Admin } from "./Admin";
 import { Header } from "./Header";
 import { playerCode } from "../helper/players";
 import { resetSelection } from "../helper/GameLogic";
+
 export const CardGame = () => {
   const [timer, setTimer] = useState(10);
   const [screenStage, setScreenStage] = useState(0);
@@ -17,7 +18,7 @@ export const CardGame = () => {
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
-    else resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard);
+    else resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard, setPlayerOutput);
   };
 
   return (
@@ -35,6 +36,8 @@ export const CardGame = () => {
         screenStage={screenStage}
         showCard={showCard}
         setShowCard={setShowCard}
+        playerOutput={playerOutput}
+        setPlayerOutput={setPlayerOutput}
       />
 
       <div className={styles.body}>
