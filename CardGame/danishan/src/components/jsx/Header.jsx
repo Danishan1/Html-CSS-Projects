@@ -41,6 +41,7 @@ export const Header = ({
                   setActivePlayer(player);
                   setPlayerDropdown(false);
                   setProfile("player");
+                  setShowCard(false);
                 }}
               >
                 {player}

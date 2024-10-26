@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import styles from "../css/CardGame.module.css";
-import CardSelection from "./CardSelection";
-import BidStake from "./BidStake";
-import { deckSuits } from "../helper/cards";
+import { PlayGame } from "./PlayGame";
 import { Admin } from "./Admin";
-import { playerCode } from "../helper/players";
 import { Header } from "./Header";
-import {
-  handleCardClick,
-  resetSelection,
-  handleBidding,
-} from "../helper/GameLogic";
-
+import { playerCode } from "../helper/players";
+import { resetSelection } from "../helper/GameLogic";
 export const CardGame = () => {
   const [timer, setTimer] = useState(10);
-  const [selectedCard, setSelectedCard] = useState(null);
   const [screenStage, setScreenStage] = useState(0);
+  const [selectedCard, setSelectedCard] = useState(null);
   const [showCard, setShowCard] = useState(false);
   const [profile, setProfile] = useState("player");
   const [playerDropdown, setPlayerDropdown] = useState(false);
@@ -47,37 +40,18 @@ export const CardGame = () => {
       <div className={styles.body}>
         {profile === "admin" ? (
           <Admin playerOutput={playerOutput} />
-        ) : screenStage === 0 ? (
-          <CardSelection
-            deck={deckSuits}
-            onCardClick={(card) =>
-              handleCardClick(card, setSelectedCard, setScreenStage, setTimer)
-            }
-            isShow={showCard}
-            activePlayer={activePlayer}
-          />
         ) : (
-          <BidStake
+          <PlayGame
             activePlayer={activePlayer}
-            selectedCard={selectedCard}
             timer={timer}
             setTimer={setTimer}
-            setBid={(bidAmount) =>
-              handleBidding(
-                bidAmount,
-                setPlayerOutput,
-                activePlayer,
-                selectedCard
-              )
-            }
-            resetSelection={() =>
-              resetSelection(
-                setSelectedCard,
-                setScreenStage,
-                setTimer,
-                setShowCard
-              )
-            }
+            screenStage={screenStage}
+            setScreenStage={setScreenStage}
+            selectedCard={selectedCard}
+            setSelectedCard={setSelectedCard}
+            setPlayerOutput={setPlayerOutput}
+            setShowCard={setShowCard}
+            showCard={showCard}
           />
         )}
       </div>
