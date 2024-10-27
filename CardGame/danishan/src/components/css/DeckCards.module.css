@@ -36,6 +36,7 @@
 
 .text {
     font-weight: var(--boldL2);
+    text-align: center;
 }
 
 .stakeInput {
