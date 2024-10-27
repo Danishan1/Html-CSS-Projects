@@ -14,19 +14,22 @@ const shuffleDeck = (array) => {
 };
 
 export const CardDrawn = ({ isShow }) => {
-  const [currentWindow, setCurrentWindow] = useState(0);
+  const [currentWindow, setCurrentWindow] = useState(0); // 0: unshuffled, 1: waiting, 2: shuffled, 3: selected cards
   const [shuffledDeck, setShuffledDeck] = useState([]);
   const [waitingTime, setWaitingTime] = useState(3);
+  const [selectedCards, setSelectedCards] = useState([]); // Store the selected cards
+  const [remainingDeck, setRemainingDeck] = useState([]); // Store the remaining deck after selections
 
   useEffect(() => {
-    const timeDurations = [3, 3, 4];
-
+    const timeDurations = [3, 3, 4, 4]; 
     const showNextWindow = (index) => {
       if (index < timeDurations.length) {
         setCurrentWindow(index);
 
         if (index === 2) {
-          setShuffledDeck(shuffleDeck(deck));
+          const shuffled = shuffleDeck(deck);
+          setShuffledDeck(shuffled);
+          setRemainingDeck(shuffled); 
         }
 
         setTimeout(
@@ -37,7 +40,6 @@ export const CardDrawn = ({ isShow }) => {
     };
 
     showNextWindow(0);
-
     return () => clearTimeout();
   }, []);
 
@@ -48,11 +50,29 @@ export const CardDrawn = ({ isShow }) => {
         setWaitingTime((prevTime) => prevTime - 1);
       }, 1000);
     } else if (waitingTime === 0) {
-      setCurrentWindow(2);
+      setCurrentWindow(2); 
     }
 
     return () => clearInterval(timer);
   }, [currentWindow, waitingTime]);
+
+  useEffect(() => {
+    if (currentWindow === 2 && selectedCards.length < 2) {
+      const pickCard = () => {
+        if (remainingDeck.length > 0) {
+          const randomIndex = Math.floor(Math.random() * remainingDeck.length);
+          const selectedCard = remainingDeck[randomIndex];
+
+          setSelectedCards((prev) => [...prev, selectedCard]);
+          setRemainingDeck((prev) =>
+            prev.filter((_, index) => index !== randomIndex)
+          );
+        }
+      };
+
+      pickCard();
+    }
+  }, [currentWindow, selectedCards, remainingDeck]);
 
   return (
     <div className={styles.cardDrawn}>
@@ -74,12 +94,24 @@ export const CardDrawn = ({ isShow }) => {
       )}
 
       {currentWindow === 2 && (
-        <div className={styles.showDeckCards}>
-          {shuffledDeck.map((code) => (
-            <div key={code} className={styles.cardWrapper}>
-              <Card code={code} setResult={() => {}} isShow={isShow} />
-            </div>
-          ))}
+        <div className={styles.cards}>
+          <div className={styles.showDeckCards}>
+            {shuffledDeck.map((code) => (
+              <div key={code} className={styles.cardWrapper}>
+                <Card code={code} setResult={() => {}} isShow={isShow} />
+              </div>
+            ))}
+          </div>
+          <div className={`${styles.selectedCard}`}>
+            {selectedCards.length > 0 &&
+              selectedCards.map((code, index) => (
+                <div key={code} className={styles.cardWrapper}>
+                  <Card code={code} setResult={() => {}} isShow={isShow} />
+                <p>{index === 0 ? "Flag Card" : "Deciding Card" }</p>
+                </div>
+              ))}
+            ;
+          </div>
         </div>
       )}
     </div>

@@ -4,9 +4,36 @@
     overflow-y: auto;
 }
 
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
 .showDeckCards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 10px;
     padding: 10px;
+}
+
+.selectedCard {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+
+.selectedCard .cardWrapper {
+    padding: 10px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+.selectedCard .cardWrapper p {
+    padding-top: 5px;
+    font-weight: var(--boldL2);
+    text-align: center;
+
 }
