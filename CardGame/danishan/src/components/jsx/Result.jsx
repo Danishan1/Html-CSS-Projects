@@ -8,7 +8,6 @@ export const Result = ({ winners, activePlayer }) => {
         <p className={styles.playerText}>Select a Player</p>
       </div>
     );
-  console.log(winners);
 
   // Find the active player's result in the winners array
   const activePlayerResult = winners.find(
