@@ -13,7 +13,7 @@ export const CardSelection = ({
   const [waitingScreen, setWaitingScreen] = useState(false);
 
   useEffect(() => {
-    if (timer == 0) setWaitingScreen(false);
+    if (timer === 0) setWaitingScreen(false);
   }, [timer, setWaitingScreen]);
 
   if (!activePlayer)
