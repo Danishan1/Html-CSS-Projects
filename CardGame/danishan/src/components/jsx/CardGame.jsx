@@ -9,7 +9,8 @@ import { shuffleDeck } from "../helper/shuffleDeck";
 import { deck } from "../helper/cards";
 
 export const CardGame = () => {
-  const [timer, setTimer] = useState(10);
+  // const [timer, setTimer] = useState(10);
+  const [timer, setTimer] = useState(2);
   const [screenStage, setScreenStage] = useState(0);
   const [selectedCard, setSelectedCard] = useState(null);
   const [showCard, setShowCard] = useState(false);
@@ -21,7 +22,6 @@ export const CardGame = () => {
   const [selectedCards, setSelectedCards] = useState([]);
   const [winners, setWinners] = useState([]);
   const [remainingDeck, setRemainingDeck] = useState(shuffledDeck);
-
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
@@ -90,6 +90,7 @@ export const CardGame = () => {
             setRemainingDeck={setRemainingDeck}
             screenStage={screenStage}
             setWinners={setWinners}
+            winners={winners}
           />
         </div>
 

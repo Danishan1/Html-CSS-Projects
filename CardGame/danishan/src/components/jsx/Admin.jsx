@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/Admin.module.css";
 import { PlayerSelectionCard } from "./PlayerSelectionCard";
 import { CardDrawn } from "./CardDrawn";
+import { AdminResult } from "./AdminResult";
 
 export const Admin = ({
   playerOutput,
@@ -10,8 +11,11 @@ export const Admin = ({
   remainingDeck,
   setRemainingDeck,
   screenStage,
+  winners,
   setWinners,
 }) => {
+  const [gameProfit, setGameProfit] = useState([]);
+
   useEffect(() => {
     // Pick cards until we have two selected cards
     if (selectedCards.length < 2) {
@@ -40,7 +44,7 @@ export const Admin = ({
       const secondCard = selectedCards[1];
 
       // Determine winners based on the condition playerOutput[card] === secondCard
-      const winners = Object.entries(playerOutput).filter(
+      const winnerList = Object.entries(playerOutput).filter(
         ([, playerInfo]) => playerInfo.card === secondCard
       );
 
@@ -51,8 +55,11 @@ export const Admin = ({
       );
 
       // Distribute the amount among winners
-      const winningAmount = totalBidAmount / (winners.length + 1);
-      const winnersWithAmount = winners.map(([playerCode, playerInfo]) => ({
+      const winningAmount = (totalBidAmount / (winnerList.length + 1)).toFixed(
+        2
+      );
+      
+      const winnersWithAmount = winnerList.map(([playerCode, playerInfo]) => ({
         playerCode,
         winningCard: playerInfo.card,
         winningBid: playerInfo.bid,
@@ -61,6 +68,7 @@ export const Admin = ({
 
       // Update the winners state
       setWinners(winnersWithAmount);
+      setGameProfit(winningAmount);
     }
   }, [selectedCards, playerOutput, setWinners, screenStage]);
 
@@ -79,12 +87,14 @@ export const Admin = ({
             />
           ))}
         </div>
-      ) : (
+      ) : screenStage === 2 ? (
         <CardDrawn
           isShow={true}
           selectedCards={selectedCards}
           remainingDeck={remainingDeck}
         />
+      ) : (
+        <AdminResult winners={winners} gameProfit={gameProfit} />
       )}
     </>
   );

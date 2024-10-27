@@ -23,12 +23,11 @@
     display: flex;
     gap: 10px;
     justify-content: start;
+    background-color: var(--colorGray2);
 }
 
 .selectedCard .cardWrapper {
-    padding: 10px;
-    padding-left: 20px;
-    padding-bottom: 40px;
+    padding: 20px;
 }
 
 .selectedCard .cardWrapper p {

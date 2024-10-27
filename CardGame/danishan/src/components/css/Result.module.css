@@ -45,3 +45,20 @@
     color: var(--colorRed);
     font-size: calc(var(--size)* 2);
 }
+
+.adminResult{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    gap: 10px;
+}
+
+.adminResult .winner {
+    border: 1px solid var(--colorGray3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.adminResult .winner p {
+    text-align: left;
+
+}
