@@ -41,7 +41,6 @@ export const CardGame = () => {
           },
         };
 
-        console.log(playerOutput);
         setSelectedCard(null);
         return temp;
       });
