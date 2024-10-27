@@ -8,6 +8,7 @@ export const Result = ({ winners, activePlayer }) => {
         <p className={styles.playerText}>Select a Player</p>
       </div>
     );
+  console.log(winners);
 
   // Find the active player's result in the winners array
   const activePlayerResult = winners.find(
@@ -17,11 +18,15 @@ export const Result = ({ winners, activePlayer }) => {
   return (
     <div className={styles.result}>
       {activePlayerResult ? (
-        <div>
-          <p>Congratulations! You won the match</p>
-          <p>Winning Amount: {activePlayerResult.winningAmount}</p>
-          <p>Your Bid Amount: {activePlayerResult.winningBid}</p>
-          <p>
+        <div className={styles.winner}>
+          <p className={styles.congr}>Congratulations! You won the match</p>
+          <p className={styles.text}>
+            Winning Amount: {activePlayerResult.winningAmount}
+          </p>
+          <p className={styles.text}>
+            Your Bid Amount: {activePlayerResult.winningBid}
+          </p>
+          <p className={styles.profit}>
             Your Profit:{" "}
             {activePlayerResult.winningAmount - activePlayerResult.winningBid}
           </p>

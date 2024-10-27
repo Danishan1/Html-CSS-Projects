@@ -29,3 +29,19 @@
     font-weight: var(--boldL2);
     text-align: center;
 }
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.congr {
+    color: var(--colorCyan);
+    font-size: calc(var(--size)* 2);
+}
+
+.profit {
+    color: var(--colorRed);
+    font-size: calc(var(--size)* 2);
+}
