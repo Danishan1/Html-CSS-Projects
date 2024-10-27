@@ -6,11 +6,7 @@ export const resetSelection = (setSelectedCard, setScreenStage, setTimer, setSho
     setPlayerOutput({});
 };
 
-export const handleCardClick = (card, setSelectedCard, setScreenStage, setTimer) => {
-    setSelectedCard(card);
-    setScreenStage(1);
-    setTimer(10);
-};
+
 
 export const handleBidding = (bidAmount, setPlayerOutput, activePlayer, selectedCard) => {
     setPlayerOutput((prev) => ({

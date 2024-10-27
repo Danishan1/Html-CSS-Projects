@@ -52,6 +52,15 @@ export const BidStake = ({
   const activePlayerOutput = playerOutput[`Player-${activePlayer}`];
 
   if (!activePlayerOutput || !activePlayerOutput.card) {
+    // console.log(
+    //   "AA",
+    //   activePlayer,
+    //   activePlayerOutput.card,
+    //   !activePlayerOutput,
+    //   !activePlayerOutput.card
+    // );
+    console.log(playerOutput);
+
     return (
       <div className={styles.singleCard}>
         <p className={styles.text}>
@@ -61,9 +70,6 @@ export const BidStake = ({
       </div>
     );
   }
-
-  // console.log(playerOutput);
-  // console.log(activePlayer, activePlayerOutput.card);
 
   return (
     <div className={styles.singleCard}>

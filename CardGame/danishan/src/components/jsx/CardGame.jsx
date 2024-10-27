@@ -29,16 +29,21 @@ export const CardGame = () => {
   };
 
   useEffect(() => {
-    if (activePlayer)
+    if (activePlayer) {
       setPlayerOutput((prev) => {
-        return {
+        const activePlayerInfo = [`Player-${activePlayer}`];
+        
+        const temp = {
           ...prev,
-          [`Player-${activePlayer}`]: {
-            ...prev?.[`Player-${activePlayer}`],
-            card: selectedCard,
+          [activePlayerInfo]: {
+            ...prev?.[activePlayerInfo],
+            card: prev?.[activePlayerInfo]?.card || selectedCard,
           },
         };
+
+        return temp;
       });
+    }
   }, [activePlayer, selectedCard]);
 
   return (

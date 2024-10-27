@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../css/DeckCards.module.css";
 import Card from "./Card";
+import { WaitingScreen } from "./WaitingScreen";
 
-export const CardSelection = ({ deck, onCardClick, isShow, activePlayer }) => {
+export const CardSelection = ({
+  deck,
+  onCardClick,
+  isShow,
+  activePlayer,
+  timer,
+}) => {
+  const [waitingScreen, setWaitingScreen] = useState(false);
+
+  useEffect(() => {
+    if (timer == 0) setWaitingScreen(false);
+  }, [timer, setWaitingScreen]);
+
   if (!activePlayer)
     return (
       <div className={styles.singleCard}>
         <p className={styles.playerText}>Select a Player</p>
       </div>
     );
+
+  if (waitingScreen) {
+    return (
+      <div className={styles.cardSelection}>
+        <WaitingScreen
+          text={"Congratulations!! You have successfully Selected card."}
+          timer={timer}
+        />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -21,7 +45,10 @@ export const CardSelection = ({ deck, onCardClick, isShow, activePlayer }) => {
                 <div key={code} className={styles.cardWrapper}>
                   <Card
                     code={code}
-                    setResult={() => onCardClick(code)}
+                    setResult={() => {
+                      onCardClick(code);
+                      setWaitingScreen(true);
+                    }}
                     isShow={isShow}
                   />
                 </div>
