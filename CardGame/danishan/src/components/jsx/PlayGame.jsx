@@ -62,10 +62,9 @@ export const PlayGame = ({
     />
   ) : screenStage === 2 ? (
     <CardDrawn
-      isShow={false}
+      isShow={true}
       selectedCards={selectedCards}
       remainingDeck={remainingDeck}
-      shuffledDeck={shuffledDeck}
     />
   ) : (
     <></>

@@ -81,6 +81,8 @@ export const CardGame = () => {
             setSelectedCards={setSelectedCards}
             remainingDeck={remainingDeck}
             setRemainingDeck={setRemainingDeck}
+            screenStage={screenStage}
+            shuffledDeck={shuffledDeck}
           />
         ) : (
           <PlayGame

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "../css/Admin.module.css";
 import { PlayerSelectionCard } from "./PlayerSelectionCard";
+import { CardDrawn } from "./CardDrawn";
 
 export const Admin = ({
   playerOutput,
@@ -8,6 +9,8 @@ export const Admin = ({
   setSelectedCards,
   remainingDeck,
   setRemainingDeck,
+  screenStage,
+  shuffledDeck,
 }) => {
   useEffect(() => {
     if (selectedCards.length < 2) {
@@ -28,17 +31,28 @@ export const Admin = ({
   }, [selectedCards, remainingDeck, setSelectedCards, setRemainingDeck]);
 
   if (!playerOutput) return null;
+  console.log(screenStage);
 
   return (
-    <div className={styles.admin}>
-      {Object.entries(playerOutput).map(([playerCode, playerInfo]) => (
-        <PlayerSelectionCard
-          key={playerCode}
-          playerName={playerCode}
-          selectedCard={playerInfo.card || "NA"}
-          bid={playerInfo.bid || "NA"}
+    <>
+      {screenStage < 2 ? (
+        <div className={styles.admin}>
+          {Object.entries(playerOutput).map(([playerCode, playerInfo]) => (
+            <PlayerSelectionCard
+              key={playerCode}
+              playerName={playerCode}
+              selectedCard={playerInfo.card || "NA"}
+              bid={playerInfo.bid || "NA"}
+            />
+          ))}
+        </div>
+      ) : (
+        <CardDrawn
+          isShow={true}
+          selectedCards={selectedCards}
+          remainingDeck={remainingDeck}
         />
-      ))}
-    </div>
+      )}
+    </>
   );
 };

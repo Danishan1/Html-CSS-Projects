@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import styles from "../css/CardDrawn.module.css";
 import { WaitingScreen } from "./WaitingScreen";
 import Card from "./Card";
+import { deck } from "../helper/cards";
 
 export const CardDrawn = ({
   isShow,
   selectedCards,
   remainingDeck,
-  shuffledDeck,
 }) => {
   const [currentWindow, setCurrentWindow] = useState(0);
   const [waitingTime, setWaitingTime] = useState(3);
 
-  console.log(selectedCards, remainingDeck, shuffledDeck);
   useEffect(() => {
     const timeDurations = [3, 3, 4, 4];
     const showNextWindow = (index) => {
@@ -48,7 +47,7 @@ export const CardDrawn = ({
     <div className={styles.cardDrawn}>
       {currentWindow === 0 && (
         <div className={styles.showDeckCards}>
-          {shuffledDeck.map((code) => (
+          {deck.map((code) => (
             <div key={code} className={styles.cardWrapper}>
               <Card code={code} setResult={() => {}} isShow={isShow} />
             </div>
@@ -58,7 +57,7 @@ export const CardDrawn = ({
 
       {currentWindow === 1 && (
         <WaitingScreen
-          text="We are currently shuffling the cards."
+          text="We are currently shuffling the cards and randomly Picking one"
           timer={waitingTime}
         />
       )}
@@ -76,7 +75,11 @@ export const CardDrawn = ({
             {selectedCards.length > 0 &&
               selectedCards.map((code, index) => (
                 <div key={code} className={styles.cardWrapper}>
-                  <Card code={code} setResult={() => {}} isShow={isShow} />
+                  <Card
+                    code={code}
+                    setResult={() => {}}
+                    isShow={index === 0 ? false : true}
+                  />
                   <p>{index === 0 ? "Flag Card" : "Deciding Card"}</p>
                 </div>
               ))}
