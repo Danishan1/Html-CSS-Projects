@@ -87,6 +87,10 @@ export const Header = ({
         )}
       </div>
 
+      <p className={styles.text}>
+        {profile === "admin" ? "Admin Panel" : "Player Planel"}
+      </p>
+
       <div className={styles.rightHeader}>
         {profile !== "admin" && screenStage === 0 && (
           <Button

@@ -7,3 +7,8 @@
     width: 100%;
     overflow: auto;
 }
+
+.text {
+    font-weight: var(--boldL2);
+    text-align: center;
+}
