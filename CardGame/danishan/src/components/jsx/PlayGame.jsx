@@ -16,6 +16,9 @@ export const PlayGame = ({
   setPlayerOutput,
   setShowCard,
   showCard,
+  selectedCards,
+  remainingDeck,
+  shuffledDeck,
 }) => {
   useEffect(() => {
     if (timer <= 0) {
@@ -53,9 +56,17 @@ export const PlayGame = ({
       setBid={(bidAmount) =>
         handleBidding(bidAmount, setPlayerOutput, activePlayer, selectedCard)
       }
+      selectedCards={selectedCards}
+      remainingDeck={remainingDeck}
+      shuffledDeck={shuffledDeck}
     />
   ) : screenStage === 2 ? (
-    <CardDrawn isShow={false} />
+    <CardDrawn
+      isShow={false}
+      selectedCards={selectedCards}
+      remainingDeck={remainingDeck}
+      shuffledDeck={shuffledDeck}
+    />
   ) : (
     <></>
   );

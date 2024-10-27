@@ -87,17 +87,15 @@ export const Header = ({
         )}
       </div>
 
-      {profile !== "admin" && (
-        <div className={styles.rightHeader}>
-          {screenStage === 0 && (
-            <Button
-              text={showCard ? "Hide Cards" : "Show Cards"}
-              onClick={() => setShowCard((prev) => !prev)}
-            />
-          )}
-        </div>
-      )}
-      <Timer timer={timer} setTimer={setTimer} onTimeout={onTimeout} />
+      <div className={styles.rightHeader}>
+        {profile !== "admin" && screenStage === 0 && (
+          <Button
+            text={showCard ? "Hide Cards" : "Show Cards"}
+            onClick={() => setShowCard((prev) => !prev)}
+          />
+        )}
+        <Timer timer={timer} setTimer={setTimer} onTimeout={onTimeout} />
+      </div>
     </div>
   );
 };

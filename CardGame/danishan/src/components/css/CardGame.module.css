@@ -7,7 +7,11 @@
     align-items: center;
     background-color: var(--colorGray2);
     padding: 0 20px;
-    /* position: absolute; */
+}
+
+.cardGame .body {
+    width: 100vw;
+    height: calc(100vh - 50px);
 }
 
 .leftHeader,

@@ -5,6 +5,8 @@ import { Admin } from "./Admin";
 import { Header } from "./Header";
 import { playerCode } from "../helper/players";
 import { resetSelection } from "../helper/GameLogic";
+import { shuffleDeck } from "../helper/shuffleDeck";
+import { deck } from "../helper/cards";
 
 export const CardGame = () => {
   const [timer, setTimer] = useState(10);
@@ -15,6 +17,10 @@ export const CardGame = () => {
   const [playerDropdown, setPlayerDropdown] = useState(false);
   const [activePlayer, setActivePlayer] = useState(null);
   const [playerOutput, setPlayerOutput] = useState(null);
+
+  const [shuffledDeck] = useState(shuffleDeck(deck));
+  const [selectedCards, setSelectedCards] = useState([]);
+  const [remainingDeck, setRemainingDeck] = useState(shuffledDeck);
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
@@ -69,7 +75,13 @@ export const CardGame = () => {
 
       <div className={styles.body}>
         {profile === "admin" ? (
-          <Admin playerOutput={playerOutput} />
+          <Admin
+            playerOutput={playerOutput}
+            selectedCards={selectedCards}
+            setSelectedCards={setSelectedCards}
+            remainingDeck={remainingDeck}
+            setRemainingDeck={setRemainingDeck}
+          />
         ) : (
           <PlayGame
             activePlayer={activePlayer}
@@ -83,6 +95,9 @@ export const CardGame = () => {
             setPlayerOutput={setPlayerOutput}
             setShowCard={setShowCard}
             showCard={showCard}
+            selectedCards={selectedCards}
+            remainingDeck={remainingDeck}
+            shuffledDeck={shuffledDeck}
           />
         )}
       </div>
