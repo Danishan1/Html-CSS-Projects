@@ -9,8 +9,9 @@ export const resetSelection = (setSelectedCard, setScreenStage, setTimer, setSho
 
 
 export const handleBidding = (bidAmount, setPlayerOutput, activePlayer, selectedCard) => {
+
     setPlayerOutput((prev) => ({
         ...prev,
-        [`Player-${activePlayer}`]: { card: selectedCard, bid: bidAmount },
+        [`Player-${activePlayer}`]: { card: prev?.[`Player-${activePlayer}`]?.card || selectedCard, bid: bidAmount },
     }));
 };

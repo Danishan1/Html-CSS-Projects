@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import styles from "../css/DeckCards.module.css";
 import Card from "./Card";
 import { Button } from "./Button";
+import { WaitingScreen } from "./WaitingScreen";
 
-export const BidStake = ({
-  playerOutput,
-  timer,
-  setBid,
-  resetSelection,
-  setTimer,
-  activePlayer,
-}) => {
+export const BidStake = ({ playerOutput, timer, setBid, activePlayer }) => {
   const [stake, setStake] = useState("1");
   const [error, setError] = useState("");
+  const [waitingScreen, setWaitingScreen] = useState(false);
+
+  useEffect(() => {
+    if (timer === 0) setBid(1);
+  }, [timer, setBid]);
+
+  useEffect(() => {
+    if (timer === 0) setWaitingScreen(false);
+  }, [timer, setWaitingScreen]);
 
   const handleStakeChange = (e) => {
     const value = e.target.value;
@@ -28,19 +31,13 @@ export const BidStake = ({
   const confirmBid = () => {
     if (stake >= 1 && stake <= 100) {
       setBid(stake);
-      resetSelection();
-      setTimer(10);
+      setWaitingScreen(true);
       setError("");
     } else {
       setError("Invalid bid amount.");
     }
   };
 
-  useEffect(() => {
-    if (timer === 0) setBid(1);
-  }, [timer, setBid]);
-
-  // Ensure active player is selected
   if (!activePlayer)
     return (
       <div className={styles.singleCard}>
@@ -48,19 +45,10 @@ export const BidStake = ({
       </div>
     );
 
-  // Check if the active player has a card selected
-  const activePlayerOutput = playerOutput[`Player-${activePlayer}`];
+  const activePlayerInfo = playerOutput[`Player-${activePlayer}`];
 
-  if (!activePlayerOutput || !activePlayerOutput.card) {
-    // console.log(
-    //   "AA",
-    //   activePlayer,
-    //   activePlayerOutput.card,
-    //   !activePlayerOutput,
-    //   !activePlayerOutput.card
-    // );
-    console.log(playerOutput);
-
+  if (!activePlayerInfo || !activePlayerInfo.card) {
+    console.log(activePlayerInfo);
     return (
       <div className={styles.singleCard}>
         <p className={styles.text}>
@@ -71,12 +59,24 @@ export const BidStake = ({
     );
   }
 
+  if (waitingScreen && activePlayerInfo && activePlayerInfo?.bid) {
+    return (
+      <div className={styles.cardSelection}>
+        <WaitingScreen
+          text={"Congratulations!! You have successfully Bid."}
+          timer={timer}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.singleCard}>
       <p className={styles.playerText}>Player-{activePlayer}</p>
-      <Card code={activePlayerOutput.card} setResult={() => {}} isShow={true} />
+      <Card code={activePlayerInfo.card} setResult={() => {}} isShow={true} />
       <p className={styles.text}>
-        You have successfully selected a card. Stake on it between 1 to 100.
+        Card selected successfully. Place a stake between 1 and 100, or a
+        default bid of 1 will be applied.
       </p>
       <div className={styles.inputBid}>
         <input

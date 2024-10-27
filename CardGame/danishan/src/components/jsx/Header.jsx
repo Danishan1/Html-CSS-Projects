@@ -48,7 +48,6 @@ export const Header = ({
         }, {});
       }
 
-      // Update playerOutput only if it's different from the current state
       if (JSON.stringify(updatedOutput) !== JSON.stringify(playerOutput)) {
         setPlayerOutput(updatedOutput);
       }
@@ -96,9 +95,9 @@ export const Header = ({
               onClick={() => setShowCard((prev) => !prev)}
             />
           )}
-          <Timer timer={timer} setTimer={setTimer} onTimeout={onTimeout} />
         </div>
       )}
+      <Timer timer={timer} setTimer={setTimer} onTimeout={onTimeout} />
     </div>
   );
 };
