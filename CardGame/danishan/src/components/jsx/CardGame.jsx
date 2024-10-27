@@ -17,10 +17,11 @@ export const CardGame = () => {
   const [playerDropdown, setPlayerDropdown] = useState(false);
   const [activePlayer, setActivePlayer] = useState(null);
   const [playerOutput, setPlayerOutput] = useState(null);
-
   const [shuffledDeck] = useState(shuffleDeck(deck));
   const [selectedCards, setSelectedCards] = useState([]);
+  const [winners, setWinners] = useState([]);
   const [remainingDeck, setRemainingDeck] = useState(shuffledDeck);
+
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
@@ -76,7 +77,11 @@ export const CardGame = () => {
       />
 
       <div className={styles.body}>
-        {profile === "admin" ? (
+        <div
+          className={`${styles.adminScreen} ${
+            profile === "player" ? styles.hidden : ""
+          }`}
+        >
           <Admin
             playerOutput={playerOutput}
             selectedCards={selectedCards}
@@ -84,8 +89,15 @@ export const CardGame = () => {
             remainingDeck={remainingDeck}
             setRemainingDeck={setRemainingDeck}
             screenStage={screenStage}
+            setWinners={setWinners}
           />
-        ) : (
+        </div>
+
+        <div
+          className={`${styles.playGameScreen} ${
+            profile === "admin" ? styles.hidden : ""
+          }`}
+        >
           <PlayGame
             activePlayer={activePlayer}
             timer={timer}
@@ -101,8 +113,9 @@ export const CardGame = () => {
             selectedCards={selectedCards}
             remainingDeck={remainingDeck}
             shuffledDeck={shuffledDeck}
+            winners={winners}
           />
-        )}
+        </div>
       </div>
     </div>
   );

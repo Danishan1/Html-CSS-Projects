@@ -3,6 +3,7 @@ import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
 import { handleBidding, resetSelection } from "../helper/GameLogic";
 import { CardDrawn } from "./CardDrawn";
+import { Result } from "./Result";
 
 export const PlayGame = ({
   activePlayer,
@@ -19,6 +20,7 @@ export const PlayGame = ({
   selectedCards,
   remainingDeck,
   shuffledDeck,
+  winners,
 }) => {
   useEffect(() => {
     if (timer <= 0) {
@@ -67,6 +69,6 @@ export const PlayGame = ({
       remainingDeck={remainingDeck}
     />
   ) : (
-    <></>
+    <Result winners={winners} activePlayer={activePlayer} />
   );
 };

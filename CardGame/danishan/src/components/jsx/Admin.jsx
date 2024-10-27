@@ -10,27 +10,62 @@ export const Admin = ({
   remainingDeck,
   setRemainingDeck,
   screenStage,
+  setWinners,
 }) => {
   useEffect(() => {
+    // Pick cards until we have two selected cards
     if (selectedCards.length < 2) {
       const pickCard = () => {
         if (remainingDeck.length > 0) {
           const randomIndex = Math.floor(Math.random() * remainingDeck.length);
           const selectedCard = remainingDeck[randomIndex];
-
           setSelectedCards((prev) => [...prev, selectedCard]);
           setRemainingDeck((prev) =>
             prev.filter((_, index) => index !== randomIndex)
           );
         }
       };
-
       pickCard();
     }
   }, [selectedCards, remainingDeck, setSelectedCards, setRemainingDeck]);
 
+  useEffect(() => {
+    // Check if we have selected the second card to determine winners
+    if (
+      screenStage === 2 &&
+      playerOutput &&
+      Object.keys(playerOutput).length > 0 &&
+      selectedCards.length === 2
+    ) {
+      const secondCard = selectedCards[1];
+      console.log("Calculated", secondCard, playerOutput);
+
+      // Determine winners based on the condition playerOutput[card] === secondCard
+      const winners = Object.entries(playerOutput).filter(
+        ([, playerInfo]) => playerInfo.card === secondCard
+      );
+
+      // Calculate total bid amount
+      const totalBidAmount = Object.values(playerOutput).reduce(
+        (total, playerInfo) => total + (playerInfo.bid || 0),
+        0
+      );
+
+      // Distribute the amount among winners
+      const winningAmount = totalBidAmount / (winners.length + 1);
+      const winnersWithAmount = winners.map(([playerCode, playerInfo]) => ({
+        playerCode,
+        winningCard: playerInfo.card,
+        winningBid: playerInfo.bid,
+        winningAmount,
+      }));
+
+      // Update the winners state
+      setWinners(winnersWithAmount);
+    }
+  }, [selectedCards, playerOutput, setWinners, screenStage]);
+
   if (!playerOutput) return null;
-  console.log(screenStage);
 
   return (
     <>

@@ -3,7 +3,7 @@ export const resetSelection = (setSelectedCard, setScreenStage, setTimer, setSho
     setScreenStage(0);
     setTimer(10);
     setShowCard(false);
-    setPlayerOutput({});
+    setPlayerOutput(null);
 };
 
 

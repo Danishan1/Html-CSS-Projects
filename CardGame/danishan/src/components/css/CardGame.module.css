@@ -14,6 +14,17 @@
     height: calc(100vh - 50px);
 }
 
+.hidden {
+    display: none;
+}
+
+.cardGame .adminScreen,
+.cardGame .playGameScreen {
+    width: 100%;
+    height: 100%;
+}
+
+
 .leftHeader,
 .rightHeader {
     display: flex;
