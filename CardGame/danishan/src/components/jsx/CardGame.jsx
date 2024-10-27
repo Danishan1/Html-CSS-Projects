@@ -18,6 +18,7 @@ export const CardGame = () => {
 
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
+    else if (screenStage === 1) setScreenStage(2);
     else
       resetSelection(
         setSelectedCard,

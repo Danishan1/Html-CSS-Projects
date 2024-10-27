@@ -44,18 +44,18 @@ export const PlayGame = ({
       timer={timer}
       playerOutput={playerOutput}
     />
-  ) : (
+  ) : screenStage === 1 ? (
     <BidStake
       activePlayer={activePlayer}
       playerOutput={playerOutput}
       timer={timer}
-      setTimer={setTimer}
       setBid={(bidAmount) =>
         handleBidding(bidAmount, setPlayerOutput, activePlayer, selectedCard)
       }
-      resetSelection={() =>
-        resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard)
-      }
     />
+  ) : screenStage === 2 ? (
+    <></>
+  ) : (
+    <></>
   );
 };
