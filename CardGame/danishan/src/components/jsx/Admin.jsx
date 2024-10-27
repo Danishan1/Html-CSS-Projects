@@ -38,7 +38,6 @@ export const Admin = ({
       selectedCards.length === 2
     ) {
       const secondCard = selectedCards[1];
-      console.log("Calculated", secondCard, playerOutput);
 
       // Determine winners based on the condition playerOutput[card] === secondCard
       const winners = Object.entries(playerOutput).filter(
