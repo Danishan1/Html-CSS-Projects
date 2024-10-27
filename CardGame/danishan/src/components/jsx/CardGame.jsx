@@ -32,7 +32,7 @@ export const CardGame = () => {
     if (activePlayer) {
       setPlayerOutput((prev) => {
         const activePlayerInfo = [`Player-${activePlayer}`];
-        
+
         const temp = {
           ...prev,
           [activePlayerInfo]: {
@@ -41,6 +41,8 @@ export const CardGame = () => {
           },
         };
 
+        console.log(playerOutput);
+        setSelectedCard(null);
         return temp;
       });
     }

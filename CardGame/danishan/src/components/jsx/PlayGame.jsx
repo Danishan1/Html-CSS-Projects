@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
 import { handleBidding, resetSelection } from "../helper/GameLogic";
-import { deckSuits } from "../helper/cards";
 
 export const PlayGame = ({
   activePlayer,
@@ -37,13 +36,13 @@ export const PlayGame = ({
 
   return screenStage === 0 ? (
     <CardSelection
-      deck={deckSuits}
       onCardClick={(card) => {
         setSelectedCard(card);
       }}
       isShow={showCard}
       activePlayer={activePlayer}
       timer={timer}
+      playerOutput={playerOutput}
     />
   ) : (
     <BidStake

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "../css/DeckCards.module.css";
 import Card from "./Card";
 import { WaitingScreen } from "./WaitingScreen";
+import { deckSuits } from "../helper/cards";
 
 export const CardSelection = ({
-  deck,
   onCardClick,
   isShow,
   activePlayer,
   timer,
+  playerOutput,
 }) => {
   const [waitingScreen, setWaitingScreen] = useState(false);
 
@@ -23,7 +24,8 @@ export const CardSelection = ({
       </div>
     );
 
-  if (waitingScreen) {
+  const activePlayerInfo = playerOutput?.[`Player-${activePlayer}`];
+  if (waitingScreen && activePlayerInfo && activePlayerInfo?.card) {
     return (
       <div className={styles.cardSelection}>
         <WaitingScreen
@@ -39,7 +41,7 @@ export const CardSelection = ({
       <div className={styles.cardSelection}>
         <p className={styles.playerText}>{`Player-${activePlayer || 0}`}</p>
         <div className={styles.showDeckCards}>
-          {deck.map((suit, suitIndex) => (
+          {deckSuits.map((suit, suitIndex) => (
             <div key={suitIndex} className={styles.suitColumn}>
               {suit.map((code) => (
                 <div key={code} className={styles.cardWrapper}>
