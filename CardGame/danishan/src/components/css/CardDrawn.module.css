@@ -1,0 +1,12 @@
+.cardDrawn {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+.showDeckCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import CardSelection from "./CardSelection";
 import BidStake from "./BidStake";
 import { handleBidding, resetSelection } from "../helper/GameLogic";
+import { CardDrawn } from "./CardDrawn";
 
 export const PlayGame = ({
   activePlayer,
@@ -54,7 +55,7 @@ export const PlayGame = ({
       }
     />
   ) : screenStage === 2 ? (
-    <></>
+    <CardDrawn isShow={false} />
   ) : (
     <></>
   );
