@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "../css/CardGame.module.css";
 
-export const Timer = ({ timer, setTimer, onTimeout }) => {
+export const Timer = ({ timer, setTimer, onTimeout, screenStage }) => {
   useEffect(() => {
     if (timer <= 0) return;
     const countdown = setInterval(() => {
@@ -9,14 +9,14 @@ export const Timer = ({ timer, setTimer, onTimeout }) => {
         if (prev === 1) {
           clearInterval(countdown);
           onTimeout();
-          return 10;
+          return screenStage === 1 ? 20 : 10;
         }
         return prev - 1;
       });
     }, 1000);
 
     return () => clearInterval(countdown);
-  }, [timer, setTimer, onTimeout]);
+  }, [timer, setTimer, onTimeout, screenStage]);
 
   return (
     <div className={styles.timer}>

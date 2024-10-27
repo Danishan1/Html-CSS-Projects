@@ -4,19 +4,17 @@ import { WaitingScreen } from "./WaitingScreen";
 import Card from "./Card";
 import { deck } from "../helper/cards";
 
-export const CardDrawn = ({
-  isShow,
-  selectedCards,
-  remainingDeck,
-}) => {
+export const CardDrawn = ({ isShow, selectedCards, remainingDeck }) => {
   const [currentWindow, setCurrentWindow] = useState(0);
-  const [waitingTime, setWaitingTime] = useState(3);
+  const [waitingTime, setWaitingTime] = useState(8);
 
   useEffect(() => {
-    const timeDurations = [3, 3, 4, 4];
+    const timeDurations = [8, 4, 8];
+
     const showNextWindow = (index) => {
       if (index < timeDurations.length) {
         setCurrentWindow(index);
+        setWaitingTime(timeDurations[index]);
         setTimeout(
           () => showNextWindow(index + 1),
           timeDurations[index] * 1000
@@ -25,7 +23,6 @@ export const CardDrawn = ({
     };
 
     showNextWindow(0);
-    return () => clearTimeout();
   }, []);
 
   useEffect(() => {
@@ -33,11 +30,6 @@ export const CardDrawn = ({
       const timer = setInterval(() => {
         setWaitingTime((prevTime) => prevTime - 1);
       }, 1000);
-
-      if (waitingTime === 0) {
-        setCurrentWindow(2);
-        clearInterval(timer);
-      }
 
       return () => clearInterval(timer);
     }
@@ -57,7 +49,7 @@ export const CardDrawn = ({
 
       {currentWindow === 1 && (
         <WaitingScreen
-          text="We are currently shuffling the cards and randomly Picking one"
+          text="We are currently shuffling the cards and randomly picking one"
           timer={waitingTime}
         />
       )}

@@ -94,7 +94,12 @@ export const Header = ({
             onClick={() => setShowCard((prev) => !prev)}
           />
         )}
-        <Timer timer={timer} setTimer={setTimer} onTimeout={onTimeout} />
+        <Timer
+          timer={timer}
+          setTimer={setTimer}
+          onTimeout={onTimeout}
+          screenStage={screenStage}
+        />
       </div>
     </div>
   );

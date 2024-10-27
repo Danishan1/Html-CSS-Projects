@@ -10,7 +10,6 @@ export const Admin = ({
   remainingDeck,
   setRemainingDeck,
   screenStage,
-  shuffledDeck,
 }) => {
   useEffect(() => {
     if (selectedCards.length < 2) {

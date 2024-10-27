@@ -25,7 +25,8 @@ export const CardGame = () => {
   const onTimeout = () => {
     if (screenStage === 0) setScreenStage(1);
     else if (screenStage === 1) setScreenStage(2);
-    else
+    else if (screenStage === 2) setScreenStage(3);
+    else {
       resetSelection(
         setSelectedCard,
         setScreenStage,
@@ -33,6 +34,7 @@ export const CardGame = () => {
         setShowCard,
         setPlayerOutput
       );
+    }
   };
 
   useEffect(() => {
@@ -82,7 +84,6 @@ export const CardGame = () => {
             remainingDeck={remainingDeck}
             setRemainingDeck={setRemainingDeck}
             screenStage={screenStage}
-            shuffledDeck={shuffledDeck}
           />
         ) : (
           <PlayGame
