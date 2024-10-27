@@ -6,6 +6,7 @@
     border-radius: 5px;
     color: var(--colorWhite);
     font-weight: var(--boldL2);
+    text-wrap: nowrap;
 }
 
 .btn:hover {
