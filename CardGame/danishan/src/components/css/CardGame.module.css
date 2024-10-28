@@ -31,7 +31,7 @@
     gap: 10px;
 }
 
-.text{
+.text {
     font-weight: var(--boldL2);
 }
 
@@ -76,4 +76,22 @@
     background-color: var(--colorCyan);
     color: var(--colorWhite);
     font-weight: var(--boldL2);
+}
+
+@media (max-width:540px) {
+    .text {
+        font-weight: var(--boldL2);
+        display: none;
+    }
+}
+
+@media (max-width:400px) {
+    .text {
+        font-weight: var(--boldL2);
+        display: none;
+    }
+
+    .rightHeader Button{
+        display: none;
+    }
 }
