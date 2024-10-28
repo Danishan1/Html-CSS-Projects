@@ -116,7 +116,7 @@ The game is styled to be visually engaging and user-friendly:
 
 ## Installation and Setup
 
-1. **Clone the Repository**: `git clone https://github.com`
+1. **Clone the Repository**: `git clone https://github.com/Danishan1/CardGame`
 2. **Install Dependencies**: Navigate to the project folder and run `npm install`.
 3. **Run the App**: Start the app with `npm start`.
 
