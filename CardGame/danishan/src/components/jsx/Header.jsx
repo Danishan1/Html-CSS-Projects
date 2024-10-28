@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "../css/CardGame.module.css";
 import { Button } from "./Button";
 import { Timer } from "./Timer";
@@ -24,6 +24,21 @@ export const Header = ({
   playerOutput,
   setPlayerOutput,
 }) => {
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setPlayerDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setPlayerDropdown]);
+
   useEffect(() => {
     if (timer === 1) {
       let updatedOutput = {};
@@ -68,7 +83,7 @@ export const Header = ({
           onClick={() => setPlayerDropdown((prev) => !prev)}
         />
         {playerDropdown && (
-          <div className={styles.playerDropdown}>
+          <div ref={dropdownRef} className={styles.playerDropdown}>
             {playerCode.map((player) => (
               <div
                 key={player}
@@ -88,7 +103,7 @@ export const Header = ({
       </div>
 
       <p className={styles.text}>
-        {profile === "admin" ? "Admin Panel" : "Player Planel"}
+        {profile === "admin" ? "Admin Panel" : "Player Panel"}
       </p>
 
       <div className={styles.rightHeader}>
