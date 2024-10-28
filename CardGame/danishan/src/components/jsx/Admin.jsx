@@ -58,7 +58,7 @@ export const Admin = ({
       const winningAmount = (totalBidAmount / (winnerList.length + 1)).toFixed(
         2
       );
-      
+
       const winnersWithAmount = winnerList.map(([playerCode, playerInfo]) => ({
         playerCode,
         winningCard: playerInfo.card,
@@ -78,14 +78,20 @@ export const Admin = ({
     <>
       {screenStage < 2 ? (
         <div className={styles.admin}>
-          {Object.entries(playerOutput).map(([playerCode, playerInfo]) => (
-            <PlayerSelectionCard
-              key={playerCode}
-              playerName={playerCode}
-              selectedCard={playerInfo.card || "NA"}
-              bid={playerInfo.bid || "NA"}
-            />
-          ))}
+          {Object.keys(playerOutput).length === 0 ? (
+            <div className={styles.adminNothing}>
+              <p>No player has selected a card yet.</p>
+            </div>
+          ) : (
+            Object.entries(playerOutput).map(([playerCode, playerInfo]) => (
+              <PlayerSelectionCard
+                key={playerCode}
+                playerName={playerCode}
+                selectedCard={playerInfo.card || "NA"}
+                bid={playerInfo.bid || "NA"}
+              />
+            ))
+          )}
         </div>
       ) : screenStage === 2 ? (
         <CardDrawn

@@ -17,7 +17,7 @@ export const CardGame = () => {
   const [profile, setProfile] = useState("player");
   const [playerDropdown, setPlayerDropdown] = useState(false);
   const [activePlayer, setActivePlayer] = useState(null);
-  const [playerOutput, setPlayerOutput] = useState(null);
+  const [playerOutput, setPlayerOutput] = useState({});
   const [shuffledDeck] = useState(shuffleDeck(deck));
   const [selectedCards, setSelectedCards] = useState([]);
   const [winners, setWinners] = useState([]);
