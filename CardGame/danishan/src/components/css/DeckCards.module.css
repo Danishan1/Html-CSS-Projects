@@ -37,6 +37,7 @@
 .text {
     font-weight: var(--boldL2);
     text-align: center;
+    padding: 0 10px;
 }
 
 .stakeInput {
@@ -56,4 +57,13 @@
 .inputBid {
     display: flex;
     gap: 20px;
+}
+
+@media (max-width:540px) {
+    .suitColumn {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
 }
