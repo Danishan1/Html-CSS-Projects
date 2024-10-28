@@ -27,6 +27,7 @@ export const PlayGame = ({
       if (screenStage === 0) {
         setScreenStage(1);
         setTimer(10);
+        // setTimer(2);
       } else {
         resetSelection(setSelectedCard, setScreenStage, setTimer, setShowCard);
       }

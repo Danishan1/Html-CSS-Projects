@@ -9,8 +9,8 @@ export const Timer = ({ timer, setTimer, onTimeout, screenStage }) => {
         if (prev === 1) {
           clearInterval(countdown);
           onTimeout();
-          // return screenStage === 1 ? 20 : 10;
-          return screenStage === 1 ? 6 : 2;
+          return screenStage === 1 ? 20 : 10;
+          // return screenStage === 1 ? 6 : 2;
         }
         return prev - 1;
       });

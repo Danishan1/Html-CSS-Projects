@@ -6,12 +6,12 @@ import { deck } from "../helper/cards";
 
 export const CardDrawn = ({ isShow, selectedCards, remainingDeck }) => {
   const [currentWindow, setCurrentWindow] = useState(0);
-  // const [waitingTime, setWaitingTime] = useState(8);
-  const [waitingTime, setWaitingTime] = useState(2);
+  const [waitingTime, setWaitingTime] = useState(8);
+  // const [waitingTime, setWaitingTime] = useState(2);
 
   useEffect(() => {
-    // const timeDurations = [8, 4, 8];
-    const timeDurations = [2, 2, 2];
+    const timeDurations = [8, 4, 8];
+    // const timeDurations = [2, 2, 2];
 
     const showNextWindow = (index) => {
       if (index < timeDurations.length) {
