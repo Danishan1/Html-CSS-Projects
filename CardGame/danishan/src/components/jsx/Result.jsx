@@ -5,7 +5,7 @@ export const Result = ({ winners, activePlayer }) => {
   if (!activePlayer)
     return (
       <div className={styles.singleCard}>
-        <p className={styles.playerText}>Select a Player</p>
+        <p className={styles.playerText}>Hey, Result is out!!! Select a Player</p>
       </div>
     );
 

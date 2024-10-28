@@ -41,7 +41,7 @@ export const BidStake = ({ playerOutput, timer, setBid, activePlayer }) => {
   if (!activePlayer)
     return (
       <div className={styles.singleCard}>
-        <p className={styles.playerText}>Select a Player</p>
+        <p className={styles.playerText}>Select a Player to take the stake</p>
       </div>
     );
 

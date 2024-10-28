@@ -20,7 +20,7 @@ export const CardSelection = ({
   if (!activePlayer)
     return (
       <div className={styles.singleCard}>
-        <p className={styles.playerText}>Select a Player</p>
+        <p className={styles.playerText}>Select a Player to select the card.</p>
       </div>
     );
 
