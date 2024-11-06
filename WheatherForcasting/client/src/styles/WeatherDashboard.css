@@ -34,23 +34,6 @@
 }
 
 
-.crossIcon{
-    position: absolute;
-    top: -7px;
-    right: -7px;
-    line-height: 0;
-    border-radius: 50%;
-    font-weight: 800;
-    background-color: #ff5969;
-    color: white;
-    opacity: 0;  
-}
-
-.favoritesCity:hover .crossIcon{
-    opacity: 0;  
-}
-
-
 .favoritesCity:hover {
     border: 1px solid #90a1ff;
     cursor: pointer;
