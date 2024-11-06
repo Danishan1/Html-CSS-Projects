@@ -1,0 +1,6 @@
+{
+  "favorites": [
+    { "id": 1, "city": "New York" },
+    { "id": 2, "city": "London" }
+  ]
+}
