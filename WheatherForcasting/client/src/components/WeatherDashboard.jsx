@@ -95,10 +95,11 @@ const WeatherDashboard = () => {
             </div>
           ))}
         </div>
-
-        <button className="btn" onClick={addToFavorites}>
-          Add to Favorites
-        </button>
+        <div>
+          <button className="btn" onClick={addToFavorites}>
+            Add to Favorites
+          </button>
+        </div>
       </div>
 
       {/* Display current weather and forecast */}
