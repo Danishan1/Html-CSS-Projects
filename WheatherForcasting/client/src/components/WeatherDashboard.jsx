@@ -15,6 +15,7 @@ const WeatherDashboard = () => {
 
   // Fetch favorite cities on component mount
   useEffect(() => {
+    // Fetch favorites from backend (JSON Server)
     const fetchFavorites = async () => {
       try {
         const response = await axios.get(`${BACKEND_API}/favorites`);
@@ -25,6 +26,12 @@ const WeatherDashboard = () => {
     };
 
     fetchFavorites();
+
+    // Get last searched city from localStorage
+    const lastSearchedCity = localStorage.getItem("lastSearchedCity");
+    if (lastSearchedCity) {
+      handleSearch(lastSearchedCity);
+    }
   }, []);
 
   // Handle search and set current weather and forecast
@@ -40,6 +47,9 @@ const WeatherDashboard = () => {
     if (forecastData) {
       setForecast(forecastData);
     }
+
+    // Store the searched city in localStorage
+    localStorage.setItem("lastSearchedCity", cityName);
   };
 
   // Add city to favorites in both state and backend (JSON Server)
