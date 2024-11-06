@@ -48,7 +48,7 @@ Make sure you have the following installed:
 
 #### 1. **Download and Extract the ZIP File**
 
-   - After downloading the ZIP file, extract it to your desired folder location.
+   - After downloading the ZIP file, extract it to your desired folder location. (Note: Zip file do not has node_module)
 
 #### 2. **Install Dependencies for Frontend**
 
