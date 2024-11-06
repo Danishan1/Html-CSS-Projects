@@ -22,15 +22,15 @@ const WeatherDisplay = ({ weather, forecast }) => {
               alt={description}
               className="weatherIcon"
             />
-            <p class="temp">{temp}°</p>
-            <div class="humidityWind">
-              <div class="humidity">
-                <p class="humidityHeading">Humidity</p>
-                <p class="humidityValue">{humidity}%</p>
+            <p className="temp">{temp}°</p>
+            <div className="humidityWind">
+              <div className="humidity">
+                <p className="humidityHeading">Humidity</p>
+                <p className="humidityValue">{humidity}%</p>
               </div>
-              <div class="wind">
-                <p class="windHeading">Wind Speed</p>
-                <p class="windValue">{speed} m/s</p>
+              <div className="wind">
+                <p className="windHeading">Wind Speed</p>
+                <p className="windValue">{speed} m/s</p>
               </div>
             </div>
           </div>

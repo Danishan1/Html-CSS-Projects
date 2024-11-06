@@ -1,7 +1,8 @@
 .searchBar {
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
 }
 
 .searchBar input {
@@ -33,3 +34,12 @@
     opacity: 0.8;
 
 }
+
+
+@media (max-width: 425px) {
+    .searchBar {
+       flex-direction: column;
+       gap: 10px;
+    }
+  }
+  

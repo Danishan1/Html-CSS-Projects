@@ -1,9 +1,72 @@
-.weather-dashboard {
+.weatherDashboard {
     text-align: center;
     padding: 20px;
 }
 
-.weather-dashboard h2 {
+.weatherDashboard h2 {
     margin-top: 20px;
 }
 
+.favorites {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cities {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+.favoritesCity {
+    padding: 3px 10px;
+    border-radius: 7px;
+    background-color: #eeeeee;
+    border: 1px solid #e0dede;
+    text-align: center;
+    color: #474747;
+    position: relative;
+}
+
+
+.crossIcon{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    line-height: 0;
+    border-radius: 50%;
+    font-weight: 800;
+    background-color: #ff5969;
+    color: white;
+    opacity: 0;  
+}
+
+.favoritesCity:hover .crossIcon{
+    opacity: 0;  
+}
+
+
+.favoritesCity:hover {
+    border: 1px solid #90a1ff;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 7px 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #90a1ff;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
