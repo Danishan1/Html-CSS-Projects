@@ -1,0 +1,992 @@
+/* Bba.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root {
+  --primary-color: #004080;
+  --secondary-color: #ff9800;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --white: #ffffff;
+  --light-gray: #f9f9f9;
+  --dark-gray: #555555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+
+/* Promotional Banner Styles */
+.promo-banner {
+  width: 100%;
+  background-color: #ff9800; /* Secondary Color */
+  color: #ffffff; /* White Text */
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002; /* Above floating buttons */
+  overflow: hidden;
+}
+
+.promo-banner p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  margin: 0;
+}
+
+/* Scroll Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.bba-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Logo Section */
+.bba-logo {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.bba-logo img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.bba-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Header Section */
+.bba-header {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 100px 20px;
+  text-align: center;
+  background-image: url('https://source.unsplash.com/1600x900/?business,management');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bba-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 64, 128, 0.6);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-text {
+  flex: 1 1 65%;
+  color: var(--white);
+}
+
+.header-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  font-size: 1.3em;
+}
+
+.brochure {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.brochure:hover {
+  background: #e68900;
+  color: var(--white);
+}
+
+/* Application Form */
+.application-form {
+  flex: 1 1 30%;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.application-form h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.promo-message {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.application-form p {
+  font-size: 0.95em;
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.application-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--dark-gray);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.submit-button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: var(--secondary-color);
+}
+
+/* Subheadline */
+.bba-subheadline {
+  background: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bba-subheadline p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Key Benefits */
+.bba-benefits {
+  padding: 80px 20px;
+  background: var(--white);
+}
+
+.bba-benefits h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit-item {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item h3 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.benefit-item p {
+  font-size: 1em;
+  color: white;
+}
+
+/* Program Overview */
+.bba-overview {
+  padding: 80px 20px;
+  background: var(--primary-color);
+}
+
+.bba-overview h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.overview-text, .overview-details {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overview-text h3, .overview-details h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.overview-text p, .overview-details p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+.overview-text ul, .overview-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.overview-text li, .overview-details li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/* Other Courses Section */
+.head{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: #004080;
+}
+
+.other-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px 0;
+    padding: 0 10px;
+    background-color: #f8f8f8;
+}
+
+.other-courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #004080;
+}
+
+.other-courses .course {
+    width: 32%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.other-courses .course:hover {
+    transform: translateY(-5px);
+}
+
+.other-courses .course img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.other-courses .course h3 {
+    border: none;
+    background-color: #e1b481;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.other-courses .course p {
+    font-size: 16px;
+}
+
+.other-courses .course .enquire-now-btn {
+    background-color: #fd9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 19px;
+    transition: background 0.3s ease;
+}
+
+.other-courses .course .enquire-now-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles for Tablet and Mobile */
+@media (max-width: 768px) {
+    /* Make Each Course Take Full Width on Tablets */
+    .other-courses .course {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Make Each Course Take Full Width on Phones */
+    .other-courses .course {
+        width: 100%;
+    }
+
+    /* Hide Floating Buttons on Phones */
+    .floating-buttons.left,
+    .floating-buttons.right {
+        display: none;
+    }
+}
+
+/* Floating Buttons */
+.floating-buttons.left {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1001;
+}
+
+.floating-buttons.right {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1001;
+}
+
+.floating-btn {
+  width: 100px;
+  height: 100px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/*.register-now-btn {
+  /* Additional styles if needed 
+}*/
+
+/*.apply-now-btn {
+   Additional styles if needed 
+}*/
+
+/* Responsive Floating Buttons */
+@media (max-width: 768px) {
+  .floating-buttons.left,
+  .floating-buttons.right {
+    flex-direction: row;
+    bottom: 20px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  .floating-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 0.7em;
+  }
+}
+
+/* Testimonials */
+.bba-testimonials {
+  padding: 80px 20px;
+  background: var(--light-gray);
+  text-align: center;
+}
+
+.bba-testimonials h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+.bba-testimonials p {
+  font-style: italic;
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: var(--dark-gray);
+}
+
+.bba-testimonials h4 {
+  font-size: 1.1em;
+  color: var(--primary-color);
+}
+
+/* Call to Action */
+.bba-cta {
+  padding: 80px 20px;
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+}
+
+.bba-cta h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cta-button {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+.cta-button.secondary {
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+.cta-button.secondary:hover {
+  background: #e68900;
+  color: var(--white);
+}
+
+/* ... existing CSS content ... */
+
+/* Our Leading Recruiters Section */
+.bba-recruiters {
+  padding: 80px 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.bba-recruiters h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+.recruiters-slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-track img {
+  width: 150px; /* Adjust as needed */
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slider-track img {
+      width: 100px;
+      margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-track img {
+      width: 80px;
+      margin-right: 10px;
+  }
+}
+
+
+/* FAQ */
+.bba-faq {
+  padding: 80px 20px;
+  background: var(--white);
+}
+
+.bba-faq h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  border-left: 5px solid var(--primary-color);
+  background: var(--light-gray);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+  background: var(--background-color);
+}
+
+.faq-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.faq-item p {
+  font-size: 1.1em;
+  color: var(--dark-gray);
+}
+
+/* Next Step Section Styles */
+#next-step {
+  background: #004080; /* Light background for emphasis */
+  color: white;
+  border: 1px solid #ccc; /* Border for separation */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#next-step h2 {
+  color: white; /* Darker color for headings */
+  font-size: 2.5em;
+  text-align: center;
+  margin: auto;
+}
+
+#next-step p {
+  width: 75%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+/* Horizontal Form Styles */
+.horizontal-form {
+  display: flex;
+  gap: 10px; /* Space between inputs */
+  flex-wrap: wrap; /* Allow form items to wrap on small screens */
+  margin-top: 15px; /* Space above the form */
+}
+
+.horizontal-form input {
+  flex: 1; /* Allow inputs to grow and take available space */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+#next-step button {
+  margin-top: 20px; /* Space above the button */
+  margin-left: 49%;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  border: none;
+  background-color: #fd9800; /* Primary color */
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#next-step button:hover {
+  background-color: #ff9800; /* Darker shade for hover effect */
+}
+
+
+/* Contact */
+.bba-contact {
+  padding: 80px 20px;
+  background: var(--background-color);
+  text-align: center;
+}
+
+.bba-contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.bba-contact p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: var(--dark-gray);
+}
+
+.bba-contact ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.bba-contact ul li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: var(--dark-gray);
+}
+
+.bba-contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.bba-contact a:hover {
+  color: var(--secondary-color);
+}
+
+/* Footer */
+.bba-footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.bba-footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--dark-gray);
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-button {
+  color: var(--dark-gray);
+  float: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-content .promo-message {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 0.95em;
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--dark-gray);
+}
+
+.modal-content .form-group input,
+.modal-content .form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--dark-gray);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.modal-content .submit-button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content .submit-button:hover {
+  background: var(--secondary-color);
+}
+
+/* Download Brochure Modal Specific Styles */
+#downloadBrochureModal .submit-button {
+  background: var(--secondary-color);
+}
+
+#downloadBrochureModal .submit-button:hover {
+  background: #e68900;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .application-form {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .benefits-list {
+    gap: 20px;
+  }
+
+  .overview-text, .overview-details {
+    padding: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 80%;
+    text-align: center;
+  }
+
+  .download-brochure-btn {
+    width: 80%;
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .bba-header h1 {
+    font-size: 2em;
+  }
+
+  .bba-header p {
+    font-size: 1em;
+  }
+
+  .bba-benefits h2,
+  .bba-overview h2,
+  .bba-testimonials h2,
+  .bba-cta h2,
+  .bba-faq h2,
+  .bba-contact h2 {
+    font-size: 2em;
+  }
+
+  .benefit-item {
+    width: 100%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .download-brochure-btn {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Modal Content Adjustments for Small Screens */
+  .modal-content {
+    width: 95%;
+  }
+
+  /* Floating Buttons Adjustment */
+  .floating-buttons.left,
+  .floating-buttons.right {
+    flex-direction: row;
+    bottom: 20px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .floating-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 0.7em;
+  }
+}
